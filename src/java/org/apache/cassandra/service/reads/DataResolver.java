@@ -235,7 +235,7 @@ public class DataResolver<E extends Endpoints<E>, P extends ReplicaPlan.ForRead<
         //      response provider that lazily "completes" potentially out-of-date rows by directly querying them on the
         //      replicas that were previously silent. As this iterator is consumed, it caches valid data for potentially
         //      out-of-date rows, and this cached data is merged with the fetched data as rows are requested. If there
-        //      is no replica divergence, only rows in the partition being evalutated will be cached (then released
+        //      is no replica divergence, only rows in the partition being evaluated will be cached (then released
         //      when the partition is consumed).
         //   3) After a "complete" row is materialized, it must pass the row filter supplied by the original query
         //      before it counts against the limit.
