@@ -42,7 +42,7 @@ import org.apache.cassandra.utils.IteratorWithLowerBound;
  * sstable statistics or the row index lower bounds (if available in the cache).
  * Before initializing the sstable unfiltered row iterator, we return an empty row
  * with the clustering set to the lower bound. The empty row will be filtered out and
- * the result is that if we don't need to access this sstable, i.e. due to the LIMIT conditon,
+ * the result is that if we don't need to access this sstable, i.e. due to the LIMIT condition,
  * then we will not. See CASSANDRA-8180 for examples of why this is useful.
  */
 public class UnfilteredRowIteratorWithLowerBound extends LazilyInitializedUnfilteredRowIterator implements IteratorWithLowerBound<Unfiltered>
