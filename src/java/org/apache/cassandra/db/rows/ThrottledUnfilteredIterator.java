@@ -149,7 +149,7 @@ public class ThrottledUnfilteredIterator extends AbstractIterator<UnfilteredRowI
 
             /**
              * There 3 cases for next, 1. if it's boundaryMarker, we split it as closeMarker for current batch, next
-             * openMarker for next batch 2. if it's boundMakrer, it must be closeMarker. 3. if it's Row, create
+             * openMarker for next batch 2. if it's boundMarker, it must be closeMarker. 3. if it's Row, create
              * corresponding closeMarker for current batch, and create next openMarker for next batch including current
              * Row.
              */
