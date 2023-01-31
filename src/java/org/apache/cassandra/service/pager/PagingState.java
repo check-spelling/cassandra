@@ -400,7 +400,7 @@ public class PagingState
             }
             else
             {
-                // We froze the serialization version to 3.0 as we need to make this this doesn't change (that is, it has to be
+                // We froze the serialization version to 3.0 as we need to make sure this doesn't change (that is, it has to be
                 // fix for a given version of the protocol).
                 mark = Clustering.serializer.serialize(row.clustering(), MessagingService.VERSION_30, makeClusteringTypes(metadata));
             }
