@@ -68,7 +68,7 @@ requested. The interface is implemented by `DecoratedKey`, and can be requested 
 
 The (rather technical) paragraphs below detail the encoding we have chosen for the various types. For simplicity we
 only discuss the bidirectional `OSS42` version of the translation. The implementations in code of the various mappings
-are in the releavant `AbstractType` subclass.
+are in the relevant `AbstractType` subclass.
 
 ### Desired properties
 
