@@ -602,7 +602,7 @@ public abstract class AbstractType<T> implements Comparator<ByteBuffer>, Assignm
      */
     public AssignmentTestable.TestResult testAssignment(AbstractType<?> receiverType)
     {
-        // testAssignement is for CQL literals and native protocol values, none of which make a meaningful
+        // testAssignment is for CQL literals and native protocol values, none of which make a meaningful
         // difference between frozen or not and reversed or not.
 
         if (isFreezable() && !isMultiCell())

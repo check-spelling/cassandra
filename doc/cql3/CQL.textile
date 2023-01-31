@@ -951,7 +951,7 @@ The @c = c + 3@ form of @<assignment>@ is used to increment/decrement counters. 
 
 The @id = id + <collection-literal>@ and @id[value1] = value2@ forms of @<assignment>@ are for collections. Please refer to the "relevant section":#collections for more details.
 
-The @id.field = <term>@ form of @<assignemt>@ is for setting the value of a single field on a non-frozen user-defined types.
+The @id.field = <term>@ form of @<assignment>@ is for setting the value of a single field on a non-frozen user-defined types.
 
 h4(#updateOptions). @<options>@
 
