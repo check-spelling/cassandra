@@ -879,7 +879,7 @@ public class ConnectionTest
         // The reserved capacity (pendingBytes) at the end of the round should equal to K - N * M,
         //   which you can find in the assertion.
         test((inbound, outbound, endpoint) -> {
-            // max capacity equals to permit-free sendQueueCapcity + the minimun of endpoint and global reserve
+            // max capacity equals to permit-free sendQueueCapacity + the minimun of endpoint and global reserve
             double maxSendQueueCapacity = outbound.settings().applicationSendQueueCapacityInBytes +
                                           Double.min(outbound.settings().applicationSendQueueReserveEndpointCapacityInBytes,
                                                      outbound.settings().applicationSendQueueReserveGlobalCapacityInBytes.limit());
@@ -902,7 +902,7 @@ public class ConnectionTest
                     outbound.unsafeReleaseCapacity(acquireStep);
             };
 
-            // Start N acquirer and releaser to contend for capcaity
+            // Start N acquirer and releaser to contend for capacity
             List<Runnable> submitOrder = new ArrayList<>(concurrency * 2);
             for (int i = 0 ; i < concurrency ; ++i)
                 submitOrder.add(acquirer);

@@ -122,7 +122,7 @@ single `BATCH` query that might contain 50 statements in it, which if
 you have 9 copies (RF=3, three datacenters) means that every coordinator
 `BATCH` write turns into 450 replica writes! This is why keeping
 `BATCH`'s to the same partition is so critical, otherwise you can
-exhaust significant CPU capacitity with a "single" query.
+exhaust significant CPU capacity with a "single" query.
 
 == Next Step: Investigate the Node(s)
 
