@@ -592,7 +592,7 @@ successful.
 |`min_sstable_size` |SizeTieredCompactionStrategy |50MB |The size tiered
 strategy groups SSTables to compact in buckets. A bucket groups SSTables
 that differs from less than 50% in size. However, for small sizes, this
-would result in a bucketing that is too fine grained. `min_sstable_size`
+would result in a bucketing that is too fine-grained. `min_sstable_size`
 defines a size threshold (in bytes) below which all SSTables belong to
 one unique bucket
 

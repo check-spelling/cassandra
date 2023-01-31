@@ -89,7 +89,7 @@ public final class ThreadAwareSecurityManager extends SecurityManager
     static
     {
         //
-        // Use own security policy to be easier (and faster) since the C* has no fine grained permissions.
+        // Use own security policy to be easier (and faster) since the C* has no fine-grained permissions.
         // Either code has access to everything or code has access to nothing (UDFs).
         // This also removes the burden to maintain and configure policy files for production, unit tests etc.
         //

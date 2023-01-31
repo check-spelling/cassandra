@@ -480,7 +480,7 @@ node has joined the ring and initial setup is complete.
 
 With this option, the same database roles used for CQL authentication
 can be used to control access to JMX, so updates can be managed
-centrally using just `cqlsh`. Furthermore, fine grained control over
+centrally using just `cqlsh`. Furthermore, fine-grained control over
 exactly which operations are permitted on particular MBeans can be
 achieved via xref:cql/security.adoc#grant-permission[`GRANT PERMISSION`].
 
