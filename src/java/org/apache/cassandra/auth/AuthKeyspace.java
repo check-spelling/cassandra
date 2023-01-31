@@ -52,7 +52,7 @@ public final class AuthKeyspace
     public static final String ROLES = "roles";
     public static final String ROLE_MEMBERS = "role_members";
     public static final String ROLE_PERMISSIONS = "role_permissions";
-    public static final String RESOURCE_ROLE_INDEX = "resource_role_permissons_index";
+    public static final String RESOURCE_ROLE_INDEX = "resource_role_permissions_index";
     public static final String NETWORK_PERMISSIONS = "network_permissions";
 
     public static final long SUPERUSER_SETUP_DELAY = Long.getLong("cassandra.superuser_setup_delay_ms", 10000);

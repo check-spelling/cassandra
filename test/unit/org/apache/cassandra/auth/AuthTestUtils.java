@@ -145,16 +145,16 @@ public class AuthTestUtils
 
     public static long getNetworkPermissionsReadCount()
     {
-        ColumnFamilyStore networkPemissionsTable =
+        ColumnFamilyStore networkPermissionsTable =
                 Keyspace.open(SchemaConstants.AUTH_KEYSPACE_NAME).getColumnFamilyStore(AuthKeyspace.NETWORK_PERMISSIONS);
-        return networkPemissionsTable.metric.readLatency.latency.getCount();
+        return networkPermissionsTable.metric.readLatency.latency.getCount();
     }
 
     public static long getRolePermissionsReadCount()
     {
-        ColumnFamilyStore rolesPemissionsTable =
+        ColumnFamilyStore rolesPermissionsTable =
                 Keyspace.open(SchemaConstants.AUTH_KEYSPACE_NAME).getColumnFamilyStore(AuthKeyspace.ROLE_PERMISSIONS);
-        return rolesPemissionsTable.metric.readLatency.latency.getCount();
+        return rolesPermissionsTable.metric.readLatency.latency.getCount();
     }
 
     public static long getRolesReadCount()
