@@ -102,7 +102,7 @@ public final class Retry
     }
 
     /**
-     * Continously attempting to call the provided future supplier until successful or until no longer able to retry.
+     * Continuously attempting to call the provided future supplier until successful or until no longer able to retry.
      *
      * @param maxRetries to allow
      * @param fn asynchronous operation to retry
