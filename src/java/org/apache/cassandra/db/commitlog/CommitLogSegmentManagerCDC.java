@@ -371,7 +371,7 @@ public class CommitLogSegmentManagerCDC extends AbstractCommitLogSegmentManager
                     addSize(segment.onDiskSize());
 
                 // Subtract the (estimated) size of the segment from processNewSegment.
-                // For the segement that CONTAINS, we update with adding the actual onDiskSize and removing the estimated size.
+                // For the segment that CONTAINS, we update with adding the actual onDiskSize and removing the estimated size.
                 // For the segment that remains in PERMITTED, the file is to be deleted and the estimate should be returned.
                 if (segment.getCDCState() != CDCState.FORBIDDEN)
                     addSize(-defaultSegmentSize());

@@ -190,7 +190,7 @@ public class Range<T extends RingPosition<T>> extends AbstractBounds<T> implemen
             //  ---------B--------A--1----2------>
             // (2) only that's start endpoint lies in this's right segment:
             //  ---------B----1---A-------2------>
-            // or, we have the same cases on the left segement, which we can handle by swapping this and that.
+            // or, we have the same cases on the left segment, which we can handle by swapping this and that.
             return this.left.compareTo(that.left) < 0
                    ? intersectionBothWrapping(this, that)
                    : intersectionBothWrapping(that, this);
