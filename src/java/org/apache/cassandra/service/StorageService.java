@@ -5317,7 +5317,7 @@ public class StorageService extends NotificationBroadcasterSupport implements IE
     {
         if (!replicatingNodes.isEmpty()  || tokenMetadata.getSizeOfLeavingEndpoints() > 0)
         {
-            logger.warn("Removal not confirmed for for {}", StringUtils.join(this.replicatingNodes, ","));
+            logger.warn("Removal not confirmed for {}", StringUtils.join(this.replicatingNodes, ","));
             for (InetAddressAndPort endpoint : tokenMetadata.getLeavingEndpoints())
             {
                 UUID hostId = tokenMetadata.getHostId(endpoint);

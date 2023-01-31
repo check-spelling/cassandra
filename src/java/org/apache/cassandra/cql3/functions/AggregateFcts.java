@@ -385,7 +385,7 @@ public abstract class AggregateFcts
             };
 
     /**
-     * AVG function for for short values (smallint).
+     * AVG function for short values (smallint).
      * </p>
      * The average of an empty value set returns zero. The returned value is of the same type as the input values, 
      * so the returned average won't have a decimal part.

@@ -595,7 +595,7 @@ public class RepairDigestTrackingTest extends TestBaseImpl
             {
                 Uninterruptibles.sleepUninterruptibly(100, TimeUnit.MILLISECONDS);
                 if (attempts-- < 0)
-                    throw new AssertionError(String.format("Snapshot %s not found for for %s", snapshotName, KS_TABLE));
+                    throw new AssertionError(String.format("Snapshot %s not found for %s", snapshotName, KS_TABLE));
             }
         };
     }
