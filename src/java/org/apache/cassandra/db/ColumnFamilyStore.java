@@ -247,7 +247,7 @@ public class ColumnFamilyStore implements ColumnFamilyStoreMBean, Memtable.Owner
     private static final String[] COUNTER_NAMES = new String[]{"table", "count", "error", "value"};
     private static final String[] COUNTER_DESCS = new String[]
     { "keyspace.tablename",
-      "number of occurances",
+      "number of occurrences",
       "error bounds",
       "value" };
     private static final CompositeType COUNTER_COMPOSITE_TYPE;
