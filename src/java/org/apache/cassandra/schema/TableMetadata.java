@@ -991,7 +991,7 @@ public class TableMetadata implements SchemaElement
          */
         public Builder recordDeprecatedSystemColumn(String name, AbstractType<?> type)
         {
-            // As we play fast and loose with the removal timestamp, make sure this is misued for a non system table.
+            // As we play fast and loose with the removal timestamp, make sure this is misused for a non system table.
             assert SchemaConstants.isLocalSystemKeyspace(keyspace);
             recordColumnDrop(ColumnMetadata.regularColumn(keyspace, this.name, name, type), Long.MAX_VALUE);
             return this;
