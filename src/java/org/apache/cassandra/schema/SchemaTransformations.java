@@ -183,7 +183,7 @@ public class SchemaTransformations
                         TableMetadata desiredTable = updatedKeyspace.tables.getNullable(curTable.name);
                         if (desiredTable == null)
                         {
-                            // preserve exsiting tables which are missing in the new keyspace definition
+                            // preserve existing tables which are missing in the new keyspace definition
                             updatedKeyspace = updatedKeyspace.withSwapped(updatedKeyspace.tables.with(curTable));
                         }
                         else

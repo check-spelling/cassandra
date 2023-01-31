@@ -631,7 +631,7 @@ public interface Row extends Unfiltered, Iterable<ColumnData>, IMeasurableMemory
          * Appends new values to a given non-frozen collection column.
          * <p>
          * This method is similar to {@code add()} but the collection elements added through this method are "appended"
-         * to any pre-exising elements. In other words, this is like {@code add()} except that it doesn't delete the
+         * to any pre-existing elements. In other words, this is like {@code add()} except that it doesn't delete the
          * previous value of the collection. This can only be called on non-frozen collection columns.
          * <p>
          * Note that this method can be used in replacement of {@code add()} if you know that there can't be any

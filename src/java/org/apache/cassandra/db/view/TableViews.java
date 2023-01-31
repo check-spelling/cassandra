@@ -301,7 +301,7 @@ public class TableViews extends AbstractCollection<View>
                     while (updatesIter.hasNext())
                     {
                         Unfiltered update = updatesIter.next();
-                        // If it's a range tombstone, it removes nothing pre-exisiting, so we can ignore it for view updates
+                        // If it's a range tombstone, it removes nothing pre-existing, so we can ignore it for view updates
                         if (update.isRangeTombstoneMarker())
                             continue;
 
@@ -342,7 +342,7 @@ public class TableViews extends AbstractCollection<View>
             while (updatesIter.hasNext())
             {
                 Unfiltered update = updatesIter.next();
-                // If it's a range tombstone, it removes nothing pre-exisiting, so we can ignore it for view updates
+                // If it's a range tombstone, it removes nothing pre-existing, so we can ignore it for view updates
                 if (update.isRangeTombstoneMarker())
                     continue;
 
