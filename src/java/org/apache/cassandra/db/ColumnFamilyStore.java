@@ -2430,9 +2430,9 @@ public class ColumnFamilyStore implements ColumnFamilyStoreMBean, Memtable.Owner
             String[] splits = str.split(TOKEN_DELIMITER);
             assert splits.length == 2 : String.format("Unable to parse token range %s; needs to have two tokens separated by %s", str, TOKEN_DELIMITER);
             String lhsStr = splits[0];
-            assert !Strings.isNullOrEmpty(lhsStr) : String.format("Unable to parse token range %s; left hand side of the token separater is empty", str);
+            assert !Strings.isNullOrEmpty(lhsStr) : String.format("Unable to parse token range %s; left hand side of the token separator is empty", str);
             String rhsStr = splits[1];
-            assert !Strings.isNullOrEmpty(rhsStr) : String.format("Unable to parse token range %s; right hand side of the token separater is empty", str);
+            assert !Strings.isNullOrEmpty(rhsStr) : String.format("Unable to parse token range %s; right hand side of the token separator is empty", str);
             Token lhs = tokenFactory.fromString(lhsStr);
             Token rhs = tokenFactory.fromString(rhsStr);
             tokenRanges.add(new Range<>(lhs, rhs));
