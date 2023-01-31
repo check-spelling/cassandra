@@ -159,7 +159,7 @@ public class ReplicaFilteringProtectionTest extends TestBaseImpl
 
         // Case 3: Observe the effects of blocking read-repair.
 
-        // The previous query peforms a blocking read-repair, which removes replica divergence. This
+        // The previous query performs a blocking read-repair, which removes replica divergence. This
         // will only warn, therefore, if the warning threshold is actually below the number of replicas.
         // (i.e. The row cache counter is decremented/reset as each partition is consumed.)
         SimpleQueryResult newResult = cluster.coordinator(1).executeWithResult(query, ALL, "new", ROWS);
