@@ -48,22 +48,22 @@ public class FilterTestHelper
         return new CachedHashDecoratedKey(new LongToken(0L), buf);
     }
 
-    static final ResetableIterator<ByteBuffer> intKeys()
+    static final ResettableIterator<ByteBuffer> intKeys()
     {
         return new KeyGenerator.IntGenerator(ELEMENTS);
     }
 
-    static final ResetableIterator<ByteBuffer> randomKeys()
+    static final ResettableIterator<ByteBuffer> randomKeys()
     {
         return new KeyGenerator.RandomStringGenerator(314159, ELEMENTS);
     }
 
-    static final ResetableIterator<ByteBuffer> randomKeys2()
+    static final ResettableIterator<ByteBuffer> randomKeys2()
     {
         return new KeyGenerator.RandomStringGenerator(271828, ELEMENTS);
     }
 
-    public static double testFalsePositives(IFilter f, ResetableIterator<ByteBuffer> keys, ResetableIterator<ByteBuffer> otherkeys)
+    public static double testFalsePositives(IFilter f, ResettableIterator<ByteBuffer> keys, ResettableIterator<ByteBuffer> otherkeys)
     {
         assert keys.size() == otherkeys.size();
 

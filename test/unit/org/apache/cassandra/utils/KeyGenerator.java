@@ -36,7 +36,7 @@ public class KeyGenerator
         return ByteBuffer.wrap(bytes);
     }
 
-    static class RandomStringGenerator implements ResetableIterator<ByteBuffer>
+    static class RandomStringGenerator implements ResettableIterator<ByteBuffer>
     {
         int i, n, seed;
         Random random;
@@ -76,7 +76,7 @@ public class KeyGenerator
         }
     }
 
-    static class IntGenerator implements ResetableIterator<ByteBuffer>
+    static class IntGenerator implements ResettableIterator<ByteBuffer>
     {
         private int i, start, n;
 
@@ -118,7 +118,7 @@ public class KeyGenerator
         }
     }
 
-    static class WordGenerator implements ResetableIterator<ByteBuffer>
+    static class WordGenerator implements ResettableIterator<ByteBuffer>
     {
         static int WORDS;
 
