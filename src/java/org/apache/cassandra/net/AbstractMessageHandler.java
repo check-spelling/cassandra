@@ -769,7 +769,7 @@ public abstract class AbstractMessageHandler extends ChannelInboundHandlerAdapte
             private final WaitQueue waitQueue;
             private final AbstractMessageHandler handler;
             private final int bytesRequested;
-            private final long reigsteredAtNanos;
+            private final long registeredAtNanos;
             private final long expiresAtNanos;
 
             private Ticket(WaitQueue waitQueue, AbstractMessageHandler handler, int bytesRequested, long registeredAtNanos, long expiresAtNanos)
@@ -777,13 +777,13 @@ public abstract class AbstractMessageHandler extends ChannelInboundHandlerAdapte
                 this.waitQueue = waitQueue;
                 this.handler = handler;
                 this.bytesRequested = bytesRequested;
-                this.reigsteredAtNanos = registeredAtNanos;
+                this.registeredAtNanos = registeredAtNanos;
                 this.expiresAtNanos = expiresAtNanos;
             }
 
             private void reactivateHandler(Limit capacity)
             {
-                long elapsedNanos = approxTime.now() - reigsteredAtNanos;
+                long elapsedNanos = approxTime.now() - registeredAtNanos;
                 try
                 {
                     if (waitQueue.kind == Kind.ENDPOINT)
