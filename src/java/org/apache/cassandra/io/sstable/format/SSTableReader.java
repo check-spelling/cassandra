@@ -1229,7 +1229,7 @@ public abstract class SSTableReader extends SSTable implements UnfilteredSource,
                 // since that will be the last index we will return
                 right = (right + 1) * -1;
                 if (right == 0)
-                    // Means the first key is already stricly greater that the right bound
+                    // Means the first key is already strictly greater that the right bound
                     continue;
                 right--;
             }
