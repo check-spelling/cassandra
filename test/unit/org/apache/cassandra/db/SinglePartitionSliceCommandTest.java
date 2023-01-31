@@ -87,7 +87,7 @@ public class SinglePartitionSliceCommandTest
     private static ColumnMetadata v;
     private static ColumnMetadata s;
 
-    private static final String TABLE_SCLICES = "tbl_slices";
+    private static final String TABLE_SLICES = "tbl_slices";
     private static TableMetadata CFM_SLICES;
 
     @BeforeClass
@@ -103,7 +103,7 @@ public class SinglePartitionSliceCommandTest
                          .addRegularColumn("v", UTF8Type.instance)
                          .build();
 
-        CFM_SLICES = TableMetadata.builder(KEYSPACE, TABLE_SCLICES)
+        CFM_SLICES = TableMetadata.builder(KEYSPACE, TABLE_SLICES)
                                   .addPartitionKeyColumn("k", UTF8Type.instance)
                                   .addClusteringColumn("c1", Int32Type.instance)
                                   .addClusteringColumn("c2", Int32Type.instance)
@@ -120,7 +120,7 @@ public class SinglePartitionSliceCommandTest
     public void truncate()
     {
         Keyspace.open(KEYSPACE).getColumnFamilyStore(TABLE).truncateBlocking();
-        Keyspace.open(KEYSPACE).getColumnFamilyStore(TABLE_SCLICES).truncateBlocking();
+        Keyspace.open(KEYSPACE).getColumnFamilyStore(TABLE_SLICES).truncateBlocking();
     }
 
     @Test
@@ -180,7 +180,7 @@ public class SinglePartitionSliceCommandTest
                                                      ck1));
 
         if (flush)
-            Util.flushTable(KEYSPACE, TABLE_SCLICES);
+            Util.flushTable(KEYSPACE, TABLE_SLICES);
 
         AbstractClusteringIndexFilter clusteringFilter = createClusteringFilter(uniqueCk1, uniqueCk2, isSlice);
         ReadCommand cmd = SinglePartitionReadCommand.create(CFM_SLICES,
