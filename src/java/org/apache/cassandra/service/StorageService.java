@@ -2993,7 +2993,7 @@ public class StorageService extends NotificationBroadcasterSupport implements IE
             // The original host replacement must have been able to resolve the replacing address on startup
             // when setting StorageService.replacing, so if it is impossible to resolve now it is probably
             // decommissioned and did not have the same IP address or host id.  Allow the handleStateNormal
-            // handling to proceed, otherwise gossip state will be inconistent with some nodes believing the
+            // handling to proceed, otherwise gossip state will be inconsistent with some nodes believing the
             // replacement host to be normal, and nodes unable to resolve the hostname will be left in JOINING.
             if (ex.getCause() != null && ex.getCause().getClass() == UnknownHostException.class)
             {

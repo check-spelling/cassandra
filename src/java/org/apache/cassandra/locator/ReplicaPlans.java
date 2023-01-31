@@ -550,7 +550,7 @@ public class ReplicaPlans
          *
          * We do not speculate for EACH_QUORUM.
          *
-         * TODO: this is still very inconistently managed between {LOCAL,EACH}_QUORUM and other consistency levels - should address this in a follow-up
+         * TODO: this is still very inconsistently managed between {LOCAL,EACH}_QUORUM and other consistency levels - should address this in a follow-up
          */
         if (consistencyLevel == EACH_QUORUM && replicationStrategy instanceof NetworkTopologyStrategy)
             return contactForEachQuorumRead((NetworkTopologyStrategy) replicationStrategy, candidates);

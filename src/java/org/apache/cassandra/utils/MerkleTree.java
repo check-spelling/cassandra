@@ -320,7 +320,7 @@ public class MerkleTree
             diff.add(right);
             return PARTIALLY_INCONSISTENT;
         }
-        logger.trace("({}) Range {} partially inconstent", active.depth, active);
+        logger.trace("({}) Range {} partially inconsistent", active.depth, active);
         return PARTIALLY_INCONSISTENT;
     }
 
