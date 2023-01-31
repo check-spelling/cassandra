@@ -725,7 +725,7 @@ public class StorageProxy implements StorageProxyMBean
     }
 
     /**
-     * Propose the {@param proposal} accoding to the {@param replicaPlan}.
+     * Propose the {@param proposal} according to the {@param replicaPlan}.
      * When {@param backoffIfPartial} is true, the proposer backs off when seeing the proposal being accepted by some but not a quorum.
      * The result of the cooresponding CAS in uncertain as the accepted proposal may or may not be spread to other nodes in later rounds.
      */
