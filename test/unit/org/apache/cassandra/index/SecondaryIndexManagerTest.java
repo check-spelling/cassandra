@@ -537,16 +537,16 @@ public class SecondaryIndexManagerTest extends CQLTester
     }
 
     @Test
-    public void handleJVMStablityOnFailedCreate()
+    public void handleJVMStabilityOnFailedCreate()
     {
-        handleJVMStablityOnFailedCreate(new SocketException("Should not fail"), false);
-        handleJVMStablityOnFailedCreate(new FileNotFoundException("Should not fail"), false);
-        handleJVMStablityOnFailedCreate(new SocketException("Too many open files"), true);
-        handleJVMStablityOnFailedCreate(new FileNotFoundException("Too many open files"), true);
-        handleJVMStablityOnFailedCreate(new RuntimeException("Should not fail"), false);
+        handleJVMStabilityOnFailedCreate(new SocketException("Should not fail"), false);
+        handleJVMStabilityOnFailedCreate(new FileNotFoundException("Should not fail"), false);
+        handleJVMStabilityOnFailedCreate(new SocketException("Too many open files"), true);
+        handleJVMStabilityOnFailedCreate(new FileNotFoundException("Too many open files"), true);
+        handleJVMStabilityOnFailedCreate(new RuntimeException("Should not fail"), false);
     }
 
-    private void handleJVMStablityOnFailedCreate(Throwable throwable, boolean shouldKillJVM)
+    private void handleJVMStabilityOnFailedCreate(Throwable throwable, boolean shouldKillJVM)
     {
         KillerForTests killerForTests = new KillerForTests();
         JVMStabilityInspector.Killer originalKiller = JVMStabilityInspector.replaceKiller(killerForTests);
@@ -574,16 +574,16 @@ public class SecondaryIndexManagerTest extends CQLTester
     }
 
     @Test
-    public void handleJVMStablityOnFailedRebuild() throws Throwable
+    public void handleJVMStabilityOnFailedRebuild() throws Throwable
     {
-        handleJVMStablityOnFailedRebuild(new SocketException("Should not fail"), false);
-        handleJVMStablityOnFailedRebuild(new FileNotFoundException("Should not fail"), false);
-        handleJVMStablityOnFailedRebuild(new SocketException("Too many open files"), true);
-        handleJVMStablityOnFailedRebuild(new FileNotFoundException("Too many open files"), true);
-        handleJVMStablityOnFailedRebuild(new RuntimeException("Should not fail"), false);
+        handleJVMStabilityOnFailedRebuild(new SocketException("Should not fail"), false);
+        handleJVMStabilityOnFailedRebuild(new FileNotFoundException("Should not fail"), false);
+        handleJVMStabilityOnFailedRebuild(new SocketException("Too many open files"), true);
+        handleJVMStabilityOnFailedRebuild(new FileNotFoundException("Too many open files"), true);
+        handleJVMStabilityOnFailedRebuild(new RuntimeException("Should not fail"), false);
     }
 
-    private void handleJVMStablityOnFailedRebuild(Throwable throwable, boolean shouldKillJVM) throws Throwable
+    private void handleJVMStabilityOnFailedRebuild(Throwable throwable, boolean shouldKillJVM) throws Throwable
     {
         String tableName = createTable("CREATE TABLE %s (a int, b int, c int, PRIMARY KEY (a, b))");
         String indexName = createIndex(String.format("CREATE CUSTOM INDEX ON %%s(c) USING '%s'", TestingIndex.class.getName()));
