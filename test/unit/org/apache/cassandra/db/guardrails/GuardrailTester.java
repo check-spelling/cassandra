@@ -511,7 +511,7 @@ public abstract class GuardrailTester extends CQLTester
 
     /**
      * Performs execution of query using the input {@link ClientState} (i.e. unlike {@link ClientState#forInternalCalls()}
-     * which may not) to ensure guardrails are approprieately applied to the query provided.
+     * which may not) to ensure guardrails are appropriately applied to the query provided.
      */
     protected ResultMessage execute(ClientState state, String query, QueryOptions options)
     {
