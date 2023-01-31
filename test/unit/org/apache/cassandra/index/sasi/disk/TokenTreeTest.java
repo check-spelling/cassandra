@@ -310,7 +310,7 @@ public class TokenTreeTest
     }
 
     @Test
-    public void testTokenMergeDyanmic() throws Exception
+    public void testTokenMergeDynamic() throws Exception
     {
         testTokenMerge(false);
     }
