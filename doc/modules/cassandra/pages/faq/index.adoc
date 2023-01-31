@@ -35,7 +35,7 @@ When a new nodes joins a cluster, it will automatically contact the
 other nodes in the cluster and copy the right data to itself. See
 `topology-changes`.
 
-[[asynch-deletes]]
+[[async-deletes]]
 == I delete data from Cassandra, but disk usage stays the same. What gives?
 
 Data you write to Cassandra gets persisted to SSTables. Since SSTables

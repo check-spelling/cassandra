@@ -183,7 +183,7 @@ in a wide partition. Items are appended to the end of the queue and read
 from the front, being deleted after they are read. This is a design that
 seems attractive, especially given its apparent similarity to the time
 series pattern. The problem with this approach is that the deleted items
-are now `tombstones <asynch-deletes>` that Cassandra must scan past in
+are now `tombstones <async-deletes>` that Cassandra must scan past in
 order to read from the front of the queue. Over time, a growing number
 of tombstones begins to degrade read performance.
 
