@@ -73,7 +73,7 @@ public final class DropTriggerStatement extends AlterSchemaStatement
 
     public void authorize(ClientState client)
     {
-        client.ensureIsSuperuser("Only superusers are allowed to perfrom DROP TRIGGER queries");
+        client.ensureIsSuperuser("Only superusers are allowed to perform DROP TRIGGER queries");
     }
 
     @Override
