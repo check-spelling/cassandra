@@ -1106,7 +1106,7 @@ bc(syntax)..
 
 <op> ::= '=' | '<' | '>' | '<=' | '>=' | CONTAINS | CONTAINS KEY
 <group-by> ::= (<identifier>,)* (<identifier> | <function>)
-<order-by> ::= <ordering> ( ',' <odering> )*
+<order-by> ::= <ordering> ( ',' <ordering> )*
 <ordering> ::= <identifer> ( ASC | DESC )?
 <term-tuple> ::= '(' <term> (',' <term>)* ')'
 p. 
