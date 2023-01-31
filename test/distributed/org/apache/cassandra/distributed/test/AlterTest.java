@@ -85,7 +85,7 @@ public class AlterTest extends TestBaseImpl
     }
 
     @Test
-    public void alteringKeyspaceOnInsufficientNumberOfReplicasFiltersOutGossppingOnlyMembersTest() throws Throwable
+    public void alteringKeyspaceOnInsufficientNumberOfReplicasFiltersOutGossippingOnlyMembersTest() throws Throwable
     {
         int originalNodeCount = 1;
         int expandedNodeCount = originalNodeCount + 1;
