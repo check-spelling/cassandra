@@ -47,7 +47,7 @@ import static org.apache.cassandra.utils.concurrent.BlockingQueues.newBlockingQu
  * This writer buffers rows in memory and then write them all in sorted order.
  * To avoid loading the entire data set in memory, the amount of rows buffered
  * is configurable. Each time the threshold is met, one SSTable will be
- * created (and the buffer be reseted).
+ * created (and the buffer be reset).
  *
  * @see SSTableSimpleWriter
  */
