@@ -2064,7 +2064,7 @@ public class SASIIndexTest
         store.rebuildSecondaryIndex(CLUSTERING_CF_NAME_1 + "_age");
 
         long size2 = Files.readAttributes(path, BasicFileAttributes.class).size();
-        // Make sure that garbage was overwriten
+        // Make sure that garbage was overwritten
         Assert.assertTrue(size2 > size1);
 
         // Make sure that indexes work for rebuit tables
