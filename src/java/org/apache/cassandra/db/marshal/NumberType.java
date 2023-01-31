@@ -241,7 +241,7 @@ public abstract class NumberType<T extends Number> extends AbstractType<T>
     public abstract ByteBuffer exp(ByteBuffer input);
 
     /**
-     * Takes the natural logrithm of the argument.
+     * Takes the natural logarithm of the argument.
      *
      * @param input the argument to take the natural log (ln) of
      * @return a ByteBuffer containing the log base e (ln) of the argument. The type of the contents of the ByteBuffer
