@@ -1290,7 +1290,7 @@ public class BufferPool
         /**
          * We stash the chunk in the attachment of a buffer
          * that was returned by get(), this method simply
-         * retrives the chunk that sliced a buffer, if any.
+         * retrieves the chunk that sliced a buffer, if any.
          */
         static Chunk getParentChunk(ByteBuffer buffer)
         {
