@@ -196,7 +196,7 @@ public abstract class SSTableHeaderFix
         /**
          * Manually provide an individual sstable or directory containing sstables.
          *
-         * Implementation note: procesing "live" sstables in their data directories as well as sstables
+         * Implementation note: processing "live" sstables in their data directories as well as sstables
          * in snapshots and backups in the data directories works.
          *
          * But processing sstables that reside somewhere else (i.e. verifying sstables before import)
