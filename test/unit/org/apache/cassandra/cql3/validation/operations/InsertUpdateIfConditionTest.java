@@ -176,7 +176,7 @@ public class InsertUpdateIfConditionTest extends CQLTester
         assertRows(execute("DELETE v2 FROM %s WHERE k = 0 IF v1 = ?", 5), row(true));
         assertRows(execute("SELECT * FROM %s"), row(0, 5, null, null));
 
-        // Shouln't apply
+        // Shouldn't apply
         assertRows(execute("DELETE v1 FROM %s WHERE k = 0 IF v3 = ?", 4), row(false, null));
 
         // Should apply
