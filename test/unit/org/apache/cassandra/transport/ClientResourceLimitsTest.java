@@ -334,7 +334,7 @@ public class ClientResourceLimitsTest extends CQLTester
                 }
                 catch (Exception e)
                 {
-                    // ignore interuption and barrier exceptions
+                    // ignore interruption and barrier exceptions
                 }
                 return new SimpleDataSet(tableMetadata);
             });
