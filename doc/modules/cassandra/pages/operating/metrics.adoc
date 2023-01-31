@@ -371,7 +371,7 @@ written to disk
 
 |MigrationStage |internal |Runs schema migrations
 
-|MiscStage |internal |Misceleneous tasks run here
+|MiscStage |internal |Miscellaneous tasks run here
 
 |PendingRangeCalculator |internal |Calculates token range
 
