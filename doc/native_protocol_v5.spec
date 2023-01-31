@@ -1312,13 +1312,13 @@ Table of Contents
                              - "BATCH_LOG": the timeout occurred during the
                                write to the batch log when a (logged) batch
                                write was requested.
-                             - "CAS": the timeout occured during the Compare And Set write/update.
-                             - "VIEW": the timeout occured when a write involves
+                             - "CAS": the timeout occurred during the Compare And Set write/update.
+                             - "VIEW": the timeout occurred when a write involves
                                VIEW update and failure to acquire local view(MV)
                                lock for key within timeout
-                             - "CDC": the timeout occured when cdc_total_space is
+                             - "CDC": the timeout occurred when cdc_total_space is
                                exceeded when doing a write to data tracked by cdc.
-                <contentions> is a [short] that describes the number of contentions occured during the CAS operation.
+                <contentions> is a [short] that describes the number of contentions occurred during the CAS operation.
                               The field only presents when the <writeType> is "CAS".
     0x1200    Read_timeout: Timeout exception during a read request. The rest
               of the ERROR message body will be
@@ -1392,17 +1392,17 @@ Table of Contents
                                batch. No batch log write has been attempted.
                              - "COUNTER": the write was a counter write
                                (batched or not).
-                             - "BATCH_LOG": the failure occured during the
+                             - "BATCH_LOG": the failure occurred during the
                                write to the batch log when a (logged) batch
                                write was requested.
-                             - "CAS": the failure occured during the Compare And Set write/update.
-                             - "VIEW": the failure occured when a write involves
+                             - "CAS": the failure occurred during the Compare And Set write/update.
+                             - "VIEW": the failure occurred when a write involves
                                VIEW update and failure to acquire local view(MV)
                                lock for key within timeout
-                             - "CDC": the failure occured when cdc_total_space is
+                             - "CDC": the failure occurred when cdc_total_space is
                                exceeded when doing a write to data tracked by cdc.
     0x1600    CDC_WRITE_FAILURE: // todo
-    0x1700    CAS_WRITE_UNKNOWN: An exception occured due to contended Compare And Set write/update.
+    0x1700    CAS_WRITE_UNKNOWN: An exception occurred due to contended Compare And Set write/update.
               The CAS operation was only partially completed and the operation may or may not get completed by
               the contending CAS write or SERIAL/LOCAL_SERIAL read. The rest of the ERROR message body will be
                 <cl><received><blockfor>

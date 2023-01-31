@@ -70,7 +70,7 @@ public class JStackJUnitTask extends JUnitTask
         }
 
         @Override
-        public synchronized void timeoutOccured(Watchdog w)
+        public synchronized void timeoutOccurred(Watchdog w)
         {
             if (pid > 0)
             {
@@ -95,7 +95,7 @@ public class JStackJUnitTask extends JUnitTask
                     e.printStackTrace();
                 }
             }
-            super.timeoutOccured(w);
+            super.timeoutOccurred(w);
         }
 
         private long getPid(Process process)

@@ -93,7 +93,7 @@ public class StatusLoggerTest extends CQLTester
         }
         else
         {
-            verifyStatusWasPrintedAndBusyEventOccured(firstThreadEvents, secondThreadEvents);
+            verifyStatusWasPrintedAndBusyEventOccurred(firstThreadEvents, secondThreadEvents);
         }
     }
 
@@ -116,7 +116,7 @@ public class StatusLoggerTest extends CQLTester
         return Range.closedOpen(min, max);
     }
 
-    private void verifyStatusWasPrintedAndBusyEventOccured(List<ILoggingEvent> firstThreadEvents, List<ILoggingEvent> secondThreadEvents)
+    private void verifyStatusWasPrintedAndBusyEventOccurred(List<ILoggingEvent> firstThreadEvents, List<ILoggingEvent> secondThreadEvents)
     {
         if (firstThreadEvents.size() > 1 && secondThreadEvents.size() > 1)
         {

@@ -993,10 +993,10 @@ Table of Contents
                                batch. Not batch log write has been attempted.
                              - "COUNTER": the write was a counter write
                                (batched or not).
-                             - "BATCH_LOG": the timeout occured during the
+                             - "BATCH_LOG": the timeout occurred during the
                                write to the batch log when a (logged) batch
                                write was requested.
-                             - "CAS": the timeout occured during the Compare And Set write/update.
+                             - "CAS": the timeout occurred during the Compare And Set write/update.
     0x1200    Read_timeout: Timeout exception during a read request. The rest
               of the ERROR message body will be
                 <cl><received><blockfor><data_present>

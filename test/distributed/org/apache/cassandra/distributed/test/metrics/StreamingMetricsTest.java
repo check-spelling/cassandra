@@ -92,7 +92,7 @@ public class StreamingMetricsTest extends TestBaseImpl
             Object[][] results = cluster.get(3).executeInternal(withKeyspace("SELECT k, c1, c2 FROM %s.cf;"));
             assertThat(results.length).isEqualTo(0);
 
-            checkThatNoStreamingOccuredBetweenTheThreeNodes(cluster);
+            checkThatNoStreamingOccurredBetweenTheThreeNodes(cluster);
 
             // Trigger streaming from node 3
             if (useRepair)
@@ -102,7 +102,7 @@ public class StreamingMetricsTest extends TestBaseImpl
 
 
             // Check streaming metrics on node 1
-            checkThatNoStreamingOccured(cluster, 1, 2);
+            checkThatNoStreamingOccurred(cluster, 1, 2);
             long bytesFrom1 = checkDataSent(cluster, 1, 3);
             checkDataReceived(cluster, 1, 3, 0, 0);
 
@@ -114,7 +114,7 @@ public class StreamingMetricsTest extends TestBaseImpl
             checkTotalDataReceived(cluster, 1, 0);
 
             // Check streaming metrics on node 2
-            checkThatNoStreamingOccured(cluster, 2, 1);
+            checkThatNoStreamingOccurred(cluster, 2, 1);
             long bytesFrom2 = checkDataSent(cluster, 2, 3);
             checkDataReceived(cluster, 1, 2, 0, 0);
 
@@ -205,7 +205,7 @@ public class StreamingMetricsTest extends TestBaseImpl
 
             drop1to2.off();
 
-            checkThatNoStreamingOccuredBetweenTheThreeNodes(cluster);
+            checkThatNoStreamingOccurredBetweenTheThreeNodes(cluster);
 
             // Trigger streaming from node 3 and node 2
 
@@ -294,25 +294,25 @@ public class StreamingMetricsTest extends TestBaseImpl
         }
     }
 
-    private void checkThatNoStreamingOccuredBetweenTheThreeNodes(Cluster cluster)
+    private void checkThatNoStreamingOccurredBetweenTheThreeNodes(Cluster cluster)
     {
-        checkThatNoStreamingOccured(cluster, 1, 2);
-        checkThatNoStreamingOccured(cluster, 1, 3);
+        checkThatNoStreamingOccurred(cluster, 1, 2);
+        checkThatNoStreamingOccurred(cluster, 1, 3);
         checkTotalDataSent(cluster, 1, 0, 0, 0);
         checkTotalDataReceived(cluster, 1, 0);
 
-        checkThatNoStreamingOccured(cluster, 2, 1);
-        checkThatNoStreamingOccured(cluster, 2, 3);
+        checkThatNoStreamingOccurred(cluster, 2, 1);
+        checkThatNoStreamingOccurred(cluster, 2, 3);
         checkTotalDataSent(cluster, 2, 0, 0, 0);
         checkTotalDataReceived(cluster, 2, 0);
 
-        checkThatNoStreamingOccured(cluster, 3, 1);
-        checkThatNoStreamingOccured(cluster, 3, 2);
+        checkThatNoStreamingOccurred(cluster, 3, 1);
+        checkThatNoStreamingOccurred(cluster, 3, 2);
         checkTotalDataSent(cluster, 3, 0, 0, 0);
         checkTotalDataReceived(cluster, 3, 0);
     }
 
-    private void checkThatNoStreamingOccured(Cluster cluster, int node, int peer)
+    private void checkThatNoStreamingOccurred(Cluster cluster, int node, int peer)
     {
         InetAddressAndPort address = getNodeAddress(cluster, peer);
         cluster.get(node).runOnInstance(() -> {

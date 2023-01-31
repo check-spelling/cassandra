@@ -88,7 +88,7 @@ public class ReadExecutorTest
 
     /**
      * If speculation would have been beneficial but could not be attempted due to lack of replicas
-     * count that it occured
+     * count that it occurred
      */
     @Test
     public void testUnableToSpeculate() throws Throwable
