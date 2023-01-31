@@ -65,7 +65,7 @@ final class AuditLogFilter
 
     /**
      * Constructs mutually exclusive sets of included and excluded data. When there is a conflict,
-     * the entry is put into the excluded set (and removed fron the included).
+     * the entry is put into the excluded set (and removed from the included).
      */
     private static IncludeExcludeHolder loadInputSets(String includedInput, String excludedInput)
     {

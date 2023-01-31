@@ -230,7 +230,7 @@ public class NativeTransportEncryptionOptionsTest extends AbstractEncryptionOpti
                   ImmutableMap.<String,Object>builder().putAll(nonExistantCipher).put("enabled", true).build());
         }).createWithoutStarting())
         {
-            // Should also log "Dropping unsupported cipher_suite NoCipherIKnow from from native transport configuration"
+            // Should also log "Dropping unsupported cipher_suite NoCipherIKnow from native transport configuration"
             assertCannotStartDueToConfigurationException(cluster);
         }
     }
