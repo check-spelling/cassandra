@@ -1649,7 +1649,7 @@ public class NodeProbe implements AutoCloseable
     // JMX getters for the o.a.c.metrics API below.
     /**
      * Retrieve cache metrics based on the cache type (KeyCache, RowCache, or CounterCache)
-     * @param cacheType KeyCach, RowCache, or CounterCache
+     * @param cacheType KeyCache, RowCache, or CounterCache
      * @param metricName Capacity, Entries, HitRate, Size, Requests or Hits.
      */
     public Object getCacheMetric(String cacheType, String metricName)
