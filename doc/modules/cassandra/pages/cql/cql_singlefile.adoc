@@ -3795,7 +3795,7 @@ See link:#selectWhere[SELECT WHERE] clauses.
 
 ==== 3.1.5
 
-* It is now possible to group clustering columns in a relatiion, see
+* It is now possible to group clustering columns in a relation, see
 link:#selectWhere[SELECT WHERE] clauses.
 * Added support for `STATIC` columns, see link:#createTableStatic[static
 in CREATE TABLE].

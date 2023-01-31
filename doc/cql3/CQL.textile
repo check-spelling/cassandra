@@ -2656,7 +2656,7 @@ h3. 3.1.6
 
 h3. 3.1.5
 
-* It is now possible to group clustering columns in a relatiion, see "SELECT WHERE":#selectWhere clauses.
+* It is now possible to group clustering columns in a relation, see "SELECT WHERE":#selectWhere clauses.
 * Added support for @STATIC@ columns, see "static in CREATE TABLE":#createTableStatic.
 
 h3. 3.1.4
