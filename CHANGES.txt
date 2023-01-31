@@ -5294,7 +5294,7 @@ Merged from 1.1:
  * Fix CQL3 'is reversed' logic (CASSANDRA-4716, 4759)
  * (CQL3) Don't return ReversedType in result set metadata (CASSANDRA-4717)
  * Backport adding AlterKeyspace statement (CASSANDRA-4611)
- * (CQL3) Correcty accept upper-case data types (CASSANDRA-4770)
+ * (CQL3) Correctly accept upper-case data types (CASSANDRA-4770)
  * Add binary protocol events for schema changes (CASSANDRA-4684)
 Merged from 1.0:
  * Switch from NBHM to CHM in MessagingService's callback map, which
