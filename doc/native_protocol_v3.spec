@@ -555,7 +555,7 @@ Table of Contents
                       this query (See Section 8 for more details).
             0x0004    No_metadata: if set, the <metadata> is only composed of
                       these <flags>, the <column_count> and optionally the
-                      <paging_state> (depending on the Has_more_pages flage) but
+                      <paging_state> (depending on the Has_more_pages flag) but
                       no other information (so no <global_table_spec> nor <col_spec_i>).
                       This will only ever be the case if this was requested
                       during the query (see QUERY and RESULT messages).
