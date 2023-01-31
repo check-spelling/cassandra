@@ -31,7 +31,7 @@ import com.sun.jna.Pointer;
  * A {@code NativeLibraryWrapper} implementation for Darwin/Mac.
  * <p>
  * When JNA is initialized, all methods that have the 'native' keyword
- * will be attmpted to be linked against. As Java doesn't have the equivalent
+ * will be attempted to be linked against. As Java doesn't have the equivalent
  * of a #ifdef, this means if a native method like posix_fadvise is defined in the
  * class but not available on the target operating system (e.g.
  * posix_fadvise is not availble on Darwin/Mac) this will cause the entire
