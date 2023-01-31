@@ -279,7 +279,7 @@ public class CasWriteTest extends TestBaseImpl
         Assert.fail("Expecting test to throw a CasWriteUnknownResultException");
     }
 
-    // every invokation returns a query with an unique pk
+    // every invocation returns a query with an unique pk
     private String mkUniqueCasInsertQuery(int v)
     {
         return mkCasInsertQuery(AtomicInteger::getAndIncrement, 1, v);
