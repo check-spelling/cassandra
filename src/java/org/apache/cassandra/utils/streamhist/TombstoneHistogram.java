@@ -26,7 +26,7 @@ import org.apache.cassandra.io.util.DataOutputPlus;
 import org.apache.cassandra.utils.streamhist.StreamingTombstoneHistogramBuilder.DataHolder;
 
 /**
- * A snapshot or finished histrogram of tombstones for a sstable, as generated from {@link StreamingTombstoneHistogramBuilder}.
+ * A snapshot or finished histogram of tombstones for a sstable, as generated from {@link StreamingTombstoneHistogramBuilder}.
  */
 public class TombstoneHistogram
 {
