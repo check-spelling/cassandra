@@ -314,7 +314,7 @@ Merged from 3.0:
  * Prewarm role and credential caches to avoid timeouts at startup (CASSANDRA-16958)
  * Make capacity/validity/updateinterval/activeupdate for Auth Caches configurable via nodetool (CASSANDRA-17063)
  * Added startup check for read_ahead_kb setting (CASSANDRA-16436)
- * Avoid unecessary array allocations and initializations when performing query checks (CASSANDRA-17209)
+ * Avoid unnecessary array allocations and initializations when performing query checks (CASSANDRA-17209)
  * Add guardrail for list operations that require read before write (CASSANDRA-17154)
  * Migrate thresholds for number of keyspaces and tables to guardrails (CASSANDRA-17195)
  * Remove self-reference in SSTableTidier (CASSANDRA-17205)
@@ -2323,7 +2323,7 @@ Merged from 2.2:
  * Restore ability to filter on clustering columns when using a 2i (CASSANDRA-11510)
  * JSON datetime formatting needs timezone (CASSANDRA-11137)
  * Fix is_dense recalculation for Thrift-updated tables (CASSANDRA-11502)
- * Remove unnescessary file existence check during anticompaction (CASSANDRA-11660)
+ * Remove unnecessary file existence check during anticompaction (CASSANDRA-11660)
  * Add missing files to debian packages (CASSANDRA-11642)
  * Avoid calling Iterables::concat in loops during ModificationStatement::getFunctions (CASSANDRA-11621)
  * cqlsh: COPY FROM should use regular inserts for single statement batches and
