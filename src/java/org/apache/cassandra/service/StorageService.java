@@ -6268,7 +6268,7 @@ public class StorageService extends NotificationBroadcasterSupport implements IE
         return traceProbability;
     }
 
-    public boolean shouldTraceProbablistically()
+    public boolean shouldTraceProbabilistically()
     {
         return traceProbability != 0 && ThreadLocalRandom.current().nextDouble() < traceProbability;
     }

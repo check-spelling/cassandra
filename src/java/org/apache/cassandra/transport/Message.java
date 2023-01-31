@@ -243,7 +243,7 @@ public abstract class Message
                     tracingSessionId = nextTimeUUID();
                     Tracing.instance.newSession(tracingSessionId, getCustomPayload());
                 }
-                else if (StorageService.instance.shouldTraceProbablistically())
+                else if (StorageService.instance.shouldTraceProbabilistically())
                 {
                     shouldTrace = true;
                     Tracing.instance.newSession(getCustomPayload());
