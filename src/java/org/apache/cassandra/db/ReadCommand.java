@@ -459,7 +459,7 @@ public abstract class ReadCommand extends AbstractReadQuery
                     iterator = limits().filter(iterator, nowInSec(), selectsFullPartition());
                 }
 
-                // because of the above, we need to append an aritifical end bound if the source iterator was stopped short by a counter.
+                // because of the above, we need to append an artificial end bound if the source iterator was stopped short by a counter.
                 return RTBoundCloser.close(iterator);
             }
             catch (RuntimeException | Error e)
