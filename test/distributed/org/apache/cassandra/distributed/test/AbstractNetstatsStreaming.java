@@ -119,7 +119,7 @@ public abstract class AbstractNetstatsStreaming extends TestBaseImpl
 
     protected static class NetstatsOutputParser
     {
-        public static List<Pair<ReceivingStastistics, SendingStatistics>> parse(final NetstatResults results)
+        public static List<Pair<ReceivingStatistics, SendingStatistics>> parse(final NetstatResults results)
         {
             final Set<String> outputs = new LinkedHashSet<>();
 
@@ -129,14 +129,14 @@ public abstract class AbstractNetstatsStreaming extends TestBaseImpl
                                   .filter(output -> output.contains("Receiving") || output.contains("Sending"))
                                   .forEach(outputs::add);
 
-            final List<Pair<ReceivingStastistics, SendingStatistics>> parsed = new ArrayList<>();
+            final List<Pair<ReceivingStatistics, SendingStatistics>> parsed = new ArrayList<>();
 
             for (final String output : outputs)
             {
                 boolean processingReceiving = false;
                 boolean processingSending = false;
 
-                final ReceivingStastistics receivingStastistics = new ReceivingStastistics();
+                final ReceivingStatistics receivingStatistics = new ReceivingStatistics();
                 final SendingStatistics sendingStatistics = new SendingStatistics();
 
                 final List<String> sanitisedOutput = Stream.of(output.split("\n"))
@@ -154,7 +154,7 @@ public abstract class AbstractNetstatsStreaming extends TestBaseImpl
                         processingReceiving = true;
                         processingSending = false;
 
-                        receivingStastistics.parseHeader(outputLine);
+                        receivingStatistics.parseHeader(outputLine);
                     }
                     else if (outputLine.startsWith("Sending"))
                     {
@@ -165,7 +165,7 @@ public abstract class AbstractNetstatsStreaming extends TestBaseImpl
                     }
                     else if (processingReceiving)
                     {
-                        receivingStastistics.parseTable(outputLine);
+                        receivingStatistics.parseTable(outputLine);
                     }
                     else if (processingSending)
                     {
@@ -173,13 +173,13 @@ public abstract class AbstractNetstatsStreaming extends TestBaseImpl
                     }
                 }
 
-                parsed.add(Pair.create(receivingStastistics, sendingStatistics));
+                parsed.add(Pair.create(receivingStatistics, sendingStatistics));
             }
 
             return parsed;
         }
 
-        public static void validate(List<Pair<ReceivingStastistics, SendingStatistics>> result)
+        public static void validate(List<Pair<ReceivingStatistics, SendingStatistics>> result)
         {
             List<SendingStatistics> sendingStatistics = result.stream().map(pair -> pair.right).collect(toList());
 
@@ -215,9 +215,9 @@ public abstract class AbstractNetstatsStreaming extends TestBaseImpl
                 }
             }
 
-            List<ReceivingStastistics> receivingStastistics = result.stream().map(pair -> pair.left).collect(toList());
+            List<ReceivingStatistics> receivingStatistics = result.stream().map(pair -> pair.left).collect(toList());
 
-            for (ReceivingStastistics receiving : receivingStastistics)
+            for (ReceivingStatistics receiving : receivingStatistics)
             {
                 if (receiving.receivingHeader != null)
                 {
@@ -227,7 +227,7 @@ public abstract class AbstractNetstatsStreaming extends TestBaseImpl
             }
         }
 
-        public static class ReceivingStastistics
+        public static class ReceivingStatistics
         {
             public ReceivingHeader receivingHeader;
             public List<ReceivingTable> receivingTables = new ArrayList<>();
@@ -244,7 +244,7 @@ public abstract class AbstractNetstatsStreaming extends TestBaseImpl
 
             public String toString()
             {
-                return "ReceivingStastistics{" +
+                return "ReceivingStatistics{" +
                        "receivingHeader=" + receivingHeader +
                        ", receivingTables=" + receivingTables +
                        '}';
