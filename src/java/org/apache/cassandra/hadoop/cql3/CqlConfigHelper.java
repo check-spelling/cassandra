@@ -260,7 +260,7 @@ public class CqlConfigHelper
         return getBooleanSetting(INPUT_NATIVE_KEEP_ALIVE, conf);
     }
 
-    public static String getInputcolumns(Configuration conf)
+    public static String getInputColumns(Configuration conf)
     {
         return conf.get(INPUT_CQL_COLUMNS_CONFIG);
     }

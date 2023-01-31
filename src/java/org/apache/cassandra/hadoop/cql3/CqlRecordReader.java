@@ -117,7 +117,7 @@ public class CqlRecordReader extends RecordReader<Long, Row>
         cfName = ConfigHelper.getInputColumnFamily(conf);
         keyspace = ConfigHelper.getInputKeyspace(conf);
         partitioner = ConfigHelper.getInputPartitioner(conf);
-        inputColumns = CqlConfigHelper.getInputcolumns(conf);
+        inputColumns = CqlConfigHelper.getInputColumns(conf);
         userDefinedWhereClauses = CqlConfigHelper.getInputWhereClauses(conf);
 
         try
