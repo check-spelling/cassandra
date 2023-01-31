@@ -168,7 +168,7 @@ public final class InternodeEncryptionEnforcementTest extends TestBaseImpl
     }
 
     @Test
-    public void testConnectionsAreAcceptedWhenAuthSucceds() throws IOException
+    public void testConnectionsAreAcceptedWhenAuthSucceeds() throws IOException
     {
         verifyAuthenticationSucceeds(AllowAllInternodeAuthenticator.class);
     }
