@@ -108,7 +108,7 @@ public class SchemaTest extends TestBaseImpl
     }
 
     /**
-     * The purpose of this test is to verify manual schema reset functinality.
+     * The purpose of this test is to verify manual schema reset functionality.
      * <p>
      * There is a 2-node cluster and a TABLE_ONE created. The schema version is agreed on both nodes. Then the 2nd node
      * is shutdown. We introduce a disagreement by dropping TABLE_ONE and creating TABLE_TWO on the 1st node. Therefore,

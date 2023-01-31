@@ -26,7 +26,7 @@ import org.apache.cassandra.utils.caching.TinyThreadLocalPool;
 
 public class Megamorphism
 {
-    // All functionallity noops,
+    // All functionality noops,
     public enum UpdateF { SIMPLE, SIMPLE_MEGAMORPH, UNSIMPLE }
 
     private static final UpdateFunction SIMPLE_KEEP_OLD_1 = UpdateFunction.noOp();
