@@ -56,7 +56,7 @@ public class CommunicationDuringDecommissionTest extends TestBaseImpl
             Map<Integer, Long> connectionAttempts = new HashMap<>();
             long deadline = currentTimeMillis() + TimeUnit.SECONDS.toMillis(10);
 
-            // Wait 10 seconds and check if there are any new connection attempts to the decomissioned node
+            // Wait 10 seconds and check if there are any new connection attempts to the decommissioned node
             while (currentTimeMillis() <= deadline)
             {
                 for (int i = 2; i <= cluster.size(); i++)

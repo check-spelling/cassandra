@@ -515,7 +515,7 @@ Merged from 3.0:
  * Avoid race in AbstractReplicationStrategy endpoint caching (CASSANDRA-16673)
  * Fix abort when window resizing during cqlsh COPY (CASSANDRA-15230)
  * Fix slow keycache load which blocks startup for tables with many sstables (CASSANDRA-14898)
- * Fix rare NPE caused by batchlog replay / node decomission races (CASSANDRA-17049)
+ * Fix rare NPE caused by batchlog replay / node decommission races (CASSANDRA-17049)
  * Allow users to view permissions of the roles they created (CASSANDRA-16902)
  * Fix failure handling in inter-node communication (CASSANDRA-16334)
  * Log more information when a node runs out of commitlog space (CASSANDRA-11323)

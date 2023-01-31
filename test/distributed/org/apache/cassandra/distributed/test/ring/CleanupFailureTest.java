@@ -51,10 +51,10 @@ public class CleanupFailureTest extends TestBaseImpl
             IInvokableInstance nodeToDecommission = cluster.get(1);
             IInvokableInstance nodeToRemainInCluster = cluster.get(2);
 
-            // Start decomission on nodeToDecommission
+            // Start decommission on nodeToDecommission
             cluster.forEach(statusToDecommission(nodeToDecommission));
 
-            // Add data to cluster while node is decomissioning
+            // Add data to cluster while node is decommissioning
             int NUM_ROWS = 100;
             populate(cluster, 0, NUM_ROWS, 1, 1, ConsistencyLevel.ONE);
             cluster.forEach(c -> c.flush(KEYSPACE));
@@ -89,7 +89,7 @@ public class CleanupFailureTest extends TestBaseImpl
             withProperty("cassandra.join_ring", false,
                          () -> bootstrappingNode.startup(cluster));
 
-            // Start decomission on bootstrappingNode
+            // Start decommission on bootstrappingNode
             cluster.forEach(statusToBootstrap(bootstrappingNode));
 
             // Add data to cluster while node is bootstrapping

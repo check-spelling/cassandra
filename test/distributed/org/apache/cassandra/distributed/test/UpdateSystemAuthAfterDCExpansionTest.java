@@ -190,7 +190,7 @@ public class UpdateSystemAuthAfterDCExpansionTest extends TestBaseImpl
             assertQueryThrowsConfigurationException(cluster, alterKeyspaceStatement("'dc1': '1'"));
             assertQueryThrowsConfigurationException(cluster, alterKeyspaceStatement("'dc2': '1'"));
 
-            logger.debug("Starting to decomission dc2");
+            logger.debug("Starting to decommission dc2");
             cluster.schemaChangeIgnoringStoppedInstances(alterKeyspaceStatement(beforeDecommissionedDatacenters));
 
             // Forcibly shutdown and have node2 evicted by FD
@@ -206,7 +206,7 @@ public class UpdateSystemAuthAfterDCExpansionTest extends TestBaseImpl
                 StorageService.instance.removeNode(node2hostId);
             });
 
-            logger.debug("Remove replication to decomissioned dc2");
+            logger.debug("Remove replication to decommissioned dc2");
             cluster.schemaChangeIgnoringStoppedInstances(alterKeyspaceStatement(afterDecommissionedDatacenters));
         }
     }

@@ -2984,7 +2984,7 @@ public class StorageService extends NotificationBroadcasterSupport implements IE
         }
         catch (RuntimeException ex)
         {
-            // If a host is decomissioned and the DNS entry is removed before the
+            // If a host is decommissioned and the DNS entry is removed before the
             // bootstrap completes, when it completes and advertises NORMAL state to other nodes, they will be unable
             // to resolve it to an InetAddress unless it happens to be cached. This could happen on nodes
             // storing large amounts of data or with long index rebuild times or if new instances have been added
@@ -3470,8 +3470,8 @@ public class StorageService extends NotificationBroadcasterSupport implements IE
     }
 
     /**
-     * This is used in three contexts, graceful decomission, and restoreReplicaCount/removeNode.
-     * Graceful decomission should never lose data and it's going to be important that transient data
+     * This is used in three contexts, graceful decommission, and restoreReplicaCount/removeNode.
+     * Graceful decommission should never lose data and it's going to be important that transient data
      * is streamed to at least one other node from this one for each range.
      *
      * For ranges this node replicates its removal should cause a new replica to be selected either as transient or full
@@ -5706,7 +5706,7 @@ public class StorageService extends NotificationBroadcasterSupport implements IE
         if (isDraining()) // when draining isShutdown is also true, so we check first to return a more accurate message
             throw new IllegalStateException(String.format("Unable to start %s because the node is draining.", service));
 
-        if (isShutdown()) // do not rely on operationMode in case it gets changed to decomissioned or other
+        if (isShutdown()) // do not rely on operationMode in case it gets changed to decommissioned or other
             throw new IllegalStateException(String.format("Unable to start %s because the node was drained.", service));
 
         if (!isNormal() && joinRing) // if the node is not joining the ring, it is gossipping-only member which is in STARTING state forever

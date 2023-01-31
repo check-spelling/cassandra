@@ -106,7 +106,7 @@ public class HintedHandoffAddRemoveNodesTest extends TestBaseImpl
             Awaitility.await().until(() -> countTotalHints(cluster.get(2)) > 0);
             long totalHints = countTotalHints(cluster.get(2));
 
-            // Decomision node 1...
+            // Decommission node 1...
             assertEquals(4, endpointsKnownTo(cluster, 2));
             cluster.run(decommission(), 1);
             await().pollDelay(1, SECONDS).until(() -> endpointsKnownTo(cluster, 2) == 3);
