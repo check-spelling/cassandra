@@ -36,7 +36,7 @@ import org.apache.cassandra.utils.ObjectSizes;
  * delta-encode those information for the sake of vint encoding.
  * <p>
  * Note that due to their use, those stats can suffer to be somewhat inaccurate (the more incurrate
- * they are, the less effective the storage will be, but provided the stats are not completly wacky,
+ * they are, the less effective the storage will be, but provided the stats are not completely wacky,
  * this shouldn't have too huge an impact on performance) and in fact they will not always be
  * accurate for reasons explained in {@link SerializationHeader#make}.
  */
