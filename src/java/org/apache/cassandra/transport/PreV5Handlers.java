@@ -106,7 +106,7 @@ public class PreV5Handlers
             //
             // If the current payload bytes in flight is zero, we must reenable autoread as
             // 1) we allow no other thread/channel to do it, and
-            // 2) there are no other events following this one (becuase we're at zero bytes in flight),
+            // 2) there are no other events following this one (because we're at zero bytes in flight),
             // so no successive to trigger the other clause in this if-block.
             //
             // The only exception to this is if the global request rate limit has been breached, which means

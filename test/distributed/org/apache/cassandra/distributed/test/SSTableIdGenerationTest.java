@@ -84,7 +84,7 @@ public class SSTableIdGenerationTest extends TestBaseImpl
         TestBaseImpl.beforeClass();
 
         originalSecurityManager = System.getSecurityManager();
-        // we prevent system exit and convert it to exception becuase this is one of the expected test outcomes,
+        // we prevent system exit and convert it to exception because this is one of the expected test outcomes,
         // and we want to make an assertion on that
         ClusterUtils.preventSystemExit();
     }
