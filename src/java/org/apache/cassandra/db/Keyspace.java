@@ -413,7 +413,7 @@ public class Keyspace
         if (cfs == null)
         {
             // CFS being created for the first time, either on server startup or new CF being added.
-            // We don't worry about races here; startup is safe, and adding multiple idential CFs
+            // We don't worry about races here; startup is safe, and adding multiple identical CFs
             // simultaneously is a "don't do that" scenario.
             ColumnFamilyStore oldCfs = columnFamilyStores.putIfAbsent(newCfs.metadata.id, newCfs);
             // CFS mbean instantiation will error out before we hit this, but in case that changes...
@@ -441,7 +441,7 @@ public class Keyspace
         if (cfs == null)
         {
             // CFS being created for the first time, either on server startup or new CF being added.
-            // We don't worry about races here; startup is safe, and adding multiple idential CFs
+            // We don't worry about races here; startup is safe, and adding multiple identical CFs
             // simultaneously is a "don't do that" scenario.
             ColumnFamilyStore oldCfs = columnFamilyStores.putIfAbsent(metadata.id, ColumnFamilyStore.createColumnFamilyStore(this, metadata, loadSSTables));
             // CFS mbean instantiation will error out before we hit this, but in case that changes...
