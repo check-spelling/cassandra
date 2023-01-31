@@ -523,7 +523,7 @@ public class BTree
     /**
      * The internal implementation of {@link #reverseInSitu(Object[])}.
      * Takes two arguments that help minimise garbage generation, by testing sizeMaps against
-     * known globallyl shared sizeMap for dense nodes that do not need to be modified, and
+     * known globally shared sizeMap for dense nodes that do not need to be modified, and
      * for permitting certain users (namely FastBuilder) to declare that non-matching sizeMap
      * can be mutated directly without allocating {@code new int[]}
      *
