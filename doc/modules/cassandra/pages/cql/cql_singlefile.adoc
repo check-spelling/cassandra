@@ -3422,7 +3422,7 @@ two columns named ``myKey'' and ``value'', you would do the following:
 bc(sample). +
 INSERT INTO mytable JSON `\{``\''myKey\``'': 0, ``value'': 0}'
 
-Any columns which are ommitted from the `JSON` map will be defaulted to
+Any columns which are omitted from the `JSON` map will be defaulted to
 a `NULL` value (which will result in a tombstone being created).
 
 [[jsonEncoding]]

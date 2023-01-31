@@ -60,7 +60,7 @@ public interface ScalarFunction extends Function
      * <pre>
      *     text foo(int a, text b, text c, int d)
      * </pre>
-     * then {@code foo.partialApplication([3, <ommitted>, 'bar', <omitted>])} will return a function {@code bar} of signature:
+     * then {@code foo.partialApplication([3, <omitted>, 'bar', <omitted>])} will return a function {@code bar} of signature:
      * <pre>
      *     text bar(text b, int d)
      * </pre>
