@@ -3297,7 +3297,7 @@ commands:
         type: string
     steps:
       - run:
-          name: Repeatedly run new or modifed JUnit tests
+          name: Repeatedly run new or modified JUnit tests
           no_output_timeout: 15m
           command: |
             set -x
