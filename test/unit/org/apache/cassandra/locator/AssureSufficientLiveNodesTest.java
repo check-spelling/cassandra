@@ -65,7 +65,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
  * See https://issues.apache.org/jira/browse/CASSANDRA-16545 for details.
  */
 @RunWith(BMUnitRunner.class)
-@BMRule(name = "FailureDecector sees all nodes as live", // applies to all test cases in the class
+@BMRule(name = "FailureDetector sees all nodes as live", // applies to all test cases in the class
         targetClass = "FailureDetector",
         targetMethod = "isAlive",
         action = "return true;")
