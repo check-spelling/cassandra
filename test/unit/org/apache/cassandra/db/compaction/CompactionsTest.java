@@ -181,11 +181,11 @@ public class CompactionsTest
         // disable compaction while flushing
         store.disableAutoCompaction();
 
-        //Populate sstable1 with with keys [0..9]
+        //Populate sstable1 with keys [0..9]
         populate(KEYSPACE1, CF_STANDARD1, 0, 9, 3); //ttl=3s
         Util.flush(store);
 
-        //Populate sstable2 with with keys [10..19] (keys do not overlap with SSTable1)
+        //Populate sstable2 with keys [10..19] (keys do not overlap with SSTable1)
         long timestamp2 = populate(KEYSPACE1, CF_STANDARD1, 10, 19, 3); //ttl=3s
         Util.flush(store);
 

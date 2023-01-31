@@ -57,7 +57,7 @@ public final class WhereClause
      * Renames identifiers in all relations
      * @param from the old identifier
      * @param to the new identifier
-     * @return a new WhereClause with with "from" replaced by "to" in all relations
+     * @return a new WhereClause with "from" replaced by "to" in all relations
      */
     public WhereClause renameIdentifier(ColumnIdentifier from, ColumnIdentifier to)
     {

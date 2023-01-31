@@ -974,7 +974,7 @@ public class ActiveRepairService implements IEndpointStateChangeSubscriber, IFai
      * that the repair failed, we need to fail the entire repair session
      *
      * @param ep  endpoint to be convicted
-     * @param phi the value of phi with with ep was convicted
+     * @param phi the value of phi with ep was convicted
      */
     public void convict(InetAddressAndPort ep, double phi)
     {

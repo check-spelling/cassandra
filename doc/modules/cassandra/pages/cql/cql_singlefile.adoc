@@ -1969,7 +1969,7 @@ If a role has the `LOGIN` privilege, clients may identify as that role
 when connecting. For the duration of that connection, the client will
 acquire any roles and privileges granted to that role.
 
-Only a client with with the `CREATE` permission on the database roles
+Only a client with the `CREATE` permission on the database roles
 resource may issue `CREATE ROLE` requests (see the
 link:#permissions[relevant section] below), unless the client is a
 `SUPERUSER`. Role management in Cassandra is pluggable and custom

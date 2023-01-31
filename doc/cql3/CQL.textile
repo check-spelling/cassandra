@@ -1283,7 +1283,7 @@ By default roles do not possess @LOGIN@ privileges or @SUPERUSER@ status.
 
 If a role has the @LOGIN@ privilege, clients may identify as that role when connecting. For the duration of that connection, the client will acquire any roles and privileges granted to that role.
 
-Only a client with with the @CREATE@ permission on the database roles resource may issue @CREATE ROLE@ requests (see the "relevant section":#permissions below), unless the client is a @SUPERUSER@. Role management in Cassandra is pluggable and custom implementations may support only a subset of the listed options.
+Only a client with the @CREATE@ permission on the database roles resource may issue @CREATE ROLE@ requests (see the "relevant section":#permissions below), unless the client is a @SUPERUSER@. Role management in Cassandra is pluggable and custom implementations may support only a subset of the listed options.
 
 Role names should be quoted if they contain non-alphanumeric characters. 
 

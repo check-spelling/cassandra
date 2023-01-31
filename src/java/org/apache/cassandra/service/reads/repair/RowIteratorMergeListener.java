@@ -157,7 +157,7 @@ public class RowIteratorMergeListener<E extends Endpoints<E>>
     }
 
     /**
-     * The partition level deletion with with which source {@code i} is currently repaired, or
+     * The partition level deletion with which source {@code i} is currently repaired, or
      * {@code DeletionTime.LIVE} if the source is not repaired on the partition level deletion (meaning it was
      * up to date on it). The output* of this method is only valid after the call to
      * {@link #onMergedPartitionLevelDeletion}.
