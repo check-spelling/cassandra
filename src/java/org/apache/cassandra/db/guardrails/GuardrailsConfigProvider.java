@@ -27,7 +27,7 @@ import org.apache.cassandra.utils.FBUtilities;
 /**
  * Provider of {@link GuardrailsConfig}s for a {@link ClientState}.
  * <p>
- * The {@link Default} implementation always retuns the {@link GuardrailsConfig} parsed from {@code cassandra.yaml},
+ * The {@link Default} implementation always returns the {@link GuardrailsConfig} parsed from {@code cassandra.yaml},
  * but different implementations can return different configurations based on the specified {@link ClientState}.
  * <p>
  * Custom implementations can be specified at runtime with the system property {@link #CUSTOM_IMPLEMENTATION_PROPERTY}.
