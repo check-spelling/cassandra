@@ -77,7 +77,7 @@ public class CommitLogSegmentManagerCDCTest extends CQLTester
             createTable("CREATE TABLE %s (idx int, data text, primary key(idx)) WITH cdc=false;");
             execute("INSERT INTO %s (idx, data) VALUES (1, '1');");
 
-            // Confirm that, on flush+recyle, we see files show up in cdc_raw
+            // Confirm that, on flush+recycle, we see files show up in cdc_raw
             CommitLogSegmentManagerCDC cdcMgr = (CommitLogSegmentManagerCDC)CommitLog.instance.segmentManager;
             Keyspace.open(keyspace())
                     .getColumnFamilyStore(currentTable())
