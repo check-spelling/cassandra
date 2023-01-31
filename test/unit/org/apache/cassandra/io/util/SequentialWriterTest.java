@@ -143,7 +143,7 @@ public class SequentialWriterTest extends AbstractTransactionalTest
             writer.write(toWrite);
             assertEquals(bufferSize, writer.getLastFlushOffset());
             assertEquals(writeSize, writer.position());
-            // mark thi position
+            // mark this position
             DataPosition pos = writer.mark();
             // write another
             writer.write(toWrite);

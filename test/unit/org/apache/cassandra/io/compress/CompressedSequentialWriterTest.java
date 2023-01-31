@@ -285,7 +285,7 @@ public class CompressedSequentialWriterTest extends SequentialWriterTest
             writer.write(toWrite);
             long flushedOffset = writer.getLastFlushOffset();
             assertEquals(writeSize, writer.position());
-            // mark thi position
+            // mark this position
             DataPosition pos = writer.mark();
             // write another
             writer.write(toWrite);
