@@ -744,7 +744,7 @@ public class MerkleTreeTest
     }
 
     @Test
-    public void testDifferentTrees3Differentepth() throws IOException
+    public void testDifferentTrees3DifferentDepths() throws IOException
     {
         int seed = makeSeed();
         Trees trees = Trees.make(seed, seed, 2, 3);
