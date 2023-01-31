@@ -756,7 +756,7 @@ dropped from tables defined with the `COMPACT STORAGE` option.
 If the dropped column does not already exist, the statement will return an error, unless `IF EXISTS` is used in which case the operation is a no-op.
 * `RENAME` a primary key column of a table. Non primary key columns cannot be renamed.
 Furthermore, renaming a column to another name which already exists isn't allowed.
-It's important to keep in mind that renamed columns shouldn't have dependent seconday indexes.
+It's important to keep in mind that renamed columns shouldn't have dependent secondary indexes.
 If the renamed column does not already exist, the statement will return an error, unless `IF EXISTS` is used in which case the operation is a no-op.
 
 * `WITH`: Allows to update the options of the table. The

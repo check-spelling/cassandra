@@ -767,7 +767,7 @@ if you do so, dropping a column will not correctly execute.
 
 * `RENAME` a primary key column of a table. Non primary key columns cannot be renamed.
 Furthermore, renaming a column to another name which already exists isn't allowed.
-It's important to keep in mind that renamed columns shouldn't have dependent seconday indexes.
+It's important to keep in mind that renamed columns shouldn't have dependent secondary indexes.
 If the renamed column does not already exist, the statement will return an error, unless `IF EXISTS` is used in which case the operation is a no-op.
 
 * Use `WITH` to change a table option. The xref:CQL/ddl.adoc#create-table-options[supported options]
