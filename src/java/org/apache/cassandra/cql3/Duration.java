@@ -48,7 +48,7 @@ public final class Duration
     public static final int DAYS_PER_WEEK = 7;
     public static final int MONTHS_PER_YEAR = 12;
 
-    // For some operations, like floor, a Calendar is needed if months or years are involved. Unfortunatly, creating a
+    // For some operations, like floor, a Calendar is needed if months or years are involved. Unfortunately, creating a
     // Calendar is a costly operation so instead of creating one with every call we reuse them.
     private static final FastThreadLocal<Calendar> CALENDAR_PROVIDER = new FastThreadLocal<Calendar>()
     {
