@@ -322,7 +322,7 @@ public class KubernetesSecretsPEMSslContextFactoryTest
         }
 
         /*
-         * This is overriden to first give priority to the input map configuration since we should not be setting env
+         * This is overridden to first give priority to the input map configuration since we should not be setting env
          * variables from the unit tests. However, if the input map configuration doesn't have the value for the
          * given key then fallback to loading from the real environment variables.
          */

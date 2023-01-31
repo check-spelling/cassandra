@@ -33,7 +33,7 @@ public interface SchemaTransformation
     Keyspaces apply(Keyspaces schema);
 
     /**
-     * If the transformation should be applied with a certain timestamp, this method should be overriden. This is used
+     * If the transformation should be applied with a certain timestamp, this method should be overridden. This is used
      * by {@link SchemaTransformations#updateSystemKeyspace(KeyspaceMetadata, long)} when we need to set the fixed
      * timestamp in order to preserve user settings.
      */

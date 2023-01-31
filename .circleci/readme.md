@@ -154,7 +154,7 @@ running a test repeatedly, you can either directly edit `config.yml` or edit `co
 and then regenerate `config.yml` with the `generate.sh` script using a `-l`/`-m`/`-h` flag.
 When this flag is used only the `config.yml` will be generated.
 
-Please note that any previous swapping or edition of the generated files will be overriden
+Please note that any previous swapping or edition of the generated files will be overridden
 by running `generate.sh` with `-a` argument, returning `config.yml` to the default LOWRES. So if
 you previously swapped your `config.yml` to MIDRES or HIGHRES you would need to either swap it
 again or use the `-l`/`-m`/`-h` script flags.

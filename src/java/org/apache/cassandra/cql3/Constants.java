@@ -387,7 +387,7 @@ public abstract class Constants
             // be use for any numerical type, including date, time, ...) so they don't have an exact type. And in fact,
             // for good or bad, any literal is valid for custom types, so we can never claim an exact type.
             // But really, the reason it's fine to return null here is that getExactTypeIfKnown is only used to
-            // implement testAssignment() in Selectable and that method is overriden above.
+            // implement testAssignment() in Selectable and that method is overridden above.
             return null;
         }
 

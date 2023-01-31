@@ -146,7 +146,7 @@ public abstract class CollectionType<T> extends AbstractType<T>
         return true;
     }
 
-    // Overrided by maps
+    // Overridden by maps
     protected int collectionSize(List<ByteBuffer> values)
     {
         return values.size();

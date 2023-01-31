@@ -75,7 +75,7 @@ public interface Term
      */
     default public boolean isTerminal()
     {
-        return false; // overriden below by Terminal
+        return false; // overridden below by Terminal
     }
 
     public void addFunctionsTo(List<Function> functions);
