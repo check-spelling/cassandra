@@ -104,7 +104,7 @@ import static org.apache.cassandra.utils.FBUtilities.getBroadcastAddressAndPort;
  *       and send back a {@link PrepareSynAckMessage}, which contains a summary of the files/sections that will be sent to
  *       the initiator.
  *   (c) When the initiator receives the {@link PrepareSynAckMessage}, it records which files/sections it will
- *       receive, and then goes to it's Streaming phase (see next section). If the intiator is to receive files,
+ *       receive, and then goes to it's Streaming phase (see next section). If the initiator is to receive files,
  *       it sends a {@link PrepareAckMessage} to the follower to indicate that it can start streaming to the initiator.
  *   (d) (Optional) If the follower receives a {@link PrepareAckMessage}, it enters it's Streaming phase.
  *
@@ -530,7 +530,7 @@ public class StreamSession implements IEndpointStateChangeSubscriber
             futures.add(ScheduledExecutors.nonPeriodicTasks.submit(this::abortTasks));
 
         // Channels should only be closed by the initiator; but, if this session closed
-        // due to failure, channels should be always closed regardless, even if this is not the initator.
+        // due to failure, channels should be always closed regardless, even if this is not the initiator.
         if (!isFollower || state != State.COMPLETE)
         {
             logger.debug("[Stream #{}] Will close attached inbound {} and outbound {} channels", planId(), inbound, outbound);

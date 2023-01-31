@@ -122,7 +122,7 @@ public class StreamingTest extends TestBaseImpl
             MessageStateSinkImpl followerSink = new MessageStateSinkImpl();
             followerSink.messages(initiator, Arrays.asList(STREAM_INIT, PREPARE_SYN, PREPARE_ACK, RECEIVED));
             // why 2 completes?  There is a race condition bug with sending COMPLETE where the socket gets closed
-            // by the initator, which then triggers a ClosedChannelException, which then checks the current state (PREPARING)
+            // by the initiator, which then triggers a ClosedChannelException, which then checks the current state (PREPARING)
             // to solve this, COMPLETE is set before sending the message, and reset when closing the stream
             followerSink.states(initiator,  Arrays.asList(PREPARING, STREAMING, StreamSession.State.COMPLETE, StreamSession.State.COMPLETE));
             followerNode.runOnInstance(() -> StreamSession.sink = followerSink);
