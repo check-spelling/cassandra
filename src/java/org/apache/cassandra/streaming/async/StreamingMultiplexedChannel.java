@@ -155,7 +155,7 @@ public class StreamingMultiplexedChannel
             /*
              * Inbound handlers are needed:
              *  a) for initiator's control channel(the first outbound channel) to receive follower's message.
-             *  b) for streaming receiver (note: both initiator and follower can receive streaming files) to reveive files,
+             *  b) for streaming receiver (note: both initiator and follower can receive streaming files) to receive files,
              *     in {@link Handler#setupStreamingPipeline}
              */
             controlChannel = createControlChannel();

@@ -1124,7 +1124,7 @@ public class BufferPool
      * multiple of allocation units required. Then we search for n consecutive free units,
      * where n is the number of units required. We also align to page boundaries.
      *
-     * When we reiceve a release request we work out the position by comparing the buffer
+     * When we receive a release request we work out the position by comparing the buffer
      * address to our base address and we simply release the units.
      */
     final static class Chunk
