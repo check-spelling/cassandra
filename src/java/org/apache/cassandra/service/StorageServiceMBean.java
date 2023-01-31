@@ -504,13 +504,13 @@ public interface StorageServiceMBean extends NotificationEmitter
     /**
      * set the logging level at runtime<br>
      * <br>
-     * If both classQualifer and level are empty/null, it will reload the configuration to reset.<br>
-     * If classQualifer is not empty but level is empty/null, it will set the level to null for the defined classQualifer<br>
+     * If both classQualifier and level are empty/null, it will reload the configuration to reset.<br>
+     * If classQualifier is not empty but level is empty/null, it will set the level to null for the defined classQualifier<br>
      * If level cannot be parsed, then the level will be defaulted to DEBUG<br>
      * <br>
      * The logback configuration should have {@code < jmxConfigurator />} set
      *
-     * @param classQualifier The logger's classQualifer
+     * @param classQualifier The logger's classQualifier
      * @param level The log level
      * @throws Exception
      *
