@@ -31,7 +31,7 @@ public class StreamSummaryCompositeData
     private static final String[] ITEM_NAMES = new String[]{"tableId",
                                                             "files",
                                                             "totalSize"};
-    private static final String[] ITEM_DESCS = new String[]{"ColumnFamilu ID",
+    private static final String[] ITEM_DESCS = new String[]{"ColumnFamily ID",
                                                             "Number of files",
                                                             "Total bytes of the files"};
     private static final OpenType<?>[] ITEM_TYPES = new OpenType[]{SimpleType.STRING,
