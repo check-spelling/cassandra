@@ -223,7 +223,7 @@ public class LeveledManifest
         //
         // So instead, we
         // 1) force compacting higher levels first, which minimizes the i/o needed to compact
-        //    optimially which gives us a long term win, and
+        //    optimally which gives us a long term win, and
         // 2) if L0 falls behind, we will size-tiered compact it to reduce read overhead until
         //    we can catch up on the higher levels.
         //
