@@ -373,7 +373,7 @@ public class RangeFetchMapCalculatorTest
    @Test
     public void testTrivalRangeLocalHostStreaming() throws UnknownHostException
     {
-        // trivial ranges ranges should not try to stream from localhost
+        // trivial ranges should not try to stream from localhost
         EndpointsByRange.Builder rangesWithSources = new EndpointsByRange.Builder();
         addTrivialRangeAndSources(rangesWithSources, 21, 30, "127.0.0.2", "127.0.0.1");
         addTrivialRangeAndSources(rangesWithSources, 31, 40, "127.0.0.1", "127.0.0.2");
