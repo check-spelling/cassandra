@@ -210,7 +210,7 @@ public class RequestTimeoutTest extends TestBaseImpl
 
         public static boolean await(long time, TimeUnit units, @This Awaitable self, @SuperMethod Method method) throws InterruptedException, InvocationTargetException, IllegalAccessException
         {
-            // make sure that the underline condition is met before returnning true
+            // make sure that the underline condition is met before returning true
             // this way its know that the timeouts triggered!
             while (!((boolean) method.invoke(self, time, units)))
             {
