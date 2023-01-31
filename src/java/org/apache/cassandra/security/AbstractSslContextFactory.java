@@ -108,7 +108,7 @@ abstract public class AbstractSslContextFactory implements ISslContextFactory
     }
 
     /**
-     * Dervies if {@code OpenSSL} is available. It allows in-jvm dtests to disable tcnative openssl support by
+     * Derives if {@code OpenSSL} is available. It allows in-jvm dtests to disable tcnative openssl support by
      * setting {@code cassandra.disable_tcactive_openssl} system property as {@code true}. Otherwise, it creates a
      * circular reference that prevents the instance class loader from being garbage collected.
      */
