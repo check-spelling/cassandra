@@ -2052,7 +2052,7 @@ public class SASIIndexTest
         // Overwrite index file with garbage
         try(FileChannel fc = FileChannel.open(path, StandardOpenOption.WRITE))
         {
-            fc.truncate(8).write(ByteBuffer.wrap("grabage".getBytes(StandardCharsets.UTF_8)));
+            fc.truncate(8).write(ByteBuffer.wrap("garbage".getBytes(StandardCharsets.UTF_8)));
         }
 
         long size1 = Files.readAttributes(path, BasicFileAttributes.class).size();

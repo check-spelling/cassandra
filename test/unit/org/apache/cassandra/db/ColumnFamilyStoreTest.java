@@ -262,7 +262,7 @@ public class ColumnFamilyStoreTest
     {
         ColumnFamilyStore cfs = Keyspace.open(KEYSPACE1).getColumnFamilyStore(CF_INDEX1);
 
-        //cleanup any previous test gargbage
+        //cleanup any previous test garbage
         cfs.clearSnapshot("");
 
         int numRows = 1000;
@@ -295,7 +295,7 @@ public class ColumnFamilyStoreTest
     @Test
     public void testSnapshotSize() throws IOException
     {
-        // cleanup any previous test gargbage
+        // cleanup any previous test garbage
         ColumnFamilyStore cfs = Keyspace.open(KEYSPACE1).getColumnFamilyStore(CF_STANDARD1);
         cfs.clearSnapshot("");
 
