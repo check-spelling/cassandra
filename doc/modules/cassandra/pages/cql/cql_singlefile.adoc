@@ -2129,7 +2129,7 @@ List all roles directly granted to `bob`.
 Prior to the introduction of roles in Cassandra 2.2, authentication and
 authorization were based around the concept of a `USER`. For backward
 compatibility, the legacy syntax has been preserved with `USER` centric
-statments becoming synonyms for the `ROLE` based equivalents.
+statements becoming synonyms for the `ROLE` based equivalents.
 
 _Syntax:_
 
@@ -3396,7 +3396,7 @@ documents.
 
 With `SELECT` statements, the new `JSON` keyword can be used to return
 each row as a single `JSON` encoded map. The remainder of the `SELECT`
-statment behavior is the same.
+statement behavior is the same.
 
 The result map keys are the same as the column names in a normal result
 set. For example, a statement like ```SELECT JSON a, ttl(b) FROM ...`''

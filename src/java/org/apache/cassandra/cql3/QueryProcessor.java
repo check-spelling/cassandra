@@ -905,7 +905,7 @@ public class QueryProcessor implements QueryHandler
     }
 
     /**
-     * Clear our internal statmeent cache for test purposes.
+     * Clear our internal statement cache for test purposes.
      */
     @VisibleForTesting
     public static void clearInternalStatementsCache()

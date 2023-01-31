@@ -64,7 +64,7 @@ public interface CQLStatement
     public void authorize(ClientState state);
 
     /**
-     * Perform additional validation required by the statment. To be overridden by subclasses if needed.
+     * Perform additional validation required by the statement. To be overridden by subclasses if needed.
      *
      * @param state the current client state
      */
