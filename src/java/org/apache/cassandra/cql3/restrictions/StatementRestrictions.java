@@ -379,7 +379,7 @@ public final class StatementRestrictions
      * Checks if the specified column is restricted by an EQ restriction.
      *
      * @param columnDef the column definition
-     * @return <code>true</code> if the specified column is restricted by an EQ restiction, <code>false</code>
+     * @return <code>true</code> if the specified column is restricted by an EQ restriction, <code>false</code>
      * otherwise.
      */
     public boolean isColumnRestrictedByEq(ColumnMetadata columnDef)
