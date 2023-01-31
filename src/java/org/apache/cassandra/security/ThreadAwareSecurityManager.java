@@ -96,7 +96,7 @@ public final class ThreadAwareSecurityManager extends SecurityManager
         // Note: a permission is only granted, if there is no objector. This means that
         // AccessController/AccessControlContext collect all applicable ProtectionDomains - only if none of these
         // applicable ProtectionDomains denies access, the permission is granted.
-        // A ProtectionDomain can have its origin at an oridinary code-source or provided via a
+        // A ProtectionDomain can have its origin at an ordinary code-source or provided via a
         // AccessController.doPrivileded() call.
         //
         Policy.setPolicy(new Policy()
