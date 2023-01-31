@@ -105,7 +105,7 @@ public class NetworkTopologyTest extends TestBaseImpl
     }
 
     @Test
-    public void noWarningForNetworkTopologyStategyConfigOnRestart() throws Exception {
+    public void noWarningForNetworkTopologyStrategyConfigOnRestart() throws Exception {
         int nodesPerDc = 2;
         try (Cluster cluster = builder().withConfig(c -> c.with(GOSSIP, NETWORK))
                                         .withRacks(2, 1, nodesPerDc)

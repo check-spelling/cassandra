@@ -193,7 +193,7 @@ public class ClusterUtils
 
         InstanceConfig config = cluster.newInstanceConfig();
         //TODO adding new instances should be cleaner, currently requires you create the cluster with all
-        // instances known about (at least to NetworkTopology and TokenStategy)
+        // instances known about (at least to NetworkTopology and TokenStrategy)
         // this is very hidden, so should be more explicit
         config.networkTopology().put(config.broadcastAddress(), NetworkTopology.dcAndRack(dc, rack));
 
