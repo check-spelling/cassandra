@@ -1230,13 +1230,13 @@ public class ColumnFamilyStore implements ColumnFamilyStoreMBean, Memtable.Owner
             postFlush.latch.decrement();
 
             if (logger.isTraceEnabled())
-                logger.trace("Flush task task {}@{} finished", hashCode(), name);
+                logger.trace("Flush task {}@{} finished", hashCode(), name);
         }
 
         public Collection<SSTableReader> flushMemtable(ColumnFamilyStore cfs, Memtable memtable, boolean flushNonCf2i)
         {
             if (logger.isTraceEnabled())
-                logger.trace("Flush task task {}@{} flushing memtable {}", hashCode(), name, memtable);
+                logger.trace("Flush task {}@{} flushing memtable {}", hashCode(), name, memtable);
 
             if (memtable.isClean() || truncate)
             {
