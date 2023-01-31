@@ -162,7 +162,7 @@ New features
       the number of tables, columns per table or the size of collections. These guardrails are only applied to regular
       user queries, and superusers and internal queries are excluded. Reaching the soft limit raises a client warning,
       whereas reaching the hard limit aborts the query. In both cases a log message and a diagnostic event are emitted.
-      Additionally, some guardrails are not linked to specific user queries due to techincal limitations, such as
+      Additionally, some guardrails are not linked to specific user queries due to technical limitations, such as
       detecting the size of large collections during compaction or periodically monitoring the disk usage. These
       guardrails would only emit the proper logs and diagnostic events when triggered, without aborting any processes.
       Guardrails config is defined through cassandra.yaml properties, and they can be dynamically updated through the
