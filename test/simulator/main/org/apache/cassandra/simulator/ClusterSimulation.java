@@ -169,7 +169,7 @@ public class ClusterSimulation<S extends Simulation> implements AutoCloseable
                                   schedulerDelayNanos = new LongRange(0, 50, MICROSECONDS, NANOSECONDS),
                               schedulerLongDelayNanos = new LongRange(50, 5000, MICROSECONDS, NANOSECONDS),
                                       clockDriftNanos = new LongRange(1, 5000, MILLISECONDS, NANOSECONDS),
-                       clockDiscontinuitIntervalNanos = new LongRange(10, 60, SECONDS, NANOSECONDS),
+                      clockDiscontinuityIntervalNanos = new LongRange(10, 60, SECONDS, NANOSECONDS),
                           topologyChangeIntervalNanos = new LongRange(5, 15, SECONDS, NANOSECONDS);
 
 
@@ -377,7 +377,7 @@ public class ClusterSimulation<S extends Simulation> implements AutoCloseable
 
         public Builder<S> clockDiscontinuityIntervalNanos(LongRange clockDiscontinuityIntervalNanos)
         {
-            this.clockDiscontinuitIntervalNanos = clockDiscontinuityIntervalNanos;
+            this.clockDiscontinuityIntervalNanos = clockDiscontinuityIntervalNanos;
             return this;
         }
 
@@ -657,7 +657,7 @@ public class ClusterSimulation<S extends Simulation> implements AutoCloseable
         KindOfSequence kindOfDriftSequence = Choices.uniform(KindOfSequence.values()).choose(random);
         KindOfSequence kindOfDiscontinuitySequence = Choices.uniform(KindOfSequence.values()).choose(random);
         time = new SimulatedTime(numOfNodes, random, 1577836800000L /*Jan 1st UTC*/, builder.clockDriftNanos, kindOfDriftSequence,
-                                 kindOfDiscontinuitySequence.period(builder.clockDiscontinuitIntervalNanos, random),
+                                 kindOfDiscontinuitySequence.period(builder.clockDiscontinuityIntervalNanos, random),
                                  builder.timeListener);
         ballots = new SimulatedBallots(random, () -> {
             long max = random.uniform(2, 16);
