@@ -90,7 +90,7 @@ import org.apache.cassandra.utils.Pair;
  * compaction is only in one of the location.
  *
  * Snapshots (resp. backups) are always created along the sstables there are
- * snapshotted (resp. backuped) but inside a subdirectory named 'snapshots'
+ * snapshotted (resp. backed up) but inside a subdirectory named 'snapshots'
  * (resp. backups) (and snapshots are further inside a subdirectory of the name
  * of the snapshot). For secondary indexes, snapshots (backups) are not created in
  * their own directory, but are in their parent's snapshot (backup) directory.
