@@ -135,7 +135,7 @@ final class HintsDescriptor
     }
 
     /**
-     * Create, if necessary, the required encryption components (for either decrpyt or encrypt operations).
+     * Create, if necessary, the required encryption components (for either decrypt or encrypt operations).
      * Note that in the case of encyption (this is, when writing out a new hints file), we need to write
      * the cipher's IV out to the header so it can be used when decrypting. Thus, we need to add an additional
      * entry to the {@code params} map.
