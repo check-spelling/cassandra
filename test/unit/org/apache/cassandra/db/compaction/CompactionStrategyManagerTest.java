@@ -294,7 +294,7 @@ public class CompactionStrategyManagerTest
         assertEquals(1, matches);
     }
 
-    private static void assertInvalieHolderConfig(boolean isRepaired, boolean isPendingRepair, boolean isTransient)
+    private static void assertInvalidHolderConfig(boolean isRepaired, boolean isPendingRepair, boolean isTransient)
     {
         ColumnFamilyStore cfs = Keyspace.open(KS_PREFIX).getColumnFamilyStore(TABLE_PREFIX);
         CompactionStrategyManager csm = cfs.getCompactionStrategyManager();
@@ -320,10 +320,10 @@ public class CompactionStrategyManagerTest
         assertHolderExclusivity(true, false, false, CompactionStrategyHolder.class);
         assertHolderExclusivity(false, true, false, PendingRepairHolder.class);
         assertHolderExclusivity(false, true, true, PendingRepairHolder.class);
-        assertInvalieHolderConfig(true, true, false);
-        assertInvalieHolderConfig(true, true, true);
-        assertInvalieHolderConfig(false, false, true);
-        assertInvalieHolderConfig(true, false, true);
+        assertInvalidHolderConfig(true, true, false);
+        assertInvalidHolderConfig(true, true, true);
+        assertInvalidHolderConfig(false, false, true);
+        assertInvalidHolderConfig(true, false, true);
     }
 
     PartitionPosition forKey(int key)
