@@ -1811,7 +1811,7 @@ drop_compact_storage_enabled: false
 # column_value_size_fail_threshold:
 #
 # Guardrail to warn or fail when encountering larger size of collection data than threshold.
-# At query time this guardrail is applied only to the collection fragment that is being writen, even though in the case
+# At query time this guardrail is applied only to the collection fragment that is being written, even though in the case
 # of non-frozen collections there could be unaccounted parts of the collection on the sstables. This is done this way to
 # prevent read-before-write. The guardrail is also checked at sstable write time to detect large non-frozen collections,
 # although in that case exceeding the fail threshold will only log an error message, without interrupting the operation.
@@ -1822,7 +1822,7 @@ drop_compact_storage_enabled: false
 # collection_size_fail_threshold:
 #
 # Guardrail to warn or fail when encountering more elements in collection than threshold.
-# At query time this guardrail is applied only to the collection fragment that is being writen, even though in the case
+# At query time this guardrail is applied only to the collection fragment that is being written, even though in the case
 # of non-frozen collections there could be unaccounted parts of the collection on the sstables. This is done this way to
 # prevent read-before-write. The guardrail is also checked at sstable write time to detect large non-frozen collections,
 # although in that case exceeding the fail threshold will only log an error message, without interrupting the operation.
