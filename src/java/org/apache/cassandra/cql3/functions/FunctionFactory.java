@@ -73,8 +73,8 @@ public abstract class FunctionFactory
      *
      * @param args the arguments in the function call for which the function is going to be built
      * @param receiverType the expected return type of the function call for which the function is going to be built
-     * @param receiverKeyspace the name of the recevier keyspace
-     * @param receiverTable the name of the recevier table
+     * @param receiverKeyspace the name of the receiver keyspace
+     * @param receiverTable the name of the receiver table
      * @return a function with a signature compatible with the specified function call, or {@code null} if the factory
      * cannot create a function for the supplied arguments but there might be another factory with the same
      * {@link #name()} able to do it.
