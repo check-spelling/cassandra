@@ -299,7 +299,7 @@ public class AuditLoggerAuthTest
     {
         //CREATE USER and ALTER USER are supported only for backwards compatibility.
 
-        String user = TEST_ROLE + "userHasedPwd";
+        String user = TEST_ROLE + "userHashedPwd";
         String cql = "CREATE USER " + user + " WITH HASHED PASSWORD '" + TEST_PW_HASH + "'";
         executeWithCredentials(Arrays.asList(cql), CASS_USER, CASS_PW, AuditLogEntryType.LOGIN_SUCCESS);
         assertTrue(getInMemAuditLogger().size() > 0);
