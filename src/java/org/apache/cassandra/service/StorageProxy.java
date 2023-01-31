@@ -470,7 +470,7 @@ public class StorageProxy implements StorageProxyMBean
      * @param casMetrics the metrics to update for this operation.
      * @param createUpdateProposal method called after a successful 'prepare' phase to obtain 1) the actual update of
      *     this operation and 2) the result that the whole method should return. This can return {@code null} in the
-     *     special where, after having "prepared" (and thus potentially replayed in-progress upgdates), we don't want
+     *     special where, after having "prepared" (and thus potentially replayed in-progress updates), we don't want
      *     to propose anything (the whole method then return {@code null}).
      * @return the second element of the pair returned by {@code createUpdateProposal} (for the last call of that method
      *     if that method is called multiple times due to retries).
