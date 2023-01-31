@@ -193,7 +193,7 @@ public abstract class SSTableReader extends SSTable implements UnfilteredSource,
      * When a new sstable is flushed, maxDataAge is set to the time of creation.
      * When a sstable is created from compaction, maxDataAge is set to max of all merged sstables.
      *
-     * The age is in milliseconds since epoc and is local to this host.
+     * The age is in milliseconds since epoch and is local to this host.
      */
     public final long maxDataAge;
 
@@ -1589,7 +1589,7 @@ public abstract class SSTableReader extends SSTable implements UnfilteredSource,
     /**
      * Tests if the sstable contains data newer than the given age param (in localhost currentMilli time).
      * This works in conjunction with maxDataAge which is an upper bound on the create of data in this sstable.
-     * @param age The age to compare the maxDataAre of this sstable. Measured in millisec since epoc on this host
+     * @param age The age to compare the maxDataAre of this sstable. Measured in millisec since epoch on this host
      * @return True iff this sstable contains data that's newer than the given age parameter.
      */
     public boolean newSince(long age)
