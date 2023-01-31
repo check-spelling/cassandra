@@ -70,7 +70,7 @@ public class DataResource implements IResource
     private final String keyspace;
     private final String table;
 
-    // memoized hashcode since DataRessource is immutable and used in hashmaps often
+    // memoized hashcode since DataResource is immutable and used in hashmaps often
     private final transient int hash;
 
     private DataResource(Level level, String keyspace, String table)

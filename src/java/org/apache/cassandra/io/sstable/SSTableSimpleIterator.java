@@ -32,7 +32,7 @@ import org.apache.cassandra.utils.AbstractIterator;
  * Utility class to handle deserializing atom from sstables.
  *
  * Note that this is not a full fledged UnfilteredRowIterator. It's also not closeable, it is always
- * the job of the user to close the underlying ressources.
+ * the job of the user to close the underlying resources.
  */
 public abstract class SSTableSimpleIterator extends AbstractIterator<Unfiltered> implements Iterator<Unfiltered>
 {

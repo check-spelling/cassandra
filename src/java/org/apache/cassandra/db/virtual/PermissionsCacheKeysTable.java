@@ -46,8 +46,8 @@ final class PermissionsCacheKeysTable extends AbstractMutableVirtualTable
         SimpleDataSet result = new SimpleDataSet(metadata());
 
         AuthenticatedUser.permissionsCache.getAll()
-                .forEach((userResoursePair, ignored) ->
-                        result.row(userResoursePair.left.getName(), userResoursePair.right.getName()));
+                .forEach((userResourcePair, ignored) ->
+                        result.row(userResourcePair.left.getName(), userResourcePair.right.getName()));
 
         return result;
     }

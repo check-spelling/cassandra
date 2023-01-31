@@ -101,7 +101,7 @@ public interface QueryPager
      * <p>
      * This must be called before {@link fetchPageInternal} and passed to it to protect the read.
      * The returned object <b>must</b> be closed on all path and it is thus strongly advised to
-     * use it in a try-with-ressource construction.
+     * use it in a try-with-resource construction.
      *
      * @return a newly started order group for this {@code QueryPager}.
      */
