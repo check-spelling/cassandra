@@ -122,7 +122,7 @@ public class StartupClusterConnectivityChecker
         }
 
         // The threshold is 3 because for each peer we want to have 3 acks,
-        // one for small message connection, one for large message connnection and one for alive event from gossip.
+        // one for small message connection, one for large message connection and one for alive event from gossip.
         AckMap acks = new AckMap(3, peers);
         Map<String, CountDownLatch> dcToRemainingPeers = new HashMap<>(datacenterToPeers.size());
         for (String datacenter: datacenterToPeers.keys())
