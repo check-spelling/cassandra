@@ -248,7 +248,7 @@ abstract class AbstractReplicationAwareTokenAllocatorTest extends TokenAllocator
 
         public double spreadExpectation()
         {
-            return 1.5;   // Even balanced racks get disbalanced when they lose nodes.
+            return 1.5;   // Even balanced racks get unbalanced when they lose nodes.
         }
     }
 
