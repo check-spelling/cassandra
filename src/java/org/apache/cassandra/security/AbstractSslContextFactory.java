@@ -267,7 +267,7 @@ abstract public class AbstractSslContextFactory implements ISslContextFactory
 
     /**
      * Create a {@code KeyManagerFactory} for outbound connections.
-     * It provides a seperate keystore for internode mTLS outbound connections.
+     * It provides a separate keystore for internode mTLS outbound connections.
      * @return {@code KeyManagerFactory}
      * @throws SSLException
      */

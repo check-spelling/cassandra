@@ -120,7 +120,7 @@ final class SettingsTable extends AbstractVirtualTable
 
     /**
      * settings table was released in 4.0 and attempted to support nested properties for a few hand selected properties.
-     * The issue is that 4.0 used '_' to seperate the names, which makes it hard to map back to the yaml names; to solve
+     * The issue is that 4.0 used '_' to separate the names, which makes it hard to map back to the yaml names; to solve
      * this 4.1+ uses '.' to avoid possible conflicts, this class provides mappings from old names to the '.' names.
      *
      * There were a handle full of properties which had custom names, names not present in the yaml, this map also
