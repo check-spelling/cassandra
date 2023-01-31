@@ -31,6 +31,6 @@ relevance queries and sorting based on column value, relevance or
 distance. Each node indexes its own data, so high availability and
 scalability is guaranteed.
 
-The official Github repository
+The official GitHub repository
 http://www.github.com/stratio/cassandra-lucene-index[Cassandra Lucene
 Index] contains everything you need to build/run/configure the plugin.
