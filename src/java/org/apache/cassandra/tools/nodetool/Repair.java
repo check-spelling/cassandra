@@ -47,7 +47,7 @@ public class Repair extends NodeToolCmd
     @Arguments(usage = "[<keyspace> <tables>...]", description = "The keyspace followed by one or many tables")
     private List<String> args = new ArrayList<>();
 
-    @Option(title = "seqential", name = {"-seq", "--sequential"}, description = "Use -seq to carry out a sequential repair")
+    @Option(title = "sequential", name = {"-seq", "--sequential"}, description = "Use -seq to carry out a sequential repair")
     private boolean sequential = false;
 
     @Option(title = "dc parallel", name = {"-dcpar", "--dc-parallel"}, description = "Use -dcpar to repair data centers in parallel.")

@@ -130,7 +130,7 @@ public class SequentialWriter extends BufferedDataOutputStreamPlus implements Tr
     }
 
     /**
-     * Create heap-based, non-compressed SequenialWriter with default buffer size(64k).
+     * Create heap-based, non-compressed SequentialWriter with default buffer size(64k).
      *
      * @param file File to write
      */
