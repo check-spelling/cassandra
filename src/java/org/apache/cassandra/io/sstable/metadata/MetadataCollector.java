@@ -94,7 +94,7 @@ public class MetadataCollector implements PartitionStatisticsCollector
     }
 
     protected EstimatedHistogram estimatedPartitionSize = defaultPartitionSizeHistogram();
-    // TODO: cound the number of row per partition (either with the number of cells, or instead)
+    // TODO: count the number of row per partition (either with the number of cells, or instead)
     protected EstimatedHistogram estimatedCellPerPartitionCount = defaultCellPerPartitionCountHistogram();
     protected IntervalSet<CommitLogPosition> commitLogIntervals = IntervalSet.empty();
     protected final MinMaxLongTracker timestampTracker = new MinMaxLongTracker();
