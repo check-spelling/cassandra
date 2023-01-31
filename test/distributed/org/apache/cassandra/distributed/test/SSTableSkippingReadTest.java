@@ -108,7 +108,7 @@ public class SSTableSkippingReadTest extends TestBaseImpl
             // sstable 1 has minTimestamp == maxTimestamp == 1 and is skipped due to its min/max clusterings. Now we
             // insert a row which is not shadowed by the partition delete and flush to a second sstable. The first sstable
             // has a maxTimestamp > than the min timestamp of all sstables, so it is a candidate for reinclusion to the
-            // merge. Hoever, the second sstable's minTimestamp is > than the partition delete. This would  cause the
+            // merge. However, the second sstable's minTimestamp is > than the partition delete. This would  cause the
             // first sstable not to be reincluded in the merge input, but we can't really make that decision as we don't
             // know what data and/or tombstones are present on other nodes
             cluster.get(1).executeInternal(withKeyspace("INSERT INTO %s.tbl (pk, ck, v) VALUES (0, 6, 6) USING TIMESTAMP 2"));
