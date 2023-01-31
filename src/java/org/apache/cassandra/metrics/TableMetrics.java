@@ -114,7 +114,7 @@ public class TableMetrics
     public final Counter bytesFlushed;
     /** Total number of bytes written by compaction since server [re]start */
     public final Counter compactionBytesWritten;
-    /** Estimate of number of pending compactios for this table */
+    /** Estimate of number of pending compactions for this table */
     public final Gauge<Integer> pendingCompactions;
     /** Number of SSTables on disk for this CF */
     public final Gauge<Integer> liveSSTableCount;
