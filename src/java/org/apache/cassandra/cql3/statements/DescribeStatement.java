@@ -142,7 +142,7 @@ public abstract class DescribeStatement<T> extends CQLStatement.Raw implements C
 
         PagingState pagingState = options.getPagingState();
 
-        // The paging implemented here uses some arbitray row number as the partition-key for paging,
+        // The paging implemented here uses some arbitrary row number as the partition-key for paging,
         // which is used to skip/limit the result from the Java Stream. This works good enough for
         // reasonably sized schemas. Even a 'DESCRIBE SCHEMA' for an abnormally schema with 10000 tables
         // completes within a few seconds. This seems good enough for now. Once Cassandra actually supports
