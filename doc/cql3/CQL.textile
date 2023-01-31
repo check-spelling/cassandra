@@ -2669,7 +2669,7 @@ h3. 3.1.3
 
 h3. 3.1.2
 
-* @NaN@ and @Infinity@ has been added as valid float contants. They are now reserved keywords. In the unlikely case you we using them as a column identifier (or keyspace/table one), you will noew need to double quote them (see "quote identifiers":#identifiers ).
+* @NaN@ and @Infinity@ has been added as valid float constants. They are now reserved keywords. In the unlikely case you we using them as a column identifier (or keyspace/table one), you will noew need to double quote them (see "quote identifiers":#identifiers ).
 
 h3. 3.1.1
 
