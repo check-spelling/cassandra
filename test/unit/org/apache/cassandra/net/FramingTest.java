@@ -237,7 +237,7 @@ public class FramingTest
             }
             catch (IOException ioe)
             {
-                Assert.fail("Unexpected IOEception during test. " + ioe.getMessage());
+                Assert.fail("Unexpected IOException during test. " + ioe.getMessage());
             }
         };
 

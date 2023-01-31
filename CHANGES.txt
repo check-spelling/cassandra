@@ -2100,7 +2100,7 @@ Merged from 3.0:
  * Faster startup by only scanning each directory for temporary files once (CASSANDRA-12114)
  * Respond with v1/v2 protocol header when responding to driver that attempts
    to connect with too low of a protocol version (CASSANDRA-11464)
- * NullPointerExpception when reading/compacting table (CASSANDRA-11988)
+ * NullPointerException when reading/compacting table (CASSANDRA-11988)
  * Fix problem with undeleteable rows on upgrade to new sstable format (CASSANDRA-12144)
  * Fix potential bad messaging service message for paged range reads
    within mixed-version 3.x clusters (CASSANDRA-12249)
@@ -2367,7 +2367,7 @@ Merged from 3.0:
  * Fix filtering on non-primary key columns for queries without index (CASSANDRA-6377)
  * Fix sstableloader fail when using materialized view (CASSANDRA-11275)
 Merged from 2.2:
- * DatabaseDescriptor should log stacktrace in case of Eception during seed provider creation (CASSANDRA-11312)
+ * DatabaseDescriptor should log stacktrace in case of Exception during seed provider creation (CASSANDRA-11312)
  * Use canonical path for directory in SSTable descriptor (CASSANDRA-10587)
  * Add cassandra-stress keystore option (CASSANDRA-9325)
  * Dont mark sstables as repairing with sub range repairs (CASSANDRA-11451)
@@ -5379,7 +5379,7 @@ Merged from 1.0:
  * fix NPE in compactionstats (CASSANDRA-4318)
  * enforce 1m min keycache for auto (CASSANDRA-4306)
  * Have DeletedColumn.isMFD always return true (CASSANDRA-4307)
- * (cql3) exeption message for ORDER BY constraints said primary filter can be
+ * (cql3) exception message for ORDER BY constraints said primary filter can be
     an IN clause, which is misleading (CASSANDRA-4319)
  * (cql3) Reject (not yet supported) creation of 2ndardy indexes on tables with
    composite primary keys (CASSANDRA-4328)

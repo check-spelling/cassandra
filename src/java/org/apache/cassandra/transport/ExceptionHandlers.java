@@ -195,7 +195,7 @@ public class ExceptionHandlers
                 message = "Unexpected exception during request; channel = <unprintable>";
             }
 
-            // netty wraps SSL errors in a CodecExcpetion
+            // netty wraps SSL errors in a CodecException
             if (!alwaysLogAtError && (exception instanceof IOException || (exception.getCause() instanceof IOException)))
             {
                 String errorMessage = exception.getMessage();
