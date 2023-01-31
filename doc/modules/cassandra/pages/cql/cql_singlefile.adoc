@@ -3877,8 +3877,8 @@ representation of the blob). This is no longer the case, type validation
 of constants is now more strict. See the link:#types[data types] section
 for details on which constant is allowed for which type.
 * The type validation fixed of the previous point has lead to the
-introduction of link:#constants[blobs constants] to allow inputing
-blobs. Do note that while inputing blobs as strings constant is still
+introduction of link:#constants[blobs constants] to allow inputting
+blobs. Do note that while inputting blobs as strings constant is still
 supported by this version (to allow smoother transition to blob
 constant), it is now deprecated (in particular the link:#types[data
 types] section does not list strings constants as valid blobs) and will
