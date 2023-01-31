@@ -112,13 +112,13 @@ public class SSTableIdGenerationTest extends TestBaseImpl
             cluster.schemaChange(createTableStmt(KEYSPACE, "tbl", null));
             createSSTables(cluster.get(1), KEYSPACE, "tbl", 1, 2);
             assertSSTablesCount(cluster.get(1), 2, 0, KEYSPACE, "tbl");
-            verfiySSTableActivity(cluster, true);
+            verifySSTableActivity(cluster, true);
 
             restartNode(cluster, 1, true);
 
             createSSTables(cluster.get(1), KEYSPACE, "tbl", 3, 4);
             assertSSTablesCount(cluster.get(1), 2, 3, KEYSPACE, "tbl");
-            verfiySSTableActivity(cluster, false);
+            verifySSTableActivity(cluster, false);
 
             checkRowsNumber(cluster.get(1), KEYSPACE, "tbl", 9);
         }
@@ -139,7 +139,7 @@ public class SSTableIdGenerationTest extends TestBaseImpl
             cluster.schemaChange(createTableStmt(KEYSPACE, "tbl", null));
             createSSTables(cluster.get(1), KEYSPACE, "tbl", 1, 2);
             assertSSTablesCount(cluster.get(1), 0, 2, KEYSPACE, "tbl");
-            verfiySSTableActivity(cluster, false);
+            verifySSTableActivity(cluster, false);
 
             Assertions.assertThatExceptionOfType(RuntimeException.class)
                       .isThrownBy(() -> restartNode(cluster, 1, false))
@@ -461,7 +461,7 @@ public class SSTableIdGenerationTest extends TestBaseImpl
                                                                       .collect(Collectors.toSet()));
     }
 
-    private static void verfiySSTableActivity(Cluster cluster, boolean expectLegacyTableIsPopulated)
+    private static void verifySSTableActivity(Cluster cluster, boolean expectLegacyTableIsPopulated)
     {
         cluster.get(1).runOnInstance(() -> {
             RestorableMeter meter = new RestorableMeter(15, 120);

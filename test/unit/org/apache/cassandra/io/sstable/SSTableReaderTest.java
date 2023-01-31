@@ -864,7 +864,7 @@ public class SSTableReaderTest
     @Test
     public void testVerifyCompressionInfoExistenceThrows()
     {
-        Descriptor desc = setUpForTestVerfiyCompressionInfoExistence();
+        Descriptor desc = setUpForTestVerifyCompressionInfoExistence();
 
         // delete the compression info, so it is corrupted.
         File compressionInfoFile = new File(desc.filenameFor(Component.COMPRESSION_INFO));
@@ -882,7 +882,7 @@ public class SSTableReaderTest
     @Test
     public void testVerifyCompressionInfoExistenceWhenTOCUnableToOpen()
     {
-        Descriptor desc = setUpForTestVerfiyCompressionInfoExistence();
+        Descriptor desc = setUpForTestVerifyCompressionInfoExistence();
         Set<Component> components = SSTable.discoverComponentsFor(desc);
         SSTableReader.verifyCompressionInfoExistenceIfApplicable(desc, components);
 
@@ -898,12 +898,12 @@ public class SSTableReaderTest
     @Test
     public void testVerifyCompressionInfoExistencePasses()
     {
-        Descriptor desc = setUpForTestVerfiyCompressionInfoExistence();
+        Descriptor desc = setUpForTestVerifyCompressionInfoExistence();
         Set<Component> components = SSTable.discoverComponentsFor(desc);
         SSTableReader.verifyCompressionInfoExistenceIfApplicable(desc, components);
     }
 
-    private Descriptor setUpForTestVerfiyCompressionInfoExistence()
+    private Descriptor setUpForTestVerifyCompressionInfoExistence()
     {
         Keyspace keyspace = Keyspace.open(KEYSPACE1);
         ColumnFamilyStore cfs = keyspace.getColumnFamilyStore(CF_COMPRESSED);
