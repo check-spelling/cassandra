@@ -153,7 +153,7 @@ public abstract class Cell<V> extends ColumnData
 
     /**
      * Used to apply the same optimization as in {@link Cell.Serializer#deserialize} when
-     * the column is not queried but eventhough it's used for digest calculation.
+     * the column is not queried but even though it's used for digest calculation.
      * @return a cell with an empty buffer as value
      */
     public abstract Cell<?> withSkippedValue();
