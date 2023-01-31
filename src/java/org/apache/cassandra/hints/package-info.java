@@ -24,7 +24,7 @@
  * before we flush them to disk.
  *
  * {@link org.apache.cassandra.hints.HintsBufferPool} is responsible for submitting {@link org.apache.cassandra.hints.HintsBuffer}
- * instances for flushing when they exceed their capacity, and for maitaining a reserve {@link org.apache.cassandra.hints.HintsBuffer}
+ * instances for flushing when they exceed their capacity, and for maintaining a reserve {@link org.apache.cassandra.hints.HintsBuffer}
  * instance, and creating extra ones if flushing cannot keep up with arrival rate.
  *
  * {@link org.apache.cassandra.hints.HintsWriteExecutor} is a single-threaded executor that performs all the writing to disk.
