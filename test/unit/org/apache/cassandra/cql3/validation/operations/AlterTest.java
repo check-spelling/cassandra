@@ -698,7 +698,7 @@ public class AlterTest extends CQLTester
         try
         {
             function.apply();
-            fail("An error should havee been thrown but was not.");
+            fail("An error should have been thrown but was not.");
         }
         catch (Throwable e)
         {
