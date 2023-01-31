@@ -332,7 +332,7 @@ public class RowIteratorMergeListener<E extends Endpoints<E>>
 
                 if (merged.isClose(isReversed))
                 {
-                    // We're closing the merged range. If we're recorded that this should be repaird for the
+                    // We're closing the merged range. If we're recorded that this should be repaired for the
                     // source, close and add said range to the repair to send.
                     if (markerToRepair[i] != null)
                         closeOpenMarker(i, merged.closeBound(isReversed));
