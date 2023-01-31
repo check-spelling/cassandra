@@ -223,7 +223,7 @@ public class RangeTombstoneList implements Iterable<RangeTombstone>, IMeasurable
                     i++;
                 }
             }
-            // Addds the remaining ones from tombstones if any (note that addInternal will increment size if relevant).
+            // Adds the remaining ones from tombstones if any (note that addInternal will increment size if relevant).
             for (; j < tombstones.size; j++)
                 addInternal(size, tombstones.starts[j], tombstones.ends[j], tombstones.markedAts[j], tombstones.delTimes[j]);
         }
