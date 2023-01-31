@@ -40,7 +40,7 @@ import static org.junit.Assert.assertNotEquals;
 
 public class OptionalTasksTest
 {
-    private static final String KEYSPACE = "OpitonalTasksTest";
+    private static final String KEYSPACE = "OptionalTasksTest";
     private static final String TABLE = "SpeculationThreshold";
 
     @BeforeClass
