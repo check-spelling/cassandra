@@ -227,7 +227,7 @@ public class StorageProxy implements StorageProxyMBean
 
         /*
          * We execute counter writes in 2 places: either directly in the coordinator node if it is a replica, or
-         * in CounterMutationVerbHandler on a replica othewise. The write must be executed on the COUNTER_MUTATION stage
+         * in CounterMutationVerbHandler on a replica otherwise. The write must be executed on the COUNTER_MUTATION stage
          * but on the latter case, the verb handler already run on the COUNTER_MUTATION stage, so we must not execute the
          * underlying on the stage otherwise we risk a deadlock. Hence two different performer.
          */
