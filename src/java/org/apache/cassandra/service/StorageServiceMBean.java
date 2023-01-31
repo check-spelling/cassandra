@@ -241,7 +241,7 @@ public interface StorageServiceMBean extends NotificationEmitter
     @Deprecated public List<InetAddress> getNaturalEndpoints(String keyspaceName, String cf, String key);
     public List<String> getNaturalEndpointsWithPort(String keyspaceName, String cf, String key);
     @Deprecated public List<InetAddress> getNaturalEndpoints(String keyspaceName, ByteBuffer key);
-    public List<String> getNaturalEndpointsWithPort(String keysapceName, ByteBuffer key);
+    public List<String> getNaturalEndpointsWithPort(String keyspaceName, ByteBuffer key);
 
     /**
      * @deprecated use {@link #takeSnapshot(String tag, Map options, String... entities)} instead.
@@ -868,7 +868,7 @@ public interface StorageServiceMBean extends NotificationEmitter
 
     /**
      * Stop a scheduled sampling
-     * @param ks Keyspace. Nullable. If null, the scheduled sampling is on all keysapces and tables
+     * @param ks Keyspace. Nullable. If null, the scheduled sampling is on all keyspaces and tables
      * @param table Nullable. If null, the scheduled sampling is on all tables of the specified keyspace
      * @return true if the scheduled sampling is stopped. False is returned if the sampling task is not found
      */

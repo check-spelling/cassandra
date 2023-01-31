@@ -561,11 +561,11 @@ public class TypeParser
         return sb.toString();
     }
 
-    public static String stringifyUserTypeParameters(String keysace, ByteBuffer typeName, List<FieldIdentifier> fields,
+    public static String stringifyUserTypeParameters(String keyspace, ByteBuffer typeName, List<FieldIdentifier> fields,
                                                      List<AbstractType<?>> columnTypes, boolean ignoreFreezing)
     {
         StringBuilder sb = new StringBuilder();
-        sb.append('(').append(keysace).append(",").append(ByteBufferUtil.bytesToHex(typeName));
+        sb.append('(').append(keyspace).append(",").append(ByteBufferUtil.bytesToHex(typeName));
 
         for (int i = 0; i < fields.size(); i++)
         {

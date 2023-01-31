@@ -194,15 +194,15 @@ public class ReplicaPlans
     public static ReplicaPlan.ForWrite forLocalBatchlogWrite()
     {
         Token token = DatabaseDescriptor.getPartitioner().getMinimumToken();
-        Keyspace systemKeypsace = Keyspace.open(SchemaConstants.SYSTEM_KEYSPACE_NAME);
+        Keyspace systemKeyspace = Keyspace.open(SchemaConstants.SYSTEM_KEYSPACE_NAME);
         Replica localSystemReplica = SystemReplicas.getSystemReplica(FBUtilities.getBroadcastAddressAndPort());
 
         ReplicaLayout.ForTokenWrite liveAndDown = ReplicaLayout.forTokenWrite(
-                systemKeypsace.getReplicationStrategy(),
+                systemKeyspace.getReplicationStrategy(),
                 EndpointsForToken.of(token, localSystemReplica),
                 EndpointsForToken.empty(token)
         );
-        return forWrite(systemKeypsace, ConsistencyLevel.ONE, liveAndDown, liveAndDown, writeAll);
+        return forWrite(systemKeyspace, ConsistencyLevel.ONE, liveAndDown, liveAndDown, writeAll);
     }
 
     /**
@@ -230,16 +230,16 @@ public class ReplicaPlans
         if (chosenEndpoints.isEmpty() && isAny)
             chosenEndpoints = Collections.singleton(FBUtilities.getBroadcastAddressAndPort());
 
-        Keyspace systemKeypsace = Keyspace.open(SchemaConstants.SYSTEM_KEYSPACE_NAME);
+        Keyspace systemKeyspace = Keyspace.open(SchemaConstants.SYSTEM_KEYSPACE_NAME);
         ReplicaLayout.ForTokenWrite liveAndDown = ReplicaLayout.forTokenWrite(
-                systemKeypsace.getReplicationStrategy(),
+                systemKeyspace.getReplicationStrategy(),
                 SystemReplicas.getSystemReplicas(chosenEndpoints).forToken(token),
                 EndpointsForToken.empty(token)
         );
         // Batchlog is hosted by either one node or two nodes from different racks.
         ConsistencyLevel consistencyLevel = liveAndDown.all().size() == 1 ? ConsistencyLevel.ONE : ConsistencyLevel.TWO;
         // assume that we have already been given live endpoints, and skip applying the failure detector
-        return forWrite(systemKeypsace, consistencyLevel, liveAndDown, liveAndDown, writeAll);
+        return forWrite(systemKeyspace, consistencyLevel, liveAndDown, liveAndDown, writeAll);
     }
 
     private static Collection<InetAddressAndPort> filterBatchlogEndpoints(String localRack,

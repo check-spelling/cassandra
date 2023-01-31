@@ -185,7 +185,7 @@ public abstract class AbstractBounds<T extends RingPosition<T>> implements Seria
              * sign). We use negative kind for keys so as to preserve the serialization of token from older version.
              */
             // !WARNING! While we don't support the pre-3.0 messaging protocol, we serialize the token range in the
-            // system table (see SystemKeypsace.rangeToBytes) using the old/pre-3.0 format and until we deal with that
+            // system table (see SystemKeyspace.rangeToBytes) using the old/pre-3.0 format and until we deal with that
             // problem, we have to preserve this code.
             if (version < MessagingService.VERSION_30)
                 out.writeInt(kindInt(range));

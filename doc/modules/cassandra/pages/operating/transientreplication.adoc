@@ -61,12 +61,12 @@ CREATE KEYSPACE CassandraKeyspaceSimple WITH replication = {'class': 'SimpleStra
 'replication_factor' : 4/1};
 ....
 
-As another example, `some_keysopace keyspace` will have 3 replicas in
+As another example, `some_keyspace keyspace` will have 3 replicas in
 DC1, 1 of which is transient, and 5 replicas in DC2, 2 of which are
 transient:
 
 ....
-CREATE KEYSPACE some_keysopace WITH replication = {'class': 'NetworkTopologyStrategy',
+CREATE KEYSPACE some_keyspace WITH replication = {'class': 'NetworkTopologyStrategy',
 'DC1' : '3/1'', 'DC2' : '5/2'};
 ....
 
