@@ -32,7 +32,7 @@ public class SettingsNodeTest
     }
 
     @Test
-    public void testOveridingDataCenter() throws Exception
+    public void testOverridingDataCenter() throws Exception
     {
         SettingsNode.Options options = new SettingsNode.Options();
         options.accept("datacenter=dc1");
