@@ -84,7 +84,7 @@ import static org.apache.cassandra.utils.TimeUUID.Generator.nextTimeUUID;
  * commit:[commit_time][CRC]
  *
  * When the transaction log is cleaned-up by the TransactionTidier, which happens only after any old sstables have been
- * osoleted, then any sstable files for old sstables are removed before deleting the transaction log if the transaction
+ * obsoleted, then any sstable files for old sstables are removed before deleting the transaction log if the transaction
  * was committed, vice-versa if the transaction was aborted.
  *
  * On start-up we look for any transaction log files and repeat the cleanup process described above.
