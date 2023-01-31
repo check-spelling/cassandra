@@ -3450,7 +3450,7 @@ Merged from 2.0:
  * Properly calculate expected write size during compaction (CASSANDRA-8532)
  * Invalidate affected prepared statements when a table's columns
    are altered (CASSANDRA-7910)
- * Stress - user defined writes should populate sequentally (CASSANDRA-8524)
+ * Stress - user defined writes should populate sequentially (CASSANDRA-8524)
  * Fix regression in SSTableRewriter causing some rows to become unreadable
    during compaction (CASSANDRA-8429)
  * Run major compactions for repaired/unrepaired in parallel (CASSANDRA-8510)
