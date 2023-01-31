@@ -509,7 +509,7 @@ Upgrading
       the types in the serialization-header and the schema will cause sstablescrub to error out and stop by default.
       See the new `-e` option. `-e off` disables the new validation code. `-e fix` or `-e fix-only`, e.g.
       `sstablescrub -e fix keyspace table`, will validate the serialization-header, rewrite the non-frozen UDTs
-      in the serialzation-header to frozen UDTs, if that matches the schema, and continue with scrub.
+      in the serialization-header to frozen UDTs, if that matches the schema, and continue with scrub.
       See `sstablescrub -h`.
       (CASSANDRA-15035)
     - CASSANDRA-13241 lowered the default chunk_length_in_kb for compressed tables from
@@ -718,7 +718,7 @@ Upgrading
       the types in the serialization-header and the schema will cause sstablescrub to error out and stop by default.
       See the new `-e` option. `-e off` disables the new validation code. `-e fix` or `-e fix-only`, e.g.
       `sstablescrub -e fix keyspace table`, will validate the serialization-header, rewrite the non-frozen UDTs
-      in the serialzation-header to frozen UDTs, if that matches the schema, and continue with scrub.
+      in the serialization-header to frozen UDTs, if that matches the schema, and continue with scrub.
       See `sstablescrub -h`.
       (CASSANDRA-15035)
 	- repair_session_max_tree_depth setting has been added to cassandra.yaml to allow operators to reduce

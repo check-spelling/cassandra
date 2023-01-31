@@ -539,7 +539,7 @@ public class SerializationHeader
 
         private void writeType(AbstractType<?> type, DataOutputPlus out) throws IOException
         {
-            // TODO: we should have a terser serializaion format. Not a big deal though
+            // TODO: we should have a terser serialization format. Not a big deal though
             ByteBufferUtil.writeWithVIntLength(UTF8Type.instance.decompose(type.toString()), out);
         }
 

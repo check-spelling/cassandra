@@ -365,7 +365,7 @@ public final class InetAddressAndPort extends InetSocketAddress implements Compa
             int size = in.readByte() & 0xFF;
             switch(size)
             {
-                //The original pre-4.0 serialiation of just an address
+                //The original pre-4.0 serialization of just an address
                 case 4:
                 case 16:
                 {
