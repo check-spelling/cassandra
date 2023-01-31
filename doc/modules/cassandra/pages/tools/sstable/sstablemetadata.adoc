@@ -223,7 +223,7 @@ seconds, use the gc_grace_seconds option. Because the sstablemetadata
 tool doesn't access the schema directly, this is a way to more
 accurately estimate droppable tombstones -- for example, if you pass in
 gc_grace_seconds matching what is configured in the schema. The
-gc_grace_seconds value provided is subtracted from the curent machine
+gc_grace_seconds value provided is subtracted from the current machine
 time (in seconds).
 
 ref: https://issues.apache.org/jira/browse/CASSANDRA-12208
