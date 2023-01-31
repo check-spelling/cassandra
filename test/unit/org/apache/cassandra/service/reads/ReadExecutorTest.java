@@ -126,7 +126,7 @@ public class ReadExecutorTest
     }
 
     /**
-     *  Test that speculation when it is attempted is countedc, and when it succeed
+     *  Test that speculation when it is attempted is counted, and when it succeed
      *  no failure is counted.
      */
     @Test
