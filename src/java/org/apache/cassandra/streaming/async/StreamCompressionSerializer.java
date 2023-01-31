@@ -32,7 +32,7 @@ import org.apache.cassandra.streaming.StreamingDataOutputPlus;
 import static org.apache.cassandra.net.MessagingService.current_version;
 
 /**
- * A serialiazer for stream compressed files (see package-level documentation). Much like a typical compressed
+ * A serializer for stream compressed files (see package-level documentation). Much like a typical compressed
  * output stream, this class operates on buffers or chunks of the data at a a time. The format for each compressed
  * chunk is as follows:
  *
