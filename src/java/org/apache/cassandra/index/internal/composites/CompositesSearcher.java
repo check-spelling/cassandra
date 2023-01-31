@@ -107,7 +107,7 @@ public class CompositesSearcher extends CassandraIndexSearcher
                     List<IndexEntry> entries = new ArrayList<>();
                     if (isStaticColumn())
                     {
-                        // The index hit may not match the commad key constraint
+                        // The index hit may not match the command key constraint
                         if (!isMatchingEntry(partitionKey, nextEntry, command)) {
                             nextEntry = indexHits.hasNext() ? index.decodeEntry(indexKey, indexHits.next()) : null;
                             continue;
