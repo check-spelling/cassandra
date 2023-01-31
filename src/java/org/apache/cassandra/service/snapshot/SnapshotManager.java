@@ -57,7 +57,7 @@ public class SnapshotManager {
     protected volatile ScheduledFuture cleanupTaskFuture;
 
     /**
-     * Expiring ssnapshots ordered by expiration date, to allow only iterating over snapshots
+     * Expiring snapshots ordered by expiration date, to allow only iterating over snapshots
      * that need to be removed on {@link this#clearExpiredSnapshots()}
      */
     private final PriorityQueue<TableSnapshot> expiringSnapshots = new PriorityQueue<>(Comparator.comparing(x -> x.getExpiresAt()));

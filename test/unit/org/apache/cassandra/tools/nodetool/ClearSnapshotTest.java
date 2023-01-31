@@ -146,7 +146,7 @@ public class ClearSnapshotTest extends CQLTester
                    output.contains("last-snapshot-ks2-tb2");
         });
 
-        // clear all snapshosts older than 1 second
+        // clear all snapshots older than 1 second
         invokeNodetool("clearsnapshot", "--older-than", "1s", "--all", "--", currentKeyspace()).assertOnCleanExit();
 
         await().until(() -> {
