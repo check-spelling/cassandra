@@ -227,7 +227,7 @@ public class TombstonesTest extends CQLTester
         }
         catch (Throwable e)
         {
-            fail("SELECT with tombstones below the failure threshold and above warning threashhold should not have failed, but has: " + e);
+            fail("SELECT with tombstones below the failure threshold and above warning threshold should not have failed, but has: " + e);
         }
     }
 

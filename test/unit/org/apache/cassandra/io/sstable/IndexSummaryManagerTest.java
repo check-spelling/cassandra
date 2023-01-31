@@ -59,7 +59,7 @@ import static com.google.common.collect.ImmutableMap.of;
 import static java.util.Arrays.asList;
 import static org.apache.cassandra.Util.assertOnDiskState;
 import static org.apache.cassandra.io.sstable.Downsampling.BASE_SAMPLING_LEVEL;
-import static org.apache.cassandra.io.sstable.IndexSummaryRedistribution.DOWNSAMPLE_THESHOLD;
+import static org.apache.cassandra.io.sstable.IndexSummaryRedistribution.DOWNSAMPLE_THRESHOLD;
 import static org.apache.cassandra.io.sstable.IndexSummaryRedistribution.UPSAMPLE_THRESHOLD;
 import static org.apache.cassandra.utils.TimeUUID.Generator.nextTimeUUID;
 import static org.junit.Assert.assertEquals;
@@ -426,7 +426,7 @@ public class IndexSummaryManagerTest
         validateData(cfs, numRows);
 
         // small increases or decreases in the read rate don't result in downsampling or upsampling
-        double lowerRate = 50.0 * (DOWNSAMPLE_THESHOLD + (DOWNSAMPLE_THESHOLD * 0.10));
+        double lowerRate = 50.0 * (DOWNSAMPLE_THRESHOLD + (DOWNSAMPLE_THRESHOLD * 0.10));
         double higherRate = 50.0 * (UPSAMPLE_THRESHOLD - (UPSAMPLE_THRESHOLD * 0.10));
         sstables.get(0).overrideReadMeter(new RestorableMeter(lowerRate, lowerRate));
         sstables.get(1).overrideReadMeter(new RestorableMeter(higherRate, higherRate));

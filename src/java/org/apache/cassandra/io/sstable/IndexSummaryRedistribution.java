@@ -59,7 +59,7 @@ public class IndexSummaryRedistribution extends CompactionInfo.Holder
     // upsampling requires reading the primary index in order to rebuild the summary, the threshold
     // for upsampling is is higher.
     static final double UPSAMPLE_THRESHOLD = 1.5;
-    static final double DOWNSAMPLE_THESHOLD = 0.75;
+    static final double DOWNSAMPLE_THRESHOLD = 0.75;
 
     private final Map<TableId, LifecycleTransaction> transactions;
     private final long nonRedistributingOffHeapSize;
@@ -220,7 +220,7 @@ public class IndexSummaryRedistribution extends CompactionInfo.Holder
                 toUpsample.add(new ResampleEntry(sstable, spaceUsed, newSamplingLevel));
                 remainingSpace -= avgEntrySize * numEntriesAtNewSamplingLevel;
             }
-            else if (targetNumEntries < currentNumEntries * DOWNSAMPLE_THESHOLD && newSamplingLevel < currentSamplingLevel)
+            else if (targetNumEntries < currentNumEntries * DOWNSAMPLE_THRESHOLD && newSamplingLevel < currentSamplingLevel)
             {
                 long spaceUsed = (long) Math.ceil(avgEntrySize * numEntriesAtNewSamplingLevel);
                 toDownsample.add(new ResampleEntry(sstable, spaceUsed, newSamplingLevel));
