@@ -367,7 +367,7 @@ public class PagingState
             // This is the types that will be used when serializing the clustering in the paging state. We can't really use the actual clustering
             // types however because we can't guarantee that there won't be a schema change between when we send the paging state and get it back,
             // and said schema change could theoretically change one of the clustering types from a fixed width type to a non-fixed one
-            // (say timestamp -> blob). So we simply use a list of BytesTypes (for both reading and writting), which may be slightly inefficient
+            // (say timestamp -> blob). So we simply use a list of BytesTypes (for both reading and writing), which may be slightly inefficient
             // for fixed-width types, but avoid any risk during schema changes.
             int size = metadata.clusteringColumns().size();
             List<AbstractType<?>> l = new ArrayList<>(size);

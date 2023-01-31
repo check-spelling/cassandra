@@ -63,7 +63,7 @@ public class HintsServiceMetricsTest extends TestBaseImpl
     @Test
     public void testHintsServiceMetrics() throws Exception
     {
-        // setup a 3-node cluster with a bytebuddy injection that makes the writting of some hints to fail
+        // setup a 3-node cluster with a bytebuddy injection that makes the writing of some hints to fail
         try (Cluster cluster = builder().withNodes(3)
                                         .withConfig(config -> config.with(NETWORK, GOSSIP, NATIVE_PROTOCOL))
                                         .withInstanceInitializer(FailHints::install)
