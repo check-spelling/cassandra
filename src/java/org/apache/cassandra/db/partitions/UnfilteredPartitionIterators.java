@@ -342,7 +342,7 @@ public abstract class UnfilteredPartitionIterators
                      * In that case we must drain the unconsumed iterator fully ourselves, here.
                      *
                      * NOTE: transformations of the upstream BaseRows won't be applied for these consumed elements,
-                     * so, for exmaple, they won't be counted.
+                     * so, for example, they won't be counted.
                      */
                     if (null != next)
                         while (next.hasNext())
