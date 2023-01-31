@@ -1912,7 +1912,7 @@ public class StorageProxy implements StorageProxyMBean
                     : ballot -> Pair.create(PartitionUpdate.emptyUpdate(metadata, key), null);
                 // When replaying, we commit at quorum/local quorum, as we want to be sure the following read (done at
                 // quorum/local_quorum) sees any replayed updates. Our own update is however empty, and those don't even
-                // get committed due to an optimiation described in doPaxos/beingRepairAndPaxos, so the commit
+                // get committed due to an optimization described in doPaxos/beingRepairAndPaxos, so the commit
                 // consistency is irrelevant (we use ANY just to emphasis that we don't wait on our commit).
                 doPaxos(metadata,
                         key,
