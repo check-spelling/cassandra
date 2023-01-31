@@ -104,7 +104,7 @@ class CollectionMergeTrie<T> extends Trie<T>
      * bottom to top. Should a source be exhausted when advancing, it can be thrown away by swapping in the last
      * source in the heap (note: we must be careful to advance that source too if required).
      *
-     * To make it easier to advance efficienty in single-sourced branches of tries, we extract the current smallest
+     * To make it easier to advance efficiency in single-sourced branches of tries, we extract the current smallest
      * cursor (the head) separately, and start any advance with comparing that to the heap's first. When the smallest
      * cursor remains the same (e.g. in branches coming from a single source) this makes it possible to advance with
      * just one comparison instead of two at the expense of increasing the number by one in the general case.
