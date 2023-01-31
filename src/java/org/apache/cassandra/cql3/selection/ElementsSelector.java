@@ -140,7 +140,7 @@ abstract class ElementsSelector extends Selector
                 // the ColumnFilter (through addFetchedColumns below).
                 // That's the case if either there is no particular subselection
                 // to add, or if there is one but the selected key is terminal. In other words,
-                // we known all the fetched columns if all the feched columns of the factory are known and either:
+                // we known all the fetched columns if all the fetched columns of the factory are known and either:
                 //  1) the type is frozen (in which case there isn't subselection to do).
                 //  2) the factory (the left-hand-side) isn't a simple column selection (here again, no
                 //     subselection we can do).
@@ -201,7 +201,7 @@ abstract class ElementsSelector extends Selector
                 // the ColumnFilter (through addFetchedColumns below).
                 // That's the case if either there is no particular subselection
                 // to add, or if there is one but the selected bound are terminal. In other words,
-                // we known all the fetched columns if all the feched columns of the factory are known and either:
+                // we known all the fetched columns if all the fetched columns of the factory are known and either:
                 //  1) the type is frozen (in which case there isn't subselection to do).
                 //  2) the factory (the left-hand-side) isn't a simple column selection (here again, no
                 //     subselection we can do).
