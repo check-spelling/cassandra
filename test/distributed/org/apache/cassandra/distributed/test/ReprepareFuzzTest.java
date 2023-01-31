@@ -202,10 +202,10 @@ public class ReprepareFuzzTest extends TestBaseImpl
                                     try
                                     {
                                         String qs = String.format(unqualified, statementIdx, statementIdx, ks);
-                                        PreparedStatement preparedUnqalified = session.prepare(qs);
-                                        Assert.assertEquals(preparedUnqalified.getQueryKeyspace(), usedKs);
-                                        PreparedStatementHelper.assertHashWithKeyspace(preparedUnqalified, qs, usedKs);
-                                        unqualifiedStatements.put(Pair.create(usedKsIdx, statementIdx), preparedUnqalified);
+                                        PreparedStatement preparedUnqualified = session.prepare(qs);
+                                        Assert.assertEquals(preparedUnqualified.getQueryKeyspace(), usedKs);
+                                        PreparedStatementHelper.assertHashWithKeyspace(preparedUnqualified, qs, usedKs);
+                                        unqualifiedStatements.put(Pair.create(usedKsIdx, statementIdx), preparedUnqualified);
                                     }
                                     catch (InvalidQueryException iqe)
                                     {

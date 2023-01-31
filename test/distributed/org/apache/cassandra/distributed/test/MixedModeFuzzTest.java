@@ -301,8 +301,8 @@ public class MixedModeFuzzTest extends TestBaseImpl
                                     {
                                         String qs = String.format(unqualified, statementIdx, statementIdx);
                                         // we don't know where it's going to be executed
-                                        PreparedStatement preparedUnqalified = sessions.get("ks" + ks).prepare(qs);
-                                        unqualifiedStatements.put(Pair.create(ks, statementIdx), preparedUnqalified);
+                                        PreparedStatement preparedUnqualified = sessions.get("ks" + ks).prepare(qs);
+                                        unqualifiedStatements.put(Pair.create(ks, statementIdx), preparedUnqualified);
                                     }
                                     catch (InvalidQueryException iqe)
                                     {
