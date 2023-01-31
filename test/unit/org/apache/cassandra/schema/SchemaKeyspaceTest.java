@@ -282,7 +282,7 @@ public class SchemaKeyspaceTest
         SchemaLoader.createKeyspace(testKS,
                                     KeyspaceParams.simple(1),
                                     SchemaLoader.standardCFMD(testKS, testTable));
-        // Delete all colmns in the schema
+        // Delete all columns in the schema
         String query = String.format("DELETE FROM %s.%s WHERE keyspace_name=? and table_name=?", SchemaConstants.SCHEMA_KEYSPACE_NAME, SchemaKeyspaceTables.COLUMNS);
         executeOnceInternal(query, testKS, testTable);
         SchemaKeyspace.fetchNonSystemKeyspaces();

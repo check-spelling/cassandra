@@ -232,7 +232,7 @@ public final class StatementRestrictions
         if (selectsOnlyStaticColumns && hasClusteringColumnsRestrictions())
         {
             // If the only updated/deleted columns are static, then we don't need clustering columns.
-            // And in fact, unless it is an INSERT, we reject if clustering colums are provided as that
+            // And in fact, unless it is an INSERT, we reject if clustering columns are provided as that
             // suggest something unintended. For instance, given:
             //   CREATE TABLE t (k int, v int, s int static, PRIMARY KEY (k, v))
             // it can make sense to do:

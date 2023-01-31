@@ -108,7 +108,7 @@ public abstract class Selection
 
         // If we order post-query in json, the first and only column that we ship to the client is the json column.
         // In that case, we should keep ordering columns around to perform the ordering, then these columns will
-        // be placed after the json column. As a consequence of where the colums are placed, we should give the
+        // be placed after the json column. As a consequence of where the columns are placed, we should give the
         // ordering index a value based on their position in the json encoding and discard the original index.
         // (CASSANDRA-14286)
         return orderingColumns.indexOf(c) + 1;
