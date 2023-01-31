@@ -284,7 +284,7 @@ public class AuthorizationProxy implements InvocationHandler
         logger.trace("JMX invocation of {} on {} requires permission {}", methodName, targetBean, requiredPermission);
 
         // find any JMXResources upon which the authenticated subject has been granted the
-        // reqired permission. We'll do ObjectName-specific filtering & matching of resources later
+        // required permission. We'll do ObjectName-specific filtering & matching of resources later
         Set<JMXResource> permittedResources = getPermittedResources(role, requiredPermission);
 
         if (permittedResources.isEmpty())
