@@ -321,7 +321,7 @@ public final class JavaBasedUDFunction extends UDFunction
             try
             {
                 thread.setContextClassLoader(UDFunction.udfClassLoader);
-                // Execute UDF intiialization from UDF class loader
+                // Execute UDF initialization from UDF class loader
 
                 Class cls = Class.forName(targetClassName, false, targetClassLoader);
 
