@@ -24,7 +24,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Synchronous, file-based audit logger; just uses the standard logging mechansim.
+ * Synchronous, file-based audit logger; just uses the standard logging mechanism.
  */
 public class FileAuditLogger implements IAuditLogger
 {

@@ -93,7 +93,7 @@ public class StreamingMultiplexedChannel
     private static final int DEFAULT_MAX_PARALLEL_TRANSFERS = getAvailableProcessors();
     private static final int MAX_PARALLEL_TRANSFERS = parseInt(getProperty(PROPERTY_PREFIX + "streaming.session.parallelTransfers", Integer.toString(DEFAULT_MAX_PARALLEL_TRANSFERS)));
 
-    // a simple mechansim for allowing a degree of fairness across multiple sessions
+    // a simple mechanism for allowing a degree of fairness across multiple sessions
     private static final Semaphore fileTransferSemaphore = newFairSemaphore(DEFAULT_MAX_PARALLEL_TRANSFERS);
 
     private final StreamingChannel.Factory factory;
