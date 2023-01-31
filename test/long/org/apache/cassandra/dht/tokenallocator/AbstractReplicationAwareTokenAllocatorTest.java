@@ -153,7 +153,7 @@ abstract class AbstractReplicationAwareTokenAllocatorTest extends TokenAllocator
             Iterator<Unit> iter = Iterables.concat(sortedTokens.tailMap(token, true).values(), sortedTokens.values()).iterator();
             while (endpoints.size() < replicas)
             {
-                // For simlicity assuming list can't be exhausted before finding all replicas.
+                // For simplicity assuming list can't be exhausted before finding all replicas.
                 Unit ep = iter.next();
                 int group = groupMap.get(ep);
                 if (!usedGroups.get(group))
