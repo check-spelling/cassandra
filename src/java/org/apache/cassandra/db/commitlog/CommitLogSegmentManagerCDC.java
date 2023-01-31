@@ -102,7 +102,7 @@ public class CommitLogSegmentManagerCDC extends AbstractCommitLogSegmentManager
             return 0;
         }
         List<File> sorted = Arrays.stream(files)
-                                  // sort by the commmit log segment id
+                                  // sort by the commit log segment id
                                   .sorted(new CommitLogSegment.CommitLogSegmentFileComparator())
                                   .collect(Collectors.toList());
         long bytesDeleted = 0;

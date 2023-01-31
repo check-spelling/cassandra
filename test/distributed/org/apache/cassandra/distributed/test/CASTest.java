@@ -429,7 +429,7 @@ public class CASTest extends CASCommonTestCases
                    row(true));
 
         FOUR_NODES.get(1).acceptsOnInstance(CASTestBase::assertNotVisibleInRing).accept(FOUR_NODES.get(4));
-        // {1} promises, accepts and commmits on !{3} => {1, 2}
+        // {1} promises, accepts and commits on !{3} => {1, 2}
         drop(FOUR_NODES, 1, to(3), to(3), to(3));
         assertRows(executeWithRetry(FOUR_NODES.coordinator(1), "INSERT INTO " + KEYSPACE + "." + tableName + " (pk, ck, v2) VALUES (?, 1, 2) IF NOT EXISTS", ONE, pk),
                    row(false, pk, 1, 1, null));
@@ -467,7 +467,7 @@ public class CASTest extends CASCommonTestCases
         int pk = pk(FOUR_NODES, 1, 2);
 
         FOUR_NODES.get(1).acceptsOnInstance(CASTestBase::assertNotVisibleInRing).accept(FOUR_NODES.get(4));
-        // {1} promises and accepts on !{3} => {1, 2}; commmits on !{2, 3} => {1}
+        // {1} promises and accepts on !{3} => {1, 2}; commits on !{2, 3} => {1}
         drop(FOUR_NODES, 1, to(3), to(3), to(2, 3));
         assertRows(executeWithRetry(FOUR_NODES.coordinator(1), "INSERT INTO " + KEYSPACE + "." + tableName + " (pk, ck, v) VALUES (?, 1, 1) IF NOT EXISTS", ONE, pk),
                    row(true));
