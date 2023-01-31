@@ -1534,7 +1534,7 @@ public class Gossiper implements IFailureDetectionEventListener, GossiperMBean
      * h5 tries to do a host replacement against n4 (ignore the fact this doesn't make sense)
      * }
      * In that case above, the {@link Map#entrySet()} ordering can be random, causing h4 to apply before h2, which will
-     * be rejected by subscripers (only after updating gossip causing zero retries).
+     * be rejected by subscribers (only after updating gossip causing zero retries).
      */
     private static Comparator<Entry<InetAddressAndPort, EndpointState>> stateOrderMap()
     {
