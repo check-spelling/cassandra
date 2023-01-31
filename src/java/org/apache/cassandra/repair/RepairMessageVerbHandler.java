@@ -280,9 +280,9 @@ public class RepairMessageVerbHandler implements IVerbHandler<RepairMessage>
             logger.error("Got error, removing parent repair session");
             if (desc != null && desc.parentSessionId != null)
             {
-                ParticipateState parcipate = ActiveRepairService.instance.participate(desc.parentSessionId);
-                if (parcipate != null)
-                    parcipate.phase.fail(e);
+                ParticipateState participate = ActiveRepairService.instance.participate(desc.parentSessionId);
+                if (participate != null)
+                    participate.phase.fail(e);
                 ActiveRepairService.instance.removeParentRepairSession(desc.parentSessionId);
             }
             throw new RuntimeException(e);
