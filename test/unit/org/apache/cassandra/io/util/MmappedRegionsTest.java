@@ -198,7 +198,7 @@ public class MmappedRegionsTest
         try(ChannelProxy channel = new ChannelProxy(writeFile("testSnapshot", buffer));
             MmappedRegions regions = MmappedRegions.map(channel, buffer.capacity() / 4))
         {
-            // create 3 more segments, one per quater capacity
+            // create 3 more segments, one per quarter capacity
             regions.extend(buffer.capacity() / 2);
             regions.extend(3 * buffer.capacity() / 4);
             regions.extend(buffer.capacity());
