@@ -239,7 +239,7 @@ public class NativeTransportEncryptionOptionsTest extends AbstractEncryptionOpti
     public void testEndpointVerificationDisabledIpNotInSAN() throws Throwable
     {
         // When required_endpoint_verification is set to false, client certificate Ip/hostname should be validated
-        // The certificate in cassandra_ssl_test_outbound.keystore does not have IP/hostname embeded, so when
+        // The certificate in cassandra_ssl_test_outbound.keystore does not have IP/hostname embedded, so when
         // require_endpoint_verification is false, the connection should be established
        testEndpointVerification(false, true);
     }
@@ -248,7 +248,7 @@ public class NativeTransportEncryptionOptionsTest extends AbstractEncryptionOpti
     public void testEndpointVerificationEnabledIpNotInSAN() throws Throwable
     {
         // When required_endpoint_verification is set to true, client certificate Ip/hostname should be validated
-        // The certificate in cassandra_ssl_test_outbound.keystore does not have IP/hostname emebeded, so when
+        // The certificate in cassandra_ssl_test_outbound.keystore does not have IP/hostname embedded, so when
         // require_endpoint_verification is true, the connection should not be established
         testEndpointVerification(true, false);
     }
@@ -257,7 +257,7 @@ public class NativeTransportEncryptionOptionsTest extends AbstractEncryptionOpti
     public void testEndpointVerificationEnabledWithIPInSan() throws Throwable
     {
         // When required_endpoint_verification is set to true, client certificate Ip/hostname should be validated
-        // The certificate in cassandra_ssl_test_outbound.keystore have IP/hostname emebeded, so when
+        // The certificate in cassandra_ssl_test_outbound.keystore have IP/hostname embedded, so when
         // require_endpoint_verification is true, the connection should be established
         testEndpointVerification(true, true);
     }
