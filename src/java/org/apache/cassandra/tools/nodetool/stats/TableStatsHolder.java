@@ -479,8 +479,8 @@ public class TableStatsHolder implements StatsHolder
             if (filterList.isEmpty())
                 return !ignoreMode;
 
-            // Note that if there is any table for the keyspace, we want to include the keyspace irregarding
-            // of the ignoreMode, since the ignoreMode then apply to the table inside the keyspace but the
+            // Note that if there is any table for the keyspace, we want to include the keyspace disregarding
+            // the ignoreMode, since the ignoreMode then apply to the table inside the keyspace but the
             // keyspace itself is not ignored
             return filter.get(keyspace) != null || ignoreMode;
         }

@@ -359,7 +359,7 @@ public class Columns extends AbstractCollection<ColumnMetadata> implements Colle
     public Iterator<ColumnMetadata> selectOrderIterator()
     {
         // In wildcard selection, we want to return all columns in alphabetical order,
-        // irregarding of whether they are complex or not
+        // disregarding whether they are complex or not
         return Iterators.<ColumnMetadata>
                          mergeSorted(ImmutableList.of(simpleColumns(), complexColumns()),
                                      (s, c) ->
