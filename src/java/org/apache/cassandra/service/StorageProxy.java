@@ -1691,7 +1691,7 @@ public class StorageProxy implements StorageProxyMBean
      *
      * A counter mutation needs to first be applied to a replica (that we'll call the leader for the mutation) before being
      * replicated to the other endpoint. To achieve so, there is two case:
-     *   1) the coordinator host is a replica: we proceed to applying the update locally and replicate throug
+     *   1) the coordinator host is a replica: we proceed to applying the update locally and replicate through
      *   applyCounterMutationOnCoordinator
      *   2) the coordinator is not a replica: we forward the (counter)mutation to a chosen replica (that will proceed through
      *   applyCounterMutationOnLeader upon receive) and wait for its acknowledgment.

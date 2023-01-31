@@ -113,7 +113,7 @@ public class SequentialWriterOption
         private int trickleFsyncByteInterval = 10 * 1024 * 1024;
         private boolean finishOnClose = false;
 
-        /* construct throguh SequentialWriteOption.newBuilder */
+        /* construct through SequentialWriteOption.newBuilder */
         private Builder() {}
 
         public SequentialWriterOption build()
