@@ -2848,7 +2848,7 @@ Thrift API
     - The get_string_property() method has been removed.
     - The get_string_list_property() method has been removed.
 
-Configuraton
+Configuration
 ------------
     - Configuration file renamed to cassandra.yaml and log4j.properties to
       log4j-server.properties
@@ -2925,7 +2925,7 @@ Features
     - experimental authentication support, described under
       Authenticator in storage.conf
 
-Configuraton
+Configuration
 ------------
     - MemtableSizeInMB has been replaced by MemtableThroughputInMB which
       triggers a memtable flush when the specified amount of data has

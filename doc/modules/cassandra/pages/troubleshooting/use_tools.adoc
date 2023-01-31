@@ -504,7 +504,7 @@ Generally:
 
 [arabic]
 . Enable the `-XX:+PreserveFramePointer` option in Cassandra's
-`jvm.options` configuation file. This has a negligible performance
+`jvm.options` configuration file. This has a negligible performance
 impact but allows you actually see what Cassandra is doing.
 . Run `perf` to get some data.
 . Send that data through the relevant scripts in the FlameGraph toolset

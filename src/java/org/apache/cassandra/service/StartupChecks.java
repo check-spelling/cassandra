@@ -167,7 +167,7 @@ public class StartupChecks
      * Run the configured tests and return a report detailing the results.
      * @throws StartupException if any test determines that the
      * system is not in an valid state to startup
-     * @param options options to pass to respective checks for their configration
+     * @param options options to pass to respective checks for their configuration
      */
     public void verify(StartupChecksOptions options) throws StartupException
     {
