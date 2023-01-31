@@ -29,7 +29,7 @@ public class SsdDiskOptimizationStrategy implements DiskOptimizationStrategy
 
     /**
      * For solid state disks only add one page if the chance of crossing to the next page is more
-     * than a predifined value.
+     * than a predefined value.
      *
      * @see org.apache.cassandra.config.Config#disk_optimization_page_cross_chance
      */
