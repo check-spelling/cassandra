@@ -38,7 +38,7 @@ The `system_views` keyspace contains the actual virtual tables.
 
 == Virtual Table Limitations
 
-Before disccusing virtual keyspaces and tables, note that virtual keyspaces and tables have some limitations. 
+Before discussing virtual keyspaces and tables, note that virtual keyspaces and tables have some limitations. 
 These limitations are subject to change.
 Virtual keyspaces cannot be altered or dropped. 
 In fact, no operations can be performed against virtual keyspaces.
