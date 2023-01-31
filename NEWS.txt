@@ -956,7 +956,7 @@ New features
      tasks for. Thread names mentioned in traced queries change accordingly.
    - A new option has been added to cassandra-stress "-rate fixed={number}/s"
      that forces a scheduled rate of operations/sec over time. Using this, stress can
-     accurately account for coordinated ommission from the stress process.
+     accurately account for coordinated omission from the stress process.
    - The cassandra-stress "-rate limit=" option has been renamed to "-rate throttle="
    - hdr histograms have been added to stress runs, it's output can be saved to disk using:
      "-log hdrfile=" option. This histogram includes response/service/wait times when used with the
