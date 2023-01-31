@@ -553,7 +553,7 @@ public class PaxosRepair extends AbstractPaxosRepair
     }
 
     /**
-     * The proposal request handler, i.e. receives a proposal from a peer and responds with either acccept/reject
+     * The proposal request handler, i.e. receives a proposal from a peer and responds with either accept/reject
      */
     public static class RequestHandler implements IVerbHandler<PaxosRepair.Request>
     {

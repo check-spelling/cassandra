@@ -401,7 +401,7 @@ public class PaxosPropose<OnDone extends Consumer<? super PaxosPropose.Status>> 
     }
 
     /**
-     * The proposal request handler, i.e. receives a proposal from a peer and responds with either acccept/reject
+     * The proposal request handler, i.e. receives a proposal from a peer and responds with either accept/reject
      */
     public static class RequestHandler implements IVerbHandler<Request>
     {
