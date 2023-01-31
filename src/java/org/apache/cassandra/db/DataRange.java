@@ -274,7 +274,7 @@ public class DataRange
      * sub-range of the initial range but doesn't validate it. You should make sure to only provided sub-ranges however or this
      * might throw off the paging case (see Paging.forSubRange()).
      *
-     * @return a new {@code DataRange} using {@code range} as partition key range and the clustering index filter filter from {@code this}.
+     * @return a new {@code DataRange} using {@code range} as partition key range and the clustering index filter from {@code this}.
      */
     public DataRange forSubRange(AbstractBounds<PartitionPosition> range)
     {
