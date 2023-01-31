@@ -1189,7 +1189,7 @@ public final class SchemaKeyspace
         boolean calledOnNullInput = row.getBoolean("called_on_null_input");
 
         /*
-         * TODO: find a way to get rid of Schema.instance dependency; evaluate if the opimisation below makes a difference
+         * TODO: find a way to get rid of Schema.instance dependency; evaluate if the optimisation below makes a difference
          * in the first place. Remove if it isn't.
          */
         UserFunction existing = Schema.instance.findUserFunction(name, argTypes).orElse(null);
