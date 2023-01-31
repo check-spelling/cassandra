@@ -198,7 +198,7 @@ public class DataOutputTest
 
         try (DataOutputBuffer write = new DataOutputBuffer())
         {
-            //Doesn't throw up to DataOuptutBuffer.MAX_ARRAY_SIZE which is the array size limit in Java
+            //Doesn't throw up to DataOutputBuffer.MAX_ARRAY_SIZE which is the array size limit in Java
             for (int ii = 0; ii < DataOutputBuffer.MAX_ARRAY_SIZE / 8; ii++)
                 write.writeLong(0);
             write.write(new byte[7]);

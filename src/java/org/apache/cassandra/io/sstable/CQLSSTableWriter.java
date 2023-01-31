@@ -548,7 +548,7 @@ public class CQLSSTableWriter implements Closeable
         public CQLSSTableWriter build()
         {
             if (directory == null)
-                throw new IllegalStateException("No ouptut directory specified, you should provide a directory with inDirectory()");
+                throw new IllegalStateException("No output directory specified, you should provide a directory with inDirectory()");
             if (schemaStatement == null)
                 throw new IllegalStateException("Missing schema, you should provide the schema for the SSTable to create with forTable()");
             if (modificationStatement == null)

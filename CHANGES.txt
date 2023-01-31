@@ -2235,7 +2235,7 @@ Merged from 2.1:
  * Enhanced Compaction Logging (CASSANDRA-10805)
  * Make prepared statement cache size configurable (CASSANDRA-11555)
  * Integrated JMX authentication and authorization (CASSANDRA-10091)
- * Add units to stress ouput (CASSANDRA-11352)
+ * Add units to stress output (CASSANDRA-11352)
  * Fix PER PARTITION LIMIT for single and multi partitions queries (CASSANDRA-11603)
  * Add uncompressed chunk cache for RandomAccessReader (CASSANDRA-5863)
  * Clarify ClusteringPrefix hierarchy (CASSANDRA-11213)
@@ -2953,7 +2953,7 @@ Merged from 2.2:
 Merged from 2.1:
  * Add new JMX methods to change local compaction strategy (CASSANDRA-9965)
  * Fix handling of enable/disable autocompaction (CASSANDRA-9899)
- * Add consistency level to tracing ouput (CASSANDRA-9827)
+ * Add consistency level to tracing output (CASSANDRA-9827)
  * Remove repair snapshot leftover on startup (CASSANDRA-7357)
  * Use random nodes for batch log when only 2 racks (CASSANDRA-8735)
  * Ensure atomicity inside thrift and stream session (CASSANDRA-7757)
