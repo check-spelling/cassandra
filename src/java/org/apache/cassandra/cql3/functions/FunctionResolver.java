@@ -133,7 +133,7 @@ public final class FunctionResolver
         {
             if (matchReturnType(toTest, receiverType))
             {
-                AssignmentTestable.TestResult r = matchAguments(keyspace, toTest, providedArgs, receiverKeyspace, receiverTable);
+                AssignmentTestable.TestResult r = matchArguments(keyspace, toTest, providedArgs, receiverKeyspace, receiverTable);
                 switch (r)
                 {
                     case EXACT_MATCH:
@@ -237,7 +237,7 @@ public final class FunctionResolver
         }
     }
 
-    private static AssignmentTestable.TestResult matchAguments(String keyspace,
+    private static AssignmentTestable.TestResult matchArguments(String keyspace,
                                                                Function fun,
                                                                List<? extends AssignmentTestable> providedArgs,
                                                                String receiverKeyspace,
