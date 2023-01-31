@@ -25,7 +25,7 @@ and why you would use each one.
 [width="100%",cols="13%,87%",options="header",]
 |===
 |Token Count |Description
-|1 |Maximum availablility, maximum cluster size, fewest peers, but
+|1 |Maximum availability, maximum cluster size, fewest peers, but
 inflexible expansion. Must always double size of cluster to expand and
 remain balanced.
 
