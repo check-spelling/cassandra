@@ -106,7 +106,7 @@ public class PaxosCleanupLocalCoordinator extends AsyncFuture<PaxosCleanupRespon
     }
 
     /**
-     * Schedule as many key repairs as we can, up to the paralellism limit. If no repairs are scheduled and
+     * Schedule as many key repairs as we can, up to the parallelism limit. If no repairs are scheduled and
      * none are in flight when the iterator is exhausted, the session will be finished
      */
     private void scheduleKeyRepairsOrFinish()
