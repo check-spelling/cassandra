@@ -1916,7 +1916,7 @@ Adding or updating key-values of a (potentially) existing map can be accomplishe
 bc(sample). 
 // Updating (or inserting)
 UPDATE users SET favs['author'] = 'Ed Poe' WHERE id = 'jsmith'
-UPDATE users SET favs = favs +  { 'movie' : 'Cassablanca' } WHERE id = 'jsmith'
+UPDATE users SET favs = favs +  { 'movie' : 'Casablanca' } WHERE id = 'jsmith'
 
 Note that TTLs are allowed for both @INSERT@ and @UPDATE@, but in both case the TTL set only apply to the newly inserted/updated _values_. In other words,
 

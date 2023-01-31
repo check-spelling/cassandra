@@ -2836,7 +2836,7 @@ statement or by adding a new map literal:
 bc(sample). +
 // Updating (or inserting) +
 UPDATE users SET favs[`author'] = `Ed Poe' WHERE id = `jsmith' +
-UPDATE users SET favs = favs + \{ `movie' : `Cassablanca' } WHERE id =
+UPDATE users SET favs = favs + \{ `movie' : `Casablanca' } WHERE id =
 `jsmith'
 
 Note that TTLs are allowed for both `INSERT` and `UPDATE`, but in both
