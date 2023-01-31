@@ -1160,7 +1160,7 @@ Upgrading
    - 3.0 requires Java 8u40 or later.
    - Garbage collection options were moved from cassandra-env to jvm.options file.
    - New transaction log files have been introduced to replace the compactions_in_progress
-     system table, temporary file markers (tmp and tmplink) and sstable ancerstors.
+     system table, temporary file markers (tmp and tmplink) and sstable ancestors.
      Therefore, compaction metadata no longer contains ancestors. Transaction log files
      list sstable descriptors involved in compactions and other operations such as flushing
      and streaming. Use the sstableutil tool to list any sstable files currently involved
