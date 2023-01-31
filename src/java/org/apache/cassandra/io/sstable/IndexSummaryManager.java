@@ -199,7 +199,7 @@ public class IndexSummaryManager implements IndexSummaryManagerMBean
      *          right: the transactions, keyed by table id.
      */
     @SuppressWarnings("resource")
-    private Pair<Long, Map<TableId, LifecycleTransaction>> getRestributionTransactions()
+    private Pair<Long, Map<TableId, LifecycleTransaction>> getRetributionTransactions()
     {
         List<SSTableReader> allCompacting = new ArrayList<>();
         Map<TableId, LifecycleTransaction> allNonCompacting = new HashMap<>();
@@ -229,7 +229,7 @@ public class IndexSummaryManager implements IndexSummaryManagerMBean
     {
         if (CompactionManager.instance.isGlobalCompactionPaused())
             return;
-        Pair<Long, Map<TableId, LifecycleTransaction>> redistributionTransactionInfo = getRestributionTransactions();
+        Pair<Long, Map<TableId, LifecycleTransaction>> redistributionTransactionInfo = getRetributionTransactions();
         Map<TableId, LifecycleTransaction> transactions = redistributionTransactionInfo.right;
         long nonRedistributingOffHeapSize = redistributionTransactionInfo.left;
         try (Timer.Context ctx = CompactionManager.instance.getMetrics().indexSummaryRedistributionTime.time())
