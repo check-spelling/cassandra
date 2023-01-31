@@ -596,7 +596,7 @@ public abstract class DurationSpec
          * Below constructor is used only for backward compatibility for the old commitlog_sync_group_window_in_ms before 4.1
          * Creates a {@code DurationSpec.IntMillisecondsBound} of the specified amount in the specified unit.
          *
-         * @param quantity where quantity shouldn't be bigger than Intetger.MAX_VALUE - 1 in milliseconds
+         * @param quantity where quantity shouldn't be bigger than Integer.MAX_VALUE - 1 in milliseconds
          * @param unit in which the provided quantity is
          */
         public IntMillisecondsBound(double quantity, TimeUnit unit)

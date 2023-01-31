@@ -122,7 +122,7 @@ public class GuardrailDiskUsageTest extends GuardrailTester
         String message = String.format("only %s are actually available on disk", FileUtils.stringifyFileSize(diskSize));
         assertConfigValid(x -> x.setDataDiskUsageMaxDiskSize(diskSize + "B"));
         assertConfigFails(x -> x.setDataDiskUsageMaxDiskSize(diskSize + 1 + "B"), message);
-        // We want to test with very big number, Long.MAX_VALUE is not allowed so it was easy to use Intger.MAX_VALUE
+        // We want to test with very big number, Long.MAX_VALUE is not allowed so it was easy to use Integer.MAX_VALUE
         assertConfigFails(x -> x.setDataDiskUsageMaxDiskSize(Integer.MAX_VALUE + "GiB"), message);
 
         // warn threshold smaller than lower bound
