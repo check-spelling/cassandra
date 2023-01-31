@@ -5649,7 +5649,7 @@ Merged from 0.8:
  * (Hadoop) add support for KeyRange.filter
  * remove assumption that keys and token are in bijection
    (CASSANDRA-1034, 3574, 3604)
- * always remove endpoints from delevery queue in HH (CASSANDRA-3546)
+ * always remove endpoints from delivery queue in HH (CASSANDRA-3546)
  * fix race between cf flush and its 2ndary indexes flush (CASSANDRA-3547)
  * fix potential race in AES when a repair fails (CASSANDRA-3548)
  * Remove columns shadowed by a deleted container even when we cannot purge
@@ -5797,7 +5797,7 @@ Merged from 0.8:
  * Support TimeUUIDType column names in Stress.java tool (CASSANDRA-3541)
  * (CQL) INSERT/UPDATE/DELETE/TRUNCATE commands should allow CF names to
    be qualified by keyspace (CASSANDRA-3419)
- * always remove endpoints from delevery queue in HH (CASSANDRA-3546)
+ * always remove endpoints from delivery queue in HH (CASSANDRA-3546)
  * fix race between cf flush and its 2ndary indexes flush (CASSANDRA-3547)
  * fix potential race in AES when a repair fails (CASSANDRA-3548)
  * fix default value validation usage in CLI SET command (CASSANDRA-3553)
