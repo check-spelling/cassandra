@@ -242,7 +242,7 @@ public abstract class AbstractCommitLogSegmentManager
 
     /**
      * Indicates that a segment file has been flushed and is no longer needed. Only perform as task submit to segment
-     * manager so it's performend on segment management thread, or perform while segment management thread is shutdown
+     * manager so it's performed on segment management thread, or perform while segment management thread is shutdown
      * during testing resets.
      *
      * @param segment segment to be discarded
