@@ -150,7 +150,7 @@ public class SnapshotsTest extends TestBaseImpl
                                       format("%ds", 1000),
                                       "-t", "snapshot_with_ttl").asserts().success();
 
-        // list snaphots without TTL
+        // list snapshots without TTL
         waitForSnapshot("snapshot_without_ttl", true, true);
         waitForSnapshot("snapshot_with_ttl", false, true);
 
