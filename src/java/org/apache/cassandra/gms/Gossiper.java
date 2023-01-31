@@ -1700,7 +1700,7 @@ public class Gossiper implements IFailureDetectionEventListener, GossiperMBean
         {
             switch (updatedEntry.getKey())
             {
-                // We should have alredy handled these two states above:
+                // We should have already handled these two states above:
                 case STATUS_WITH_PORT:
                 case STATUS:
                     continue;
