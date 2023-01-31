@@ -715,7 +715,7 @@ public class TableMetadata implements SchemaElement
         private Kind kind = Kind.REGULAR;
         private TableParams.Builder params = TableParams.builder();
 
-        // See the comment on Flag.COMPOUND definition for why we (still) inconditionally add this flag.
+        // See the comment on Flag.COMPOUND definition for why we (still) unconditionally add this flag.
         private Set<Flag> flags = EnumSet.of(Flag.COMPOUND);
         private Triggers triggers = Triggers.none();
         private Indexes indexes = Indexes.none();

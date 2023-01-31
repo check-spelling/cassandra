@@ -181,7 +181,7 @@ public interface Selectable extends AssignmentTestable
                     throw new InvalidRequestException("Cannot infer type for term " + this + " in selection clause (try using a cast to force a type)");
             }
 
-            // The fact we default the name to "[selection]" inconditionally means that any bind marker in a
+            // The fact we default the name to "[selection]" unconditionally means that any bind marker in a
             // selection will have this name. Which isn't terribly helpful, but it's unclear how to provide
             // something a lot more helpful and in practice user can bind those markers by position or, even better,
             // use bind markers.
