@@ -77,7 +77,7 @@ public class MixedModeRepairTest extends UpgradeTestBase
                 cluster.get(2).executeInternal(INSERT, row2);
                 cluster.get(2).flush(KEYSPACE);
 
-                // in case of repairing the upgraded node the repair should be rejected with a decriptive error in both
+                // in case of repairing the upgraded node the repair should be rejected with a descriptive error in both
                 // nodetool output and logs (see CASSANDRA-13944)
                 if (repairedNode == UPGRADED_NODE)
                 {
