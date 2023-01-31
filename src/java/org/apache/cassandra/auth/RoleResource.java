@@ -81,7 +81,7 @@ public class RoleResource implements IResource, Comparable<RoleResource>
     /**
      * Creates a RoleResource representing an individual Role.
      * @param name name of the Role.
-     * @return RoleResource instance reresenting the Role.
+     * @return RoleResource instance representing the Role.
      */
     public static RoleResource role(String name)
     {

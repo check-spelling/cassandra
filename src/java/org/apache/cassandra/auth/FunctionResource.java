@@ -129,7 +129,7 @@ public class FunctionResource implements IResource
      * @param keyspace the keyspace in which the function is scoped
      * @param name     name of the function.
      * @param argTypes the types of the arguments to the function
-     * @return FunctionResource instance reresenting the function.
+     * @return FunctionResource instance representing the function.
      */
     public static FunctionResource function(String keyspace, String name, List<AbstractType<?>> argTypes)
     {
@@ -150,7 +150,7 @@ public class FunctionResource implements IResource
      * @param keyspace the keyspace in which the function is scoped
      * @param name     name of the function.
      * @param argTypes the types of the function arguments in raw CQL form
-     * @return FunctionResource instance reresenting the function.
+     * @return FunctionResource instance representing the function.
      */
     public static FunctionResource functionFromCql(String keyspace, String name, List<CQL3Type.Raw> argTypes)
     {

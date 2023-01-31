@@ -479,7 +479,7 @@ Table of Contents
       This is optional; if not specified no compression will be used.
     - "DRIVER_NAME": allows clients to supply a free-form label representing the driver
       implementation. This is displayed in the output of `nodetool clientstats`
-    - "DRIVER_VERSION": allows clients to supply a free-form label represting the driver
+    - "DRIVER_VERSION": allows clients to supply a free-form label representing the driver
       version. This is displayed in the output of `nodetool clientstats`
     - "THROW_ON_OVERLOAD": flag to specify server behaviour where the incoming message
       rate is too high. An [string] value of "1" instructs the server to respond with

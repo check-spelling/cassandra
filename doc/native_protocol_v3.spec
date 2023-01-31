@@ -608,7 +608,7 @@ Table of Contents
                               - <ks> is a [string] representing the keyspace name this
                                 UDT is part of.
                               - <udt_name> is a [string] representing the UDT name.
-                              - <n> is a [short] reprensenting the number of fields of
+                              - <n> is a [short] representing the number of fields of
                                 the UDT, and thus the number of <name_i><type_i> pair
                                 following
                               - <name_i> is a [string] representing the name of the
