@@ -2067,7 +2067,7 @@ public class SASIIndexTest
         // Make sure that garbage was overwritten
         Assert.assertTrue(size2 > size1);
 
-        // Make sure that indexes work for rebuit tables
+        // Make sure that indexes work for rebuilt tables
         CQLTester.assertRows(executeCQL(CLUSTERING_CF_NAME_1, "SELECT * FROM %s.%s WHERE age = 27 AND name = 'Pavel'"),
                              CQLTester.row("Pavel", "US", 27, "xedin", 183, 1.0));
         CQLTester.assertRows(executeCQL(CLUSTERING_CF_NAME_1, "SELECT * FROM %s.%s WHERE age = 28"),
