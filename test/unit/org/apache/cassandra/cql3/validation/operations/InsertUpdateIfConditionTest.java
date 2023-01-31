@@ -624,7 +624,7 @@ public class InsertUpdateIfConditionTest extends CQLTester
         for (int i = 1; i <= 6; i++)
             execute("INSERT INTO %s (a, b) VALUES (?, ?)", i, i);
 
-        // applied: null is indistiguishable from empty value, lwt condition is executed before INSERT
+        // applied: null is indistinguishable from empty value, lwt condition is executed before INSERT
         assertRows(execute("BEGIN BATCH\n"
                            + "INSERT INTO %1$s (a, b, d) values (2, 2, 'a');\n"
                            + "UPDATE %1$s SET s = 2 WHERE a = 2 IF s = null;\n"
