@@ -326,7 +326,7 @@ public final class CompressionParams
         }
         catch (SecurityException e)
         {
-            throw new ConfigurationException("Access forbiden", e);
+            throw new ConfigurationException("Access forbidden", e);
         }
         catch (IllegalAccessException e)
         {
