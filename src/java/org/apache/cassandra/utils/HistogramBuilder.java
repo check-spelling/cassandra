@@ -20,7 +20,7 @@ package org.apache.cassandra.utils;
 import java.util.Arrays;
 
 /**
- * Simple class for constructing an EsimatedHistogram from a set of predetermined values
+ * Simple class for constructing an EstimatedHistogram from a set of predetermined values
  */
 public class HistogramBuilder
 {
