@@ -30,7 +30,7 @@ import org.apache.cassandra.db.filter.ColumnFilter;
  * This is used by our {@code Partition} implementations to produce a {@code UnfilteredRowIterator} by merging the rows
  * and deletion infos that are kept separate. This has also 2 additional role:
  *   1) this make sure the row returned only includes the columns selected for the resulting iterator.
- *   2) this (optionally) remove any data that can be shadowed (see commet on 'removeShadowedData' below for more details)
+ *   2) this (optionally) remove any data that can be shadowed (see comment on 'removeShadowedData' below for more details)
  */
 public class RowAndDeletionMergeIterator extends AbstractUnfilteredRowIterator
 {
