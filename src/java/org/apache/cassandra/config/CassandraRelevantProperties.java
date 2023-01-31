@@ -301,7 +301,7 @@ public enum CassandraRelevantProperties
     /** property for the interval on which the repeated client warnings and diagnostic events about disk usage are ignored */
     DISK_USAGE_NOTIFY_INTERVAL_MS("cassandra.disk_usage.notify_interval_ms", Long.toString(TimeUnit.MINUTES.toMillis(30))),
 
-    /** Controls the type of bufffer (heap/direct) used for shared scratch buffers */
+    /** Controls the type of buffer (heap/direct) used for shared scratch buffers */
     DATA_OUTPUT_BUFFER_ALLOCATE_TYPE("cassandra.dob.allocate_type"),
 
     // for specific tests
