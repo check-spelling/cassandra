@@ -330,7 +330,7 @@ public final class RTTransformationsTest
     }
 
     @Test
-    public void testComplainsAboutInvalidSequenceInReveseOrder()
+    public void testComplainsAboutInvalidSequenceInReverseOrder()
     {
         // duplicated start bound
         UnfilteredPartitionIterator iterator = iter(true
