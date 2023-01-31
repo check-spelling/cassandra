@@ -125,7 +125,7 @@ public interface ClusteringIndexFilter
      * @param columnFilter the columns to include in the rows of the result iterator.
      * @param iterator the iterator for which we should filter rows.
      *
-     * @return an iterator that only returns the rows (or rather Unfilted) from {@code iterator} that are selected by this filter.
+     * @return an iterator that only returns the rows (or rather Unfiltered) from {@code iterator} that are selected by this filter.
      */
     public UnfilteredRowIterator filterNotIndexed(ColumnFilter columnFilter, UnfilteredRowIterator iterator);
 
