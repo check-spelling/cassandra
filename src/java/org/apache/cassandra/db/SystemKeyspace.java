@@ -165,7 +165,7 @@ public final class SystemKeyspace
 
     /**
      * By default the system keyspace tables should be stored in a single data directory to allow the server
-     * to handle more gracefully disk failures. Some tables through can be split accross multiple directories
+     * to handle more gracefully disk failures. Some tables through can be split across multiple directories
      * as the server can continue operating even if those tables lost some data.
      */
     public static final Set<String> TABLES_SPLIT_ACROSS_MULTIPLE_DISKS = ImmutableSet.of(BATCHES,

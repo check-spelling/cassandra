@@ -40,7 +40,7 @@ import org.apache.cassandra.transport.ProtocolVersion;
  * <p>
  * All the functions provided here are {@link NativeScalarFunction}, and they are meant to be applied to single
  * collection values to perform some kind of aggregation with the elements of the collection argument. When possible,
- * the implementation of these aggregation functions is based on the accross-rows aggregation functions available on
+ * the implementation of these aggregation functions is based on the across-rows aggregation functions available on
  * {@link AggregateFcts}, so both across-rows and within-collection aggregations have the same behaviour.
  */
 public class CollectionFcts
@@ -337,7 +337,7 @@ public class CollectionFcts
      * A {@link NativeScalarFunction} for aggregating the elements of a collection according to the aggregator of
      * a certain {@link NativeAggregateFunction}.
      * <p>
-     * {@link NativeAggregateFunction} is meant to be used for aggregating values accross rows, but here we use that
+     * {@link NativeAggregateFunction} is meant to be used for aggregating values across rows, but here we use that
      * function to aggregate the elements of a single collection value. That way, functions such as {@code avg} and
      * {@code collection_avg} should have the same behaviour when applied to row columns or collection elements.
      */

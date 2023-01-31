@@ -318,7 +318,7 @@ public class SnapshotsTest extends TestBaseImpl
                                    .distinct()
                                    .count();
 
-        // assert all dates are same so there is just one value accross all individual tables
+        // assert all dates are same so there is just one value across all individual tables
         assertEquals(1, distinctTimestamps);
     }
 
