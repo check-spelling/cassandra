@@ -366,7 +366,7 @@ public interface StorageServiceMBean extends NotificationEmitter
 
     /**
      * Forces compaction for a list of partition keys on a table.
-     * The method will ignore the gc_grace_seconds for the partitionKeysIgnoreGcGrace during the comapction,
+     * The method will ignore the gc_grace_seconds for the partitionKeysIgnoreGcGrace during the compaction,
      * in order to purge the tombstones and free up space quicker.
      */
     public void forceCompactionKeysIgnoringGcGrace(String keyspaceName, String tableName, String... partitionKeysIgnoreGcGrace) throws IOException, ExecutionException, InterruptedException;

@@ -4106,7 +4106,7 @@ public class StorageService extends NotificationBroadcasterSupport implements IE
 
     /***
      * Forces compaction for a list of partition keys in a table
-     * The method will ignore the gc_grace_seconds for the partitionKeysIgnoreGcGrace during the comapction,
+     * The method will ignore the gc_grace_seconds for the partitionKeysIgnoreGcGrace during the compaction,
      * in order to purge the tombstones and free up space quicker.
      * @param keyspaceName keyspace name
      * @param tableName table name

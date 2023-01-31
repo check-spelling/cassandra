@@ -3173,7 +3173,7 @@ public class ColumnFamilyStore implements ColumnFamilyStoreMBean, Memtable.Owner
     /**
      * Discard all SSTables that were created before given timestamp.
      *
-     * Caller should first ensure that comapctions have quiesced.
+     * Caller should first ensure that compactions have quiesced.
      *
      * @param truncatedAt The timestamp of the truncation
      *                    (all SSTables before that timestamp are going be marked as compacted)
