@@ -132,7 +132,7 @@ public class DiskBoundaryManager
         }
         else
         {
-            // Reason we use use the future settled TMD is that if we decommission a node, we want to stream
+            // Reason we use the future settled TMD is that if we decommission a node, we want to stream
             // from that node to the correct location on disk, if we didn't, we would put new files in the wrong places.
             // We do this to minimize the amount of data we need to move in rebalancedisks once everything settled
             localRanges = cfs.keyspace.getReplicationStrategy().getAddressReplicas(tmd.cloneAfterAllSettled(), FBUtilities.getBroadcastAddressAndPort());
