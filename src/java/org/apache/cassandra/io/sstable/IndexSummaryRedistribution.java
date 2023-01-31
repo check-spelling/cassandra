@@ -293,7 +293,7 @@ public class IndexSummaryRedistribution extends CompactionInfo.Holder
             cfs.metric.totalDiskSpaceUsed.dec(oldSize);
         });
         txn.runOnAbort(() -> {
-            // the local disk was modified but bookkeeping couldn't be commited, apply the delta
+            // the local disk was modified but bookkeeping couldn't be committed, apply the delta
             long delta = oldSize - newSize; // if new is larger this will be negative, so dec will become a inc
             long deltaUncompressed = oldSizeUncompressed - newSizeUncompressed;
 

@@ -568,18 +568,18 @@ public class PaxosRepair extends AbstractPaxosRepair
             }
 
             Ballot latestWitnessed;
-            Accepted acceptedButNotCommited;
+            Accepted acceptedButNotCommitted;
             Committed committed;
             int nowInSec = FBUtilities.nowInSeconds();
             try (PaxosState state = PaxosState.get(request.partitionKey, request.table))
             {
                 PaxosState.Snapshot snapshot = state.current(nowInSec);
                 latestWitnessed = snapshot.latestWitnessedOrLowBound();
-                acceptedButNotCommited = snapshot.accepted;
+                acceptedButNotCommitted = snapshot.accepted;
                 committed = snapshot.committed;
             }
 
-            Response response = new Response(latestWitnessed, acceptedButNotCommited, committed);
+            Response response = new Response(latestWitnessed, acceptedButNotCommitted, committed);
             MessagingService.instance().respond(response, message);
         }
     }

@@ -241,7 +241,7 @@ public class ClientState
      * As during the prepared phase replica send us the last propose they accepted, a first option would be to take
      * the maximum of those last accepted proposal timestamp plus 1 (and use a default value, say 0, if it's the
      * first known proposal for the partition). This would most work (giving commits the timestamp 0, 1, 2, ...
-     * in the order they are commited) up to 2 important caveats:
+     * in the order they are committed) up to 2 important caveats:
      *   1) it would give a very poor experience when Paxos and non-Paxos updates are mixed in the same partition,
      *      since paxos operations wouldn't be using microseconds timestamps. And while you shouldn't theoretically
      *      mix the 2 kind of operations, this would still be pretty unintuitive. And what if you started writing

@@ -595,7 +595,7 @@ public class Paxos
      *       later on.
      *
      *  Note that since we are performing a CAS rather than a simple update, when nodes respond positively to
-     *  Prepare, they include read response of commited values that will be reconciled on the coordinator
+     *  Prepare, they include read response of committed values that will be reconciled on the coordinator
      *  and checked against CAS precondition between the prepare and accept phases. This gives us a slightly
      *  longer window for another coordinator to come along and trump our own promise with a newer one but
      *  is otherwise safe.
