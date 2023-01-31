@@ -366,7 +366,7 @@ public class BTreeRow extends AbstractRow
             if (isForDropped || isShadowed || (isSkippable && cell.timestamp() < rowLiveness.timestamp()))
                 return null;
 
-            // We should apply the same "optimization" as in Cell.deserialize to avoid discrepances
+            // We should apply the same "optimization" as in Cell.deserialize to avoid discrepancies
             // between sstables and memtables data, i.e resulting in a digest mismatch.
             return isSkippable ? cell.withSkippedValue() : cell;
         });

@@ -197,7 +197,7 @@ public class ComplexColumnData extends ColumnData implements Iterable<Cell<?>>
             boolean isSkippableCell = !isFetchedCell || (!isQueriedCell && cell.timestamp() < rowLiveness.timestamp());
             if (isForDropped || isShadowed || isSkippableCell)
                 return null;
-            // We should apply the same "optimization" as in Cell.deserialize to avoid discrepances
+            // We should apply the same "optimization" as in Cell.deserialize to avoid discrepancies
             // between sstables and memtables data, i.e resulting in a digest mismatch.
             return isQueriedCell ? cell : cell.withSkippedValue();
         });
