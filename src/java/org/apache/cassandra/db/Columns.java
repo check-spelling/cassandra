@@ -209,7 +209,7 @@ public class Columns extends AbstractCollection<ColumnMetadata> implements Colle
     /**
      * Returns the ith simple column of this object.
      *
-     * @param i the index for the simple column to fectch. This must
+     * @param i the index for the simple column to fetch. This must
      * satisfy {@code 0 <= i < simpleColumnCount()}.
      *
      * @return the {@code i}th simple column in this object.
@@ -222,7 +222,7 @@ public class Columns extends AbstractCollection<ColumnMetadata> implements Colle
     /**
      * Returns the ith complex column of this object.
      *
-     * @param i the index for the complex column to fectch. This must
+     * @param i the index for the complex column to fetch. This must
      * satisfy {@code 0 <= i < complexColumnCount()}.
      *
      * @return the {@code i}th complex column in this object.
