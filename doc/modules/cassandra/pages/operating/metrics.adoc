@@ -901,7 +901,7 @@ ____
 
 == Client Metrics
 
-Metrics specifc to client management.
+Metrics specific to client management.
 
 Reported name format:
 
@@ -925,7 +925,7 @@ connective native clients by username
 
 == Batch Metrics
 
-Metrics specifc to batch statements.
+Metrics specific to batch statements.
 
 Reported name format:
 

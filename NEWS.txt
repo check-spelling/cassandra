@@ -2272,7 +2272,7 @@ Features
       -- a reader may see mixed old and new values while the update
       happens.
     - Finer-grained control over data directories, allowing a ColumnFamily to
-      be pinned to specfic volume, e.g. one backed by SSD.
+      be pinned to specific volume, e.g. one backed by SSD.
     - The bulk loader is not longer a fat client; it can be run from an
       existing machine in a cluster.
     - A new write survey mode has been added, similar to bootstrap (enabled via
