@@ -526,7 +526,7 @@ public abstract class InterceptingMonitors implements InterceptorOfGlobalMethods
     }
 
     @Override
-    public void sleepUninterriptibly(long period, TimeUnit units)
+    public void sleepUninterruptibly(long period, TimeUnit units)
     {
         try
         {

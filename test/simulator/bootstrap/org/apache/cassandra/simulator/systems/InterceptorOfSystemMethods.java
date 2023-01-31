@@ -39,7 +39,7 @@ public interface InterceptorOfSystemMethods
 {
     void waitUntil(long deadlineNanos) throws InterruptedException;
     void sleep(long period, TimeUnit units) throws InterruptedException;
-    void sleepUninterriptibly(long period, TimeUnit units);
+    void sleepUninterruptibly(long period, TimeUnit units);
     boolean waitUntil(Object monitor, long deadlineNanos) throws InterruptedException;
     void wait(Object monitor) throws InterruptedException;
     void wait(Object monitor, long millis) throws InterruptedException;
@@ -91,7 +91,7 @@ public interface InterceptorOfSystemMethods
         // to match Guava Uninterruptibles
         public static void sleepUninterruptibly(long period, TimeUnit units)
         {
-            methods.sleepUninterriptibly(period, units);
+            methods.sleepUninterruptibly(period, units);
         }
 
         public static boolean waitUntil(Object monitor, long deadlineNanos) throws InterruptedException
@@ -257,7 +257,7 @@ public interface InterceptorOfSystemMethods
         }
 
         @Override
-        public void sleepUninterriptibly(long period, TimeUnit units)
+        public void sleepUninterruptibly(long period, TimeUnit units)
         {
             long until = System.nanoTime() + units.toNanos(period);
             boolean isInterrupted = false;
