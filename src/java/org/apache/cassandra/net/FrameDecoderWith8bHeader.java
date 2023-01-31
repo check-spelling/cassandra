@@ -50,7 +50,7 @@ abstract class FrameDecoderWith8bHeader extends FrameDecoder
     abstract CorruptFrame verifyHeader(long header);
 
     /**
-     * Calculate the full frame length from info provided by the header, including the length of the header and any triler
+     * Calculate the full frame length from info provided by the header, including the length of the header and any trailer
      */
     abstract int frameLength(long header);
 
