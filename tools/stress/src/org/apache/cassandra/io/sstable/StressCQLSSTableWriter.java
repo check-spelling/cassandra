@@ -478,7 +478,7 @@ public class StressCQLSSTableWriter implements Closeable
          * The INSERT statement defining the order of the values to add for a given CQL row.
          * <p>
          * Please note that the provided INSERT statement <b>must</b> use a fully-qualified
-         * table name, one that include the keyspace name. Morewover, said statement must use
+         * table name, one that include the keyspace name. Moreover, said statement must use
          * bind variables since it is those bind variables that will be bound to values by the
          * resulting writer.
          * <p>
