@@ -254,7 +254,7 @@ public class OutboundConnection
         final Future<Result<MessagingSuccess>> attempt;
 
         /**
-         * If we are retrying to connect with some delay, this represents the scheduled inititation of another attempt
+         * If we are retrying to connect with some delay, this represents the scheduled initiation of another attempt
          */
         @Nullable
         final Future<?> scheduled;
