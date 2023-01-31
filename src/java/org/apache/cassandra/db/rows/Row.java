@@ -329,7 +329,7 @@ public interface Row extends Unfiltered, Iterable<ColumnData>, IMeasurableMemory
     public <A> void apply(BiConsumer<A, ColumnData> function, A arg);
 
     /**
-     * Apply an accumulation funtion to every column in a row
+     * Apply an accumulation function to every column in a row
      */
 
     public long accumulate(LongAccumulator<ColumnData> accumulator, long initialValue);
