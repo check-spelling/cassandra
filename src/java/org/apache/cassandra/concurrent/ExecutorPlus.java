@@ -88,7 +88,7 @@ public interface ExecutorPlus extends ExecutorService, ResizableThreadPool
      * Invoke {@code task}. The invoking thread will first instantiate the resources provided before
      * invoking {@code task}, so that thread state may be modified and cleaned up.
      *
-     * The invoking thread will execute something semantically equivlent to:
+     * The invoking thread will execute something semantically equivalent to:
      *
      * <code>
      *     try (Closeable close = withResources.get())
@@ -107,7 +107,7 @@ public interface ExecutorPlus extends ExecutorService, ResizableThreadPool
      * The invoking thread will first instantiate the resources provided before
      * invoking {@code task}, so that thread state may be modified and cleaned up.
      *
-     * The invoking thread will execute something semantically equivlent to:
+     * The invoking thread will execute something semantically equivalent to:
      *
      * <code>
      *     try (Closeable close = withResources.get())
@@ -148,7 +148,7 @@ public interface ExecutorPlus extends ExecutorService, ResizableThreadPool
      * The invoking thread will first instantiate the resources provided before
      * invoking {@code task}, so that thread state may be modified and cleaned up.
      *
-     * The invoking thread will execute something semantically equivlent to:
+     * The invoking thread will execute something semantically equivalent to:
      *
      * <code>
      *     try (Closeable close = withResources.get())

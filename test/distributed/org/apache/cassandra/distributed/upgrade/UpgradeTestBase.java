@@ -224,7 +224,7 @@ public class UpgradeTestBase extends DistributedTestBase
 
         /**
          * performs all supported upgrade paths that exist in between from and to that include the current version.
-         * This call is equivilent to calling {@code upgradesTo(from, CURRENT).upgradesFrom(CURRENT, to)}.
+         * This call is equivalent to calling {@code upgradesTo(from, CURRENT).upgradesFrom(CURRENT, to)}.
          **/
         public TestCase upgrades(Semver from, Semver to)
         {
