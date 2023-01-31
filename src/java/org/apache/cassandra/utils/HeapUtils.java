@@ -181,7 +181,7 @@ public final class HeapUtils
             String line;
             while ((line = input.readLine()) != null)
             {
-                builder.appendln(line);
+                builder.appendix(line);
             }
             logger.info(builder.toString());
         }
