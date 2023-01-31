@@ -1511,9 +1511,9 @@ public class MerkleTree
     public static int estimatedMaxDepthForBytes(IPartitioner partitioner, long numBytes, int bytesPerHash)
     {
         byte[] hashLeft = new byte[bytesPerHash];
-        byte[] hashRigth = new byte[bytesPerHash];
+        byte[] hashRight = new byte[bytesPerHash];
         OnHeapLeaf left = new OnHeapLeaf(hashLeft);
-        OnHeapLeaf right = new OnHeapLeaf(hashRigth);
+        OnHeapLeaf right = new OnHeapLeaf(hashRight);
         Inner inner = new OnHeapInner(partitioner.getMinimumToken(), left, right);
         inner.fillInnerHashes();
 
