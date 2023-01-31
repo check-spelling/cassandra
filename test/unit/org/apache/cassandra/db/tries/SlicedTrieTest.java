@@ -290,7 +290,7 @@ public class SlicedTrieTest
     }
 
     /**
-     * Creates a simple trie with a root having the provided number of childs, where each child is a leaf whose content
+     * Creates a simple trie with a root having the provided number of children, where each child is a leaf whose content
      * is simply the value of the transition leading to it.
      *
      * In other words, {@code singleLevelIntTrie(4)} creates the following trie:
@@ -299,7 +299,7 @@ public class SlicedTrieTest
      *    |  |  |  |
      *    0  1  2  3
      */
-    private static Trie<Integer> singleLevelIntTrie(int childs)
+    private static Trie<Integer> singleLevelIntTrie(int children)
     {
         return new Trie<Integer>()
         {
@@ -331,7 +331,7 @@ public class SlicedTrieTest
                 {
                     if (current == -1)
                         return 0;
-                    if (current < childs)
+                    if (current < children)
                         return 1;
                     return -1;
                 }
