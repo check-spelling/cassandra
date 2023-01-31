@@ -166,7 +166,7 @@ public class CleanupTest
         cf.add(cdef, Operator.EQ, VALUE);
         assertEquals(LOOPS, Util.getAll(Util.cmd(cfs).filterOn("birthdate", Operator.EQ, VALUE).build()).size());
 
-        // we don't allow cleanup when the local host has no range to avoid wipping up all data when a node has not join the ring.
+        // we don't allow cleanup when the local host has no range to avoid wiping up all data when a node has not join the ring.
         // So to make sure cleanup erase everything here, we give the localhost the tiniest possible range.
         TokenMetadata tmd = StorageService.instance.getTokenMetadata();
         byte[] tk1 = new byte[1], tk2 = new byte[1];
