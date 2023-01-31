@@ -217,7 +217,7 @@ the audit log events to flow through separate log file instead of system.log.
   </encoder>
 </appender>
 
-<!-- Audit Logging additivity to redirect audt logging events to audit/audit.log -->
+<!-- Audit Logging additivity to redirect audit logging events to audit/audit.log -->
 <logger name="org.apache.cassandra.audit" additivity="false" level="INFO">
     <appender-ref ref="AUDIT"/>
 </logger>
