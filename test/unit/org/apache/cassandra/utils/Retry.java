@@ -105,7 +105,7 @@ public final class Retry
      * Continously attempting to call the provided future supplier until successful or until no longer able to retry.
      *
      * @param maxRetries to allow
-     * @param fn asyncronous operation to retry
+     * @param fn asynchronous operation to retry
      * @param retryableException used to say if retry is allowed
      * @return future representing the result.  If retries were not able to get a successful result, the exception is the last exception seen.
      */

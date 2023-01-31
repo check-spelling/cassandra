@@ -550,7 +550,7 @@ public class SecondaryIndexManager implements IndexRegistry, INotificationConsum
                     logAndMarkIndexesFailed(failedIndexes, accumulatedFail, false);
                 }
 
-                // Flush all built indexes with an aynchronous callback to log the success or failure of the flush
+                // Flush all built indexes with an asynchronous callback to log the success or failure of the flush
                 flushIndexesBlocking(builtIndexes, new FutureCallback()
                 {
                     String indexNames = StringUtils.join(builtIndexes.stream()

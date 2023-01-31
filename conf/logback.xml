@@ -64,7 +64,7 @@ appender reference in the root level section below.
     </encoder>
   </appender>
 
-  <!-- ASYNCLOG assynchronous appender to debug.log (all levels) -->
+  <!-- ASYNCLOG asynchronous appender to debug.log (all levels) -->
 
   <appender name="ASYNCDEBUGLOG" class="ch.qos.logback.classic.AsyncAppender">
     <queueSize>1024</queueSize>
