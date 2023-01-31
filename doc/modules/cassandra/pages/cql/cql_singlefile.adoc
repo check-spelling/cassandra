@@ -3261,7 +3261,7 @@ User-defined functions can be used in link:#selectStmt[`SELECT`],
 link:#insertStmt[`INSERT`] and link:#updateStmt[`UPDATE`] statements.
 
 The implicitly available `udfContext` field (or binding for script UDFs)
-provides the neccessary functionality to create new UDT and tuple
+provides the necessary functionality to create new UDT and tuple
 values.
 
 bc(sample). +

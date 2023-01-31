@@ -307,7 +307,7 @@ public class PendingAntiCompaction
                     }
                 }
                 String message = String.format("Prepare phase for incremental repair session %s was unable to " +
-                                               "acquire exclusive access to the neccesary sstables. " +
+                                               "acquire exclusive access to the necessary sstables. " +
                                                "This is usually caused by running multiple incremental repairs on nodes that share token ranges",
                                                parentRepairSession);
                 logger.warn(message);

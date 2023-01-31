@@ -2251,7 +2251,7 @@ CREATE FUNCTION fct_using_udt ( udtarg frozen<custom_type> )
 
 User-defined functions can be used in "@SELECT@":#selectStmt, "@INSERT@":#insertStmt and "@UPDATE@":#updateStmt statements.
 
-The implicitly available @udfContext@ field (or binding for script UDFs) provides the neccessary functionality to create new UDT and tuple values.
+The implicitly available @udfContext@ field (or binding for script UDFs) provides the necessary functionality to create new UDT and tuple values.
 
 bc(sample). 
 CREATE TYPE custom_type (txt text, i int);
