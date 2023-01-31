@@ -101,7 +101,7 @@ public class GossipHelper
 
     /**
      * This method is unsafe and should be used _only_ when gossip is not used or available: it creates versioned values on the
-     * target instance, which means Gossip versioning gets out of sync. Use a safe couterpart at all times when performing _any_
+     * target instance, which means Gossip versioning gets out of sync. Use a safe counterpart at all times when performing _any_
      * ring movement operations _or_ if Gossip is used.
      */
     public static void unsafeStatusToNormal(IInvokableInstance target, IInstance peer)
