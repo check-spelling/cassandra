@@ -5337,7 +5337,7 @@ public class StorageService extends NotificationBroadcasterSupport implements IE
      * Remove a node that has died, attempting to restore the replica count.
      * If the node is alive, decommission should be attempted.  If decommission
      * fails, then removeNode should be called.  If we fail while trying to
-     * restore the replica count, finally forceRemoveCompleteion should be
+     * restore the replica count, finally forceRemoveCompletion should be
      * called to forcibly remove the node without regard to replica count.
      *
      * @param hostIdString Host ID for the node
