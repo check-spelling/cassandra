@@ -485,13 +485,13 @@ public interface Row extends Unfiltered, Iterable<ColumnData>, IMeasurableMemory
     /**
      * Interface for building rows.
      * <p>
-     * The builder of a row should always abid to the following rules:
+     * The builder of a row should always abide by the following rules:
      *   1) {@link #newRow} is always called as the first thing for the row.
      *   2) {@link #addPrimaryKeyLivenessInfo} and {@link #addRowDeletion}, if called, are called before
      *      any {@link #addCell}/{@link #addComplexDeletion} call.
      *   3) {@link #build} is called to construct the new row. The builder can then be reused.
      *
-     * There is 2 variants of a builder: sorted and unsorted ones. A sorted builder expects user to abid to the
+     * There is 2 variants of a builder: sorted and unsorted ones. A sorted builder expects user to abide by the
      * following additional rules:
      *   4) Calls to {@link #addCell}/{@link #addComplexDeletion} are done in strictly increasing column order.
      *      In other words, all calls to these methods for a give column {@code c} are done after any call for
