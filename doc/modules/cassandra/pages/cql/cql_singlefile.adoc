@@ -2116,7 +2116,7 @@ bc(sample). +
 LIST ROLES OF `alice`;
 
 Enumerate all roles granted to `alice`, including those transitively
-aquired.
+acquired.
 
 bc(sample). +
 LIST ROLES OF `bob` NORECURSIVE

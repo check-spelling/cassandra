@@ -1402,7 +1402,7 @@ Return all known roles in the system, this requires @DESCRIBE@ permission on the
 bc(sample). 
 LIST ROLES OF @alice@;
 
-Enumerate all roles granted to @alice@, including those transitively aquired.
+Enumerate all roles granted to @alice@, including those transitively acquired.
 
 bc(sample). 
 LIST ROLES OF @bob@ NORECURSIVE
