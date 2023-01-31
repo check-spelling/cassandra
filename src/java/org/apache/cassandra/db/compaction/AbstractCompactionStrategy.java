@@ -517,7 +517,7 @@ public abstract class AbstractCompactionStrategy
 
     /**
      * Method for grouping similar SSTables together, This will be used by
-     * anti-compaction to determine which SSTables should be anitcompacted
+     * anti-compaction to determine which SSTables should be anti-compacted
      * as a group. If a given compaction strategy creates sstables which
      * cannot be merged due to some constraint it must override this method.
      */
