@@ -191,7 +191,7 @@ public class PaxosRepairHistory
     }
 
     // append the item to the given list, modifying the underlying list
-    // if the item makes previoud entries redundant
+    // if the item makes previous entries redundant
 
     public static PaxosRepairHistory merge(PaxosRepairHistory historyLeft, PaxosRepairHistory historyRight)
     {

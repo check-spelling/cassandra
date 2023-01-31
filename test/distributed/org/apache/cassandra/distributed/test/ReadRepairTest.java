@@ -248,7 +248,7 @@ public class ReadRepairTest extends TestBaseImpl
             for (int i = 1; i <= cluster.size(); i++)
                 assertRows(cluster.coordinator(i).execute(query, ALL), row);
 
-            // at RF=1 the prevoius queries shouldn't have triggered read repair
+            // at RF=1 the previous queries shouldn't have triggered read repair
             assertRows(cluster.get(1).executeInternal(query), row);
             assertRows(cluster.get(2).executeInternal(query));
 
