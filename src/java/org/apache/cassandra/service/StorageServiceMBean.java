@@ -486,7 +486,7 @@ public interface StorageServiceMBean extends NotificationEmitter
 
     /**
      * removeToken removes token (and all data associated with
-     * enpoint that had it) from the ring
+     * endpoint that had it) from the ring
      */
     public void removeNode(String token);
 

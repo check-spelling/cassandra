@@ -212,8 +212,8 @@ public class GuardrailDiskUsageTest extends GuardrailTester
             instance.runOnInstance(() -> DiskStateInjection.state = state);
 
             // wait for disk usage state propagation, all nodes must see it
-            InetAddressAndPort enpoint = InetAddressAndPort.getByAddress(instance.broadcastAddress());
-            cluster.forEach(n -> n.runOnInstance(() -> Util.spinAssertEquals(state, () -> DiskUsageBroadcaster.instance.state(enpoint), 60)));
+            InetAddressAndPort endpoint = InetAddressAndPort.getByAddress(instance.broadcastAddress());
+            cluster.forEach(n -> n.runOnInstance(() -> Util.spinAssertEquals(state, () -> DiskUsageBroadcaster.instance.state(endpoint), 60)));
         }
 
         @SuppressWarnings("unused")

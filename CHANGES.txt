@@ -2940,7 +2940,7 @@ Merged from 2.0:
  * Make file buffer cache independent of paths being read (CASSANDRA-8897)
  * Remove deprecated legacy Hadoop code (CASSANDRA-9353)
  * Decommissioned nodes will not rejoin the cluster (CASSANDRA-8801)
- * Change gossip stabilization to use endpoit size (CASSANDRA-9401)
+ * Change gossip stabilization to use endpoint size (CASSANDRA-9401)
  * Change default garbage collector to G1 (CASSANDRA-7486)
  * Populate TokenMetadata early during startup (CASSANDRA-9317)
  * Undeprecate cache recentHitRate (CASSANDRA-6591)

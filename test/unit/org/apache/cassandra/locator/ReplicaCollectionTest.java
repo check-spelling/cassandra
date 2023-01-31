@@ -290,7 +290,7 @@ public class ReplicaCollectionTest
 
         void testByRange()
         {
-            // check byEndppint() and byRange().entrySet()
+            // check byEndpoint() and byRange().entrySet()
             Assert.assertFalse(test.byRange().containsKey(EP1));
             Assert.assertFalse(test.byRange().entrySet().contains(EP1));
             try
@@ -374,7 +374,7 @@ public class ReplicaCollectionTest
 
         void testByEndpoint()
         {
-            // check byEndppint() and byEndpoint().entrySet()
+            // check byEndpoint() and byEndpoint().entrySet()
             Assert.assertFalse(test.byEndpoint().containsKey(R1));
             Assert.assertFalse(test.byEndpoint().entrySet().contains(EP1));
             try

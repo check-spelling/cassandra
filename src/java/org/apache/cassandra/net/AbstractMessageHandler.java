@@ -125,7 +125,7 @@ import static org.apache.cassandra.utils.MonotonicClock.Global.approxTime;
  * couldn't be tapped into. Once enough messages have finished processing and had their permits released back
  * to the reserves, {@link WaitQueue} will reactivate the sleeping handlers and they'll resume processing frames.
  *
- * The reason we 'split' reserve capacity into two limits - endpoing and global - is to guarantee liveness, and
+ * The reason we 'split' reserve capacity into two limits - endpoint and global - is to guarantee liveness, and
  * prevent single endpoint's connections from taking over the whole reserve, starving other connections.
  *
  * One permit per byte of serialized message gets acquired. When inflated on-heap, each message will occupy more
