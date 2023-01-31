@@ -61,7 +61,7 @@ public class PagingTest
 
         cassandra = ServerTestUtils.startEmbeddedCassandraService();
 
-        // Currently the native server start method return before the server is fully binded to the socket, so we need
+        // Currently the native server start method return before the server is fully bound to the socket, so we need
         // to wait slightly before trying to connect to it. We should fix this but in the meantime using a sleep.
         Thread.sleep(500);
 

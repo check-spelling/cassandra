@@ -45,7 +45,7 @@ import static java.util.stream.Collectors.toMap;
 
 /**
  * The <code>CqlRecordWriter</code> maps the output &lt;key, value&gt;
- * pairs to a Cassandra table. In particular, it applies the binded variables
+ * pairs to a Cassandra table. In particular, it applies the bound variables
  * in the value to the prepared statement, which it associates with the key, and in
  * turn the responsible endpoint.
  *
@@ -285,7 +285,7 @@ class CqlRecordWriter extends RecordWriter<Map<String, ByteBuffer>, List<ByteBuf
         }
 
         /**
-         * Loops collecting cql binded variable values from the queue and sending to Cassandra
+         * Loops collecting cql bound variable values from the queue and sending to Cassandra
          */
         @SuppressWarnings("resource")
         public void run()

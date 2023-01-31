@@ -148,7 +148,7 @@ public abstract class AggregationSpecification
     public static interface Factory
     {
         /**
-         * Creates a new {@code AggregationSpecification} instance after having binded the parameters.
+         * Creates a new {@code AggregationSpecification} instance after having bound the parameters.
          *
          * @param options the query options
          * @return a new {@code AggregationSpecification} instance.

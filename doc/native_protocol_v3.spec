@@ -316,8 +316,8 @@ Table of Contents
               values are provided. Those value are used for bound variables in
               the query. Optionally, if the 0x40 flag is present, each value
               will be preceded by a [string] name, representing the name of
-              the marker the value must be binded to. This is optional, and
-              if not present, values will be binded by position.
+              the marker the value must be bound to. This is optional, and
+              if not present, values will be bound by position.
         0x02: Skip_metadata. If present, the Result Set returned as a response
               to that query (if any) will have the NO_METADATA flag (see
               Section 4.2.5.2).

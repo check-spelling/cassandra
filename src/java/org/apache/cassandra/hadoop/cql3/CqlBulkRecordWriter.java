@@ -55,7 +55,7 @@ import static org.apache.cassandra.config.CassandraRelevantProperties.JAVA_IO_TM
 
 /**
  * The <code>CqlBulkRecordWriter</code> maps the output &lt;key, value&gt;
- * pairs to a Cassandra column family. In particular, it applies the binded variables
+ * pairs to a Cassandra column family. In particular, it applies the bound variables
  * in the value to the prepared statement, which it associates with the key, and in 
  * turn the responsible endpoint.
  *

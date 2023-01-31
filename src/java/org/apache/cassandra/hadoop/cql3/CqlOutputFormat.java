@@ -46,7 +46,7 @@ import org.apache.hadoop.mapreduce.*;
  * 
  * <p>
  * For the sake of performance, this class employs a lazy write-back caching
- * mechanism, where its record writer prepared statement binded variable values
+ * mechanism, where its record writer prepared statement bound variable values
  * created based on the reduce's inputs (in a task-specific map), and periodically 
  * makes the changes official by sending a execution of prepared statement request 
  * to Cassandra.
