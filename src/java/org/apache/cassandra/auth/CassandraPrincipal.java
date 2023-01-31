@@ -98,7 +98,7 @@ public class CassandraPrincipal implements Principal, Serializable
      * @param o Object to be compared for equality with this
      *          <code>CassPrincipal</code>.
      *
-     * @return true if the specified Object is equal equal to this
+     * @return true if the specified Object is equal to this
      *          <code>CassPrincipal</code>.
      */
     @Override
