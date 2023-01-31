@@ -82,7 +82,7 @@ public class SerializationHeader
         // kind of ok because those stats are only used for optimizing the underlying storage format and so we
         // just have to strive for as good as possible. Currently, we stick to a relatively naive merge of existing
         // global stats because it's simple and probably good enough in most situation but we could probably
-        // improve our marging of inaccuracy through the use of more fine-grained stats in the future.
+        // improve our margin of inaccuracy through the use of more fine-grained stats in the future.
         // Note however that to avoid seeing our accuracy degrade through successive compactions, we don't base
         // our stats merging on the compacted files headers, which as we just said can be somewhat inaccurate,
         // but rather on their stats stored in StatsMetadata that are fully accurate.
