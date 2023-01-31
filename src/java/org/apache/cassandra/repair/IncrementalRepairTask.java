@@ -64,7 +64,7 @@ public class IncrementalRepairTask extends AbstractRepairTask
                                                   .addAll(neighborsAndRanges.participants)
                                                   .add(FBUtilities.getBroadcastAddressAndPort())
                                                   .build();
-        // Not necessary to include self for filtering. The common ranges only contains neighbhor node endpoints.
+        // Not necessary to include self for filtering. The common ranges only contains neighbor node endpoints.
         List<CommonRange> allRanges = neighborsAndRanges.filterCommonRanges(keyspace, cfnames);
 
         CoordinatorSession coordinatorSession = ActiveRepairService.instance.consistent.coordinated.registerSession(parentSession, allParticipants, neighborsAndRanges.shouldExcludeDeadParticipants);
