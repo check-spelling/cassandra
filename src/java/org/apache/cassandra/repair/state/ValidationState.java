@@ -37,7 +37,7 @@ public class ValidationState extends AbstractState<ValidationState.State, UUID>
 
     public ValidationState(RepairJobDesc desc, InetAddressAndPort initiator)
     {
-        super(desc.determanisticId(), State.class);
+        super(desc.deterministicId(), State.class);
         this.desc = desc;
         this.initiator = initiator;
     }

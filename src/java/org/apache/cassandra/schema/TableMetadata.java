@@ -746,7 +746,7 @@ public class TableMetadata implements SchemaElement
 
             if (id == null)
             {
-                // make sure vtables use determiniestic ids so they can be referenced in calls cross-nodes
+                // make sure vtables use deterministic ids so they can be referenced in calls cross-nodes
                 // see CASSANDRA-17295
                 if (DatabaseDescriptor.useDeterministicTableID() || kind == Kind.VIRTUAL) id = TableId.unsafeDeterministic(keyspace, name);
                 else id = TableId.generate();
