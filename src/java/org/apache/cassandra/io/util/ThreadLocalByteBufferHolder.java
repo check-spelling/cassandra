@@ -31,7 +31,7 @@ import org.apache.cassandra.io.compress.BufferType;
 public final class ThreadLocalByteBufferHolder
 {
     private static final EnumMap<BufferType, FastThreadLocal<ByteBuffer>> reusableBBHolder = new EnumMap<>(BufferType.class);
-    // Convenience variable holding a ref to the current resuableBB to avoid map lookups
+    // Convenience variable holding a ref to the current reusableBB to avoid map lookups
     private final FastThreadLocal<ByteBuffer> reusableBB;
 
     static
