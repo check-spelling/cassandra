@@ -238,7 +238,7 @@ public class NettyStreamingChannel extends ChannelInboundHandlerAdapter implemen
     }
 
     /** Shutdown for in-JVM tests. For any other usage, tracking of active inbound streaming handlers
-     *  should be revisted first and in-JVM shutdown refactored with it.
+     *  should be revisited first and in-JVM shutdown refactored with it.
      *  This does not prevent new inbound handlers being added after shutdown, nor is not thread-safe
      *  around new inbound handlers being opened during shutdown.
      */
