@@ -45,13 +45,13 @@ public class NetworkTopologyTest extends TestBaseImpl
     {
         try (ICluster<IInvokableInstance> cluster = builder()
                                                     .withNodeIdTopology(Collections.singletonMap(1, NetworkTopology.dcAndRack("somewhere", "rack0")))
-                                                    .withRack("elsewhere", "firstrack", 1)
+                                                    .withRack("elsewhere", "firsttrack", 1)
                                                     .withRack("elsewhere", "secondrack", 2)
                                                     .withDC("nearthere", 4)
                                                     .createWithoutStarting())
         {
             Assert.assertEquals(1, cluster.stream("somewhere").count());
-            Assert.assertEquals(1, cluster.stream("elsewhere", "firstrack").count());
+            Assert.assertEquals(1, cluster.stream("elsewhere", "firsttrack").count());
             Assert.assertEquals(2, cluster.stream("elsewhere", "secondrack").count());
             Assert.assertEquals(3, cluster.stream("elsewhere").count());
             Assert.assertEquals(4, cluster.stream("nearthere").count());
