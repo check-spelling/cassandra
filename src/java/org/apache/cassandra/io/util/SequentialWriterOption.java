@@ -109,7 +109,7 @@ public class SequentialWriterOption
         private BufferType bufferType = BufferType.ON_HEAP;
         /* default: no trickle fsync */
         private boolean trickleFsync = false;
-        /* default tricle fsync byte interval: 10MiB */
+        /* default trickle fsync byte interval: 10MiB */
         private int trickleFsyncByteInterval = 10 * 1024 * 1024;
         private boolean finishOnClose = false;
 
