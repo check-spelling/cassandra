@@ -50,7 +50,7 @@ public interface TableRepairManager
      * should not rely only on receiving calls from this method to determine when a session has ended. Implementors
      * can determine if a session has finished by calling ActiveRepairService.instance.consistent.local.isSessionInProgress.
      *
-     * Just because a session has completed doesn't mean it's completed succesfully. So implementors need to consult the
+     * Just because a session has completed doesn't mean it's completed successfully. So implementors need to consult the
      * repair service at ActiveRepairService.instance.consistent.local.getFinalSessionRepairedAt to get the repairedAt
      * time. If the repairedAt time is zero, the data for the given session should be demoted back to unrepaired. Otherwise,
      * it should be promoted to repaired with the given repaired time.

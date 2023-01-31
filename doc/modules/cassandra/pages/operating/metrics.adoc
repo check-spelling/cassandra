@@ -628,7 +628,7 @@ The different types of messages tracked are:
 |===
 |Name |Description
 |BATCH_STORE |Batchlog write
-|BATCH_REMOVE |Batchlog cleanup (after succesfully applied)
+|BATCH_REMOVE |Batchlog cleanup (after successfully applied)
 |COUNTER_MUTATION |Counter writes
 |HINT |Hint replay
 |MUTATION |Regular writes

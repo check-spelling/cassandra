@@ -45,7 +45,7 @@ public interface StreamReceiver
     void abort();
 
     /**
-     * Called when a stream session has succesfully completed. All stream data being held by this receiver
+     * Called when a stream session has successfully completed. All stream data being held by this receiver
      * should be added to the live data sets for their respective tables before this method returns.
      */
     void finished();

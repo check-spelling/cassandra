@@ -62,7 +62,7 @@ public class Mx4jTool
                     invoke(httpAdaptor, xsltProcessor);
             mbs.registerMBean(xsltProcessor, processorName);
             httpAdaptorClass.getMethod("start").invoke(httpAdaptor);
-            logger.info("mx4j successfuly loaded");
+            logger.info("mx4j successfully loaded");
             return true;
         }
         catch (ClassNotFoundException e)

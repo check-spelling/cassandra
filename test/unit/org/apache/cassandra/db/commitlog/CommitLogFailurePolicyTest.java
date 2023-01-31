@@ -92,7 +92,7 @@ public class CommitLogFailurePolicyTest
     @Test
     public void testCommitFailurePolicy_ignore_beforeStartup()
     {
-        //startup was not completed successfuly (since method completeSetup() was not called)
+        //startup was not completed successfully (since method completeSetup() was not called)
         CassandraDaemon daemon = new CassandraDaemon();
         StorageService.instance.registerDaemon(daemon);
 

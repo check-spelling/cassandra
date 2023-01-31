@@ -698,7 +698,7 @@ public class PaxosPrepare extends PaxosRequestCallback<PaxosPrepare.Response> im
         if (permitted.latestCommitted.ballot.flag() == NONE)
             return false;
 
-        // If we discovered an incomplete proposal, it could have since completed successfullly
+        // If we discovered an incomplete proposal, it could have since completed successfully
         if (latestAccepted != null && outcome.outcome == FOUND_INCOMPLETE_ACCEPTED)
         {
             switch (permitted.latestCommitted.compareWith(latestAccepted))
