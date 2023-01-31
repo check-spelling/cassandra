@@ -72,7 +72,7 @@ public class NodeToolTest extends TestBaseImpl
     @Test
     public void testNodetoolSystemExit()
     {
-        // Verify currently calls System.exit, this test uses that knowlege to test System.exit behavior in jvm-dtest
+        // Verify currently calls System.exit, this test uses that knowledge to test System.exit behavior in jvm-dtest
         NODE.nodetoolResult("verify", "--check-tokens", "--force")
             .asserts()
             .failure()

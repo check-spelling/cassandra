@@ -705,7 +705,7 @@ public class PaxosState implements PaxosOperationLock
             // witness the state before it is persisted. The only tricky situation is that we use the witnessing of
             // a quorum of nodes having witnessed the latest commit to decide if we need to disseminate a commit
             // again before proceeding with any new operation, but in this case we have already persisted the relevant
-            // information, namely the base table mutation.  So this fact is persistent, even if knowldge of this fact
+            // information, namely the base table mutation.  So this fact is persistent, even if knowledge of this fact
             // is not (and if this is lost, it may only lead to a future operation unnecessarily committing again)
             SystemKeyspace.savePaxosCommit(commit);
             postCommit.accept(commit, state);
