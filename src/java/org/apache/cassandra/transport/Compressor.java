@@ -119,7 +119,7 @@ public interface Compressor
     /*
      * This is very close to the ICompressor implementation, and in particular
      * it also layout the uncompressed size at the beginning of the message to
-     * make uncompression faster, but contrarly to the ICompressor, that length
+     * make uncompression faster, but contrary to the ICompressor, that length
      * is written in big-endian. The native protocol is entirely big-endian, so
      * it feels like putting little-endian here would be a annoying trap for
      * client writer.
