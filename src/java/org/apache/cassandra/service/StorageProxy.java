@@ -1349,7 +1349,7 @@ public class StorageProxy implements StorageProxyMBean
      *
      * @param mutation the mutation to be applied
      * @param consistencyLevel the consistency level for the write operation
-     * @param performer the WritePerformer in charge of appliying the mutation
+     * @param performer the WritePerformer in charge of applying the mutation
      * given the list of write endpoints (either standardWritePerformer for
      * standard writes or counterWritePerformer for counter writes).
      * @param callback an optional callback to be run if and when the write is
