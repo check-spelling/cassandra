@@ -194,7 +194,7 @@ abstract public class AbstractSslContextFactory implements ISslContextFactory
         builder.sslProvider(getSslProvider()).protocols(getAcceptedProtocols());
 
         // only set the cipher suites if the operator has explicity configured values for it; else, use the default
-        // for each ssl implemention (jdk or openssl)
+        // for each ssl implementation (jdk or openssl)
         if (cipher_suites != null && !cipher_suites.isEmpty())
             builder.ciphers(cipher_suites, cipherFilter);
 

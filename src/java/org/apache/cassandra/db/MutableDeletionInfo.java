@@ -131,7 +131,7 @@ public class MutableDeletionInfo implements DeletionInfo
     {
         add(newInfo.getPartitionDeletion());
 
-        // We know MutableDeletionInfo is the only impelementation and we're not mutating it, it's just to get access to the
+        // We know MutableDeletionInfo is the only implementation and we're not mutating it, it's just to get access to the
         // RangeTombstoneList directly.
         assert newInfo instanceof MutableDeletionInfo;
         RangeTombstoneList newRanges = ((MutableDeletionInfo)newInfo).ranges;

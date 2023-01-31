@@ -50,7 +50,7 @@ import org.apache.cassandra.utils.MD5Digest;
 import org.assertj.core.api.Assertions;
 
 /**
- * This class is rather impelemntation specific.  It is possible that changes made will cause this tests to fail,
+ * This class is rather implementation specific.  It is possible that changes made will cause this tests to fail,
  * so updating to the latest logic is fine.
  *
  * This class makes sure we do not do logging/update metrics for client from a specific set of ip domains, so as long

@@ -137,7 +137,7 @@ public class EmptyType extends AbstractType<Void>
     @Override
     public <V> long writtenLength(V value, ValueAccessor<V> accessor)
     {
-        // default implemenation requires non-empty bytes but this always requires empty bytes, so special case
+        // default implementation requires non-empty bytes but this always requires empty bytes, so special case
         validate(value, accessor);
         return 0;
     }
