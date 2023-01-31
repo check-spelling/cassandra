@@ -2669,7 +2669,7 @@ public class BTree
         }
 
         /**
-         * Invoked to fill our {@link #buffer} to >= MIN_KEYS with data ocurring before {@link #buffer};
+         * Invoked to fill our {@link #buffer} to >= MIN_KEYS with data occurring before {@link #buffer};
          * possibly instead fills {@link #savedBuffer}
          *
          * @param pred        directly preceding node

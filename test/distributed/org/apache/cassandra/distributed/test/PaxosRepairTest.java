@@ -255,7 +255,7 @@ public class PaxosRepairTest extends TestBaseImpl
                 Assert.assertEquals(Sets.newHashSet(400), rows.keySet());
             }));
 
-            // check that operations occuring after the last repair are not purged
+            // check that operations occurring after the last repair are not purged
             cluster.coordinator(1).execute("INSERT INTO " + KEYSPACE + '.' + TABLE + " (pk, ck, v) VALUES (500, 3, 3) IF NOT EXISTS", ConsistencyLevel.QUORUM);
             cluster.forEach(i -> i.runOnInstance(() -> {
                 compactPaxos();
