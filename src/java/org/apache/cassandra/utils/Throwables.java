@@ -250,7 +250,7 @@ public final class Throwables
     }
 
     /**
-     * throw the exception as a unchecked exception, wrapping if a checked exception, else rethroing as is.
+     * throw the exception as a unchecked exception, wrapping if a checked exception, else rethrowing as is.
      */
     public static RuntimeException throwAsUncheckedException(Throwable t)
     {
