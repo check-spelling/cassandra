@@ -6236,7 +6236,7 @@ Merged from 0.8:
  * remove gossip state when a new IP takes over a token (CASSANDRA-3071)
  * work around native memory leak in com.sun.management.GarbageCollectorMXBean
     (CASSANDRA-2868)
- * fix UnavailableException with writes at CL.EACH_QUORM (CASSANDRA-3084)
+ * fix UnavailableException with writes at CL.EACH_QUORUM (CASSANDRA-3084)
  * fix parsing of the Keyspace and ColumnFamily names in numeric
    and string representations in CLI (CASSANDRA-3075)
  * fix corner cases in Range.differenceToFetch (CASSANDRA-3084)
