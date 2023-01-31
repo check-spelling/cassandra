@@ -314,7 +314,7 @@ public class PreV5Handlers
                 ChannelFuture future = ctx.writeAndFlush(errorMessage.encode(getConnectionVersion(ctx)));
                 // On protocol exception, close the channel as soon as the message have been sent.
                 // Most cases of PE are wrapped so the type check below is expected to fail more often than not.
-                // At this moment Fatal exceptions are not thrown in v4, but just as a precaustion we check for them here
+                // At this moment Fatal exceptions are not thrown in v4, but just as a precaution we check for them here
                 if (isFatal(cause))
                     future.addListener((ChannelFutureListener) f -> ctx.close());
             }
