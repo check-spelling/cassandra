@@ -398,7 +398,7 @@ public class Server implements CassandraDaemon.Server
             // If the endpoint is not the local node, extract the node address
             // and if it is the same as our own RPC broadcast address (which defaults to the rcp address)
             // then don't send the notification. This covers the case of rpc_address set to "localhost",
-            // which is not useful to any driver and in fact may cauase serious problems to some drivers,
+            // which is not useful to any driver and in fact may cause serious problems to some drivers,
             // see CASSANDRA-10052
             if (!endpoint.equals(FBUtilities.getBroadcastAddressAndPort()) &&
                 event.nodeAddressAndPort().equals(FBUtilities.getBroadcastNativeAddressAndPort()))
