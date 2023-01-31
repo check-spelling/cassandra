@@ -3077,7 +3077,7 @@ commands:
         name: Configure virtualenv and python Dependencies
         command: |
           # note, this should be super quick as all dependencies should be pre-installed in the docker image
-          # if additional dependencies were added to requirmeents.txt and the docker image hasn't been updated
+          # if additional dependencies were added to requirements.txt and the docker image hasn't been updated
           # we'd have to install it here at runtime -- which will make things slow, so do yourself a favor and
           # rebuild the docker image! (it automatically pulls the latest requirements.txt on build)
           source ~/env<<parameters.python_version>>/bin/activate
