@@ -166,7 +166,7 @@ abstract class ColumnTimestamps
          * Extracts the timestamp from the specified cell.
          *
          * @param cell        the cell
-         * @param nowInSecond the query timestamp insecond
+         * @param nowInSecond the query timestamp in seconds
          * @return the timestamp corresponding to this type
          */
         abstract long getTimestamp(Cell<?> cell, int nowInSecond);
