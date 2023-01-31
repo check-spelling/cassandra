@@ -560,7 +560,7 @@ public class LongBTreeTest
 
         int targetSize = nextInt(random, minSize, maxSize);
         int maxModificationSize = nextInt(random, 2, targetSize);
-        Object[] accmumulate = BTree.empty();
+        Object[] accumulate = BTree.empty();
         int curSize = 0;
         while (curSize < targetSize)
         {
@@ -581,14 +581,14 @@ public class LongBTreeTest
                     }
                 }
             }
-            Object[] tmp = BTree.update(accmumulate, BTree.build(build), naturalOrder(), updateF);
+            Object[] tmp = BTree.update(accumulate, BTree.build(build), naturalOrder(), updateF);
             assertSame(canonical, BTreeSet.<Integer>wrap(tmp, naturalOrder()));
-            accmumulate = tmp;
+            accumulate = tmp;
             curSize += nextSize;
             maxModificationSize = Math.min(maxModificationSize, targetSize - curSize);
         }
-        assertSame(canonical, BTreeSet.<Integer>wrap(accmumulate, naturalOrder()));
-        return new RandomTree(seed, canonical, BTreeSet.<Integer>wrap(accmumulate, naturalOrder()));
+        assertSame(canonical, BTreeSet.<Integer>wrap(accumulate, naturalOrder()));
+        return new RandomTree(seed, canonical, BTreeSet.<Integer>wrap(accumulate, naturalOrder()));
     }
 
     private static RandomTree randomTreeByBuilder(long seed, Random random, int minSize, int maxSize)

@@ -490,7 +490,7 @@ public class CassandraAuthorizer implements IAuthorizer
                     BiConsumer<IResource, Set<Permission>> accumulator = accumulator(userPermissions);
 
                     // For each role granted to this primary, lookup the specific resource/permissions grants
-                    // we read in the first step. We'll accumlate those in the userPermissions map, which we'll turn
+                    // we read in the first step. We'll accumulate those in the userPermissions map, which we'll turn
                     // into cache entries when we're done.
                     // Note: we need to provide a default empty set of permissions for roles without any explicitly
                     // granted to them (e.g. superusers or roles with no direct perms).
