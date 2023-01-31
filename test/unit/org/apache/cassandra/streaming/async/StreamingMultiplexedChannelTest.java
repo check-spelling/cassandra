@@ -89,7 +89,7 @@ public class StreamingMultiplexedChannelTest
     }
 
     @Test
-    public void FileStreamTask_acquirePermit_HapppyPath()
+    public void FileStreamTask_acquirePermit_HappyPath()
     {
         int permits = sender.semaphoreAvailablePermits();
         fileStreamTask = sender.new FileStreamTask(null);
