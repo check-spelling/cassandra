@@ -2645,7 +2645,7 @@ See link:#usingdates[Working with dates] below for more information.
 
 |`inet` |strings |An IP address. It can be either 4 bytes long (IPv4) or
 16 bytes long (IPv6). There is no `inet` constant, IP address should be
-inputed as strings
+inputted as strings
 
 |`int` |integers |32-bit signed int
 

@@ -1761,7 +1761,7 @@ p. The following table gives additional informations on the native data types, a
 |@double@   |   integers           |64-bit IEEE-754 floating point|
 |@duration@ |   duration           |A duration with nanosecond precision. See "Working with durations":#usingdurations below for details.|
 |@float@    |   integers, floats   |32-bit IEEE-754 floating point|
-|@inet@     |   strings            |An IP address. It can be either 4 bytes long (IPv4) or 16 bytes long (IPv6). There is no @inet@ constant, IP address should be inputed as strings|
+|@inet@     |   strings            |An IP address. It can be either 4 bytes long (IPv4) or 16 bytes long (IPv6). There is no @inet@ constant, IP address should be inputted as strings|
 |@int@      |   integers           |32-bit signed int|
 |@smallint@ |   integers           |16-bit signed int|
 |@text@     |   strings            |UTF8 encoded string|

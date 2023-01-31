@@ -200,7 +200,7 @@ types of those collections is defined by:
 include::example$BNF/collection_type.bnf[]
 ----
 
-and their values can be inputd using collection literals:
+and their values can be inputted using collection literals:
 
 [source,bnf]
 ----
