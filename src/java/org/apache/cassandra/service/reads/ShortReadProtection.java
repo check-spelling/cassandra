@@ -60,7 +60,7 @@ public class ShortReadProtection
                                                                                      queryStartNanoTime);
 
         /*
-         * The order of extention and transformations is important here. Extending with more partitions has to happen
+         * The order of extension and transformations is important here. Extending with more partitions has to happen
          * first due to the way BaseIterator.hasMoreContents() works: only transformations applied after extension will
          * be called on the first partition of the extended iterator.
          *
