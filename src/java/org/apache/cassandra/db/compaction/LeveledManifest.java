@@ -250,7 +250,7 @@ public class LeveledManifest
 
             if (score > 1.001)
             {
-                // the highest level should not ever exceed its maximum size under normal curcumstaces,
+                // the highest level should not ever exceed its maximum size under normal circumstances,
                 // but if it happens we warn about it
                 if (i == generations.levelCount() - 1)
                 {
