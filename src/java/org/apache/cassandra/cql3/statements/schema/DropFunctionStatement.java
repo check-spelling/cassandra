@@ -49,26 +49,26 @@ public final class DropFunctionStatement extends AlterSchemaStatement
 {
     private final String functionName;
     private final Collection<CQL3Type.Raw> arguments;
-    private final boolean argumentsSpeficied;
+    private final boolean argumentsSpecified;
     private final boolean ifExists;
 
     public DropFunctionStatement(String keyspaceName,
                                  String functionName,
                                  Collection<CQL3Type.Raw> arguments,
-                                 boolean argumentsSpeficied,
+                                 boolean argumentsSpecified,
                                  boolean ifExists)
     {
         super(keyspaceName);
         this.functionName = functionName;
         this.arguments = arguments;
-        this.argumentsSpeficied = argumentsSpeficied;
+        this.argumentsSpecified = argumentsSpecified;
         this.ifExists = ifExists;
     }
 
     public Keyspaces apply(Keyspaces schema)
     {
         String name =
-            argumentsSpeficied
+            argumentsSpecified
           ? format("%s.%s(%s)", keyspaceName, functionName, join(", ", transform(arguments, CQL3Type.Raw::toString)))
           : format("%s.%s", keyspaceName, functionName);
 
@@ -82,7 +82,7 @@ public final class DropFunctionStatement extends AlterSchemaStatement
         }
 
         Collection<UserFunction> functions = keyspace.userFunctions.get(new FunctionName(keyspaceName, functionName));
-        if (functions.size() > 1 && !argumentsSpeficied)
+        if (functions.size() > 1 && !argumentsSpecified)
         {
             throw ire("'DROP FUNCTION %s' matches multiple function definitions; " +
                       "specify the argument types by issuing a statement like " +
@@ -99,7 +99,7 @@ public final class DropFunctionStatement extends AlterSchemaStatement
         List<AbstractType<?>> argumentTypes = prepareArgumentTypes(keyspace.types);
 
         Predicate<UserFunction> filter = UserFunctions.Filter.UDF;
-        if (argumentsSpeficied)
+        if (argumentsSpecified)
             filter = filter.and(f -> f.typesMatch(argumentTypes));
 
         UserFunction function = functions.stream().filter(filter).findAny().orElse(null);
@@ -137,7 +137,7 @@ public final class DropFunctionStatement extends AlterSchemaStatement
             return;
 
         Stream<UserFunction> functions = keyspace.userFunctions.get(new FunctionName(keyspaceName, functionName)).stream();
-        if (argumentsSpeficied)
+        if (argumentsSpecified)
             functions = functions.filter(f -> f.typesMatch(prepareArgumentTypes(keyspace.types)));
 
         functions.forEach(f -> client.ensurePermission(Permission.DROP, FunctionResource.function(f)));

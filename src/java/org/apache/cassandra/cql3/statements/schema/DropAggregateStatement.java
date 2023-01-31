@@ -48,26 +48,26 @@ public final class DropAggregateStatement extends AlterSchemaStatement
 {
     private final String aggregateName;
     private final List<CQL3Type.Raw> arguments;
-    private final boolean argumentsSpeficied;
+    private final boolean argumentsSpecified;
     private final boolean ifExists;
 
     public DropAggregateStatement(String keyspaceName,
                                   String aggregateName,
                                   List<CQL3Type.Raw> arguments,
-                                  boolean argumentsSpeficied,
+                                  boolean argumentsSpecified,
                                   boolean ifExists)
     {
         super(keyspaceName);
         this.aggregateName = aggregateName;
         this.arguments = arguments;
-        this.argumentsSpeficied = argumentsSpeficied;
+        this.argumentsSpecified = argumentsSpecified;
         this.ifExists = ifExists;
     }
 
     public Keyspaces apply(Keyspaces schema)
     {
         String name =
-            argumentsSpeficied
+            argumentsSpecified
           ? format("%s.%s(%s)", keyspaceName, aggregateName, join(", ", transform(arguments, CQL3Type.Raw::toString)))
           : format("%s.%s", keyspaceName, aggregateName);
 
@@ -81,7 +81,7 @@ public final class DropAggregateStatement extends AlterSchemaStatement
         }
 
         Collection<UserFunction> aggregates = keyspace.userFunctions.get(new FunctionName(keyspaceName, aggregateName));
-        if (aggregates.size() > 1 && !argumentsSpeficied)
+        if (aggregates.size() > 1 && !argumentsSpecified)
         {
             throw ire("'DROP AGGREGATE %s' matches multiple function definitions; " +
                       "specify the argument types by issuing a statement like " +
@@ -98,7 +98,7 @@ public final class DropAggregateStatement extends AlterSchemaStatement
         List<AbstractType<?>> argumentTypes = prepareArgumentTypes(keyspace.types);
 
         Predicate<UserFunction> filter = UserFunctions.Filter.UDA;
-        if (argumentsSpeficied)
+        if (argumentsSpecified)
             filter = filter.and(f -> f.typesMatch(argumentTypes));
 
         UserFunction aggregate = aggregates.stream().filter(filter).findAny().orElse(null);
@@ -127,7 +127,7 @@ public final class DropAggregateStatement extends AlterSchemaStatement
             return;
 
         Stream<UserFunction> functions = keyspace.userFunctions.get(new FunctionName(keyspaceName, aggregateName)).stream();
-        if (argumentsSpeficied)
+        if (argumentsSpecified)
             functions = functions.filter(f -> f.typesMatch(prepareArgumentTypes(keyspace.types)));
 
         functions.forEach(f -> client.ensurePermission(Permission.DROP, FunctionResource.function(f)));

@@ -468,7 +468,7 @@ public class AuthorizationProxy implements InvocationHandler
     /**
      * Query the configured IAuthorizer for the set of all permissions granted on JMXResources to a specific subject
      * @param subject
-     * @return All permissions granted to the specfied subject (including those transitively inherited from
+     * @return All permissions granted to the specified subject (including those transitively inherited from
      *         any roles the subject has been granted), filtered to include only permissions granted on
      *         JMXResources
      */
