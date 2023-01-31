@@ -173,7 +173,7 @@ public class Ec2Snitch extends AbstractNetworkTopologySnitch
         {
             // predicated on the late-2017 AWS naming 'convention' that all region names end with a digit.
             // Unfortunately, life isn't that simple. Since we allow custom datacenter suffixes (CASSANDRA-5155),
-            // an operator could conceiveably make the suffix "a", and thus create a region name that looks just like
+            // an operator could conceivably make the suffix "a", and thus create a region name that looks just like
             // one of the region's availability zones. (for example, "us-east-1a").
             // Further, we can't make any assumptions of what that suffix might be by looking at this node's
             // datacenterSuffix as conceivably their could be many different suffixes in play for a given region.
