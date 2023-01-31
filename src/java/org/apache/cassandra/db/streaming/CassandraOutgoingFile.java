@@ -154,7 +154,7 @@ public class CassandraOutgoingFile implements OutgoingStream
             // Acquire lock to avoid concurrent sstable component mutation because of stats update or index summary
             // redistribution, otherwise file sizes recorded in component manifest will be different from actual
             // file sizes.
-            // Recreate the latest manifest and hard links for mutatable components in case they are modified.
+            // Recreate the latest manifest and hard links for mutable components in case they are modified.
             try (ComponentContext context = sstable.runWithLock(ignored -> ComponentContext.create(sstable.descriptor)))
             {
                 CassandraStreamHeader current = makeHeader(sstable, operation, sections, estimatedKeys, true, context.manifest());
