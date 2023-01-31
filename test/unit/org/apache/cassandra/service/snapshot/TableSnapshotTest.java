@@ -284,7 +284,7 @@ public class TableSnapshotTest
         List<Pair<String, Long>> testingMethodInputs = new ArrayList<>();
 
         for (String testingTag : new String[] {null, "", tag, "someothertag"})
-            // 0 to deactive byTimestamp logic, now.toEpochMilli as true, snapshot minus 60s as false
+            // 0 to deactivate byTimestamp logic, now.toEpochMilli as true, snapshot minus 60s as false
             for (long olderThanTimestamp : new long[] {0, now.toEpochMilli(), snapshotCreation.minusSeconds(60).toEpochMilli()})
                 testingMethodInputs.add(Pair.create(testingTag, olderThanTimestamp));
 
