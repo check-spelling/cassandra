@@ -109,7 +109,7 @@ public interface Term
         public abstract String getText();
 
         /**
-         * The type of the {@code term} if it can be infered.
+         * The type of the {@code term} if it can be inferred.
          *
          * @param keyspace the keyspace on which the statement containing this term is on.
          * @return the type of this {@code Term} if inferrable, or {@code null}

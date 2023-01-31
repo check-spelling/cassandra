@@ -39,7 +39,7 @@ public interface Selectable extends AssignmentTestable
     public Selector.Factory newSelectorFactory(TableMetadata table, AbstractType<?> expectedType, List<ColumnMetadata> defs, VariableSpecifications boundNames);
 
     /**
-     * The type of the {@code Selectable} if it can be infered.
+     * The type of the {@code Selectable} if it can be inferred.
      *
      * @param keyspace the keyspace on which the statement for which this is a
      * {@code Selectable} is on.

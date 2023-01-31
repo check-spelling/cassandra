@@ -5725,7 +5725,7 @@ Merged from 0.8:
  * (cqlsh) ignore missing CfDef opts (CASSANDRA-3933)
  * (cqlsh) look for cqlshlib relative to realpath (CASSANDRA-3767)
  * Fix short read protection (CASSANDRA-3934)
- * Make sure infered and actual schema match (CASSANDRA-3371)
+ * Make sure inferred and actual schema match (CASSANDRA-3371)
  * Fix NPE during HH delivery (CASSANDRA-3677)
  * Don't put bootstrapping node in 'hibernate' status (CASSANDRA-3737)
  * Fix double quotes in windows bat files (CASSANDRA-3744)
