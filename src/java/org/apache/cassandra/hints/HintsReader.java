@@ -47,7 +47,7 @@ import static org.apache.cassandra.utils.Clock.Global.currentTimeMillis;
  * node. Extra decoding and reencoding is a waste of effort in this scenario, so we avoid it.
  *
  * The latter is required for dispatch of hints to nodes that have a different messaging version, and in general is just an
- * easy way to enable backward and future compatibilty.
+ * easy way to enable backward and future compatibility.
  */
 class HintsReader implements AutoCloseable, Iterable<HintsReader.Page>
 {

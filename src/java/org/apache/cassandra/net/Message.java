@@ -1271,7 +1271,7 @@ public class Message<T>
                 }
                 else
                 {
-                    in.skipBytesFully(length); // forward compatibiliy with minor version changes
+                    in.skipBytesFully(length); // forward compatibility with minor version changes
                 }
             }
 

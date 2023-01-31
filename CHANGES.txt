@@ -2634,7 +2634,7 @@ Merged from 3.0:
  * Improve stress performance over 1k threads (CASSANDRA-7217)
  * Wait for migration responses to complete before bootstrapping (CASSANDRA-10731)
  * Unable to create a function with argument of type Inet (CASSANDRA-10741)
- * Fix backward incompatibiliy in CqlInputFormat (CASSANDRA-10717)
+ * Fix backward incompatibility in CqlInputFormat (CASSANDRA-10717)
  * Correctly preserve deletion info on updated rows when notifying indexers
    of single-row deletions (CASSANDRA-10694)
  * Notify indexers of partition delete during cleanup (CASSANDRA-10685)
@@ -2747,7 +2747,7 @@ Merged from 2.1:
  * Remove circular references in SegmentedFile (CASSANDRA-10543)
  * Ensure validation of indexed values only occurs once per-partition (CASSANDRA-10536)
  * Fix handling of static columns for range tombstones in thrift (CASSANDRA-10174)
- * Support empty ColumnFilter for backward compatility on empty IN (CASSANDRA-10471)
+ * Support empty ColumnFilter for backward compatibility on empty IN (CASSANDRA-10471)
  * Remove Pig support (CASSANDRA-10542)
  * Fix LogFile throws Exception when assertion is disabled (CASSANDRA-10522)
  * Revert CASSANDRA-7486, make CMS default GC, move GC config to
@@ -6122,7 +6122,7 @@ Merged from 0.8:
  * Default RR chance to 0.1 (CASSANDRA-3169)
  * Add RowLevel support to secondary index API (CASSANDRA-3147)
  * Make SerializingCacheProvider the default if JNA is available (CASSANDRA-3183)
- * Fix backwards compatibilty for CQL memtable properties (CASSANDRA-3190)
+ * Fix backwards compatibility for CQL memtable properties (CASSANDRA-3190)
  * Add five-minute delay before starting compactions on a restarted server
    (CASSANDRA-3181)
  * Reduce copies done for intra-host messages (CASSANDRA-1788, 3144)

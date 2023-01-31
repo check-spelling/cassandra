@@ -399,7 +399,7 @@ public interface Selectable extends AssignmentTestable
 
                 FunctionName name = functionName;
                 // COUNT(x) is equivalent to COUNT(*) for any non-null term x (since count(x) don't care about its
-                // argument outside of check for nullness) and for backward compatibilty we want to support COUNT(1),
+                // argument outside of check for nullness) and for backward compatibility we want to support COUNT(1),
                 // but we actually have COUNT(x) method for every existing (simple) input types so currently COUNT(1)
                 // will throw as ambiguous (since 1 works for any type). So we have to special case COUNT.
                 if (functionName.equalsNativeFunction(FunctionName.nativeFunction("count"))
