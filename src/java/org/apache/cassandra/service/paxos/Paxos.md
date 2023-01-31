@@ -196,7 +196,7 @@ and a new step is inserted before 4(iv) (which becomes 4(v)):
 
 4.
     4. If the proposal is empty (i.e. the operation was a read or the CAS failed), the coordinator checks the maximum of
-       the quorum's `promised` values agains the `MRA`'s ballot number. If that maximum isn't higher, the operation
+       the quorum's `promised` values against the `MRA`'s ballot number. If that maximum isn't higher, the operation
        completes.
 
 Since we do not change issued proposals or make new ones, Proposition 1 is still in force. For Proposition 2 we must
@@ -259,7 +259,7 @@ Steps 2, 3, 4 and 8 are changed to accommodate this. The modified algorithm beco
        a read result obtained by resolving the quorum of read responses; the partition update is empty if the operation
        was a read or the CAS failed.
     4. If the proposal is empty (i.e. the operation was a read or the CAS failed), the coordinator checks the maximum of
-       the quorum's `promisedWrite` values agains the `MRA`'s ballot number. If that maximum isn't higher, the operation
+       the quorum's `promisedWrite` values against the `MRA`'s ballot number. If that maximum isn't higher, the operation
        completes.
     5. If there was no quorum of promises with false `read-only` flag, the coordinator restarts the process (step 8).
     6. Otherwise, it sends the proposal as a `propose` message with the value and the current ballot number to all
