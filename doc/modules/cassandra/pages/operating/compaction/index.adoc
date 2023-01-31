@@ -91,7 +91,7 @@ node.:
 [A], [A], [A]
 ----
 
-If one of the nodes fails and and our delete operation only removes
+If one of the nodes fails and our delete operation only removes
 existing values we can end up with a cluster that looks like:
 
 [source,none]

@@ -515,7 +515,7 @@ public class RangeStreamer
                      if (!all(strictEndpoints, testSourceFilters))
                          throw new IllegalStateException("Necessary replicas for strict consistency were removed by source filters: " + buildErrorMessage(sourceFilters, strictEndpoints));
 
-                     //If we are transitioning from transient to full and and the set of replicas for the range is not changing
+                     //If we are transitioning from transient to full and the set of replicas for the range is not changing
                      //we might end up with no endpoints to fetch from by address. In that case we can pick any full replica safely
                      //since we are already a transient replica and the existing replica remains.
                      //The old behavior where we might be asked to fetch ranges we don't need shouldn't occur anymore.
