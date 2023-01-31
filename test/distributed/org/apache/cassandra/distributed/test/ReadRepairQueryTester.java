@@ -153,7 +153,7 @@ public abstract class ReadRepairQueryTester extends TestBaseImpl
         }
 
         /**
-         * Runs the tested query with CL=ALL selectig only the specified columns and verifies that it returns the
+         * Runs the tested query with CL=ALL selecting only the specified columns and verifies that it returns the
          * specified rows. Then, it runs the query again selecting all the columns, and verifies that the first query
          * execution only propagated the selected columns, and that the second execution propagated everything.
          *
@@ -180,7 +180,7 @@ public abstract class ReadRepairQueryTester extends TestBaseImpl
         }
 
         /**
-         * Executes the specified column deletion on just one node. Then it runs the tested query with CL=ALL selectig
+         * Executes the specified column deletion on just one node. Then it runs the tested query with CL=ALL selecting
          * only the specified columns (which are expected to be different to the deleted one) and verifies that it
          * returns the specified rows. Then it runs the tested query again, this time selecting all the columns, to
          * verify that the previous query didn't propagate the column deletion.
