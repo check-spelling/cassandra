@@ -110,7 +110,7 @@ public class ClusterStorageUsageTest extends TestBaseImpl
         cluster.schemaChange(withKeyspace("CREATE TABLE %s.tbl (pk int, v text, PRIMARY KEY (pk));"));
 
         for (int i = 0; i < MUTATIONS; i++) {
-            cluster.coordinator(1).execute(withKeyspace("INSERT INTO %s.tbl (pk, v) VALUES (?,?)"), ConsistencyLevel.ALL, i, "compressable");
+            cluster.coordinator(1).execute(withKeyspace("INSERT INTO %s.tbl (pk, v) VALUES (?,?)"), ConsistencyLevel.ALL, i, "compressible");
         }
 
         cluster.forEach((i) -> i.flush(KEYSPACE));

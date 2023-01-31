@@ -2381,7 +2381,7 @@ public abstract class SSTableReader extends SSTable implements UnfilteredSource,
         long bytes = 0;
         for (Component component : components)
         {
-            // Only the data file is compressable.
+            // Only the data file is compressible.
             bytes += logical && component == Component.DATA && compression
                      ? getCompressionMetadata().dataLength
                      : new File(descriptor.filenameFor(component)).length();
