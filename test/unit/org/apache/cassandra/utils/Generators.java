@@ -76,14 +76,14 @@ public final class Generators
         int numParts = (int) rnd.next(DNS_DOMAIN_PARTS_CONSTRAINT);
         int MAX_LENGTH = 253;
         int MAX_PART_LENGTH = 63;
-        // to make sure the string is within the max allowed length (253), cap each part uniformily
+        // to make sure the string is within the max allowed length (253), cap each part uniformly
         Constraint partSizeConstraint = Constraint.between(1, Math.min(Math.max(1, (int) Math.ceil((MAX_LENGTH - numParts) / numParts)), MAX_PART_LENGTH));
         StringBuilder sb = new StringBuilder(MAX_LENGTH);
         for (int i = 0; i < numParts; i++)
         {
             int partSize = (int) rnd.next(partSizeConstraint);
             // -_ not allowed in the first or last position of a part, so special case these
-            // also, only use letters as first char doesn't allow digits uniformailly
+            // also, only use letters as first char doesn't allow digits uniformly
             sb.append(LETTER_DOMAIN[(int) rnd.next(LETTER_CONSTRAINT)]);
             for (int j = 1; j < partSize; j++)
                 sb.append(DNS_DOMAIN_PART_DOMAIN[(int) rnd.next(DNS_DOMAIN_PART_CONSTRAINT)]);
