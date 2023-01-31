@@ -168,7 +168,7 @@ public abstract class DecoratedKey implements PartitionPosition, FilterKey
     /**
      * Returns a CQL representation of this key.
      *
-     * @param metadata the metadata of the table that this key belogs to
+     * @param metadata the metadata of the table that this key belongs to
      * @return a CQL representation of this key
      */
     public String toCQLString(TableMetadata metadata)
