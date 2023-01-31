@@ -1538,7 +1538,7 @@ public class Gossiper implements IFailureDetectionEventListener, GossiperMBean
      */
     private static Comparator<Entry<InetAddressAndPort, EndpointState>> stateOrderMap()
     {
-        // There apears to be some edge cases where the state we are ordering get added to the global state causing
+        // There appears to be some edge cases where the state we are ordering get added to the global state causing
         // ordering to change... to avoid that rely on a cache
         // see CASSANDRA-17908
         class Cache extends HashMap<InetAddressAndPort, EndpointState>

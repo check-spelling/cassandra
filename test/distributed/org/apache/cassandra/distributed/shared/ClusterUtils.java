@@ -112,7 +112,7 @@ public class ClusterUtils
      * Stops an instance abruptly.  This is done by blocking all messages to/from so all other instances are unable
      * to communicate, then stopping the instance gracefully.
      *
-     * The assumption is that hard stopping inbound and outbound messages will apear to the cluster as if the instance
+     * The assumption is that hard stopping inbound and outbound messages will appear to the cluster as if the instance
      * was stopped via kill -9; this does not hold true if the instance is restarted as it knows it was properly shutdown.
      *
      * @param cluster to filter messages to
