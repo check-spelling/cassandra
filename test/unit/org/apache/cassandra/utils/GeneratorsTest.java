@@ -35,7 +35,7 @@ public class GeneratorsTest
                       .as("version was not random uuid")
                       .isEqualTo(4);
             Assertions.assertThat(uuid.variant())
-                      .as("varient not set to IETF (2)")
+                      .as("variant not set to IETF (2)")
                       .isEqualTo(2);
         });
     }
