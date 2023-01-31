@@ -123,7 +123,7 @@ regular column size (1 byte) plus the clustering column size (6 bytes)
 gives a total of 7 bytes. To finish up the term, multiply this value by
 the number of rows (73,000), giving a result of 511,000 bytes (0.51 MB).
 
-The fourth term is simply counting the metadata that that Cassandra
+The fourth term is simply counting the metadata that Cassandra
 stores for each cell. In the storage format used by Cassandra 3.0 and
 later, the amount of metadata for a given cell varies based on the type
 of data being stored, and whether or not custom timestamp or TTL values
