@@ -30,7 +30,7 @@ import java.lang.annotation.Target;
  * so some classes do not get shared (outside a blessed set of classes/packages). When the default behavior
  * is not desirable, this annotation will tell jvm-dtest to share the class across all class loaders.
  *
- * This is the oposite of {@link Isolated}.
+ * This is the opposite of {@link Isolated}.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.TYPE })
