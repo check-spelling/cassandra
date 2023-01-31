@@ -446,7 +446,7 @@ data can be used to construct the latency distributions in `biolatency`
 but can also be used to better understand how disk latency affects
 performance. For example this particular drive takes ~3ms to service a
 memory mapped read due to the large default value (`128kb`) of
-`read_ahead_kb`. To improve point read performance you may may want to
+`read_ahead_kb`. To improve point read performance you may want to
 decrease `read_ahead_kb` on fast data volumes such as SSDs while keeping
 the a higher value like `128kb` value is probably right for HDs. There
 are tradeoffs involved, see
