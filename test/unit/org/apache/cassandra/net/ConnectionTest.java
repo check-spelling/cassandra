@@ -886,7 +886,7 @@ public class ConnectionTest
             int concurrency = 100;
             int attempts = 10000;
             int acquireCount = concurrency * attempts;
-            long acquireStep = Math.round(maxSendQueueCapacity * 1.2 / acquireCount / 2); // It is guranteed to acquire (~20%) more
+            long acquireStep = Math.round(maxSendQueueCapacity * 1.2 / acquireCount / 2); // It is guaranteed to acquire (~20%) more
             // The total overly acquired amount divides the amount acquired in each step. Get the ceil value so not to miss the acquire that just exceeds.
             long maxFailures = (long) Math.ceil((acquireCount * acquireStep * 2 - maxSendQueueCapacity) / acquireStep); // The result must be in the range of lone
             AtomicLong acquisitionFailures = new AtomicLong();
