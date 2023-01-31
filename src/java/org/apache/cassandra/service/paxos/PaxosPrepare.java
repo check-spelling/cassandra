@@ -237,7 +237,7 @@ public class PaxosPrepare extends PaxosRequestCallback<PaxosPrepare.Response> im
      * committed to a majority, and we failed to read from a single natural replica that had witnessed this
      * commit when we performed the read.
      * Since this is an edge case, we simply start again, to keep the control flow more easily understood;
-     * the commit shouldld be committed to a majority as part of our re-prepare.
+     * the commit should be committed to a majority as part of our re-prepare.
      */
     static class FoundIncompleteCommitted extends FoundIncomplete
     {

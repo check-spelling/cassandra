@@ -259,7 +259,7 @@ public class CompactionManager implements CompactionManagerMBean
         }
 
         // wait for tasks to terminate
-        // compaction tasks are interrupted above, so it shuold be fairy quick
+        // compaction tasks are interrupted above, so it should be fairy quick
         // until not interrupted tasks to complete.
         for (ExecutorService exec : Arrays.asList(executor, validationExecutor, viewBuildExecutor,
                                                   cacheCleanupExecutor, secondaryIndexExecutor))

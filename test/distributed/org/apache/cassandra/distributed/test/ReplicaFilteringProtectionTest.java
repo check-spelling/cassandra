@@ -168,7 +168,7 @@ public class ReplicaFilteringProtectionTest extends TestBaseImpl
 
         verifyWarningState(warnThreshold < REPLICAS, newResult);
 
-        // We still sould only have made 3 row "completion" requests, with no replica divergence in the last query.
+        // We still should only have made 3 row "completion" requests, with no replica divergence in the last query.
         assertEquals(ROWS, protectionQueryCount(cluster.get(1), tableName));
 
         // With no replica divergence, we only cache a single partition at a time across 2 replicas.
@@ -188,7 +188,7 @@ public class ReplicaFilteringProtectionTest extends TestBaseImpl
 
         verifyWarningState(shouldWarn, futureResult);
 
-        // We sould have made 3 more row "completion" requests.
+        // We should have made 3 more row "completion" requests.
         assertEquals(ROWS * 2, protectionQueryCount(cluster.get(1), tableName));
 
         // In all cases above, the queries should be caching 1 row per partition, but 6 for the

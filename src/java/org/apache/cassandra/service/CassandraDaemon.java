@@ -930,7 +930,7 @@ public class CassandraDaemon
     {
         /**
          * Start the server.
-         * This method shoud be able to restart a server stopped through stop().
+         * This method should be able to restart a server stopped through stop().
          * Should throw a RuntimeException if the server cannot be started
          */
         public void start();
