@@ -467,7 +467,7 @@ public class ColumnFamilyStore implements ColumnFamilyStoreMBean, Memtable.Owner
                              TableMetadataRef metadata,
                              Directories directories,
                              boolean loadSSTables,
-                             boolean registerBookeeping,
+                             boolean registerBookkeeping,
                              boolean offline)
     {
         assert directories != null;
@@ -534,7 +534,7 @@ public class ColumnFamilyStore implements ColumnFamilyStoreMBean, Memtable.Owner
             data.updateInitialSSTableSize(sstables);
         }
 
-        if (registerBookeeping)
+        if (registerBookkeeping)
         {
             // register the mbean
             mbeanName = getTableMBeanName(keyspace.getName(), name, isIndex());
