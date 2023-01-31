@@ -130,7 +130,7 @@ public interface Selectable extends AssignmentTestable
          * name for bind markers, typically if you have:
          *   SELECT (int)? FROM foo;
          * there isn't a good name for that marker. So we give the same name to all the markers. Note that we could try
-         * to differenciate the names by using some increasing number in the name (so [selection_1], [selection_2], ...)
+         * to differentiate the names by using some increasing number in the name (so [selection_1], [selection_2], ...)
          * but it's actually not trivial to do in the current code and it's not really more helpful since if users wants
          * to bind by position (which they will have to in this case), they can do so at the driver level directly. And
          * so we don't bother.
