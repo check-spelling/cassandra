@@ -63,7 +63,7 @@ public class GuardrailAllowFilteringTest extends GuardrailTester
     }
 
     @Test
-    public void testAllowFilteringDisabedNotUsed() throws Throwable
+    public void testAllowFilteringDisabledNotUsed() throws Throwable
     {
         setGuardrail(false);
         execute("INSERT INTO %s (k, a, b) VALUES (1, 1, 1)");

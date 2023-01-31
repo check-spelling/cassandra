@@ -69,8 +69,8 @@ public class CommitLogDescriptorTest
         enabledEncryption = new EncryptionContext(enabledTdeOptions, iv, false);
         
         neverEnabledEncryption = EncryptionContextGenerator.createDisabledContext();
-        TransparentDataEncryptionOptions disaabledTdeOptions = new TransparentDataEncryptionOptions(false, enabledTdeOptions.cipher, enabledTdeOptions.key_alias, enabledTdeOptions.key_provider);
-        previouslyEnabledEncryption = new EncryptionContext(disaabledTdeOptions);
+        TransparentDataEncryptionOptions disabledTdeOptions = new TransparentDataEncryptionOptions(false, enabledTdeOptions.cipher, enabledTdeOptions.key_alias, enabledTdeOptions.key_provider);
+        previouslyEnabledEncryption = new EncryptionContext(disabledTdeOptions);
     }
 
     @Test
