@@ -55,7 +55,7 @@ import static org.apache.cassandra.utils.concurrent.WaitQueue.newWaitQueue;
 /*
  * A single commit log file on disk. Manages creation of the file and writing mutations to disk,
  * as well as tracking the last mutation position of any "dirty" CFs covered by the segment file. Segment
- * files are initially allocated to a fixed size and can grow to accomidate a larger value if necessary.
+ * files are initially allocated to a fixed size and can grow to accommodate a larger value if necessary.
  */
 public abstract class CommitLogSegment
 {
