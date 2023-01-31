@@ -75,7 +75,7 @@ public interface RequestCallback<T>
         // Since we got a reply back, and that was a failure, we should return a failure letting the user know.
         // When all failures are a timeout, then this is a race condition with
         // org.apache.cassandra.utils.concurrent.Awaitable.await(long, java.util.concurrent.TimeUnit)
-        // The race is that the message expire path runs and expires all messages, this then casues the condition
+        // The race is that the message expire path runs and expires all messages, this then causes the condition
         // to signal telling the caller "got all replies!".
         return failureReasonByEndpoint.values().stream().allMatch(RequestFailureReason.TIMEOUT::equals);
     }
