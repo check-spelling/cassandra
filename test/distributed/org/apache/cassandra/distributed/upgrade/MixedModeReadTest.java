@@ -59,7 +59,7 @@ public class MixedModeReadTest extends UpgradeTestBase
                 Thread.sleep(1000);
             }
 
-            // should not cause a disgest mismatch in mixed mode
+            // should not cause a digest mismatch in mixed mode
             testDigestConsistency(cluster.coordinator(1));
             testDigestConsistency(cluster.coordinator(2));
         })
