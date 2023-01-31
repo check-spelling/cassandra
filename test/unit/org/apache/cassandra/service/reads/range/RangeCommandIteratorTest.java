@@ -136,23 +136,23 @@ public class RangeCommandIteratorTest
 
         // no live row returned, fetch all remaining ranges but hit the max instead
         int cf = RangeCommandIterator.computeConcurrencyFactor(100, 30, maxConcurrentRangeRequest, 500, 0);
-        assertEquals(maxConcurrentRangeRequest, cf); // because 100 - 30 = 70 > maxConccurrentRangeRequest
+        assertEquals(maxConcurrentRangeRequest, cf); // because 100 - 30 = 70 > maxConcurrentRangeRequest
 
         // no live row returned, fetch all remaining ranges
         cf = RangeCommandIterator.computeConcurrencyFactor(100, 80, maxConcurrentRangeRequest, 500, 0);
-        assertEquals(20, cf); // because 100-80 = 20 < maxConccurrentRangeRequest
+        assertEquals(20, cf); // because 100-80 = 20 < maxConcurrentRangeRequest
 
         // returned half rows, fetch rangesQueried again but hit the max instead
         cf = RangeCommandIterator.computeConcurrencyFactor(100, 60, maxConcurrentRangeRequest, 480, 240);
-        assertEquals(maxConcurrentRangeRequest, cf); // because 60 > maxConccurrentRangeRequest
+        assertEquals(maxConcurrentRangeRequest, cf); // because 60 > maxConcurrentRangeRequest
 
         // returned half rows, fetch rangesQueried again
         cf = RangeCommandIterator.computeConcurrencyFactor(100, 30, maxConcurrentRangeRequest, 480, 240);
-        assertEquals(30, cf); // because 30 < maxConccurrentRangeRequest
+        assertEquals(30, cf); // because 30 < maxConcurrentRangeRequest
 
         // returned most of rows, 1 more range to fetch
         cf = RangeCommandIterator.computeConcurrencyFactor(100, 1, maxConcurrentRangeRequest, 480, 479);
-        assertEquals(1, cf); // because 1 < maxConccurrentRangeRequest
+        assertEquals(1, cf); // because 1 < maxConcurrentRangeRequest
     }
 
     private static List<Token> setTokens(int... values)
