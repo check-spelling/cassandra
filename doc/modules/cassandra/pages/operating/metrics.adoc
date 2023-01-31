@@ -518,7 +518,7 @@ Metrics::
 |ViewReplicasAttempted |Counter |Total number of attempted view
 replica writes.
 
-|ViewReplicasSuccess |Counter |Total number of succeded view replica
+|ViewReplicasSuccess |Counter |Total number of succeeded view replica
 writes.
 
 |ViewPendingMutations |Gauge<Long> |ViewReplicasAttempted -
