@@ -1344,7 +1344,7 @@ public class StorageProxy implements StorageProxyMBean
     /**
      * Perform the write of a mutation given a WritePerformer.
      * Gather the list of write endpoints, apply locally and/or forward the mutation to
-     * said write endpoint (deletaged to the actual WritePerformer) and wait for the
+     * said write endpoint (delegated to the actual WritePerformer) and wait for the
      * responses based on consistency level.
      *
      * @param mutation the mutation to be applied
