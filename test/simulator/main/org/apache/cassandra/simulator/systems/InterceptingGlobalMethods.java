@@ -93,9 +93,9 @@ public class InterceptingGlobalMethods extends InterceptingMonitors implements I
         Thread thread = Thread.currentThread();
         if (thread instanceof InterceptibleThread)
         {
-            InterceptibleThread interceptibleThread = (InterceptibleThread) thread;
-            if (interceptibleThread.isIntercepting())
-                return interceptibleThread;
+            InterceptibleThread interceptableThread = (InterceptibleThread) thread;
+            if (interceptableThread.isIntercepting())
+                return interceptableThread;
         }
 
         if (NonInterceptible.isPermitted())
@@ -193,8 +193,8 @@ public class InterceptingGlobalMethods extends InterceptingMonitors implements I
             Thread thread = Thread.currentThread();
             if (thread instanceof InterceptibleThread)
             {
-                InterceptibleThread interceptibleThread = (InterceptibleThread) thread;
-                if (interceptibleThread.isIntercepting())
+                InterceptibleThread interceptableThread = (InterceptibleThread) thread;
+                if (interceptableThread.isIntercepting())
                     return;
             }
 

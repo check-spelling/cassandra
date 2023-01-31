@@ -144,9 +144,9 @@ public class SimulatedTime
             Thread thread = Thread.currentThread();
             if (thread instanceof InterceptibleThread)
             {
-                InterceptibleThread interceptibleThread = ((InterceptibleThread) thread);
-                if (interceptibleThread.isIntercepting())
-                    return interceptibleThread.time();
+                InterceptibleThread interceptableThread = ((InterceptibleThread) thread);
+                if (interceptableThread.isIntercepting())
+                    return interceptableThread.time();
             }
             if (PERMITTED_TIME_THREADS.matcher(Thread.currentThread().getName()).matches())
                 return disabled;

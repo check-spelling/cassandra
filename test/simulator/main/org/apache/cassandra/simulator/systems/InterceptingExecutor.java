@@ -269,8 +269,8 @@ public interface InterceptingExecutor extends OrderOn
             Thread thread = Thread.currentThread();
             if (thread instanceof InterceptibleThread)
             {
-                InterceptibleThread interceptibleThread = (InterceptibleThread) thread;
-                if (interceptibleThread.isIntercepting())
+                InterceptibleThread interceptableThread = (InterceptibleThread) thread;
+                if (interceptableThread.isIntercepting())
                 {
                     // simpler to use no timeout than to ensure pending tasks all run first in simulation
                     isTerminated.await();

@@ -170,11 +170,11 @@ public class SimulatedExecution implements InterceptorOfExecution
         if (!(thread instanceof InterceptibleThread))
             return noIntercept;
 
-        InterceptibleThread interceptibleThread = (InterceptibleThread) thread;
-        if (!interceptibleThread.isIntercepting())
+        InterceptibleThread interceptableThread = (InterceptibleThread) thread;
+        if (!interceptableThread.isIntercepting())
             return noIntercept;
 
-        return new SimulatedExecution.Intercept(interceptibleThread);
+        return new SimulatedExecution.Intercept(interceptableThread);
     }
 
     public ActionPlan plan()

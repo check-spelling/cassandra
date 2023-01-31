@@ -31,7 +31,7 @@ import static org.apache.cassandra.simulator.systems.InterceptorOfGlobalMethods.
 @PerClassLoader
 class InterceptingWaitQueue extends WaitQueue.Standard implements WaitQueue
 {
-    final Queue<InterceptingSignal<?>> interceptible = new ConcurrentLinkedQueue<>();
+    final Queue<InterceptingSignal<?>> interceptable = new ConcurrentLinkedQueue<>();
 
     public InterceptingWaitQueue()
     {
@@ -43,7 +43,7 @@ class InterceptingWaitQueue extends WaitQueue.Standard implements WaitQueue
             return super.register();
 
         InterceptingSignal<?> signal = new InterceptingSignal<>();
-        interceptible.add(signal);
+        interceptable.add(signal);
         return signal;
     }
 
@@ -53,7 +53,7 @@ class InterceptingWaitQueue extends WaitQueue.Standard implements WaitQueue
             return super.register(value, consumer);
 
         InterceptingSignal<V> signal = new InterceptingSignal<>(value, consumer);
-        interceptible.add(signal);
+        interceptable.add(signal);
         return signal;
     }
 
@@ -76,16 +76,16 @@ class InterceptingWaitQueue extends WaitQueue.Standard implements WaitQueue
     {
         if (super.hasWaiters())
             return true;
-        if (interceptible.isEmpty())
+        if (interceptable.isEmpty())
             return false;
 
-        return !interceptible.stream().allMatch(Signal::isSet);
+        return !interceptable.stream().allMatch(Signal::isSet);
     }
 
     private boolean consumeUntil(Predicate<InterceptingSignal<?>> consumeUntil)
     {
         InterceptingSignal<?> signal;
-        while (null != (signal = interceptible.poll()))
+        while (null != (signal = interceptable.poll()))
         {
             if (consumeUntil.test(signal))
                 return true;
@@ -95,6 +95,6 @@ class InterceptingWaitQueue extends WaitQueue.Standard implements WaitQueue
 
     public int getWaiting()
     {
-        return super.getWaiting() + (int)interceptible.stream().filter(s -> !s.isSignalled).count();
+        return super.getWaiting() + (int)interceptable.stream().filter(s -> !s.isSignalled).count();
     }
 }
