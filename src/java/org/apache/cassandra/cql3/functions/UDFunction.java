@@ -408,7 +408,7 @@ public abstract class UDFunction extends UserFunction implements ScalarFunction
 
     /**
      * Like {@link ScalarFunction#execute(ProtocolVersion, List)} but the first parameter is already in non-serialized form.
-     * Remaining parameters (2nd paramters and all others) are in {@code parameters}.
+     * Remaining parameters (2nd parameters and all others) are in {@code parameters}.
      * This is used to prevent superfluous (de)serialization of the state of aggregates.
      * Means: scalar functions of aggregates are called using this variant.
      */
@@ -495,7 +495,7 @@ public abstract class UDFunction extends UserFunction implements ScalarFunction
 
     /**
      * Like {@link #executeAsync(ProtocolVersion, List)} but the first parameter is already in non-serialized form.
-     * Remaining parameters (2nd paramters and all others) are in {@code parameters}.
+     * Remaining parameters (2nd parameters and all others) are in {@code parameters}.
      * This is used to prevent superfluous (de)serialization of the state of aggregates.
      * Means: scalar functions of aggregates are called using this variant.
      */
