@@ -342,7 +342,7 @@ public class RowIteratorMergeListener<E extends Endpoints<E>>
                 if (merged.isOpen(isReversed))
                 {
                     // If we're opening a new merged range (or just switching deletion), then unless the source
-                    // is up to date on that deletion (note that we've updated what the source deleteion is
+                    // is up to date on that deletion (note that we've updated what the source deletion is
                     // above), we'll have to sent the range to the source.
                     DeletionTime newDeletion = merged.openDeletionTime(isReversed);
                     DeletionTime sourceDeletion = sourceDeletionTime[i];
