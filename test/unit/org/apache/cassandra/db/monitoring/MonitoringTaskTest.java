@@ -61,7 +61,7 @@ public class MonitoringTaskTest
     @After
     public void cleanUp()
     {
-        // these clear the queues of the monitorint task
+        // these clear the queues of the monitoring task
         MonitoringTask.instance.getSlowOperations();
         MonitoringTask.instance.getFailedOperations();
     }
