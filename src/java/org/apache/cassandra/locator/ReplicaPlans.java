@@ -223,7 +223,7 @@ public class ReplicaPlans
         // Replicas are picked manually:
         //  - replicas should be alive according to the failure detector
         //  - replicas should be in the local datacenter
-        //  - choose min(2, number of qualifying candiates above)
+        //  - choose min(2, number of qualifying candidates above)
         //  - allow the local node to be the only replica only if it's a single-node DC
         Collection<InetAddressAndPort> chosenEndpoints = filterBatchlogEndpoints(snitch.getLocalRack(), localEndpoints);
 
