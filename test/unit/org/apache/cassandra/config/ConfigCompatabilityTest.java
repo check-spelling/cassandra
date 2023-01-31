@@ -251,7 +251,7 @@ public class ConfigCompatabilityTest
 
     private static Class<?> normalize(Class<?> type)
     {
-        // convert primitives to Number, allowing null in the doamin
+        // convert primitives to Number, allowing null in the domain
         // this means that switching between int to Integer, and Integer to int are seen as the same while diffing; null
         // added/removed from domain is ignored by diff
         if (type.equals(Byte.TYPE))
