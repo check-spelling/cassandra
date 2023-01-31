@@ -142,7 +142,7 @@ public class UFSecurityTest extends CQLTester
                                           "LANGUAGE javascript\n" +
                                           "AS 'org.apache.cassandra.service.StorageService.instance.isShutdown(); 0;';");
             execute("SELECT " + fName + "(dval) FROM %s WHERE key=1");
-            Assert.fail("Javascript security check failed");
+            Assert.fail("JavaScript security check failed");
         }
         catch (FunctionExecutionException e)
         {
@@ -180,7 +180,7 @@ public class UFSecurityTest extends CQLTester
                                               "LANGUAGE javascript\n" +
                                               "AS '" + script + "';");
                 execute("SELECT " + fName + "(dval) FROM %s WHERE key=1");
-                Assert.fail("Javascript security check failed: " + script);
+                Assert.fail("JavaScript security check failed: " + script);
             }
             catch (FunctionExecutionException e)
             {
@@ -250,7 +250,7 @@ public class UFSecurityTest extends CQLTester
                                        "AS 'long t=System.currentTimeMillis()+500; while (t>System.currentTimeMillis()) { }; return 0d;';");
                 assertInvalidMessage("ran longer than 250ms", "SELECT " + fName + "(dval) FROM %s WHERE key=1");
 
-                // Javascript UDF
+                // JavaScript UDF
 
                 fName = createFunction(KEYSPACE_PER_TEST, "double",
                                        "CREATE OR REPLACE FUNCTION %s(val double) " +
