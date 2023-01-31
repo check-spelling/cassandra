@@ -63,7 +63,7 @@ public interface QueryHandler
         public final MD5Digest resultMetadataId;
 
         /**
-         * Contains the CQL statement source if the statement has been "regularly" perpared via
+         * Contains the CQL statement source if the statement has been "regularly" prepared via
          * {@link QueryHandler#prepare(String, ClientState, Map)}.
          * Other usages of this class may or may not contain the CQL statement source.
          */
