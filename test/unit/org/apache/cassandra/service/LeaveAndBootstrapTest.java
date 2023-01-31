@@ -604,7 +604,7 @@ public class LeaveAndBootstrapTest
         assertTrue(tmd.isLeaving(hosts.get(2)));
         assertNull(tmd.getEndpoint(endpointTokens.get(2)));
 
-        // go to boostrap
+        // go to bootstrap
         Gossiper.instance.injectApplicationState(hosts.get(2), ApplicationState.TOKENS, valueFactory.tokens(Collections.singleton(keyTokens.get(1))));
         ss.onChange(hosts.get(2),
                     ApplicationState.STATUS,

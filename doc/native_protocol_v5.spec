@@ -732,7 +732,7 @@ Table of Contents
 
   The authentication is SASL based and thus consists of a number of server
   challenges (AUTH_CHALLENGE, Section 4.2.7) followed by client responses
-  (AUTH_RESPONSE, Section 4.1.2). The initial exchange is however boostrapped
+  (AUTH_RESPONSE, Section 4.1.2). The initial exchange is however bootstrapped
   by an initial client response. The details of that exchange (including how
   many challenge-response pairs are required) are specific to the authenticator
   in use. The exchange ends when the server sends an AUTH_SUCCESS message or
