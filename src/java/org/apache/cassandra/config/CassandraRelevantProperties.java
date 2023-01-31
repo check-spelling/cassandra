@@ -144,13 +144,13 @@ public enum CassandraRelevantProperties
     RING_DELAY("cassandra.ring_delay_ms"),
 
     /**
-     * When bootstraping we wait for all schema versions found in gossip to be seen, and if not seen in time we fail
+     * When bootstrapping we wait for all schema versions found in gossip to be seen, and if not seen in time we fail
      * the bootstrap; this property will avoid failing and allow bootstrap to continue if set to true.
      */
     BOOTSTRAP_SKIP_SCHEMA_CHECK("cassandra.skip_schema_check"),
 
     /**
-     * When bootstraping how long to wait for schema versions to be seen.
+     * When bootstrapping how long to wait for schema versions to be seen.
      */
     BOOTSTRAP_SCHEMA_DELAY_MS("cassandra.schema_delay_ms"),
 

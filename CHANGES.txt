@@ -7427,7 +7427,7 @@ Merged from 0.8:
  * GC compacted sstables after cleanup and compaction (CASSANDRA-621)
  * Speed up anti-entropy validation (CASSANDRA-629)
  * Fix anti-entropy assertion error (CASSANDRA-639)
- * Fix pending range conflicts when bootstapping or moving
+ * Fix pending range conflicts when bootstrapping or moving
    multiple nodes at once (CASSANDRA-603)
  * Handle obsolete gossip related to node movement in the case where
    one or more nodes is down when the movement occurs (CASSANDRA-572)
@@ -7477,7 +7477,7 @@ Merged from 0.8:
    to bootstrap when started, until bootstrap successfully
    completes. -b option is removed.  (CASSANDRA-438)
  * Unless a token is manually specified in the configuration xml,
-   a bootstraping node will use a token that gives it half the
+   a bootstrapping node will use a token that gives it half the
    keys from the most-heavily-loaded node in the cluster,
    instead of generating a random token.
    (CASSANDRA-385, CASSANDRA-517)

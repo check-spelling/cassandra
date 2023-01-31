@@ -840,7 +840,7 @@ public class TokenMetadata
     }
 
      /**
-     * Calculate pending ranges according to bootsrapping and leaving nodes. Reasoning is:
+     * Calculate pending ranges according to bootstrapping and leaving nodes. Reasoning is:
      *
      * (1) When in doubt, it is better to write too much to a node than too little. That is, if
      * there are multiple nodes moving, calculate the biggest ranges a node could have. Cleaning
