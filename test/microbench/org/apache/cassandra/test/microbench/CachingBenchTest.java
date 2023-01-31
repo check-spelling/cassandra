@@ -238,7 +238,7 @@ public class CachingBenchTest extends CQLTester
         int startRowDeletions = countRowDeletions(cfs);
         int startTableCount = cfs.getLiveSSTables().size();
         long startSize = SSTableReader.getTotalBytes(cfs.getLiveSSTables());
-        System.out.println("\nCompession: " + cfs.getCompressionParameters().toString());
+        System.out.println("\nCompression: " + cfs.getCompressionParameters().toString());
         System.out.println("Reader " + cfs.getLiveSSTables().iterator().next().getFileDataInput(0).toString());
         if (cacheEnabled)
             System.out.format("Cache size %s requests %,d hit ratio %f\n",
