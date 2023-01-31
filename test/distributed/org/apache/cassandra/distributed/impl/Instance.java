@@ -687,7 +687,7 @@ public class Instance extends IsolatedExecutor implements IInvokableInstance
                         // I am tired of looking up my notes for how to fix this... so why not tell the user?
                         Throwable cause = com.google.common.base.Throwables.getRootCause(e);
                         if (cause instanceof BindException && "Can't assign requested address".equals(cause.getMessage()))
-                            throw new RuntimeException("Unable to bind, run the following in a termanl and try again:\nfor subnet in $(seq 0 5); do for id in $(seq 0 5); do sudo ifconfig lo0 alias \"127.0.$subnet.$id\"; done; done;", e);
+                            throw new RuntimeException("Unable to bind, run the following in a terminal and try again:\nfor subnet in $(seq 0 5); do for id in $(seq 0 5); do sudo ifconfig lo0 alias \"127.0.$subnet.$id\"; done; done;", e);
                         throw e;
                     }
                     StorageService.instance.removeShutdownHook();
