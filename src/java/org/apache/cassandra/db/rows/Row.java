@@ -201,7 +201,7 @@ public interface Row extends Unfiltered, Iterable<ColumnData>, IMeasurableMemory
     /**
      * Whether the row has any deletion info (row deletion, cell tombstone, expired cell or complex deletion).
      *
-     * @param nowInSec the current time in seconds to decid if a cell is expired.
+     * @param nowInSec the current time in seconds to decide if a cell is expired.
      */
     public boolean hasDeletion(int nowInSec);
 
