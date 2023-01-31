@@ -116,7 +116,7 @@ public class MerkleTree
      * @param hashdepth The maximum depth of the tree. 100/(2^depth) is the %
      *        of the key space covered by each subrange of a fully populated tree.
      * @param maxsize The maximum number of subranges in the tree.
-     * @param size The size of the tree. Typically 1, unless deserilized from an existing tree
+     * @param size The size of the tree. Typically 1, unless deserialized from an existing tree
      */
     private MerkleTree(Node root, IPartitioner partitioner, Range<Token> range, int hashdepth, long maxsize, long size)
     {
