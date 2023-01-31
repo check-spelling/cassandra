@@ -1642,7 +1642,7 @@ public abstract class SSTableReader extends SSTable implements UnfilteredSource,
             key = decorateKey(ByteBufferUtil.readWithShortLength(in));
 
             // hint read path about key location if caching is enabled
-            // this saves index summary lookup and index file iteration which whould be pretty costly
+            // this saves index summary lookup and index file iteration which would be pretty costly
             // especially in presence of promoted column indexes
             if (isKeyCacheEnabled())
                 cacheKey(key, rowIndexEntrySerializer.deserialize(in));
