@@ -98,7 +98,7 @@ public class CassandraStreamWriter
             for (SSTableReader.PartitionPositionBounds section : sections)
             {
                 long start = validator == null ? section.lowerPosition : validator.chunkStart(section.lowerPosition);
-                // if the transfer does not start on the valididator's chunk boundary, this is the number of bytes to offset by
+                // if the transfer does not start on the validator's chunk boundary, this is the number of bytes to offset by
                 int transferOffset = (int) (section.lowerPosition - start);
                 if (validator != null)
                     validator.seek(start);
