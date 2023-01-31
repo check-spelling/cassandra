@@ -19,7 +19,7 @@
 /**
  * This package has no dependencies besides asm.*\.jar (and should perhaps be a separate module)
  *
- * This is to permit it to be built as a standlone javaagent.
+ * This is to permit it to be built as a standalone javaagent.
  */
 package org.apache.cassandra.simulator.asm;
 
