@@ -642,7 +642,7 @@ public class SinglePartitionReadCommand extends ReadCommand implements SinglePar
          *      as INSERT statements are not supported on counter tables. Due to that even if only the primary key
          *      columns where queried, querying SSTables in timestamp order will always be less efficient for counter tables.
          *      Also, if tracking repaired data then we skip this optimization so we can collate the repaired sstables
-         *      and generate a digest over their merge, which procludes an early return.
+         *      and generate a digest over their merge, which precludes an early return.
          */
         if (clusteringIndexFilter() instanceof ClusteringIndexNamesFilter
             && !metadata().isCounter()
