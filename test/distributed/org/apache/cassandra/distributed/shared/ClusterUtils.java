@@ -489,7 +489,7 @@ public class ClusterUtils
         List<RingInstanceDetails> ring = ring(instance);
         Set<String> ringAddresses = ring.stream().map(d -> d.address).collect(Collectors.toSet());
         assertThat(ringAddresses)
-        .as("Ring addreses did not match for instance %s", instance)
+        .as("Ring addresses did not match for instance %s", instance)
         .isEqualTo(expectedRingAddresses);
         return ring;
     }
