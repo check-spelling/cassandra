@@ -116,7 +116,7 @@ public class LongBloomFilterTest
     @Test
     public void testBffp()
     {
-        System.out.println("Bloom filter false posiitive");
+        System.out.println("Bloom filter false positive");
         long[] staticBits = staticBits(4, 0);
         testConstrained(0.01d, 10 << 20, 0, staticBits);
         testConstrained(0.01d, 1 << 20, 6, staticBits);

@@ -156,7 +156,7 @@ public final class CassandraGenerators
                                                      .params(TableParams.builder().build());
 
         // generate columns
-        // must have a non-zero amount of partition columns, but may have 0 for the rest; SMALL_POSSITIVE_SIZE_GEN won't return 0
+        // must have a non-zero amount of partition columns, but may have 0 for the rest; SMALL_POSITIVE_SIZE_GEN won't return 0
         int numPartitionColumns = SMALL_POSITIVE_SIZE_GEN.generate(rnd);
         int numClusteringColumns = SMALL_POSITIVE_SIZE_GEN.generate(rnd) - 1;
         int numRegularColumns = SMALL_POSITIVE_SIZE_GEN.generate(rnd) - 1;

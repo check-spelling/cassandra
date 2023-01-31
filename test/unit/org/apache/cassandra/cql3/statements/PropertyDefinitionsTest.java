@@ -31,7 +31,7 @@ import static org.junit.Assert.assertTrue;
 public class PropertyDefinitionsTest
 {
     @Test
-    public void testPostiveBooleanParsing()
+    public void testPositiveBooleanParsing()
     {
         assertTrue(parseBoolean("prop1", "1"));
         assertTrue(parseBoolean("prop2", "true"));
