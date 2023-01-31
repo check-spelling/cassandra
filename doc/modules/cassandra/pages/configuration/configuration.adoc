@@ -205,7 +205,7 @@ reports the configuration loaded at any time from the Config class.
 If you add the following to `cassandra.yaml`:
 ....
 hinted_handoff_enabled: true
-enabled_hinted_handolff: false
+enabled_hinted_handoff: false
 ....
 
 you will get loaded in `Config`:
