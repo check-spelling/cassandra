@@ -172,7 +172,7 @@ public abstract class Transformation<I extends BaseRowIterator<?>>
 
     /**
      * Even though this method is sumilar to `mutable`, it supresses the optimisation of avoiding creating an additional
-     * wrapping interator object (which both creates an extra object and grows the call stack during the iteration), it
+     * wrapping iterator object (which both creates an extra object and grows the call stack during the iteration), it
      * should be used with caution.
      *
      * It is useful in cases when the input has to be checked for more contents rather than directly checking if it
