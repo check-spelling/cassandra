@@ -107,7 +107,7 @@ number of columns.
 |SSTablesPerReadHistogram |Histogram |Histogram of the number of sstable
 data files accessed per single partition read. SSTables skipped due to
 Bloom Filters, min-max key or partition index lookup are not taken into
-acoount.
+account.
 
 |ReadLatency |Latency |Local read latency for this table.
 
