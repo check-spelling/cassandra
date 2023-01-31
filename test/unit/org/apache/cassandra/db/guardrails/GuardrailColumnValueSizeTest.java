@@ -430,7 +430,7 @@ public class GuardrailColumnValueSizeTest extends ThresholdTester
     {
         createTable("CREATE TABLE %s (k text, c text, r text, s text STATIC, PRIMARY KEY(k, c))");
 
-        // the guardail is only checked for writes; reads are excluded
+        // the guardrail is only checked for writes; reads are excluded
 
         testNoThreshold("SELECT * FROM %s WHERE k = ?");
         testNoThreshold("SELECT * FROM %s WHERE k = '0' AND c = ?");
