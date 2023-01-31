@@ -530,7 +530,7 @@ public interface GuardrailsMBean
 
     /**
      * @param warn The threshold to warn when encountering more elements in a collection than threshold.
-     * @param fail The threshold to prevent collectiosn with more elements than threshold.
+     * @param fail The threshold to prevent collection with more elements than threshold.
      */
     void setItemsPerCollectionThreshold(int warn, int fail);
 
