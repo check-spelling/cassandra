@@ -329,7 +329,7 @@ public class CollectionsTest extends CQLTester
         assertRows(execute("SELECT m FROM %s WHERE k = 10"),
                    row(m)
         );
-        // test unset variables in a map update operaiotn, should not delete the contents
+        // test unset variables in a map update operation, should not delete the contents
         execute("UPDATE %s SET m['k'] = ? WHERE k = 10", unset());
         assertRows(execute("SELECT m FROM %s WHERE k = 10"),
                    row(m)

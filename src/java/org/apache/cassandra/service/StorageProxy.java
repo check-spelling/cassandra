@@ -2463,7 +2463,7 @@ public class StorageProxy implements StorageProxyMBean
     }
 
     /**
-     * Performs the truncate operatoin, which effectively deletes all data from
+     * Performs the truncate operation, which effectively deletes all data from
      * the column family cfname
      * @param keyspace
      * @param cfname

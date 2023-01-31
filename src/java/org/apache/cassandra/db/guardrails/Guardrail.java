@@ -71,7 +71,7 @@ public abstract class Guardrail
     }
 
     /**
-     * Checks whether this guardrail is enabled or not when the check is done for a background opperation that is not
+     * Checks whether this guardrail is enabled or not when the check is done for a background operation that is not
      * associated to a specific {@link ClientState}, such as compaction or other background processes. Operations that
      * are associated to a {@link ClientState}, such as CQL queries, should use {@link Guardrail#enabled(ClientState)}.
      *
