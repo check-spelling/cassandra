@@ -53,7 +53,7 @@ public final class OperationFcts
             }
 
             @Override
-            protected ByteBuffer excuteOnStrings(StringType resultType,
+            protected ByteBuffer executeOnStrings(StringType resultType,
                                                  StringType leftType,
                                                  ByteBuffer left,
                                                  StringType rightType,
@@ -172,7 +172,7 @@ public final class OperationFcts
          * @param right the right operand
          * @return the operation result
          */
-        protected ByteBuffer excuteOnStrings(StringType resultType,
+        protected ByteBuffer executeOnStrings(StringType resultType,
                                              StringType leftType,
                                              ByteBuffer left,
                                              StringType rightType,
@@ -465,7 +465,7 @@ public final class OperationFcts
             StringType rightType = (StringType) argTypes().get(1);
             StringType resultType = (StringType) returnType();
 
-            return operation.excuteOnStrings(resultType, leftType, left, rightType, right);
+            return operation.executeOnStrings(resultType, leftType, left, rightType, right);
         }
     }
 

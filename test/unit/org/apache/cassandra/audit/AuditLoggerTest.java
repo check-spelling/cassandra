@@ -738,9 +738,9 @@ public class AuditLoggerTest extends CQLTester
         return rs;
     }
 
-    private ResultSet executeAndAssertWithPrepare(String cql, AuditLogEntryType exceuteType, Object... bindValues) throws Throwable
+    private ResultSet executeAndAssertWithPrepare(String cql, AuditLogEntryType executeType, Object... bindValues) throws Throwable
     {
-        return executeAndAssertWithPrepare(cql, exceuteType, false, bindValues);
+        return executeAndAssertWithPrepare(cql, executeType, false, bindValues);
     }
 
     private ResultSet executeAndAssertWithPrepare(String cql, AuditLogEntryType executeType, boolean isTableNull, Object... bindValues) throws Throwable
