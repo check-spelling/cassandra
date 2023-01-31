@@ -466,7 +466,7 @@ public class UFAuthTest extends CQLTester
         }
         catch (InvalidRequestException e)
         {
-            assertEquals("In this context function name must be explictly qualified by a keyspace", e.getMessage());
+            assertEquals("In this context function name must be explicitly qualified by a keyspace", e.getMessage());
         }
     }
 

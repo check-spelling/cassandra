@@ -387,7 +387,7 @@ public abstract class AbstractCluster<I extends IInstance> implements ICluster<I
                 }
                 else
                 {
-                    // user was explict about the desired behavior, respect it
+                    // user was explicit about the desired behavior, respect it
                     // the most common reason to set this is to set 'false', this will leave the
                     // instance marked as running, which will have .close shut it down.
                     isShutdown = (boolean) config.get(Constants.KEY_DTEST_API_STARTUP_FAILURE_AS_SHUTDOWN);

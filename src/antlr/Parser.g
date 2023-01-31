@@ -1247,7 +1247,7 @@ createRoleStatement returns [CreateRoleStatement stmt]
     : K_CREATE K_ROLE (K_IF K_NOT K_EXISTS { ifNotExists = true; })? name=userOrRoleName
       ( K_WITH roleOptions[opts, dcperms] )?
       {
-        // set defaults if they weren't explictly supplied
+        // set defaults if they weren't explicitly supplied
         if (!opts.getLogin().isPresent())
         {
             opts.setOption(IRoleManager.Option.LOGIN, false);

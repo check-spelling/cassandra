@@ -156,7 +156,7 @@ public class FunctionResource implements IResource
     {
         if (keyspace == null)
             throw new InvalidRequestException("In this context function name must be " +
-                                              "explictly qualified by a keyspace");
+                                              "explicitly qualified by a keyspace");
         List<AbstractType<?>> abstractTypes = new ArrayList<>(argTypes.size());
         for (CQL3Type.Raw cqlType : argTypes)
             abstractTypes.add(cqlType.prepare(keyspace).getType().udfType());

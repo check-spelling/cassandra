@@ -71,7 +71,7 @@ import static org.apache.cassandra.utils.MonotonicClock.Global.approxTime;
  *
  * A connection level option (THROW_ON_OVERLOAD) allows clients to choose the backpressure strategy when a connection
  * has exceeded the maximum number of allowed permits. The choices are to either pause reads from the incoming socket
- * and allow TCP backpressure to do the work, or to throw an explict exception and rely on the client to back off.
+ * and allow TCP backpressure to do the work, or to throw an explicit exception and rely on the client to back off.
  */
 public class CQLMessageHandler<M extends Message> extends AbstractMessageHandler
 {
