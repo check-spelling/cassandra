@@ -841,7 +841,7 @@ public class ClusterUtils
     }
 
     /**
-     * Get the broadcast address InetAddess string (ex. localhost/127.0.0.1 or /127.0.0.1)
+     * Get the broadcast address InetAddress string (ex. localhost/127.0.0.1 or /127.0.0.1)
      */
     private static String getBroadcastAddressString(IInstance target)
     {
