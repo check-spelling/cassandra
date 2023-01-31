@@ -3786,7 +3786,7 @@ keyspace
 partition using an `IN` clause on combinations of clustering columns.
 See link:#selectWhere[SELECT WHERE] clauses.
 * `IF NOT EXISTS` and `IF EXISTS` syntax is now supported by
-`CREATE USER` and `DROP USER` statmenets, respectively.
+`CREATE USER` and `DROP USER` statements, respectively.
 
 ==== 3.1.6
 
