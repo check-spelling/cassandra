@@ -88,7 +88,7 @@ public class CacheRefresher<K, V> implements Runnable
 
     public static <K, V> CacheRefresher<K, V> create(String name, LoadingCache<K, V> cache, BiPredicate<K, V> invalidationCondition)
     {
-        // By default we skip cache refreshes if the node has been decommed
+        // By default we skip cache refreshes if the node has been decommissioned
         return create(name, cache, invalidationCondition, StorageService.instance::isDecommissioned);
     }
 }

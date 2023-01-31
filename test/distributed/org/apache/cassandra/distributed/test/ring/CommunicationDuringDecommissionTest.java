@@ -49,7 +49,7 @@ public class CommunicationDuringDecommissionTest extends TestBaseImpl
             cluster.run(decommission(), 1);
 
             cluster.filters().allVerbs().from(1).messagesMatching((i, i1, iMessage) -> {
-                throw new AssertionError("Decomissioned node should not send any messages");
+                throw new AssertionError("Decommissioned node should not send any messages");
             }).drop();
 
 
