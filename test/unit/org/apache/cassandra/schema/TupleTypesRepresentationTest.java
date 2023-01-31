@@ -42,7 +42,7 @@ import static org.junit.Assert.assertEquals;
  * Verifies that the string representations of {@link AbstractType} and {@link CQL3Type} are as expected and compatible.
  *
  * C* 3.0 is known to <em>not</em> enclose a frozen UDT in a "frozen bracket" in the {@link AbstractType}.
- * The string representation of a frozuen UDT using the {@link CQL3Type} type hierarchy is correct in C* 3.0.
+ * The string representation of a frozen UDT using the {@link CQL3Type} type hierarchy is correct in C* 3.0.
  */
 public class TupleTypesRepresentationTest
 {

@@ -466,7 +466,7 @@ public final class ColumnMetadata extends ColumnSpecification implements Selecta
      * This is the same than the column type, except for non-frozen collections where it's the 'valueComparator'
      * of the collection.
      * 
-     * This method should not be used to get value type of non-frozon UDT.
+     * This method should not be used to get value type of non-frozen UDT.
      */
     public AbstractType<?> cellValueType()
     {

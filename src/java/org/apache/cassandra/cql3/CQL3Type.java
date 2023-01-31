@@ -689,7 +689,7 @@ public interface CQL3Type
             {
                 assert values != null : "Got null values type for a collection";
 
-                // skip if innerType is tuple, since tuple is implicitly forzen
+                // skip if innerType is tuple, since tuple is implicitly frozen
                 if (!frozen && values.supportsFreezing() && !values.frozen && !values.isTuple())
                     throwNestedNonFrozenError(values);
 
