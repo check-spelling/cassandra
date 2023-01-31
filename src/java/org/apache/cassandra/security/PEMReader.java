@@ -48,7 +48,7 @@ import org.slf4j.LoggerFactory;
 import static java.util.regex.Pattern.CASE_INSENSITIVE;
 
 /**
- * This is a helper class to read private keys and X509 certifificates encoded based on <a href="https://datatracker.ietf.org/doc/html/rfc1421">PEM (RFC 1421)</a>
+ * This is a helper class to read private keys and X509 certificates encoded based on <a href="https://datatracker.ietf.org/doc/html/rfc1421">PEM (RFC 1421)</a>
  * format. It can read Password Based Encrypted (PBE henceforth) private keys as well as non-encrypted private keys
  * along with the X509 certificates/cert-chain based on the textual encoding defined in the <a href="https://datatracker.ietf.org/doc/html/rfc7468">RFC 7468</a>
  * <p>
