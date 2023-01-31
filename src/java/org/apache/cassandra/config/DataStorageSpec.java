@@ -152,7 +152,7 @@ public abstract class DataStorageSpec
             return quantity == other.quantity;
 
         // Due to overflows we can only guarantee that the 2 storages are equal if we get the same results
-        // doing the convertion in both directions.
+        // doing the conversion in both directions.
         return unit.convert(other.quantity, other.unit) == quantity && other.unit.convert(quantity, unit) == other.quantity;
     }
 
