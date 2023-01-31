@@ -234,7 +234,7 @@ public abstract class NumberType<T extends Number> extends AbstractType<T>
      * Raises e to the power of the argument.
      *
      * @param input the argument to raise e to
-     * @return a ByteBuffer containg the value of e (the base of natural logarithms) raised to the power of the
+     * @return a ByteBuffer containing the value of e (the base of natural logarithms) raised to the power of the
      * argument. The type of the contents of the ByteBuffer will be a double, unless the input is a DecimalType or
      * IntegerType, in which the ByteBuffer will contain a DecimalType.
      */
@@ -244,7 +244,7 @@ public abstract class NumberType<T extends Number> extends AbstractType<T>
      * Takes the natural logrithm of the argument.
      *
      * @param input the argument to take the natural log (ln) of
-     * @return a ByteBuffer containg the log base e (ln) of the argument. The type of the contents of the ByteBuffer
+     * @return a ByteBuffer containing the log base e (ln) of the argument. The type of the contents of the ByteBuffer
      * will be a double, unless the input is a DecimalType or IntegerType, in which the ByteBuffer will contain a
      * DecimalType.
      */
@@ -254,7 +254,7 @@ public abstract class NumberType<T extends Number> extends AbstractType<T>
      * Takes the log base 10 of the argument.
      *
      * @param input the argument to take the log base ten of
-     * @return a ByteBuffer containg the log base 10 of the argument. The type of the contents of the ByteBuffer
+     * @return a ByteBuffer containing the log base 10 of the argument. The type of the contents of the ByteBuffer
      * will be a double, unless the input is a DecimalType or IntegerType, in which the ByteBuffer will contain a
      * DecimalType.
      */
@@ -264,7 +264,7 @@ public abstract class NumberType<T extends Number> extends AbstractType<T>
      * Rounds the argument to the nearest whole number.
      *
      * @param input the argument to round
-     * @return a ByteBuffer containg the rounded argument. If the input is an integral type, the ByteBuffer will contain
+     * @return a ByteBuffer containing the rounded argument. If the input is an integral type, the ByteBuffer will contain
      * a copy of the input. If the input is a float, the ByteBuffer will contain an int32. If the input is a double, the
      * output will contain a long. If the input is a DecimalType, the output will contain an IntegerType.
      */
