@@ -901,7 +901,7 @@ ____
 
 == Client Metrics
 
-Metrics specifc to client managment.
+Metrics specifc to client management.
 
 Reported name format:
 

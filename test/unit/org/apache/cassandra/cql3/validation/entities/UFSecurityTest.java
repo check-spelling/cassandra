@@ -151,7 +151,7 @@ public class UFSecurityTest extends CQLTester
 
         String[] javascript =
         {
-        "java.lang.management.ManagmentFactory.getThreadMXBean(); 0;",
+        "java.lang.management.ManagementFactory.getThreadMXBean(); 0;",
         "new java.io.FileInputStream(\"/tmp/foo\"); 0;",
         "new java.io.FileOutputStream(\"/tmp/foo\"); 0;",
         "java.nio.file.FileSystems.getDefault().createFileExclusively(\"./foo_bar_baz\"); 0;",
