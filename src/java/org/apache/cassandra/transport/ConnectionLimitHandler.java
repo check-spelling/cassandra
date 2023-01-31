@@ -54,7 +54,7 @@ final class ConnectionLimitHandler extends ChannelInboundHandlerAdapter
     private final AtomicLong counter = new AtomicLong(0);
 
     // Keep the remote address as a channel attribute.  The channel inactive callback needs
-    // to know the entry into the connetionsPerClient map and depending on the state of the remote
+    // to know the entry into the connectionsPerClient map and depending on the state of the remote
     // an exception may be thrown trying to retrieve the address. Make sure the same address used
     // to increment is used for decrement.
     private static InetAddress setRemoteAddressAttribute(Channel channel)
