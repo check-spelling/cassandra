@@ -83,7 +83,7 @@ public class InitialConnectionHandler extends ByteToMessageDecoder
                     List<String> compressions = new ArrayList<>();
                     if (Compressor.SnappyCompressor.instance != null)
                         compressions.add("snappy");
-                    // LZ4 is always available since worst case scenario it default to a pure JAVA implem.
+                    // LZ4 is always available since worst case scenario it default to a pure JAVA impl.
                     compressions.add("lz4");
 
                     Map<String, List<String>> supportedOptions = new HashMap<>();
