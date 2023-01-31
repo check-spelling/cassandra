@@ -60,7 +60,7 @@ import org.apache.cassandra.utils.WrappedException;
  *           contains the timestamp, ttl and local deletion time of that info,
  *           though some/all of those can be absent based on the flags. </li>
  *       <li>{@code deletion} is the row deletion. It's presence is determined
- *           by the flags and if present, it conists of both the deletion
+ *           by the flags and if present, it consists of both the deletion
  *           timestamp and local deletion time.</li>
  *       <li>{@code <columns>} are the columns present in the row  encoded by
  *           {@link org.apache.cassandra.db.Columns.Serializer#serializeSubset}. It is absent if the row
