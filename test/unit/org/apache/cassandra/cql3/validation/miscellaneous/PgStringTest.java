@@ -25,14 +25,14 @@ import org.apache.cassandra.exceptions.SyntaxException;
 public class PgStringTest extends CQLTester
 {
     @Test
-    public void testPgSyleFunction() throws Throwable
+    public void testPgStyleFunction() throws Throwable
     {
         execute("create or replace function "+KEYSPACE+".pgfun1 ( input double ) called on null input returns text language java\n" +
                 "AS $$return \"foobar\";$$");
     }
 
     @Test
-    public void testPgSyleInsert() throws Throwable
+    public void testPgStyleInsert() throws Throwable
     {
         createTable("CREATE TABLE %s (key ascii primary key, val text)");
 
