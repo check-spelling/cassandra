@@ -44,7 +44,7 @@ import static org.apache.cassandra.cql3.statements.Bound.START;
  * <code>Restriction</code> decorator used to merge non-token restriction and token restriction on partition keys.
  *
  * <p>If all partition key columns have non-token restrictions and do not need filtering, they take precedence
- * when calculating bounds, incusiveness etc (see CASSANDRA-12149).</p>
+ * when calculating bounds, inclusiveness etc (see CASSANDRA-12149).</p>
  */
 final class TokenFilter implements PartitionKeyRestrictions
 {
