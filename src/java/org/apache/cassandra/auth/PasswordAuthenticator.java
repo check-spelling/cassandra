@@ -154,7 +154,7 @@ public class PasswordAuthenticator implements IAuthenticator, AuthCache.BulkLoad
             // CacheRefresher::run will log and swallow the exception and keep serving the stale credentials until they
             // eventually expire.
             //
-            // So whenever we encounter the sentinal value, here and also in CacheRefresher (if active updates are
+            // So whenever we encounter the sentinel value, here and also in CacheRefresher (if active updates are
             // enabled), we manually expunge the key from the cache. If caching is not enabled, AuthCache::invalidate
             // is a safe no-op.
             cache.invalidateCredentials(username);
