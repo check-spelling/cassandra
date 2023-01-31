@@ -206,23 +206,23 @@ public final class StatementRestrictions
 
         hasRegularColumnsRestrictions = nonPrimaryKeyRestrictions.hasRestrictionFor(ColumnMetadata.Kind.REGULAR);
 
-        boolean hasQueriableClusteringColumnIndex = false;
-        boolean hasQueriableIndex = false;
+        boolean hasQueryableClusteringColumnIndex = false;
+        boolean hasQueryableIndex = false;
 
         if (allowUseOfSecondaryIndices)
         {
             if (whereClause.containsCustomExpressions())
                 processCustomIndexExpressions(whereClause.expressions, boundNames, indexRegistry);
 
-            hasQueriableClusteringColumnIndex = clusteringColumnsRestrictions.hasSupportingIndex(indexRegistry);
-            hasQueriableIndex = !filterRestrictions.getCustomIndexExpressions().isEmpty()
-                    || hasQueriableClusteringColumnIndex
+            hasQueryableClusteringColumnIndex = clusteringColumnsRestrictions.hasSupportingIndex(indexRegistry);
+            hasQueryableIndex = !filterRestrictions.getCustomIndexExpressions().isEmpty()
+                    || hasQueryableClusteringColumnIndex
                     || partitionKeyRestrictions.hasSupportingIndex(indexRegistry)
                     || nonPrimaryKeyRestrictions.hasSupportingIndex(indexRegistry);
         }
 
         // At this point, the select statement if fully constructed, but we still have a few things to validate
-        processPartitionKeyRestrictions(state, hasQueriableIndex, allowFiltering, forView);
+        processPartitionKeyRestrictions(state, hasQueryableIndex, allowFiltering, forView);
 
         // Some but not all of the partition key columns have been specified;
         // hence we need turn these restrictions into a row filter.
@@ -248,13 +248,13 @@ public final class StatementRestrictions
                 throw invalidRequest("Cannot restrict clustering columns when selecting only static columns");
         }
 
-        processClusteringColumnsRestrictions(hasQueriableIndex,
+        processClusteringColumnsRestrictions(hasQueryableIndex,
                                              selectsOnlyStaticColumns,
                                              forView,
                                              allowFiltering);
 
         // Covers indexes on the first clustering column (among others).
-        if (isKeyRange && hasQueriableClusteringColumnIndex)
+        if (isKeyRange && hasQueryableClusteringColumnIndex)
             usesSecondaryIndexing = true;
 
         if (usesSecondaryIndexing || clusteringColumnsRestrictions.needFiltering())
@@ -272,7 +272,7 @@ public final class StatementRestrictions
                 throw invalidRequest("Non PRIMARY KEY columns found in where clause: %s ",
                                      Joiner.on(", ").join(nonPrimaryKeyColumns));
             }
-            if (hasQueriableIndex)
+            if (hasQueryableIndex)
                 usesSecondaryIndexing = true;
             else if (!allowFiltering)
                 throw invalidRequest(allowFilteringMessage(state));
@@ -464,7 +464,7 @@ public final class StatementRestrictions
         return this.usesSecondaryIndexing;
     }
 
-    private void processPartitionKeyRestrictions(ClientState state, boolean hasQueriableIndex, boolean allowFiltering, boolean forView)
+    private void processPartitionKeyRestrictions(ClientState state, boolean hasQueryableIndex, boolean allowFiltering, boolean forView)
     {
         if (!type.allowPartitionKeyRanges())
         {
@@ -489,22 +489,22 @@ public final class StatementRestrictions
             if (partitionKeyRestrictions.isEmpty() && partitionKeyRestrictions.hasUnrestrictedPartitionKeyComponents(table))
             {
                 isKeyRange = true;
-                usesSecondaryIndexing = hasQueriableIndex;
+                usesSecondaryIndexing = hasQueryableIndex;
             }
 
-            // If there is a queriable index, no special condition is required on the other restrictions.
+            // If there is a queryable index, no special condition is required on the other restrictions.
             // But we still need to know 2 things:
-            // - If we don't have a queriable index, is the query ok
-            // - Is it queriable without 2ndary index, which is always more efficient
+            // - If we don't have a queryable index, is the query ok
+            // - Is it queryable without 2ndary index, which is always more efficient
             // If a component of the partition key is restricted by a relation, all preceding
             // components must have a EQ. Only the last partition key component can be in IN relation.
             if (partitionKeyRestrictions.needFiltering(table))
             {
-                if (!allowFiltering && !forView && !hasQueriableIndex)
+                if (!allowFiltering && !forView && !hasQueryableIndex)
                     throw new InvalidRequestException(allowFilteringMessage(state));
 
                 isKeyRange = true;
-                usesSecondaryIndexing = hasQueriableIndex;
+                usesSecondaryIndexing = hasQueryableIndex;
             }
         }
     }
@@ -559,11 +559,11 @@ public final class StatementRestrictions
     /**
      * Processes the clustering column restrictions.
      *
-     * @param hasQueriableIndex <code>true</code> if some of the queried data are indexed, <code>false</code> otherwise
+     * @param hasQueryableIndex <code>true</code> if some of the queried data are indexed, <code>false</code> otherwise
      * @param selectsOnlyStaticColumns <code>true</code> if the selected or modified columns are all statics,
      * <code>false</code> otherwise.
      */
-    private void processClusteringColumnsRestrictions(boolean hasQueriableIndex,
+    private void processClusteringColumnsRestrictions(boolean hasQueryableIndex,
                                                       boolean selectsOnlyStaticColumns,
                                                       boolean forView,
                                                       boolean allowFiltering)
@@ -580,12 +580,12 @@ public final class StatementRestrictions
         }
         else
         {
-            checkFalse(clusteringColumnsRestrictions.hasContains() && !hasQueriableIndex && !allowFiltering,
+            checkFalse(clusteringColumnsRestrictions.hasContains() && !hasQueryableIndex && !allowFiltering,
                        "Clustering columns can only be restricted with CONTAINS with a secondary index or filtering");
 
             if (hasClusteringColumnsRestrictions() && clusteringColumnsRestrictions.needFiltering())
             {
-                if (hasQueriableIndex || forView)
+                if (hasQueryableIndex || forView)
                 {
                     usesSecondaryIndexing = true;
                 }
