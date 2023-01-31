@@ -71,7 +71,7 @@ public class Memory implements AutoCloseable, ReadableMemory
             throw new OutOfMemoryError(); // checkstyle: permit this instantiation
     }
 
-    // create a memory object that references the exacy same memory location as the one provided.
+    // create a memory object that references the exactly same memory location as the one provided.
     // this should ONLY be used by SafeMemory
     protected Memory(Memory copyOf)
     {
