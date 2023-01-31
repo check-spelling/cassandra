@@ -790,7 +790,7 @@ public class RowIndexEntry<T> implements IMeasurableMemory
             // read offset of IndexInfo
             int indexInfoPos = indexReader.readInt();
 
-            // seek to posision of IndexInfo
+            // seek to position of IndexInfo
             indexReader.seek(indexInfoFilePosition + indexInfoPos);
 
             // finally, deserialize IndexInfo
