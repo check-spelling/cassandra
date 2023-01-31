@@ -402,7 +402,7 @@ public class BufferPool
             assert MACRO_CHUNK_SIZE % NORMAL_CHUNK_SIZE == 0; // must be a multiple
         }
 
-        /** Return a chunk, the caller will take owership of the parent chunk. */
+        /** Return a chunk, the caller will take ownership of the parent chunk. */
         public Chunk get()
         {
             Chunk chunk = getInternal();

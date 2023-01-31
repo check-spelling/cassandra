@@ -27,7 +27,7 @@ state of the system (thread state) at the time of that pause. This can
 help narrow down a capacity issue (either not enough heap or not enough
 spare CPU).
 * Information about nodes joining and leaving the cluster as well as
-token metadata (data ownersip) changes. This is useful for debugging
+token metadata (data ownership) changes. This is useful for debugging
 network partitions, data movements, and more.
 * Keyspace/Table creation, modification, deletion.
 * `StartupChecks` that ensure optimal configuration of the operating
