@@ -148,7 +148,7 @@ public class CQLMessageHandler<M extends Message> extends AbstractMessageHandler
      * 
      * 1.) If no limits are breached, process the request.
      * 2.) If a limit is breached, and the connection is configured to throw on overload, throw {@link OverloadedException}.
-     * 3.) If a limit is breached, and the connection is not configurd to throw, process the request, and return false
+     * 3.) If a limit is breached, and the connection is not configured to throw, process the request, and return false
      *     to let the {@link FrameDecoder} know it should stop processing frames.
      *     
      * If the connection is configured to throw {@link OverloadedException}, requests that breach the rate limit are
