@@ -194,7 +194,7 @@ public class CqlInputFormat extends org.apache.hadoop.mapreduce.InputFormat<Long
             // wait until we have all the results back
             List<SplitFuture> failedTasks = new ArrayList<>();
             int maxSplits = 0;
-            long expectedPartionsForFailedRanges = 0;
+            long expectedPartitionsForFailedRanges = 0;
             for (SplitFuture task : splitfutures)
             {
                 try
@@ -203,7 +203,7 @@ public class CqlInputFormat extends org.apache.hadoop.mapreduce.InputFormat<Long
                     if (tokenRangeSplits.size() > maxSplits)
                     {
                         maxSplits = tokenRangeSplits.size();
-                        expectedPartionsForFailedRanges = tokenRangeSplits.get(0).getLength();
+                        expectedPartitionsForFailedRanges = tokenRangeSplits.get(0).getLength();
                     }
                     splits.addAll(tokenRangeSplits);
                 }
@@ -234,7 +234,7 @@ public class CqlInputFormat extends org.apache.hadoop.mapreduce.InputFormat<Long
                     }
                 }
                 for (SplitFuture task : failedTasks)
-                    splits.addAll(toSplit(task.splitCallable.hosts, splitTokenRange(task.splitCallable.tokenRange, maxSplits, expectedPartionsForFailedRanges)));
+                    splits.addAll(toSplit(task.splitCallable.hosts, splitTokenRange(task.splitCallable.tokenRange, maxSplits, expectedPartitionsForFailedRanges)));
             }
         }
         finally
