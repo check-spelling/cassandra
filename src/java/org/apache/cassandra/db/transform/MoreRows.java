@@ -34,7 +34,7 @@ import static org.apache.cassandra.db.transform.Transformation.mutable;
  * The new contents are produced as a normal arbitrary RowIterator or UnfilteredRowIterator (as appropriate),
  * with matching staticRow, partitionKey and partitionLevelDeletion.
  *
- * The transforming iterator invokes this method when any current source is exhausted, then then inserts the
+ * The transforming iterator invokes this method when any current source is exhausted, then inserts the
  * new contents as the new source.
  *
  * If the new source is itself a product of any transformations, the two transforming iterators are merged
