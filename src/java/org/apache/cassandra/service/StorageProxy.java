@@ -534,7 +534,7 @@ public class StorageProxy implements StorageProxyMBean
                     return result;
                 }
 
-                Tracing.trace("Paxos proposal not accepted (pre-empted by a higher ballot)");
+                Tracing.trace("Paxos proposal not accepted (preempted by a higher ballot)");
                 contentions++;
 
                 Uninterruptibles.sleepUninterruptibly(ThreadLocalRandom.current().nextInt(100), TimeUnit.MILLISECONDS);

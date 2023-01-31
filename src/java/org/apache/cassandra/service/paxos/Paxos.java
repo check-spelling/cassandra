@@ -770,7 +770,7 @@ public class Paxos
                             case NO:
                                 minimumBallot = propose.superseded().by;
                                 // We have been superseded without our proposal being accepted by anyone, so we can safely retry
-                                Tracing.trace("Paxos proposal not accepted (pre-empted by a higher ballot)");
+                                Tracing.trace("Paxos proposal not accepted (preempted by a higher ballot)");
                                 if (!waitForContention(proposeDeadline, ++failedAttemptsDueToContention, metadata, partitionKey, consistencyForConsensus, WRITE))
                                     throw MaybeFailure.noResponses(participants).markAndThrowAsTimeoutOrFailure(true, consistencyForConsensus, failedAttemptsDueToContention);
                         }
@@ -884,7 +884,7 @@ public class Paxos
                             case NO:
                                 minimumBallot = propose.superseded().by;
                                 // We have been superseded without our proposal being accepted by anyone, so we can safely retry
-                                Tracing.trace("Paxos proposal not accepted (pre-empted by a higher ballot)");
+                                Tracing.trace("Paxos proposal not accepted (preempted by a higher ballot)");
                                 if (!waitForContention(deadline, ++failedAttemptsDueToContention, group.metadata(), group.queries.get(0).partitionKey(), consistencyForConsensus, READ))
                                     throw MaybeFailure.noResponses(begin.participants).markAndThrowAsTimeoutOrFailure(true, consistencyForConsensus, failedAttemptsDueToContention);
                         }
