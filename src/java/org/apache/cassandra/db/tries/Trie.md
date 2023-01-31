@@ -97,7 +97,7 @@ This is supported by `Cursor.advanceMultiple`.
 
 The most straightforward representation of a trie is done by giving users every `Node` visited as an object.
 Then the consumer can query its transitions, get its children, decide to walk over them in any order it sees
-fit, and retain those that it actually needs. This is a very natural and cheap represention if the nodes are actually 
+fit, and retain those that it actually needs. This is a very natural and cheap representation if the nodes are actually 
 the objects in memory that represent the trie.
 
 The latter is not the case for us: we store tries in integer blobs or files on disk and we present transformed views of
