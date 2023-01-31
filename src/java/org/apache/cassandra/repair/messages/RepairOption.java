@@ -160,7 +160,7 @@ public class RepairOption
      *         </tr>
      *         <tr>
      *             <td>optimiseStreams</td>
-     *             <td>"true" if we should try to optimise the syncing to avoid transfering identical
+     *             <td>"true" if we should try to optimise the syncing to avoid transferring identical
      *             ranges to the same host multiple times</td>
      *             <td>false</td>
      *         </tr>

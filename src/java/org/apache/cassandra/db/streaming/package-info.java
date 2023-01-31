@@ -19,7 +19,7 @@
 /**
  * <h2>File transfer</h2>
  *
- * When tranferring whole or subsections of an sstable, only the DATA component is shipped. To that end,
+ * When transferring whole or subsections of an sstable, only the DATA component is shipped. To that end,
  * there are three "modes" of an sstable transfer that need to be handled somewhat differently:
  *
  * 1) uncompressed sstable - data needs to be read into user space so it can be manipulated: checksum validation,
