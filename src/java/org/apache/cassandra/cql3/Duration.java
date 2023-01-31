@@ -314,7 +314,7 @@ public final class Duration
      */
     private static long add(long timeInMillis, int months, int days, long nanoseconds)
     {
-        // If the duration does not contains any months we can can ignore daylight saving,
+        // If the duration does not contains any months we can ignore daylight saving,
         // as time zones are not supported, and simply look at the milliseconds
         if (months == 0)
         {
