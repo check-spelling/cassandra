@@ -53,7 +53,7 @@ import org.apache.cassandra.utils.FBUtilities;
 import org.apache.cassandra.utils.MBeanWrapper;
 
 /**
- * Central location for managing the logging of client/user-initated actions (like queries, log in commands, and so on).
+ * Central location for managing the logging of client/user-initiated actions (like queries, log in commands, and so on).
  *
  */
 public class AuditLogManager implements QueryEvents.Listener, AuthEvents.Listener, AuditLogManagerMBean
