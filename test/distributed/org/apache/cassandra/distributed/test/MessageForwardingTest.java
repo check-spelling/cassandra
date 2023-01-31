@@ -75,7 +75,7 @@ public class MessageForwardingTest extends TestBaseImpl
 
             // Tracing is async with respect to queries, just because the query has completed it does not mean
             // all tracing updates have completed. The tracing executor serializes work, so run a task through
-            // and everthing submitted before must have completed.
+            // and everything submitted before must have completed.
             cluster.forEach(instance -> instance.runOnInstance(() -> {
                 Future<?> result = Stage.TRACING.submit(() -> null);
                 try

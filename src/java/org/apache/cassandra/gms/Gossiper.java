@@ -1735,7 +1735,7 @@ public class Gossiper implements IFailureDetectionEventListener, GossiperMBean
     /* Request all the state for the endpoint in the gDigest */
     private void requestAll(GossipDigest gDigest, List<GossipDigest> deltaGossipDigestList, int remoteGeneration)
     {
-        /* We are here since we have no data for this endpoint locally so request everthing. */
+        /* We are here since we have no data for this endpoint locally so request everything. */
         deltaGossipDigestList.add(new GossipDigest(gDigest.getEndpoint(), remoteGeneration, 0));
         if (logger.isTraceEnabled())
             logger.trace("requestAll for {}", gDigest.getEndpoint());

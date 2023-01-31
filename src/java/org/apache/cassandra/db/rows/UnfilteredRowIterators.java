@@ -115,7 +115,7 @@ public abstract class UnfilteredRowIterators
      * Returns a iterator that only returns rows with only live content.
      *
      * This is mainly used in the CQL layer when we know we don't care about deletion
-     * infos (and since an UnfilteredRowIterator cannot shadow it's own data, we know everyting
+     * infos (and since an UnfilteredRowIterator cannot shadow it's own data, we know everything
      * returned isn't shadowed by a tombstone).
      */
     public static RowIterator filter(UnfilteredRowIterator iter, int nowInSec)
