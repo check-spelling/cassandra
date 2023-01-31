@@ -920,7 +920,7 @@ this nodes native protocol server
 and their state information
 
 |connectedNativeClientsByUser |Gauge<Map<String, Int> |Number of
-connnective native clients by username
+connective native clients by username
 |===
 
 == Batch Metrics
