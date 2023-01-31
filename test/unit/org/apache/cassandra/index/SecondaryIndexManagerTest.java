@@ -68,7 +68,7 @@ public class SecondaryIndexManagerTest extends CQLTester
     }
 
     @Test
-    public void rebuilOrRecoveringIndexMarksTheIndexAsBuilt() throws Throwable
+    public void rebuildOrRecoveringIndexMarksTheIndexAsBuilt() throws Throwable
     {
         String tableName = createTable("CREATE TABLE %s (a int, b int, c int, PRIMARY KEY (a, b))");
         String indexName = createIndex("CREATE INDEX ON %s(c)");

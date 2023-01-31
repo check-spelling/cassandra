@@ -2060,7 +2060,7 @@ public class SASIIndexTest
         // Trying to query the corrupted index file yields no results
         Assert.assertTrue(executeCQL(CLUSTERING_CF_NAME_1, "SELECT * FROM %s.%s WHERE age = 27 AND name = 'Pavel'").isEmpty());
 
-        // Rebuld index
+        // Rebuild index
         store.rebuildSecondaryIndex(CLUSTERING_CF_NAME_1 + "_age");
 
         long size2 = Files.readAttributes(path, BasicFileAttributes.class).size();
