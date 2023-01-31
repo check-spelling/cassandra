@@ -132,7 +132,7 @@ public abstract class Trie<T>
      *  (1, w)+  <  (-1, -1)       w       cursors not equal, advance smaller (1 > -1)
      *  (2, i)+  <  (-1, -1)       wi      cursors not equal, advance smaller (2 > -1)
      *  (3, n)+  <  (-1, -1)       win*    cursors not equal, advance smaller (3 > -1)
-     *  (-1, -1)    (-1, -1)               both exhasted
+     *  (-1, -1)    (-1, -1)               both exhausted
      */
     protected interface Cursor<T>
     {
