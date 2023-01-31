@@ -6605,7 +6605,7 @@ Merged from 0.8:
  * fix backslash substitutions in CLI (CASSANDRA-2492)
  * disable cache saving for system CFS (CASSANDRA-2502)
  * fixes for verifying destination availability under hinted conditions
-   so UE can be thrown intead of timing out (CASSANDRA-2514)
+   so UE can be thrown instead of timing out (CASSANDRA-2514)
  * fix update of validation class in column metadata (CASSANDRA-2512)
  * support LOCAL_QUORUM, EACH_QUORUM CLs outside of NTS (CASSANDRA-2516)
  * preserve version when streaming data from old sstables (CASSANDRA-2283)
