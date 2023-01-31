@@ -1923,7 +1923,7 @@ public abstract class CQLTester
         return sb.toString();
     }
 
-    // We're rellly only returning ByteBuffers but this make the type system happy
+    // We're really only returning ByteBuffers but this make the type system happy
     private static Object[] transformValues(Object[] values)
     {
         // We could partly rely on QueryProcessor.executeOnceInternal doing type conversion for us, but
