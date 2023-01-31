@@ -552,9 +552,9 @@ public abstract class InMemoryTrieTestBase
             Assert.assertEquals(actual.next(), expected.next());
         }
         if (expected.hasNext())
-            Assert.fail("Remaing values in expected, starting with " + expected.next());
+            Assert.fail("Remaining values in expected, starting with " + expected.next());
         else if (actual.hasNext())
-            Assert.fail("Remaing values in actual, starting with " + actual.next());
+            Assert.fail("Remaining values in actual, starting with " + actual.next());
     }
 
     static ByteComparable[] generateKeys(Random rand, int count)
