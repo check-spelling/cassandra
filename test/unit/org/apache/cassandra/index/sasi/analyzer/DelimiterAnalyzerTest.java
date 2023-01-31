@@ -40,7 +40,7 @@ public class DelimiterAnalyzerTest
 {
 
     @Test
-    public void caseSensitiveAnalizer() throws Exception
+    public void caseSensitiveAnalyzer() throws Exception
     {
         DelimiterAnalyzer analyzer = new DelimiterAnalyzer();
 

@@ -32,7 +32,7 @@ import org.junit.Test;
 public class NonTokenizingAnalyzerTest
 {
     @Test
-    public void caseInsensitiveAnalizer() throws Exception
+    public void caseInsensitiveAnalyzer() throws Exception
     {
         NonTokenizingAnalyzer analyzer = new NonTokenizingAnalyzer();
         NonTokenizingOptions options = NonTokenizingOptions.getDefaultOptions();
@@ -49,7 +49,7 @@ public class NonTokenizingAnalyzerTest
     }
 
     @Test
-    public void caseSensitiveAnalizer() throws Exception
+    public void caseSensitiveAnalyzer() throws Exception
     {
         NonTokenizingAnalyzer analyzer = new NonTokenizingAnalyzer();
         NonTokenizingOptions options = NonTokenizingOptions.getDefaultOptions();
