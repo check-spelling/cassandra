@@ -750,7 +750,7 @@ manages.
 |TotalHints |Counter |Number of hint messages written to this node since
 [re]start. Includes one entry for each host to be hinted per hint.
 
-|TotalHintsInProgress |Counter |Number of hints attemping to be sent
+|TotalHintsInProgress |Counter |Number of hints attempting to be sent
 currently.
 |===
 
