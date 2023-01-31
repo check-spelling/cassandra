@@ -284,7 +284,7 @@ public class RepairJob extends AsyncFuture<RepairResult> implements Runnable
             {
                 TreeResponse r2 = trees.get(j);
 
-                // Avoid streaming between two tansient replicas
+                // Avoid streaming between two transient replicas
                 if (isTransient.test(r1.endpoint) && isTransient.test(r2.endpoint))
                     continue;
 
