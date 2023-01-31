@@ -1314,7 +1314,7 @@ Table of Contents
                                write was requested.
                              - "CAS": the timeout occured during the Compare And Set write/update.
                              - "VIEW": the timeout occured when a write involves
-                               VIEW update and failure to acqiure local view(MV)
+                               VIEW update and failure to acquire local view(MV)
                                lock for key within timeout
                              - "CDC": the timeout occured when cdc_total_space is
                                exceeded when doing a write to data tracked by cdc.
@@ -1397,7 +1397,7 @@ Table of Contents
                                write was requested.
                              - "CAS": the failure occured during the Compare And Set write/update.
                              - "VIEW": the failure occured when a write involves
-                               VIEW update and failure to acqiure local view(MV)
+                               VIEW update and failure to acquire local view(MV)
                                lock for key within timeout
                              - "CDC": the failure occured when cdc_total_space is
                                exceeded when doing a write to data tracked by cdc.

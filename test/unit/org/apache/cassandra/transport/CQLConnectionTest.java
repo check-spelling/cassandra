@@ -222,7 +222,7 @@ public class CQLConnectionTest
     }
 
     @Test
-    public void testAquireAndRelease()
+    public void testAcquireAndRelease()
     {
         acquireAndRelease(10, 100, Codec.crc(alloc));
         acquireAndRelease(10, 100, Codec.lz4(alloc));
