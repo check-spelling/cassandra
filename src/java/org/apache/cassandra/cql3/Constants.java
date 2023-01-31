@@ -158,7 +158,7 @@ public abstract class Constants
         }
     }
 
-    // We don't have "unset" literal in the syntax, but it's used implicitely for JSON "DEFAULT UNSET" option
+    // We don't have "unset" literal in the syntax, but it's used implicitly for JSON "DEFAULT UNSET" option
     public static final UnsetLiteral UNSET_LITERAL = new UnsetLiteral();
 
     public static final Value UNSET_VALUE = new Value(ByteBufferUtil.UNSET_BYTE_BUFFER);

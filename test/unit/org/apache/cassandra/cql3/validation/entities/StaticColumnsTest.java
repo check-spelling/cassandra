@@ -87,7 +87,7 @@ public class StaticColumnsTest extends CQLTester
         assertRows(execute("SELECT p, s FROM %s WHERE k=0 AND p=1"), row(1, 24));
         assertRows(execute("SELECT k, p, s FROM %s WHERE k=0 AND p=1"),row(0, 1, 24));
 
-        // Check that deleting a row don't implicitely deletes statics
+        // Check that deleting a row don't implicitly deletes statics
         execute("DELETE FROM %s WHERE k=0 AND p=0");
         flush(forceFlush);
         assertRows(execute("SELECT * FROM %s"),row(0, 1, 24, 1));
