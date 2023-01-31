@@ -716,7 +716,7 @@ public abstract class Slices implements Iterable<Slice>
     /**
      * Specialized implementation of {@code Slices} that selects all rows.
      * <p>
-     * This is equivalent to having the single {@code Slice.ALL} slice, but is somewhat more effecient.
+     * This is equivalent to having the single {@code Slice.ALL} slice, but is somewhat more efficient.
      */
     private static class SelectAllSlices extends Slices
     {
