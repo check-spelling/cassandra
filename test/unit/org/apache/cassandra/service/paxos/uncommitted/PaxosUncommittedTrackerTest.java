@@ -99,7 +99,7 @@ public class PaxosUncommittedTrackerTest
     }
 
     @Test
-    public void inmemory() throws Exception
+    public void inMemory() throws Exception
     {
         Assert.assertEquals(0, state.numFiles());
         int size = 5;
