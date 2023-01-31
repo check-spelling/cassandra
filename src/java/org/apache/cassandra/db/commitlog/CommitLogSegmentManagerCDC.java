@@ -443,7 +443,7 @@ public class CommitLogSegmentManagerCDC extends AbstractCommitLogSegmentManager
         cdcSizeTracker.submitOverflowSizeRecalculation();
         // Give the update time to run
         Uninterruptibles.sleepUninterruptibly(sleepTime, TimeUnit.MILLISECONDS);
-        // then update the state of the segment it is allocating from. In produciton, the state is updated during "allocate"
+        // then update the state of the segment it is allocating from. In production, the state is updated during "allocate"
         if (allocatingFrom().getCDCState() == CDCState.FORBIDDEN)
             cdcSizeTracker.processNewSegment(allocatingFrom());
         return cdcSizeTracker.getAllocatedSize();
