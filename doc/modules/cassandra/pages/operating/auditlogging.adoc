@@ -240,7 +240,7 @@ For example: ``roll_cycle: DAILY``
 
 WARNING: Read the following paragraph when changing ``roll_cycle`` on a production node.
 
-With the `BinLogger` implementation, any attempt to modify the roll cycle on a node where audit logging was previously enabled will fail silentely due to https://github.com/OpenHFT/Chronicle-Queue[Chronicle Queue] roll cycle inference mechanism (even if you delete the ``metadata.cq4t`` file).
+With the `BinLogger` implementation, any attempt to modify the roll cycle on a node where audit logging was previously enabled will fail silently due to https://github.com/OpenHFT/Chronicle-Queue[Chronicle Queue] roll cycle inference mechanism (even if you delete the ``metadata.cq4t`` file).
 
 Here is an example of such an override visible in Cassandra logs:
 ----
