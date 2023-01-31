@@ -94,7 +94,7 @@ public class PagingState
         try
         {
             /*
-             * We can't just attempt to deser twice, as we risk to misinterpet short/vint
+             * We can't just attempt to deser twice, as we risk to misinterpret short/vint
              * lengths and allocate huge byte arrays for readWithVIntLength() or,
              * to a lesser extent, readWithShortLength()
              */
