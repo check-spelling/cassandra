@@ -350,7 +350,7 @@ public class CQLMessageHandler<M extends Message> extends AbstractMessageHandler
             message = messageDecoder.decode(channel, request);
             dispatcher.accept(channel, message, this::toFlushItem, backpressure);
             
-            // sucessfully delivered a CQL message to the execution
+            // successfully delivered a CQL message to the execution
             // stage, so reset the counter of consecutive errors
             consecutiveMessageErrors = 0;
             return true;

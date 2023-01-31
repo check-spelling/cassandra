@@ -490,7 +490,7 @@ public class SecondaryIndexManagerTest extends CQLTester
         tryRebuild(writeOnlyIndexName, true);
         TestingIndex.shouldFailCreate = false;
 
-        // a successfull full rebuild should set the index as queryable/writable
+        // a successful full rebuild should set the index as queryable/writable
         ColumnFamilyStore cfs = getCurrentColumnFamilyStore();
         cfs.indexManager.rebuildIndexesBlocking(Sets.newHashSet(defaultIndexName, readOnlyIndexName, writeOnlyIndexName));
         assertTrue(isQueryable(defaultIndexName));

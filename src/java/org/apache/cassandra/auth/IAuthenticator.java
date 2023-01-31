@@ -136,7 +136,7 @@ public interface IAuthenticator
         public boolean isComplete();
 
         /**
-         * Following a sucessful negotiation, get the AuthenticatedUser representing the logged in subject.
+         * Following a successful negotiation, get the AuthenticatedUser representing the logged in subject.
          * This method should only be called if {@link isComplete()} returns true.
          * Should never return null - always throw AuthenticationException instead.
          * Returning AuthenticatedUser.ANONYMOUS_USER is an option if authentication is not required.

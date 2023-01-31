@@ -447,7 +447,7 @@ public class CASTest extends CASCommonTestCases
      *  - Any: Promised and Read from {3, 4}
      */
     @Test
-    public void testSucccessfulWriteDuringRangeMovementFollowedByRead() throws Throwable
+    public void testSuccessfulWriteDuringRangeMovementFollowedByRead() throws Throwable
     {
         String tableName = tableName("tbl");
         FOUR_NODES.schemaChange("CREATE TABLE " + KEYSPACE + "." + tableName + " (pk int, ck int, v int, PRIMARY KEY (pk, ck))");

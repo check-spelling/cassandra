@@ -224,7 +224,7 @@ public class Descriptor
      * additional subdirectory. The file themselves have the form:
      *   {@code <version>-<gen>-<format>-<component>}.
      * <p>
-     * Note that this method will only sucessfully parse sstable files of supported versions.
+     * Note that this method will only successfully parse sstable files of supported versions.
      *
      * @param file the {@code File} object for the filename to parse.
      * @return the descriptor for the parsed file.
