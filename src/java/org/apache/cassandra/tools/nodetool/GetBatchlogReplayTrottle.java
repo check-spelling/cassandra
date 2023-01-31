@@ -23,7 +23,7 @@ import org.apache.cassandra.tools.NodeTool.NodeToolCmd;
 
 @Command(name = "getbatchlogreplaythrottle", description = "Print batchlog replay throttle in KB/s. " +
                                                            "This is reduced proportionally to the number of nodes in the cluster.")
-public class GetBatchlogReplayTrottle extends NodeToolCmd
+public class GetBatchlogReplayThrottle extends NodeToolCmd
 {
     @Override
     public void execute(NodeProbe probe)

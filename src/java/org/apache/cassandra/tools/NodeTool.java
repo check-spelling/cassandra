@@ -133,7 +133,7 @@ public class NodeTool
                 GcStats.class,
                 GetAuditLog.class,
                 GetAuthCacheConfig.class,
-                GetBatchlogReplayTrottle.class,
+                GetBatchlogReplayThrottle.class,
                 GetColumnIndexSize.class,
                 GetCompactionThreshold.class,
                 GetCompactionThroughput.class,
