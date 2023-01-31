@@ -2943,7 +2943,7 @@ Configuration
 Thrift API
 ----------
     - removed deprecated get_key_range method
-    - added batch_mutate meethod
+    - added batch_mutate method
     - deprecated multiget and batch_insert methods in favor of
       multiget_slice and batch_mutate, respectively
     - added ConsistencyLevel.ANY, for when you want write

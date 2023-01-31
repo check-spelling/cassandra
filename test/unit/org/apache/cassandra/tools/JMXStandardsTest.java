@@ -165,7 +165,7 @@ public class JMXStandardsTest
                 }
                 else
                 {
-                    String msg = String.format("Error at signature %s; type %s is not in the supported set of types, method method '%s'", sig, typeName, method);
+                    String msg = String.format("Error at signature %s; type %s is not in the supported set of types, method '%s'", sig, typeName, method);
                     (method.isAnnotationPresent(BreaksJMX.class) ? warnings : errors).add(msg);
                 }
             }
