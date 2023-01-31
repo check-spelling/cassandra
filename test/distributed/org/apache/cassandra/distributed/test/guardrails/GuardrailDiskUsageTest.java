@@ -129,7 +129,7 @@ public class GuardrailDiskUsageTest extends GuardrailTester
             Assertions.assertThat(rs.getExecutionInfo().getWarnings()).isEmpty();
         }
 
-        // If one node becomes STUFFED, the writes targeting that node will raise a warning, while the writes targetting
+        // If one node becomes STUFFED, the writes targeting that node will raise a warning, while the writes targeting
         // the node that remains SPACIOUS will keep succeeding without warnings
         DiskStateInjection.setState(getCluster(), 2, DiskUsageState.STUFFED);
         int numWarnings = 0;
