@@ -1362,7 +1362,7 @@ New features
      entirety.
    - In addition to the above, Roles are also first class resources and can be the
      subject of permissions. Users (roles) can now be granted permissions on other
-     roles, including CREATE, ALTER, DROP & AUTHORIZE, which removesthe need for
+     roles, including CREATE, ALTER, DROP & AUTHORIZE, which removes the need for
      superuser privileges in order to perform user/role management operations.
    - Creators of database resources (Keyspaces, Tables, Roles) are now automatically
      granted all permissions on them (if the IAuthorizer implementation supports
