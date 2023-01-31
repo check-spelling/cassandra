@@ -277,7 +277,7 @@ public class SizeTieredCompactionStrategy extends AbstractCompactionStrategy
                 if ((size > (oldAverageSize * bucketLow) && size < (oldAverageSize * bucketHigh))
                     || (size < minSSTableSize && oldAverageSize < minSSTableSize))
                 {
-                    // remove and re-add under new new average size
+                    // remove and re-add under new average size
                     buckets.remove(oldAverageSize);
                     long totalSize = bucket.size() * oldAverageSize;
                     long newAverageSize = (totalSize + size) / (bucket.size() + 1);
