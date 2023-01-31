@@ -621,7 +621,7 @@ public class BigTableWriter extends SSTableWriter
         public void resetAndTruncate()
         {
             // we can't un-set the bloom filter addition, but extra keys in there are harmless.
-            // we can't reset dbuilder either, but that is the last thing called in afterappend so
+            // we can't reset dbuilder either, but that is the last thing called in afterAppend so
             // we assume that if that worked then we won't be trying to reset.
             indexFile.resetAndTruncate(mark);
         }
