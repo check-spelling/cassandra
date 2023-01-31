@@ -133,7 +133,7 @@ public abstract class RepairCoordinatorNeighbourDown extends RepairCoordinatorBa
     {
         // Test what happens when a participant restarts in the middle of validation
         // Currently this isn't recoverable but could be.
-        // TODO since this is a real restart, how would I test "long pause"? Can't send SIGSTOP since same procress
+        // TODO since this is a real restart, how would I test "long pause"? Can't send SIGSTOP since same process
         String table = tableName("validationparticipentcrashesandcomesback");
         assertTimeoutPreemptively(Duration.ofMinutes(1), () -> {
             CLUSTER.schemaChange(format("CREATE TABLE %s.%s (key text, value text, PRIMARY KEY (key))", KEYSPACE, table));

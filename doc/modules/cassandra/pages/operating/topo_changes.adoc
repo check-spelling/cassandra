@@ -54,7 +54,7 @@ stalls, it may also be resumed by simply restarting the node. In order
 to cleanup bootstrap state and start fresh, you may set the JVM startup
 flag `-Dcassandra.reset_bootstrap_progress=true`.
 
-On lower versions, when the bootstrap proces fails it is recommended to
+On lower versions, when the bootstrap process fails it is recommended to
 wipe the node (remove all the data), and restart the bootstrap process
 again.
 
