@@ -87,7 +87,7 @@ import static org.apache.cassandra.utils.ExecutorUtils.shutdown;
  * much all cases, as tasks like flushing an index needs to be executed synchronously to avoid potentially
  * deadlocking on the FlushWriter or PostFlusher. Several of these {@code Callable<?>} returning methods on Index could
  * then be defined with as void and called directly from SIM (rather than being run via the executor service).
- * Separating the task defintion from execution gives us greater flexibility though, so that in future, for example,
+ * Separating the task definition from execution gives us greater flexibility though, so that in future, for example,
  * if the flush process allows it we leave open the possibility of executing more of these tasks asynchronously.
  * <br><br>
  * The primary exception to the above is the Callable returned from Index#addIndexedColumn. This may
