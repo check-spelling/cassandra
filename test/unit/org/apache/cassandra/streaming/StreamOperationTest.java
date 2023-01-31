@@ -36,7 +36,7 @@ public class StreamOperationTest
         assertEquals(StreamOperation.REBUILD, StreamOperation.fromString("Rebuild"));
         assertEquals(StreamOperation.BULK_LOAD, StreamOperation.fromString("Bulk Load"));
         assertEquals(StreamOperation.REPAIR, StreamOperation.fromString("Repair"));
-        // Test case insensivity
+        // Test case insensitivity
         assertEquals(StreamOperation.REPAIR, StreamOperation.fromString("rEpair"));
 
         // Test description
