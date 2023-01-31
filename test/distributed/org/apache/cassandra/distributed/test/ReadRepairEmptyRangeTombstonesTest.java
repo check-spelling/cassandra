@@ -168,7 +168,7 @@ public class ReadRepairEmptyRangeTombstonesTest extends TestBaseImpl
      * Test range queries asking for a not-empty range targeting rows overlapping with a tombstone range in one replica.
      */
     @Test
-    public void testRangeQueriesWithRowsOvetrlappingWithTombstoneRangeStart()
+    public void testRangeQueriesWithRowsOverlappingWithTombstoneRangeStart()
     {
         tester().createTable("CREATE TABLE %s(k int, c int, PRIMARY KEY (k, c)) " +
                              "WITH CLUSTERING ORDER BY (c %s) AND read_repair='%s'")
