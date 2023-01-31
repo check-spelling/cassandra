@@ -32,7 +32,7 @@ import org.junit.Test;
 import org.apache.cassandra.db.ConsistencyLevel;
 
 /**
- * Utilty class for testing the guardrails for read/write consistency levels.
+ * Utility class for testing the guardrails for read/write consistency levels.
  */
 public abstract class GuardrailConsistencyLevelsTester extends GuardrailTester
 {
