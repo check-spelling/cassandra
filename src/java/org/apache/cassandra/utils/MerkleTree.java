@@ -77,7 +77,7 @@ public class MerkleTree
     private static final byte[] EMPTY_HASH = new byte[HASH_SIZE];
 
     /*
-     * Thread-local byte array, large enough to host 32B of digest or MM3/Random partitoners' tokens
+     * Thread-local byte array, large enough to host 32B of digest or MM3/Random partitioners' tokens
      */
     private static final ThreadLocal<byte[]> byteArray = ThreadLocal.withInitial(() -> new byte[HASH_SIZE]);
 
