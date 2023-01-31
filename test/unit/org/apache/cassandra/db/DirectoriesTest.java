@@ -309,7 +309,7 @@ public class DirectoriesTest
         // Create snapshot with and without manifest
         FakeSnapshot snapshot1 = createFakeSnapshot(fakeTable, SNAPSHOT1, true, false);
         FakeSnapshot snapshot2 = createFakeSnapshot(fakeTable, SNAPSHOT2, false, false);
-        // ephemeral without manifst
+        // ephemeral without manifest
         FakeSnapshot snapshot3 = createFakeSnapshot(fakeTable, SNAPSHOT3, false, true);
 
         // Both snapshots should be present
