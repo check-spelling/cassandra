@@ -632,7 +632,7 @@ public class ConnectionTest
                 outbound.settings().endpointToVersion.set(endpoint, VERSION_30);
 
                 // The connection should have successfully connected and delivered the _TEST_1
-                // message within the timout.
+                // message within the timeout.
                 Assert.assertTrue(done.await(15, SECONDS));
                 Assert.assertTrue(outbound.isConnected());
                 Assert.assertTrue(String.format("expect less successful connections (%d) than attempts (%d)",

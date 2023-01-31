@@ -497,7 +497,7 @@ public class FBUtilities
      *
      * @param futures
      * @param timeout The number of units to wait in total. If this value is less than or equal to zero,
-     *           no tiemout value will be passed to {@link Future#get()}.
+     *           no timeout value will be passed to {@link Future#get()}.
      * @param units The units of timeout.
      */
     public static <T> List<T> waitOnFutures(Iterable<? extends Future<? extends T>> futures, long timeout, TimeUnit units)
