@@ -305,7 +305,7 @@ public class MathFctsTest
         ByteBuffer input = inputType.decompose(inputValue);
         if (expected instanceof BigDecimal)
         {
-            // This block is to deal with the edgecase where two BigDecimals' values are equal but not their scale.
+            // This block is to deal with the edge case where two BigDecimals' values are equal but not their scale.
             BigDecimal bdExpected = (BigDecimal) expected;
             BigDecimal bdInputValue = (BigDecimal) inputType.compose(executeFunction(fct, input));
             assertEquals(bdExpected.compareTo(bdInputValue), 0);
