@@ -1070,7 +1070,7 @@ public class OutboundConnection
      *  Most of the actual work is performed by OutboundConnectionInitiator, this method just manages
      *  our book keeping on either success or failure.
      *
-     *  This method is only to be invoked by the eventLoop, and the inner class' methods should only be evaluated by the eventtLoop
+     *  This method is only to be invoked by the eventLoop, and the inner class' methods should only be evaluated by the eventLoop
      */
     Future<?> initiate()
     {

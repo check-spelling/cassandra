@@ -83,7 +83,7 @@ public class FailureDetector implements IFailureDetector, FailureDetectorMBean
     private final double PHI_FACTOR = 1.0 / Math.log(10.0); // 0.434...
 
     private final ConcurrentHashMap<InetAddressAndPort, ArrivalWindow> arrivalSamples = new ConcurrentHashMap<>();
-    private final List<IFailureDetectionEventListener> fdEvntListeners = new CopyOnWriteArrayList<>();
+    private final List<IFailureDetectionEventListener> fdEventListeners = new CopyOnWriteArrayList<>();
 
     public FailureDetector()
     {
@@ -349,7 +349,7 @@ public class FailureDetector implements IFailureDetector, FailureDetectorMBean
         {
             if (logger.isTraceEnabled())
                 logger.trace("Node {} phi {} > {}; intervals: {} mean: {}ns", new Object[]{ep, PHI_FACTOR * phi, getPhiConvictThreshold(), hbWnd, hbWnd.mean()});
-            for (IFailureDetectionEventListener listener : fdEvntListeners)
+            for (IFailureDetectionEventListener listener : fdEventListeners)
             {
                 listener.convict(ep, phi);
             }
@@ -368,7 +368,7 @@ public class FailureDetector implements IFailureDetector, FailureDetectorMBean
     public void forceConviction(InetAddressAndPort ep)
     {
         logger.debug("Forcing conviction of {}", ep);
-        for (IFailureDetectionEventListener listener : fdEvntListeners)
+        for (IFailureDetectionEventListener listener : fdEventListeners)
         {
             listener.convict(ep, getPhiConvictThreshold());
         }
@@ -381,12 +381,12 @@ public class FailureDetector implements IFailureDetector, FailureDetectorMBean
 
     public void registerFailureDetectionEventListener(IFailureDetectionEventListener listener)
     {
-        fdEvntListeners.add(listener);
+        fdEventListeners.add(listener);
     }
 
     public void unregisterFailureDetectionEventListener(IFailureDetectionEventListener listener)
     {
-        fdEvntListeners.remove(listener);
+        fdEventListeners.remove(listener);
     }
 
     public String toString()
