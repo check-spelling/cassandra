@@ -5734,7 +5734,7 @@ Merged from 0.8:
  * Don't leave zombie connections with THSHA thrift server (CASSANDRA-3867)
  * (cqlsh) fix deserialization of data (CASSANDRA-3874)
  * Fix removetoken force causing an inconsistent state (CASSANDRA-3876)
- * Fix ahndling of some types with Pig (CASSANDRA-3886)
+ * Fix handling of some types with Pig (CASSANDRA-3886)
  * Don't allow to drop the system keyspace (CASSANDRA-3759)
  * Make Pig deletes disabled by default and configurable (CASSANDRA-3628)
 Merged from 0.8:
