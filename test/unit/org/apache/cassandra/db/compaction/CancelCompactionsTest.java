@@ -487,7 +487,7 @@ public class CancelCompactionsTest extends CQLTester
 
         CountDownLatch waitForBeginCompaction = new CountDownLatch(1);
         CountDownLatch waitForStart = new CountDownLatch(1);
-        Iterable<TableMetadata> metadatas = Collections.singleton(getCurrentColumnFamilyStore().metadata());
+        Iterable<TableMetadata> metadata = Collections.singleton(getCurrentColumnFamilyStore().metadata());
         /*
         Here we ask strategies to pause & interrupt compactions right before calling beginCompaction in CompactionTask
         The code running in the separate thread below mimics CFS#runWithCompactionsDisabled but we only allow
@@ -496,7 +496,7 @@ public class CancelCompactionsTest extends CQLTester
         Thread t = new Thread(() -> {
             Uninterruptibles.awaitUninterruptibly(waitForBeginCompaction);
             getCurrentColumnFamilyStore().getCompactionStrategyManager().pause();
-            CompactionManager.instance.interruptCompactionFor(metadatas, (s) -> true, false);
+            CompactionManager.instance.interruptCompactionFor(metadata, (s) -> true, false);
             waitForStart.countDown();
             CompactionManager.instance.waitForCessation(Collections.singleton(getCurrentColumnFamilyStore()), (s) -> true);
             getCurrentColumnFamilyStore().getCompactionStrategyManager().resume();

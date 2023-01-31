@@ -791,7 +791,7 @@ public class CompactionManager implements CompactionManagerMBean
 
         cfs.metric.bytesMutatedAnticompaction.inc(SSTableReader.getTotalBytes(fullyContainedSSTables));
         cfs.getCompactionStrategyManager().mutateRepaired(fullyContainedSSTables, UNREPAIRED_SSTABLE, sessionID, isTransient);
-        // since we're just re-writing the sstable metdata for the fully contained sstables, we don't want
+        // since we're just re-writing the sstable metadata for the fully contained sstables, we don't want
         // them obsoleted when the anti-compaction is complete. So they're removed from the transaction here
         txn.cancel(fullyContainedSSTables);
         refs.release(fullyContainedSSTables);

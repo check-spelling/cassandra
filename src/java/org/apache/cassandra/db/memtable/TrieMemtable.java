@@ -689,10 +689,10 @@ public class TrieMemtable extends AbstractShardedMemtable
         }
 
         public Memtable create(AtomicReference<CommitLogPosition> commitLogLowerBound,
-                               TableMetadataRef metadaRef,
+                               TableMetadataRef metadataRef,
                                Owner owner)
         {
-            return new TrieMemtable(commitLogLowerBound, metadaRef, owner, shardCount);
+            return new TrieMemtable(commitLogLowerBound, metadataRef, owner, shardCount);
         }
 
         @Override

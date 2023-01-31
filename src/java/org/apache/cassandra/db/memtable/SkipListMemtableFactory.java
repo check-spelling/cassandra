@@ -37,9 +37,9 @@ import org.apache.cassandra.schema.TableMetadataRef;
 public class SkipListMemtableFactory implements Memtable.Factory
 {
     @Override
-    public Memtable create(AtomicReference<CommitLogPosition> commitLogLowerBound, TableMetadataRef metadaRef, Memtable.Owner owner)
+    public Memtable create(AtomicReference<CommitLogPosition> commitLogLowerBound, TableMetadataRef metadataRef, Memtable.Owner owner)
     {
-        return new SkipListMemtable(commitLogLowerBound, metadaRef, owner);
+        return new SkipListMemtable(commitLogLowerBound, metadataRef, owner);
     }
 
     public static final SkipListMemtableFactory INSTANCE = new SkipListMemtableFactory();

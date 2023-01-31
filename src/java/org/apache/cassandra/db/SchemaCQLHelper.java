@@ -47,10 +47,10 @@ public class SchemaCQLHelper
         // Types come first, as table can't be created without them
         Stream<String> udts = SchemaCQLHelper.getUserTypesAsCQL(metadata, keyspaceMetadata.types, true);
 
-        Stream<String> tableMatadata = Stream.of(SchemaCQLHelper.getTableMetadataAsCQL(metadata, keyspaceMetadata));
+        Stream<String> tableMetadata = Stream.of(SchemaCQLHelper.getTableMetadataAsCQL(metadata, keyspaceMetadata));
 
         Stream<String> indexes = SchemaCQLHelper.getIndexesAsCQL(metadata, true);
-        return Stream.of(udts, tableMatadata, indexes).flatMap(Function.identity());
+        return Stream.of(udts, tableMetadata, indexes).flatMap(Function.identity());
     }
 
     /**

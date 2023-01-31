@@ -78,10 +78,10 @@ public interface Memtable extends Comparable<Memtable>, UnfilteredSource
          * @param commitLogLowerBound A commit log lower bound for the new memtable. This will be equal to the previous
          *                            memtable's upper bound and defines the span of positions that any flushed sstable
          *                            will cover.
-         * @param metadaRef Pointer to the up-to-date table metadata.
+         * @param metadataRef Pointer to the up-to-date table metadata.
          * @param owner Owning objects that will receive flush requests triggered by the memtable (e.g. on expiration).
          */
-        Memtable create(AtomicReference<CommitLogPosition> commitLogLowerBound, TableMetadataRef metadaRef, Owner owner);
+        Memtable create(AtomicReference<CommitLogPosition> commitLogLowerBound, TableMetadataRef metadataRef, Owner owner);
 
         /**
          * If the memtable can achieve write durability directly (i.e. using some feature other than the commitlog, e.g.
