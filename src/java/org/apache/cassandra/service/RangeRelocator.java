@@ -243,7 +243,7 @@ public class RangeRelocator
      * If the range is transient and is transitioning to full then always fetch even if the range was already transient
      * since a transiently replicated obviously needs to fetch data to become full.
      *
-     * This why there is a continue after checking for instersection because intersection is not sufficient reason
+     * This why there is a continue after checking for intersection because intersection is not sufficient reason
      * to do the subtraction since we might need to stream/fetch data anyways.
      *
      * @param currentRanges collection of the ranges by current token
