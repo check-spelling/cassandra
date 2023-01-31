@@ -29,7 +29,7 @@ import org.apache.cassandra.transport.ProtocolVersion;
  * A CQL3 term, i.e. a column value with or without bind variables.
  *
  * A Term can be either terminal or non terminal. A term object is one that is typed and is obtained
- * from a raw term (Term.Raw) by poviding the actual receiver to which the term is supposed to be a
+ * from a raw term (Term.Raw) by providing the actual receiver to which the term is supposed to be a
  * value of.
  */
 public interface Term
