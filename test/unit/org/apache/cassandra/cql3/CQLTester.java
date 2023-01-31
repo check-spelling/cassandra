@@ -193,7 +193,7 @@ public abstract class CQLTester
 
     private User user;
 
-    // We don't use USE_PREPARED_VALUES in the code below so some test can foce value preparation (if the result
+    // We don't use USE_PREPARED_VALUES in the code below so some test can force value preparation (if the result
     // is not expected to be the same without preparation)
     private boolean usePrepared = USE_PREPARED_VALUES;
     private static boolean reusePrepared = REUSE_PREPARED;

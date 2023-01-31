@@ -210,7 +210,7 @@ public class StandaloneVerifierTest extends OfflineToolUtils
     @Test
     public void testBadForceArgument()
     {
-        Arrays.asList("bf", "badforce", "garbage", "forrce").forEach(arg -> {
+        Arrays.asList("bf", "badforce", "garbage", "force").forEach(arg -> {
             ToolResult tool = ToolRunner.invokeClass(StandaloneVerifier.class,
                                                      "system_schema",
                                                      "tables",
