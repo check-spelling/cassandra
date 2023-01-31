@@ -520,7 +520,7 @@ public final class CompressionParams
 
     // chunkLength must be a power of 2 because we assume so when
     // computing the chunk number from an uncompressed file offset (see
-    // CompressedRandomAccessReader.decompresseChunk())
+    // CompressedRandomAccessReader.decompressChunk())
     public void validate() throws ConfigurationException
     {
         // if chunk length was not set (chunkLength == null), this is fine, default will be used
