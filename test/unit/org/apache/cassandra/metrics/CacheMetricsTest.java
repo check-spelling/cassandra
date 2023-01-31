@@ -144,7 +144,7 @@ public class CacheMetricsTest
 
         public long capacity()
         {
-            // capacity in bytes but just using a fixed number here since since the validation is just to ensure
+            // capacity in bytes but just using a fixed number here since the validation is just to ensure
             // that this number is equivalent to the metric that publishes it.
             return capacity;
         }
