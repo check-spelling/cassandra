@@ -53,9 +53,9 @@ public class StressGraph
     }
     private String[] stressArguments;
 
-    public StressGraph(StressSettings stressSetttings, String[] stressArguments)
+    public StressGraph(StressSettings stressSettings, String[] stressArguments)
     {
-        this.stressSettings = stressSetttings;
+        this.stressSettings = stressSettings;
         this.stressArguments = stressArguments;
     }
 
