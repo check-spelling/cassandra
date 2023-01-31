@@ -238,7 +238,7 @@ public class HandshakeProtocol
      *   1) the messaging version of the peer sending this message
      *   2) the negotiated messaging version if one could be accepted by both peers,
      *      or if not the closest version that this peer could support to the ones requested
-     *   3) a CRC protectingn the integrity of the message
+     *   3) a CRC protecting the integrity of the message
      *
      * Note that the pre40 equivalent of this message contains ONLY the messaging version of the peer.
      */
