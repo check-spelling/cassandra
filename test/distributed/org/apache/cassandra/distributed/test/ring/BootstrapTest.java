@@ -66,7 +66,7 @@ public class BootstrapTest extends TestBaseImpl
     @Before
     public void beforeTest()
     {
-        // MigrationCoordinator schedules schema pull requests immediatelly when the node is just starting up, otherwise
+        // MigrationCoordinator schedules schema pull requests immediately when the node is just starting up, otherwise
         // the first pull request is sent in 60 seconds. Whether we are starting up or not is detected by examining
         // the node up-time and if it is lower than MIGRATION_DELAY, we consider the server is starting up.
         // When we are running multiple test cases in the class, where each starts a node but in the same JVM, the

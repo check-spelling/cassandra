@@ -486,7 +486,7 @@ public class LeaveAndBootstrapTest
         assertTrue(tmd.isLeaving(hosts.get(2)));
         assertTrue(tmd.getBootstrapTokens().isEmpty());
 
-        // Bootstrap the node immedidiately to keyTokens.get(4) without going through STATE_LEFT
+        // Bootstrap the node immediately to keyTokens.get(4) without going through STATE_LEFT
         Gossiper.instance.injectApplicationState(hosts.get(2), ApplicationState.TOKENS, valueFactory.tokens(Collections.singleton(keyTokens.get(4))));
         ss.onChange(hosts.get(2),
                     ApplicationState.STATUS,
