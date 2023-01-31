@@ -530,7 +530,7 @@ base table and when CL.ONE is achieved on view.
 
 == Cache Metrics
 
-Cassandra caches have metrics to track the effectivness of the caches.
+Cassandra caches have metrics to track the effectiveness of the caches.
 Though the `Table Metrics` might be more useful.
 
 Reported name format:
