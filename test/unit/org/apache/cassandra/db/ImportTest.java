@@ -333,7 +333,7 @@ public class ImportTest extends CQLTester
         File backupdirCorrect = moveToBackupDir(correctSSTables);
 
         Set<File> beforeImport = Sets.newHashSet(backupdir.tryList());
-        // first we moved out 2 sstables, one correct and one corrupt in to a single directory (backupdir)
+        // first we moved out 2 sstables, one correct and one corrupt into a single directory (backupdir)
         // then we moved out 1 sstable, a correct one (in backupdirCorrect).
         // now import should fail import on backupdir, but import the one in backupdirCorrect.
         SSTableImporter.Options options = SSTableImporter.Options.options(Sets.newHashSet(backupdir.toString(), backupdirCorrect.toString())).copyData(copy).verifySSTables(verify).build();

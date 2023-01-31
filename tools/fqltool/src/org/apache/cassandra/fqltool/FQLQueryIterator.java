@@ -33,7 +33,7 @@ public class FQLQueryIterator extends AbstractIterator<FQLQuery>
     /**
      * Create an iterator over the FQLQueries in tailer
      *
-     * Reads up to readAhead queries in to memory to be able to sort them (the files are mostly sorted already)
+     * Reads up to readAhead queries into memory to be able to sort them (the files are mostly sorted already)
      */
     public FQLQueryIterator(ExcerptTailer tailer, int readAhead)
     {

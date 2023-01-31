@@ -37,6 +37,6 @@ are approximately 50%, 25%, 12.5%... of the total size.
 == Defragmentation
 
 Defragmentation is done when many sstables are touched during a read.
-The result of the read is put in to the memtable so that the next read
+The result of the read is put into the memtable so that the next read
 will not have to touch as many sstables. This can cause writes on a
 read-only-cluster.

@@ -148,7 +148,7 @@ public final class CastFcts
     }
 
     /**
-     * Adds to the list a function converting the input type in to the output type if they are not the same.
+     * Adds to the list a function converting the input type into the output type if they are not the same.
      *
      * @param functions the list to add to
      * @param inputType the input type

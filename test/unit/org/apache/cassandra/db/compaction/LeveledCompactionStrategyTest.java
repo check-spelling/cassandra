@@ -447,7 +447,7 @@ public class LeveledCompactionStrategyTest
 
         Awaitility.await().until(() -> !CompactionManager.instance.isCompacting(singleton(cfs), sstable -> true));
 
-        // 20 tables that have key2 should have been compacted in to 1 table resulting in 11 (30-20+1)
+        // 20 tables that have key2 should have been compacted into 1 table resulting in 11 (30-20+1)
         assertEquals(11, cfs.getLiveSSTables().size());
 
         // Compact just the tables with key1. At this point all 11 tables should have key1

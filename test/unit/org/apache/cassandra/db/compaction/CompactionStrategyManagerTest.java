@@ -217,7 +217,7 @@ public class CompactionStrategyManagerTest
 
         CompactionManager.BackgroundCompactionCandidate r = CompactionManager.instance.getBackgroundCompactionCandidate(mock);
         CompactionStrategyManager mgr = mock.getCompactionStrategyManager();
-        // basic idea is that we start a thread which will be able to get in to the currentlyBackgroundUpgrading-guarded
+        // basic idea is that we start a thread which will be able to get into the currentlyBackgroundUpgrading-guarded
         // code in CompactionManager, then we try to run a bunch more of the upgrade tasks which should return false
         // due to the currentlyBackgroundUpgrading count being >= max_concurrent_auto_upgrade_tasks
         Thread t = new Thread(() -> r.maybeRunUpgradeTask(mgr));
@@ -250,7 +250,7 @@ public class CompactionStrategyManagerTest
         CompactionManager.BackgroundCompactionCandidate r = CompactionManager.instance.getBackgroundCompactionCandidate(mock);
         CompactionStrategyManager mgr = mock.getCompactionStrategyManager();
 
-        // basic idea is that we start 2 threads who will be able to get in to the currentlyBackgroundUpgrading-guarded
+        // basic idea is that we start 2 threads who will be able to get into the currentlyBackgroundUpgrading-guarded
         // code in CompactionManager, then we try to run a bunch more of the upgrade task which should return false
         // due to the currentlyBackgroundUpgrading count being >= max_concurrent_auto_upgrade_tasks
         Thread t = new Thread(() -> r.maybeRunUpgradeTask(mgr));

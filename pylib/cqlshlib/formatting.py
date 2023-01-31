@@ -87,7 +87,7 @@ def color_text(bval, colormap, displaywidth=None):
     # using color, we need to double up the backslashes so it's not
     # ambiguous. This introduces the unique difficulty of having different
     # display widths for the colored and non-colored versions. To avoid
-    # adding the smarts to handle that in to FormattedValue, we just
+    # adding the smarts to handle that into FormattedValue, we just
     # make an explicit check to see if a null colormap is being used or
     # not.
     if displaywidth is None:

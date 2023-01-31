@@ -99,7 +99,7 @@ public class Replay implements Runnable
 
     public static void replay(String keyspace, List<String> arguments, List<String> targetHosts, List<File> resultPaths, String queryStorePath, boolean replayDDLStatements)
     {
-        int readAhead = 200; // how many fql queries should we read in to memory to be able to sort them?
+        int readAhead = 200; // how many fql queries should we read into memory to be able to sort them?
         List<ChronicleQueue> readQueues = null;
         List<FQLQueryIterator> iterators = null;
         List<Predicate<FQLQuery>> filters = new ArrayList<>();
