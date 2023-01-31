@@ -34,7 +34,7 @@ import io.netty.handler.ssl.SslContext;
  * Implementation of this interface must have a constructor with argument of type {@code Map<String,Object>} to allow
  * custom parameters, needed by the implementation, to be passed from the yaml configuration. Common SSL
  * configurations like {@code protocol, algorithm, cipher_suites, accepted_protocols, require_client_auth,
- * require_endpoint_verification, enabled, optional} will also be passed to that map by Cassanddra.
+ * require_endpoint_verification, enabled, optional} will also be passed to that map by Cassandra.
  * <p>
  * Since on top of Netty, Cassandra is internally using JSSE SSLContext also for certain use-cases- this interface
  * has methods for both.

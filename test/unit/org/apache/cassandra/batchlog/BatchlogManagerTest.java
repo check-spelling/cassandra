@@ -341,7 +341,7 @@ public class BatchlogManagerTest
         assertEquals(0L, result.one().getLong("count"));
     }
 
-    // CASSANRDA-9223
+    // CASSANDRA-9223
     @Test
     public void testReplayWithNoPeers() throws Exception
     {

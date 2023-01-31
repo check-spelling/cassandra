@@ -2023,7 +2023,7 @@ public class StorageProxy implements StorageProxyMBean
             long latency = nanoTime() - start;
             readMetrics.addNano(latency);
             readMetricsForLevel(consistencyLevel).addNano(latency);
-            // TODO avoid giving every command the same latency number.  Can fix this in CASSADRA-5329
+            // TODO avoid giving every command the same latency number.  Can fix this in CASSANDRA-5329
             for (ReadCommand command : group.queries)
                 Keyspace.openAndGetStore(command.metadata()).metric.coordinatorReadLatency.update(latency, TimeUnit.NANOSECONDS);
         }

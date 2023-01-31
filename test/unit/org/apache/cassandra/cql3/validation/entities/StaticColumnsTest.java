@@ -170,7 +170,7 @@ public class StaticColumnsTest extends CQLTester
         rows = getRows(execute("SELECT DISTINCT k, s FROM %s WHERE k IN (" + keys + ")"));
         checkDistinctRows(rows, false, 0, 10, 0, 10);
 
-        // additional testing for CASSANRA-8087
+        // additional testing for CASSANDRA-8087
         createTable("CREATE TABLE %s( k int, c1 int, c2 int, s1 int static, s2 int static, PRIMARY KEY (k, c1, c2))");
 
         for (int i = 0; i < 10; i++)
