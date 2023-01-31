@@ -107,7 +107,7 @@ import static org.apache.cassandra.utils.MonotonicClock.Global.approxTime;
  * provide their own flow control policy.
  *
  * Before we attempt to process a message fully, we first infer its size from the stream. This inference is
- * delegated to implementations as the encoding of the message size is protocol specific. Having assertained
+ * delegated to implementations as the encoding of the message size is protocol specific. Having ascertained
  * the size of the incoming message, we then attempt to acquire the corresponding number of memory permits.
  * If we succeed, then we move on actually process the message. If we fail, the frame decoder deactivates
  * until sufficient permits are released for the message to be processed and the handler is activated again.
