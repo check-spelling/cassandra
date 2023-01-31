@@ -74,7 +74,7 @@ import static org.apache.cassandra.utils.Throwables.isCausedBy;
 import static org.apache.cassandra.utils.concurrent.CountDownLatch.newCountDownLatch;
 
 /**
- * Represents a connection type to a peer, and handles the state transistions on the connection and the netty {@link Channel}.
+ * Represents a connection type to a peer, and handles the state transitions on the connection and the netty {@link Channel}.
  * The underlying socket is not opened until explicitly requested (by sending a message).
  *
  * TODO: complete this description
