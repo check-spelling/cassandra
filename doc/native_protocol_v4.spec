@@ -842,7 +842,7 @@ Table of Contents
       bytes).
     - snappy (https://code.google.com/p/snappy/). This compression might not be
       available as it depends on a native lib (server-side) that might not be
-      avaivable on some installations.
+      available on some installations.
 
 
 6. Data Type Serialization Formats
