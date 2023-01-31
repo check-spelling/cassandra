@@ -117,7 +117,7 @@ public class CASTest extends CASCommonTestCases
      * See CASSANDRA-12126
      *
      *  - A Promised by {1, 2, 3}
-     *  - A Acccepted by {1}
+     *  - A Accepted by {1}
      *  - B (=>!A) Promised and Proposed to {2, 3}
      *  - Read from (or attempt C (=>!B)) to {1, 2} -> witness either A or B, not both
      */
