@@ -189,7 +189,7 @@ public class BufferedRandomAccessFileTest
     
             w.finish();
     
-            // will use cachedlength
+            // will use cached length
             try (FileHandle.Builder builder = new FileHandle.Builder(tmpFile.path());
                  FileHandle fh = builder.complete();
                  RandomAccessReader r = fh.createReader())
