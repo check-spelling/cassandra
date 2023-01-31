@@ -57,7 +57,7 @@ public class DefaultLoaderTest
     @Test
     public void fieldPresentWithGetter()
     {
-        // if setter/getter present, methods take precendents over field
+        // if setter/getter present, methods take precedents over field
         assertThat(get(Example2.class, "first")).isInstanceOf(MethodProperty.class);
     }
 
