@@ -298,7 +298,7 @@ replica will forget the partition's Paxos state.
 If this data expires, any in-progress operations may fail to be brought to completion. With the algorithm as described
 above, one of the effects of this is that some writes that are reported complete may fail to ever be committed on a
 majority of replicas, or even on any replica (if e.g. connection with the replicas is lost before commits are sent, and
-the TTL expires before any new LWT operation on the permition is initiated).
+the TTL expires before any new LWT operation on the permission is initiated).
 
 To avoid this problem, Version 1 of the implementation only reports success on writes after the commit stage has reached
 a requested consistency level. This solves the problem of reporting success, but only guarantees LWT writes to behave
