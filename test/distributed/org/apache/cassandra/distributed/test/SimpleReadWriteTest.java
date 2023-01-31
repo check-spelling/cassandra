@@ -52,7 +52,7 @@ import static org.apache.cassandra.distributed.shared.AssertUtils.fail;
 import static org.apache.cassandra.distributed.shared.AssertUtils.row;
 
 /**
- * Simple read/write tests using different types of query, paticularly when the data is spread across memory and
+ * Simple read/write tests using different types of query, particularly when the data is spread across memory and
  * multiple sstables and using different compressors. All available compressors are tested. Both ascending and
  * descending clustering orders are tested. The read queries are run using every node as a coordinator, with and without
  * paging.
