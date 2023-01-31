@@ -27,7 +27,7 @@ import org.apache.cassandra.tools.NodeTool;
 
 import static com.google.common.base.Preconditions.checkArgument;
 
-@Command(name = "enablehintsfordc", description = "Enable hints for a data center that was previsouly disabled")
+@Command(name = "enablehintsfordc", description = "Enable hints for a data center that was previously disabled")
 public class EnableHintsForDC extends NodeTool.NodeToolCmd
 {
     @Arguments(usage = "<datacenter>", description = "The data center to enable")
