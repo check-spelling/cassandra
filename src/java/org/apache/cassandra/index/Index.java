@@ -567,7 +567,7 @@ public interface Index
     }
 
     /**
-     * Tells whether this index supports replica fitering protection or not.
+     * Tells whether this index supports replica filtering protection or not.
      *
      * Replica filtering protection might need to run the query row filter in the coordinator to detect stale results.
      * An index implementation will be compatible with this protection mechanism if it returns the same results for the
