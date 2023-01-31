@@ -5465,7 +5465,7 @@ Merged from 1.0:
  * (cql3) Add name of parameters in CqlResultSet (CASSANDRA-4242)
  * (cql3) Correctly validate order by queries (CASSANDRA-4246)
  * rename stress to cassandra-stress for saner packaging (CASSANDRA-4256)
- * Fix exception on colum metadata with non-string comparator (CASSANDRA-4269)
+ * Fix exception on column metadata with non-string comparator (CASSANDRA-4269)
  * Check for unknown/invalid compression options (CASSANDRA-4266)
  * (cql3) Adds simple access to column timestamp and ttl (CASSANDRA-4217)
  * (cql3) Fix range queries with secondary indexes (CASSANDRA-4257)

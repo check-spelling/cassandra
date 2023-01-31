@@ -195,7 +195,7 @@ public class StressCQLSSTableWriter implements Closeable
      * <a href="http://cassandra.apache.org/doc/cql3/CQL.html#identifiers">case-sensitive quoted identifier</a>
      * (in which case the map key must use the exact case of the column).
      *
-     * @param values a map of colum name to column values representing the new
+     * @param values a map of column name to column values representing the new
      * row to add. Note that if a column is not part of the map, it's value will
      * be {@code null}. If the map contains keys that does not correspond to one
      * of the column of the insert statement used when creating this writer, the
@@ -286,7 +286,7 @@ public class StressCQLSSTableWriter implements Closeable
      * values in the order of the insert statement used during construction of
      * this write.
      *
-     * @param values a map of colum name to column values representing the new
+     * @param values a map of column name to column values representing the new
      * row to add. Note that if a column is not part of the map, it's value will
      * be {@code null}. If the map contains keys that does not correspond to one
      * of the column of the insert statement used when creating this writer, the
