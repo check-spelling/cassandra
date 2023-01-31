@@ -73,7 +73,7 @@ public class HintServiceBytemanTest
     }
 
     @Before
-    public void reinstanciateService() throws Throwable
+    public void reinstantiateService() throws Throwable
     {
         MessagingService.instance().inboundSink.clear();
         MessagingService.instance().outboundSink.clear();
