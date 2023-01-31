@@ -1190,7 +1190,7 @@ public class Directories
     /**
      * @return Raw size on disk for all directories
      */
-    public long getRawDiretoriesSize()
+    public long getRawDirectoriesSize()
     {
         long totalAllocatedSize = 0L;
 
