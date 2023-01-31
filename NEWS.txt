@@ -2261,7 +2261,7 @@ Features
       identifier generation, for more details see CASSANDRA-3794.
     - The CQL language has undergone a major revision, CQL3, the
       highlights of which are covered at [1].  CQL3 is not
-      backwards-compatibile with CQL2, so we've introduced a
+      backwards-compatible with CQL2, so we've introduced a
       set_cql_version Thrift method to specify which version you want.
       (The default remains CQL2 at least until Cassandra 1.2.)  cqlsh
       adds a --cql3 flag to enable this.
