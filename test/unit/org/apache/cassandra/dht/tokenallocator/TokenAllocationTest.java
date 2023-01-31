@@ -180,7 +180,7 @@ public class TokenAllocationTest
                 generateFakeEndpoints(tm, 10, vn, dc, Integer.toString(i));
             InetAddressAndPort addr = InetAddressAndPort.getByName("127." + dc + ".0.99");
             allocateTokensForKeyspace(vn, ks, tm, addr);
-            // Note: Not matching replication factor in second datacentre, but this should not affect us.
+            // Note: Not matching replication factor in second datacenter, but this should not affect us.
         } finally {
             DatabaseDescriptor.setEndpointSnitch(oldSnitch);
         }

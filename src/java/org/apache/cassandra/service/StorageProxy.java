@@ -2392,7 +2392,7 @@ public class StorageProxy implements StorageProxyMBean
     /**
      * Determines whether a hint should be stored or not.
      * It rejects early if any of the condition is met:
-     * - Hints disabled entirely or for the belonging datacetner of the replica
+     * - Hints disabled entirely or for the belonging datacenter of the replica
      * - The replica is transient or is the self node
      * - The replica is no longer part of the ring
      * - The hint window has expired
