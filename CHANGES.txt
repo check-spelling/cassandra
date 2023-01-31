@@ -3519,7 +3519,7 @@ Merged from 2.0:
  * Ensure SSTableWriter cleans up properly after failure (CASSANDRA-8499)
  * Increase bf true positive count on key cache hit (CASSANDRA-8525)
  * Move MeteredFlusher to its own thread (CASSANDRA-8485)
- * Fix non-distinct results in DISTNCT queries on static columns when
+ * Fix non-distinct results in DISTINCT queries on static columns when
    paging is enabled (CASSANDRA-8087)
  * Move all hints related tasks to hints internal executor (CASSANDRA-8285)
  * Fix paging for multi-partition IN queries (CASSANDRA-8408)
@@ -3925,7 +3925,7 @@ Merged from 1.2:
  * Properly reject unknown UDT field (CASSANDRA-7484)
 Merged from 2.0:
  * Fix CC#collectTimeOrderedData() tombstone optimisations (CASSANDRA-7394)
- * Support DISTINCT for static columns and fix behaviour when DISTINC is
+ * Support DISTINCT for static columns and fix behaviour when DISTINCT is
    not use (CASSANDRA-7305).
  * Workaround JVM NPE on JMX bind failure (CASSANDRA-7254)
  * Fix race in FileCacheService RemovalListener (CASSANDRA-7278)
