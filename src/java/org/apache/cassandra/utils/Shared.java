@@ -27,7 +27,7 @@ import java.lang.annotation.Target;
  * Tells jvm-dtest that a class should be shared across all {@link ClassLoader}s.
  *
  * Jvm-dtest relies on classloader isolation to run multiple cassandra instances in the same JVM, this makes it
- * so some classes do not get shared (outside a blesssed set of classes/packages). When the default behavior
+ * so some classes do not get shared (outside a blessed set of classes/packages). When the default behavior
  * is not desirable, this annotation will tell jvm-dtest to share the class across all class loaders.
  *
  * This is the oposite of {@link Isolated}.
