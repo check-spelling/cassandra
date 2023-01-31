@@ -65,7 +65,7 @@
 ; Supported browsers are those supported by the Python webbrowser module.
 ; (https://docs.python.org/3/library/webbrowser.html).
 ;
-; Hint: to use Google Chome, use
+; Hint: to use Google Chrome, use
 ; 'browser = open -a /Applications/Google\ Chrome.app %s' on Mac OS X and
 ; 'browser = /usr/bin/google-chrome-stable %s' on Linux and
 ; 'browser = C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s' on Windows.
