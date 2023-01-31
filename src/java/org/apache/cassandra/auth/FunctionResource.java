@@ -241,7 +241,7 @@ public class FunctionResource implements IResource
 
     /**
      * @return a qualified FunctionName instance for a function-level resource.
-     * Throws IllegalStateException if called on the resource which doens't represent a single function.
+     * Throws IllegalStateException if called on the resource which doesn't represent a single function.
      */
     public FunctionName getFunctionName()
     {
