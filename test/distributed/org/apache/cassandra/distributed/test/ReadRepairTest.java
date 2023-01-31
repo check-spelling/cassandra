@@ -145,7 +145,7 @@ public class ReadRepairTest extends TestBaseImpl
                 Assert.assertTrue(ex.getClass().toString().contains("ReadTimeoutException"));
                 long actualTimeTaken = currentTimeMillis() - start;
                 long magicDelayAmount = 100L; // it might not be the best way to check if the time taken is around the timeout value.
-                // Due to the delays, the actual time taken from client perspective is slighly more than the timeout value
+                // Due to the delays, the actual time taken from client perspective is slightly more than the timeout value
                 Assert.assertTrue(actualTimeTaken > reducedReadTimeout);
                 // But it should not exceed too much
                 Assert.assertTrue(actualTimeTaken < reducedReadTimeout + magicDelayAmount);
