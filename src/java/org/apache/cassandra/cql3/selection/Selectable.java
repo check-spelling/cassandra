@@ -126,7 +126,7 @@ public interface Selectable extends AssignmentTestable
     public static class WithTerm implements Selectable
     {
         /**
-         * The names given to unamed bind markers found in selection. In selection clause, we often don't have a good
+         * The names given to unnamed bind markers found in selection. In selection clause, we often don't have a good
          * name for bind markers, typically if you have:
          *   SELECT (int)? FROM foo;
          * there isn't a good name for that marker. So we give the same name to all the markers. Note that we could try
