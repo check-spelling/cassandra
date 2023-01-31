@@ -63,7 +63,7 @@ public class AsyncStreamingInputPlus extends RebufferingInputStream implements S
     }
 
     /**
-     * Append a {@link ByteBuf} to the end of the einternal queue.
+     * Append a {@link ByteBuf} to the end of the internal queue.
      *
      * Note: it's expected this method is invoked on the netty event loop.
      */
