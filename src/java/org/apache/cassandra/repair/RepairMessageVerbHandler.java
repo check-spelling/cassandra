@@ -230,7 +230,7 @@ public class RepairMessageVerbHandler implements IVerbHandler<RepairMessage>
                     CleanupMessage cleanup = (CleanupMessage) message.payload;
                     ParticipateState state = ActiveRepairService.instance.participate(cleanup.parentRepairSession);
                     if (state != null)
-                        state.phase.success("Cleanup message recieved");
+                        state.phase.success("Cleanup message received");
                     ActiveRepairService.instance.removeParentRepairSession(cleanup.parentRepairSession);
                     MessagingService.instance().send(message.emptyResponse(), message.from());
                 }

@@ -268,7 +268,7 @@ public class MigrationCoordinator
         {
             if (info.wasReceived() || info.outstandingRequests.size() > 0)
             {
-                logger.trace("Skipping pull of schema {} because it has been already recevied, or it is being received ({})", info.version, info);
+                logger.trace("Skipping pull of schema {} because it has been already received, or it is being received ({})", info.version, info);
                 continue;
             }
 
@@ -444,7 +444,7 @@ public class MigrationCoordinator
         if (Objects.equals(schemaVersion.get(), version))
         {
             info.markReceived();
-            logger.trace("Schema {} from {} has been marked as recevied because it is equal the local schema", version, endpoint);
+            logger.trace("Schema {} from {} has been marked as received because it is equal the local schema", version, endpoint);
         }
         else
         {
