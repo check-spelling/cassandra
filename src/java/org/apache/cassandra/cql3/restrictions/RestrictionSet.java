@@ -106,7 +106,7 @@ final class RestrictionSet implements Restrictions, Iterable<SingleRestriction>
     }
 
     /**
-     * @return a direct reference to the key set from {@link #restrictions} with no defenseive copying
+     * @return a direct reference to the key set from {@link #restrictions} with no defensive copying
      */
     @Override
     public Collection<ColumnMetadata> getColumnDefinitions()
