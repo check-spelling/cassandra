@@ -180,7 +180,7 @@ public class KubernetesSecretsSslContextFactoryTest
         config.putAll(commonConfig);
 
         KubernetesSecretsSslContextFactory kubernetesSecretsSslContextFactory1 = new KubernetesSecretsSslContextFactoryForTestOnly(config);
-        // Make sure the exiry check didn't happen so far for the private key
+        // Make sure the expiry check didn't happen so far for the private key
         Assert.assertFalse(kubernetesSecretsSslContextFactory1.checkedExpiry);
 
         addKeystoreOptions(config);

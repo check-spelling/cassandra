@@ -145,7 +145,7 @@ public class DefaultSslContextFactoryTest
         config.putAll(commonConfig);
 
         DefaultSslContextFactory defaultSslContextFactoryImpl = new DefaultSslContextFactory(config);
-        // Make sure the exiry check didn't happen so far for the private key
+        // Make sure the expiry check didn't happen so far for the private key
         Assert.assertFalse(defaultSslContextFactoryImpl.keystoreContext.checkedExpiry);
 
         addKeystoreOptions(config);
@@ -193,7 +193,7 @@ public class DefaultSslContextFactoryTest
         config.putAll(commonConfig);
 
         DefaultSslContextFactory defaultSslContextFactoryImpl = new DefaultSslContextFactory(config);
-        // Make sure the exiry check didn't happen so far for the private key
+        // Make sure the expiry check didn't happen so far for the private key
         Assert.assertFalse(defaultSslContextFactoryImpl.outboundKeystoreContext.checkedExpiry);
 
         addOutboundKeystoreOptions(config);
