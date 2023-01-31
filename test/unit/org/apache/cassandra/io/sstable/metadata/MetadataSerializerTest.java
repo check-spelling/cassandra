@@ -93,7 +93,7 @@ public class MetadataSerializerTest
 
         try (RandomAccessReader in = RandomAccessReader.open(statsFile))
         {
-            // Deserialie and verify that the two histograms have had their overflow buckets cleared:
+            // Deserialize and verify that the two histograms have had their overflow buckets cleared:
             Map<MetadataType, MetadataComponent> deserialized = serializer.deserialize(desc, in, EnumSet.allOf(MetadataType.class));
             StatsMetadata deserializedStats = (StatsMetadata) deserialized.get(MetadataType.STATS);
             assertFalse(deserializedStats.estimatedCellPerPartitionCount.isOverflowed());

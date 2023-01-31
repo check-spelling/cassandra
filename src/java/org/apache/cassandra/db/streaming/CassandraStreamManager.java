@@ -57,7 +57,7 @@ import java.util.Set;
  *
  * Handles the streaming a one or more section of one of more sstables to and from a specific
  * remote node. The sending side performs a block-level transfer of the source stream, while the receiver
- * must deserilaize that data stream into an partitions and rows, and then write that out as an sstable.
+ * must deserialize that data stream into an partitions and rows, and then write that out as an sstable.
  */
 public class CassandraStreamManager implements TableStreamManager
 {
