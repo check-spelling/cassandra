@@ -115,7 +115,7 @@ public class JMXServerUtils
         env.put("jmx.remote.x.daemon", "true");
 
         // Set the port used to create subsequent connections to exported objects over RMI. This simplifies
-        // configuration in firewalled environments, but it can't be used in conjuction with SSL sockets.
+        // configuration in firewalled environments, but it can't be used in conjunction with SSL sockets.
         // See: CASSANDRA-7087
         int rmiPort = COM_SUN_MANAGEMENT_JMXREMOTE_RMI_PORT.getInt();
 
