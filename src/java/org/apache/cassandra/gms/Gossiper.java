@@ -1527,7 +1527,7 @@ public class Gossiper implements IFailureDetectionEventListener, GossiperMBean
      * (generations do not have a happens-before relationship, so ordering is sketchy at best).
      * <p>
      * Motivations:
-     * {@link Map#entrySet()} returns data in effectivlly random order, so can get into a situation such as the following example.
+     * {@link Map#entrySet()} returns data in effectively random order, so can get into a situation such as the following example.
      * {@code
      * 3 node cluster: n1, n2, and n3
      * n2 goes down and n4 does host replacement and fails before completion
