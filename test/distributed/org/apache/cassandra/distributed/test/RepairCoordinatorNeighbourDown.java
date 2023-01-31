@@ -129,7 +129,7 @@ public abstract class RepairCoordinatorNeighbourDown extends RepairCoordinatorBa
     }
 
     @Test
-    public void validationParticipentCrashesAndComesBack()
+    public void validationParticipantCrashesAndComesBack()
     {
         // Test what happens when a participant restarts in the middle of validation
         // Currently this isn't recoverable but could be.
