@@ -72,7 +72,7 @@ public class CacheMetricsTest
 
     private void assertCacheMetrics(CacheMetrics actual, CacheMetricsExpectation expectation)
     {
-        // assuming meters/guagues (hits, misses, requests, and hitRate) will have correct one/five/fifteenMinute
+        // assuming meters/gauges (hits, misses, requests, and hitRate) will have correct one/five/fifteenMinute
         // calculations - applying some general assertions for hitRate calculations that essentially just smoke test
         // existence (i.e. NaN at initialization) since they are established by way of an inner class on CacheMetrics
         // itself.
