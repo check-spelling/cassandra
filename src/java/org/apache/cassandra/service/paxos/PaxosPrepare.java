@@ -692,7 +692,7 @@ public class PaxosPrepare extends PaxosRequestCallback<PaxosPrepare.Response> im
         if (permitted.latestCommitted.ballot.uuidTimestamp() <= maxLowBound)
             return false;
 
-        // if the lateset commit ballot doesn't have an encoded consistency level, it's from a legacy paxos operation.
+        // if the latest commit ballot doesn't have an encoded consistency level, it's from a legacy paxos operation.
         // Legacy paxos operations would send commits to all replicas for LOCAL_SERIAL operations, which look like
         // linearizability violations from datacenters the operation wasn't run in, so we ignore them here.
         if (permitted.latestCommitted.ballot.flag() == NONE)
