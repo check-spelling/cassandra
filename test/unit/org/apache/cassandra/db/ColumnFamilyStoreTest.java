@@ -202,7 +202,7 @@ public class ColumnFamilyStoreTest
     @Test
     public void testDeleteStandardRowSticksAfterFlush()
     {
-        // test to make sure flushing after a delete doesn't resurrect delted cols.
+        // test to make sure flushing after a delete doesn't resurrect deleted cols.
         String keyspaceName = KEYSPACE1;
         String cfName = CF_STANDARD1;
         Keyspace keyspace = Keyspace.open(keyspaceName);
