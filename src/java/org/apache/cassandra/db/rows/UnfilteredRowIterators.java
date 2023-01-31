@@ -48,7 +48,7 @@ public abstract class UnfilteredRowIterators
      * Interface for a listener interested in the result of merging multiple versions of a given row.
      * <p>
      * Implementors of this interface are given enough information that they can easily reconstruct the difference
-     * between the merged result and each individual input. This is used when reconciling results on replias for
+     * between the merged result and each individual input. This is used when reconciling results on replicas for
      * instance to figure out what to send as read-repair to each source.
      */
     public interface MergeListener
