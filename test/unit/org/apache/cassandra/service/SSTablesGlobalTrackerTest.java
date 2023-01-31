@@ -51,7 +51,7 @@ public class SSTablesGlobalTrackerTest
      * Ensures that the tracker properly maintains the set of versions in use.
      *
      * <p>Using 'Quick Theories', we generate a number of random sstables notification and validate that after each
-     * update the tracker computes the proper set of versions in use (using a simplisitic model that keeps the set
+     * update the tracker computes the proper set of versions in use (using a simplistic model that keeps the set
      * of all sstables in use and maps it to the set of its versions).
      */
     @Test
