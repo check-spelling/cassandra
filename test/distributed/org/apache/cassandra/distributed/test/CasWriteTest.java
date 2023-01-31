@@ -230,7 +230,7 @@ public class CasWriteTest extends TestBaseImpl
                 description.appendText("Cause should be loaded by InstanceClassLoader");
             }
         });
-        // unable to assert on class because the exception thrown was loaded by a differnet classloader, InstanceClassLoader
+        // unable to assert on class because the exception thrown was loaded by a different classloader, InstanceClassLoader
         // therefor asserts the FQCN name present in the message as a workaround
         thrown.expect(new BaseMatcher<Throwable>()
         {

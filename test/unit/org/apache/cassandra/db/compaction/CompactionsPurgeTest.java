@@ -350,7 +350,7 @@ public class CompactionsPurgeTest
         Util.flush(cfs);
         Collection<SSTableReader> sstablesIncomplete = cfs.getLiveSSTables();
 
-        // delete c2 so we have new delete in a diffrent SSTable
+        // delete c2 so we have new delete in a different SSTable
         RowUpdateBuilder.deleteRow(cfs.metadata(), 9, key3, "c2").applyUnsafe();
         Util.flush(cfs);
 

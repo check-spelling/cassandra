@@ -59,7 +59,7 @@ import static org.apache.cassandra.cql3.statements.RequestValidations.invalidReq
 import static org.apache.cassandra.utils.ByteBufferUtil.bytes;
 
 /**
- * The differents <code>DESCRIBE</code> statements parsed from a CQL statement.
+ * The different <code>DESCRIBE</code> statements parsed from a CQL statement.
  */
 public abstract class DescribeStatement<T> extends CQLStatement.Raw implements CQLStatement
 {
