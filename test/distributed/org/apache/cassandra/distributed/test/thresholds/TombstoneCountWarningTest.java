@@ -188,7 +188,7 @@ public class TombstoneCountWarningTest extends TestBaseImpl
             // client warnings are currently coordinator only, so if present only 1 is expected
             if (isScan)
             {
-                // Scans perform multiple ReadCommands, which will not propgate the warnings to the top-level coordinator; so no warnings are expected
+                // Scans perform multiple ReadCommands, which will not propagate the warnings to the top-level coordinator; so no warnings are expected
                 Assertions.assertThat(warnings).isEmpty();
             }
             else
@@ -299,7 +299,7 @@ public class TombstoneCountWarningTest extends TestBaseImpl
         // client warnings are currently coordinator only, so if present only 1 is expected
         if (isScan)
         {
-            // Scans perform multiple ReadCommands, which will not propgate the warnings to the top-level coordinator; so no warnings are expected
+            // Scans perform multiple ReadCommands, which will not propagate the warnings to the top-level coordinator; so no warnings are expected
             Assertions.assertThat(warnings).isNull();
         }
         else

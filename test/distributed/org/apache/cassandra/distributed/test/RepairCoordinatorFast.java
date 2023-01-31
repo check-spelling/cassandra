@@ -370,11 +370,11 @@ public abstract class RepairCoordinatorFast extends RepairCoordinatorBase
                 NodeToolResult result = repair(1, KEYSPACE, table);
                 result.asserts()
                       .failure();
-                      // Right now coordination doesn't propgate the first exception, so we only know "there exists a issue".
+                      // Right now coordination doesn't propagate the first exception, so we only know "there exists a issue".
                       // With notifications on nodetool will see the error then complete, so the cmd state (what nodetool
                       // polls on) is ignored.  With notifications off or dropped, the poll await fails and queries cmd
                       // state, and that will have the below error.
-                      // NOTE: this isn't desireable, would be good to propgate
+                      // NOTE: this isn't desireable, would be good to propagate
                       // TODO replace with errorContainsAny once dtest api updated
                 Throwable error = result.getError();
                 Assert.assertNotNull("Error was null", error);
