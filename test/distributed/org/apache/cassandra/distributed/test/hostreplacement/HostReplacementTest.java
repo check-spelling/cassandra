@@ -55,7 +55,7 @@ public class HostReplacementTest extends TestBaseImpl
 
     static
     {
-        // Gossip has a notiion of quarantine, which is used to remove "fat clients" and "gossip only members"
+        // Gossip has a notion of quarantine, which is used to remove "fat clients" and "gossip only members"
         // from the ring if not updated recently (recently is defined by this config).
         // The reason for setting to 0 is to make sure even under such an aggressive environment, we do NOT remove
         // nodes from the peers table
