@@ -482,7 +482,7 @@
 
     <target name="_build_java">
         <!-- Note: we cannot use javac's 'release' option, as that does not allow accessing sun.misc.Unsafe nor
-        Nashorn's ClassFilter class as any javac modules option is invalid for relase 8. -->
+        Nashorn's ClassFilter class as any javac modules option is invalid for release 8. -->
         <echo message="Compiling for Java ${target.version}..."/>
         <javac
                debug="true" debuglevel="${debuglevel}" encoding="utf-8"

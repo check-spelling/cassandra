@@ -108,7 +108,7 @@ public final class Refs<T extends RefCounted<T>> extends AbstractCollection<T> i
         return ref != null;
     }
 
-    public void relaseAllExcept(Collection<T> keep)
+    public void releaseAllExcept(Collection<T> keep)
     {
         Collection<T> release = new ArrayList<>(references.keySet());
         release.retainAll(keep);

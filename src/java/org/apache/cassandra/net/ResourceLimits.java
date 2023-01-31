@@ -79,7 +79,7 @@ public abstract class ResourceLimits
         /**
          * @param amount return the amount of permits back to this limit
          * @return {@code ABOVE_LIMIT} if there aren't enough permits available even after the release, or
-         *         {@code BELOW_LIMIT} if there are enough permits available after the releaese.
+         *         {@code BELOW_LIMIT} if there are enough permits available after the release.
          */
         Outcome release(long amount);
     }
