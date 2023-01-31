@@ -29,7 +29,7 @@ import static org.apache.cassandra.distributed.shared.ClusterUtils.stopUnchecked
  *
  * The node is removed gracefully before assassinate, leaving gossip without an empty entry.
  */
-public class AssassinateGracefullNodeTest extends BaseAssassinatedCase
+public class AssassinateGracefulNodeTest extends BaseAssassinatedCase
 {
     @Override
     void consume(Cluster cluster, IInvokableInstance nodeToRemove)
