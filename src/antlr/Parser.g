@@ -1860,7 +1860,7 @@ mbean
     : STRING_LITERAL
     ;
 
-// Basically the same as cident, but we need to exlude existing CQL3 types
+// Basically the same as cident, but we need to exclude existing CQL3 types
 // (which for some reason are not reserved otherwise)
 non_type_ident returns [ColumnIdentifier id]
     : t=IDENT                    { if (reservedTypeNames.contains($t.text)) addRecognitionError("Invalid (reserved) user type name " + $t.text); $id = new ColumnIdentifier($t.text, false); }

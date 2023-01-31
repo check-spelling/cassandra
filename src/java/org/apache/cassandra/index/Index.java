@@ -326,7 +326,7 @@ public interface Index
      * incorporated into the index.
      *
      * This is called by SecondaryIndexManager in buildIndexBlocking, buildAllIndexesBlocking and rebuildIndexesBlocking
-     * where a return value of false causes the index to be exluded from the set of those which will process the
+     * where a return value of false causes the index to be excluded from the set of those which will process the
      * SSTable data.
      * @return if the index should be included in the set which processes SSTable data, false otherwise.
      */

@@ -583,7 +583,7 @@ public class RepairRunnable implements Runnable, ProgressEventNotifier, RepairNo
 
         /**
          * When in the force mode, removes dead nodes from common ranges (not contained within `allNeighbors`),
-         * and exludes ranges left without any participants
+         * and excludes ranges left without any participants
          * When not in the force mode, no-op.
          */
         public List<CommonRange> filterCommonRanges(String keyspace, String[] tableNames)
