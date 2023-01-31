@@ -2346,7 +2346,7 @@ Merged from 2.1:
 
 
 3.5
- * StaticTokenTreeBuilder should respect posibility of duplicate tokens (CASSANDRA-11525)
+ * StaticTokenTreeBuilder should respect possibility of duplicate tokens (CASSANDRA-11525)
  * Correctly fix potential assertion error during compaction (CASSANDRA-11353)
  * Avoid index segment stitching in RAM which lead to OOM on big SSTable files (CASSANDRA-11383)
  * Fix clustering and row filters for LIKE queries on clustering columns (CASSANDRA-11397)
@@ -5525,7 +5525,7 @@ Merged from 1.0:
    (CASSANDRA-4154)
  * fix read_repair_chance to really default to 0.1 in the cli (CASSANDRA-4114)
  * Adds caching and bloomFilterFpChange to CQL options (CASSANDRA-4042)
- * Adds posibility to autoconfigure size of the KeyCache (CASSANDRA-4087)
+ * Adds possibility to autoconfigure size of the KeyCache (CASSANDRA-4087)
  * fix KEYS index from skipping results (CASSANDRA-3996)
  * Remove sliced_buffer_size_in_kb dead option (CASSANDRA-4076)
  * make loadNewSStable preserve sstable version (CASSANDRA-4077)
