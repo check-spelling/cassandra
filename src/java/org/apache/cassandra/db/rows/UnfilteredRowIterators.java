@@ -216,7 +216,7 @@ public abstract class UnfilteredRowIterators
 
     /**
      * Filter the provided iterator to exclude cells that have been fetched but are not queried by the user
-     * (see ColumnFilter for detailes).
+     * (see ColumnFilter for details).
      *
      * @param iterator the iterator to filter.
      * @param filter the {@code ColumnFilter} to use when deciding which columns are the one queried by the
