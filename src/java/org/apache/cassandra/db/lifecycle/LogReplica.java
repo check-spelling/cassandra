@@ -42,7 +42,7 @@ import static org.apache.cassandra.config.CassandraRelevantProperties.IGNORE_MIS
  *
  * Each replica contains the exact same content but we do allow for final
  * partial records in case we crashed after writing to one replica but
- * before compliting the write to another replica.
+ * before completing the write to another replica.
  *
  * @see LogFile
  */
