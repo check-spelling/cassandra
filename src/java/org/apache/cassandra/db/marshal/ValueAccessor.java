@@ -45,7 +45,7 @@ import static org.apache.cassandra.db.ClusteringPrefix.Kind.*;
 /**
  * ValueAccessor allows serializers and other code dealing with raw bytes to operate on different backing types
  * (ie: byte arrays, byte buffers, etc) without requiring that the supported backing types share a common type
- * ancestor and without incuring the allocation cost of a wrapper object.
+ * ancestor and without incurring the allocation cost of a wrapper object.
  *
  * A note on byte buffers for implementors: the "value" of a byte buffer is always interpreted as beginning at
  * it's {@link ByteBuffer#position()} and having a length of {@link ByteBuffer#remaining()}. ValueAccessor
