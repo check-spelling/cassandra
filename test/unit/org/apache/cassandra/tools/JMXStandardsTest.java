@@ -61,7 +61,7 @@ public class JMXStandardsTest
     private static final Logger logger = LoggerFactory.getLogger(JMXStandardsTest.class);
 
     /**
-     * JMX typlically works well with java.* and javax.*, but not all types are serializable and will work, so this class
+     * JMX typically works well with java.* and javax.*, but not all types are serializable and will work, so this class
      * goes with a explicit approval list, new APIs may fail if a java.* or javax.* is used not in this allow list, if
      * that is the case it is fine to add here.
      * <p>
