@@ -383,7 +383,7 @@ public class CQLMessageHandler<M extends Message> extends AbstractMessageHandler
     /**
      * For "expected" errors this ensures we pass a WrappedException,
      * which contains a streamId, to the error handler. This makes
-     * sure that whereever possible, the streamId is propagated back
+     * sure that wherever possible, the streamId is propagated back
      * to the client.
      * This also releases the capacity acquired for processing as
      * indicated by supplied header.
@@ -397,7 +397,7 @@ public class CQLMessageHandler<M extends Message> extends AbstractMessageHandler
     /**
      * For "expected" errors this ensures we pass a WrappedException,
      * which contains a streamId, to the error handler. This makes
-     * sure that whereever possible, the streamId is propagated back
+     * sure that wherever possible, the streamId is propagated back
      * to the client.
      * This variant doesn't call release as it is intended for use
      * when an error occurs without any capacity being acquired.
@@ -412,7 +412,7 @@ public class CQLMessageHandler<M extends Message> extends AbstractMessageHandler
     /**
      * For "expected" errors this ensures we pass a WrappedException,
      * which contains a streamId, to the error handler. This makes
-     * sure that whereever possible, the streamId is propagated back
+     * sure that wherever possible, the streamId is propagated back
      * to the client.
      * This variant doesn't call release as it is intended for use
      * when an error occurs without any capacity being acquired.
