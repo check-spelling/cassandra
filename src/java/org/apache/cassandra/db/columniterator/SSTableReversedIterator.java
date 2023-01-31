@@ -201,7 +201,7 @@ public class SSTableReversedIterator extends AbstractSSTableIterator
             // one of the next) index block (if openMarker == openMarkerAtStartOfBlock).
             if (openMarker != null)
             {
-                // We have to feed a marker to the buffer, because that marker is likely to be close later and ImmtableBTreePartition
+                // We have to feed a marker to the buffer, because that marker is likely to be close later and ImmutableBTreePartition
                 // doesn't take kindly to marker that comes without their counterpart. If that's the last block we're gonna read (for
                 // the current slice at least) it's easy because we'll want to return that open marker at the end of the data in this
                 // block anyway, so we have nothing more to do than adding it to the buffer.
