@@ -340,7 +340,7 @@ public class Mutation implements IMutation, Supplier<Mutation>
     }
 
     /**
-     * Creates a new simple mutuation builder.
+     * Creates a new simple mutation builder.
      *
      * @param keyspaceName the name of the keyspace this is a mutation for.
      * @param partitionKey the key of partition this if a mutation for.
