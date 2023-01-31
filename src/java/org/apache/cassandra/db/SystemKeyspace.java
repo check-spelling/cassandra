@@ -1772,7 +1772,7 @@ public final class SystemKeyspace
         try (DataOutputBuffer out = new DataOutputBuffer())
         {
             // The format with which token ranges are serialized in the system tables is the pre-3.0 serialization
-            // formot for ranges, so we should maintain that for now. And while we don't really support pre-3.0
+            // format for ranges, so we should maintain that for now. And while we don't really support pre-3.0
             // messaging versions, we know AbstractBounds.Serializer still support it _exactly_ for this use case, so we
             // pass 0 as the version to trigger that legacy code.
             // In the future, it might be worth switching to a stable text format for the ranges to 1) save that and 2)
