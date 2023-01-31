@@ -38,7 +38,7 @@ import com.google.common.annotations.VisibleForTesting;
  * Besides splitting, this iterator will also ensure each chunk does not finish with an open tombstone marker,
  * by closing any opened tombstone markers and re-opening on the next chunk.
  *
- * The lifecycle of outputed {{@link UnfilteredRowIterator} only last till next call to {@link #next()}.
+ * The lifecycle of outputted {{@link UnfilteredRowIterator} only last till next call to {@link #next()}.
  *
  * A subsequent {@link #next} call will exhaust the previously returned iterator before computing the next,
  * effectively skipping unfiltereds up to the throttle size.
