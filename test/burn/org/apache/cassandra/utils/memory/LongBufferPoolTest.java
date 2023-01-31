@@ -297,7 +297,7 @@ public class LongBufferPoolTest
             {
                 try
                 {
-                    // Wait until allocations stop in all threads; this guanrantees this thread won't
+                    // Wait until allocations stop in all threads; this guarantees this thread won't
                     // receive any new buffers from other threads while freeing memory.
                     stopAllocationsBarrier.await();
                     // Free our memory
