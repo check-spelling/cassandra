@@ -72,7 +72,7 @@ public class StreamCompressionSerializerTest
     }
 
     @Test
-    public void roundTrip_HappyPath_NotReadabaleByteBuffer() throws IOException
+    public void roundTrip_HappyPath_NotReadableByteBuffer() throws IOException
     {
         populateInput();
         StreamCompressionSerializer.serialize(compressor, input, VERSION).write(size -> compressed = ByteBuffer.allocateDirect(size));
@@ -98,7 +98,7 @@ public class StreamCompressionSerializerTest
     }
 
     @Test
-    public void roundTrip_HappyPath_ReadabaleByteBuffer() throws IOException
+    public void roundTrip_HappyPath_ReadableByteBuffer() throws IOException
     {
         populateInput();
         StreamCompressionSerializer.serialize(compressor, input, VERSION)
