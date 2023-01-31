@@ -62,7 +62,7 @@ public interface RangeTombstoneMarker extends Unfiltered, IMeasurableMemory
      * The assumption that each individual input must validate and that we must preserve in the output is that every
      * open marker has a corresponding close marker with the exact same deletion info, and that there is no other range
      * tombstone marker between those open and close marker (of course, they could be rows in between). In other word,
-     * for any {@code UnfilteredRowIterator}, you only ever have to remenber the last open marker (if any) to have the
+     * for any {@code UnfilteredRowIterator}, you only ever have to remember the last open marker (if any) to have the
      * full picture of what is deleted by range tombstones at any given point of iterating that iterator.
      * <p>
      * Note that this class can merge both forward and reverse iterators. To deal with reverse, we just reverse how we

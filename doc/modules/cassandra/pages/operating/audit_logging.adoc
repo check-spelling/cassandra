@@ -94,7 +94,7 @@ nodetool enableauditlog
   log. If not set the value from cassandra.yaml will be used
 `--excluded-keyspaces`::
   Comma separated list of keyspaces to be excluded for audit log. If not
-  set the value from cassandra.yaml will be used. Please remeber that
+  set the value from cassandra.yaml will be used. Please remember that
   [.title-ref]#system#, [.title-ref]#system_schema# and
   [.title-ref]#system_virtual_schema# are excluded by default, if you
   are overwriting this option via nodetool, remember to add these
