@@ -1044,7 +1044,7 @@ public class PaxosPrepare extends PaxosRequestCallback<PaxosPrepare.Response> im
                     // then either we must have witnessed it (since it must have been committed), or the proposal
                     // will now be rejected by our promises.
 
-                    // This is logicaly complicated a bit by reading from a subset of the consensus group when there are
+                    // This is logically complicated a bit by reading from a subset of the consensus group when there are
                     // pending nodes, however electorate verification we will cause us to retry if the pending status changes
                     // during execution; otherwise if the most recent commit we witnessed wasn't witnessed by a read response
                     // we will abort and retry, and we must witness it by the above argument.

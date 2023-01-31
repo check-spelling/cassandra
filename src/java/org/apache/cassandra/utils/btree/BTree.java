@@ -3857,7 +3857,7 @@ public class BTree
          * 2) If we exhaust all of our ancestors, and are not now ourselves overflowing, drain and return
          * 3) Otherwise propagate the redistributed contents to our parent and return null, indicating we can continue to parent
          *
-         * @return {@code null} if {@code parent} is still logicallly in use after we execute;
+         * @return {@code null} if {@code parent} is still logically in use after we execute;
          * otherwise the return value is the final result
          */
         private Object[] stealAndMaybeRepropagate(LeafOrBranchBuilder fill, BranchBuilder parent)
