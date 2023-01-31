@@ -629,7 +629,7 @@ public class SinglePartitionReadCommand extends ReadCommand implements SinglePar
     {
         /*
          * We have 2 main strategies:
-         *   1) We query memtables and sstables simulateneously. This is our most generic strategy and the one we use
+         *   1) We query memtables and sstables simultaneously. This is our most generic strategy and the one we use
          *      unless we have a names filter that we know we can optimize further.
          *   2) If we have a name filter (so we query specific rows), we can make a bet: that all column for all queried row
          *      will have data in the most recent sstable(s), thus saving us from reading older ones. This does imply we

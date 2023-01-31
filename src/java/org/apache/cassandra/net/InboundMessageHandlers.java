@@ -38,7 +38,7 @@ import static org.apache.cassandra.utils.MonotonicClock.Global.approxTime;
  * An aggregation of {@link InboundMessageHandler}s for all connections from a peer.
  *
  * Manages metrics and shared resource limits. Can have multiple connections of a single
- * type open simultaneousely (legacy in particular).
+ * type open simultaneously (legacy in particular).
  */
 public final class InboundMessageHandlers
 {

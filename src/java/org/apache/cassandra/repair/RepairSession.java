@@ -97,7 +97,7 @@ import org.apache.cassandra.utils.concurrent.Future;
  * it will requests merkle tree creation from each replica in sequence (though in that case
  * we still first send a message to each node to flush and snapshot data so each merkle tree
  * creation is still done on similar data, even if the actual creation is not
- * done simulatneously). If not sequential, all merkle tree are requested in parallel.
+ * done simultaneously). If not sequential, all merkle tree are requested in parallel.
  * Similarly, if a job is sequential, it will handle one SymmetricSyncTask at a time, but will handle
  * all of them in parallel otherwise.
  */
