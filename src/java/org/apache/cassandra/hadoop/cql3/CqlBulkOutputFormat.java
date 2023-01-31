@@ -182,7 +182,7 @@ public class CqlBulkOutputFormat extends OutputFormat<Object, List<ByteBuffer>>
     /**
      * Get the hosts to ignore as a collection of strings
      * @param conf job configuration
-     * @return the nodes to ignore as a collection of stirngs
+     * @return the nodes to ignore as a collection of strings
      */
     public static Collection<String> getIgnoreHosts(Configuration conf)
     {
