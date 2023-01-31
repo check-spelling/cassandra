@@ -119,7 +119,7 @@ public final class UserFunctions implements Iterable<UserFunction>
 
     /**
      * @return a stream of aggregates that use the provided function as either a state or a final function
-     * @param function the referree function
+     * @param function the referee function
      */
     public Stream<UDAggregate> aggregatesUsingFunction(Function function)
     {
