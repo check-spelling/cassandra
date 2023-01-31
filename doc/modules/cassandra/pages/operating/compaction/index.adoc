@@ -233,7 +233,7 @@ run compactions independently from the others.
 * Users can backup and restore a single data directory.
 * Note though that currently all data directories are considered equal,
 so if you have a tiny disk and a big disk backing two data directories,
-the big one will be limited the by the small one. One work around to
+the big one will be limited the by the small one. One workaround to
 this is to create more data directories backed by the big disk.
 
 == Single sstable tombstone compaction
