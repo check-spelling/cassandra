@@ -113,7 +113,7 @@ public final class Properties
     }
 
     /**
-     * @return true if proeprty type is a collection
+     * @return true if property type is a collection
      */
     public static boolean isCollection(Property prop)
     {

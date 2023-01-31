@@ -1303,7 +1303,7 @@ Merged from 3.0:
  * Fast and garbage-free Streaming Histogram (CASSANDRA-13444)
  * Update repairTime for keyspaces on completion (CASSANDRA-13539)
  * Add configurable upper bound for validation executor threads (CASSANDRA-13521)
- * Bring back maxHintTTL propery (CASSANDRA-12982)
+ * Bring back maxHintTTL property (CASSANDRA-12982)
  * Add testing guidelines (CASSANDRA-13497)
  * Add more repair metrics (CASSANDRA-13531)
  * RangeStreamer should be smarter when picking endpoints for streaming (CASSANDRA-4650)
