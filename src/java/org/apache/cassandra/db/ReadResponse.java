@@ -168,7 +168,7 @@ public abstract class ReadResponse
             // We assume that the digest is in the proper version, which bug excluded should be true since this is called with
             // ReadCommand.digestVersion() as argument and that's also what we use to produce the digest in the first place.
             // Validating it's the proper digest in this method would require sending back the digest version along with the
-            // digest which would waste bandwith for little gain.
+            // digest which would waste bandwidth for little gain.
             return digest;
         }
 
