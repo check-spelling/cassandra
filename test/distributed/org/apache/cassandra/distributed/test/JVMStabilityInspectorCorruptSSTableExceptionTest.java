@@ -82,7 +82,7 @@ public class JVMStabilityInspectorCorruptSSTableExceptionTest extends TestBaseIm
                 return new boolean[]{ StorageService.instance.isNativeTransportRunning(), Gossiper.instance.isEnabled() };
             });
 
-            // make sure environment is setup propertly
+            // make sure environment is setup properly
             Assert.assertTrue("Native support is not running, test is not ready!", setup[0]);
             Assert.assertTrue("Gossiper is not running, test is not ready!", setup[1]);
 
