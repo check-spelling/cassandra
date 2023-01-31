@@ -482,7 +482,7 @@ With this option, the same database roles used for CQL authentication
 can be used to control access to JMX, so updates can be managed
 centrally using just `cqlsh`. Furthermore, fine grained control over
 exactly which operations are permitted on particular MBeans can be
-acheived via xref:cql/security.adoc#grant-permission[`GRANT PERMISSION`].
+achieved via xref:cql/security.adoc#grant-permission[`GRANT PERMISSION`].
 
 To enable integrated authentication, edit `cassandra-env.sh` to
 uncomment these lines:
