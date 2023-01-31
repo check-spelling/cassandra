@@ -282,7 +282,7 @@ public final class AggregationQueryPager implements QueryPager
         }
 
         /**
-         * Fetchs the next sub-page.
+         * Fetches the next sub-page.
          *
          * @param subPageSize the sub-page size in number of groups
          * @return the next sub-page
