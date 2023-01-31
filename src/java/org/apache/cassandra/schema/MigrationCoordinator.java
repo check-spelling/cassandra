@@ -335,7 +335,7 @@ public class MigrationCoordinator
         UUID localSchemaVersion = schemaVersion.get();
         if (localSchemaVersion == null)
         {
-            logger.debug("Not pulling schema {} because the local schama version is not known yet", version);
+            logger.debug("Not pulling schema {} because the local schema version is not known yet", version);
             return false;
         }
 

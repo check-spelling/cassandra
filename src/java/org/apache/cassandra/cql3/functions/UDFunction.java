@@ -276,7 +276,7 @@ public abstract class UDFunction extends UserFunction implements ScalarFunction
     }
 
     /**
-     * It can happen that a function has been declared (is listed in the scheam) but cannot
+     * It can happen that a function has been declared (is listed in the schema) but cannot
      * be loaded (maybe only on some nodes). This is the case for instance if the class defining
      * the class is not on the classpath for some of the node, or after a restart. In that case,
      * we create a "fake" function so that:
