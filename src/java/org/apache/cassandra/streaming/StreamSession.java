@@ -135,7 +135,7 @@ import static org.apache.cassandra.utils.FBUtilities.getBroadcastAddressAndPort;
  *
  * </pre>
  *
- * In brief, the message passing looks like this (I for initiator, F for follwer):
+ * In brief, the message passing looks like this (I for initiator, F for follower):
  * <pre>
  * (session init)
  * I: StreamInitMessage
