@@ -181,7 +181,7 @@ public class StorageService extends NotificationBroadcasterSupport implements IE
     private static final Logger logger = LoggerFactory.getLogger(StorageService.class);
 
     public static final int INDEFINITE = -1;
-    public static final int RING_DELAY_MILLIS = getRingDelay(); // delay after which we assume ring has stablized
+    public static final int RING_DELAY_MILLIS = getRingDelay(); // delay after which we assume ring has stabilized
     public static final int SCHEMA_DELAY_MILLIS = getSchemaDelay();
 
     private static final boolean REQUIRE_SCHEMAS = !BOOTSTRAP_SKIP_SCHEMA_CHECK.getBoolean();
