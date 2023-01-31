@@ -267,7 +267,7 @@ Table of Contents
 
   The body is a [string map] of options. Possible options are:
     - "CQL_VERSION": the version of CQL to use. This option is mandatory and
-      currenty, the only version supported is "3.0.0". Note that this is
+      currently, the only version supported is "3.0.0". Note that this is
       different from the protocol version.
     - "COMPRESSION": the compression algorithm to use for frames (See section 5).
       This is optional, if not specified no compression will be used.
