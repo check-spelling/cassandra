@@ -71,14 +71,14 @@ import org.apache.cassandra.utils.TimeUUID;
  *  <p/>
  *  (see {@link LocalSessions#handlePrepareMessage(InetAddressAndPort, PrepareConsistentRequest)}
  *  <p/>
- *  Once the coordinator recieves positive {@code PrepareConsistentResponse} messages from all the participants, the
+ *  Once the coordinator receives positive {@code PrepareConsistentResponse} messages from all the participants, the
  *  coordinator begins the normal repair process.
  *  <p/>
  *  (see {@link CoordinatorSession#handlePrepareResponse(InetAddressAndPort, boolean)}
  *
  * <h1>Repair</h1>
  *  The coordinator runs the normal data repair process against the sstables segregated in the previous step. When a
- *  node recieves a {@link ValidationRequest}, it sets it's local session state to {@code REPAIRING}.
+ *  node receives a {@link ValidationRequest}, it sets it's local session state to {@code REPAIRING}.
  *  <p/>
  *
  *  If all of the RepairSessions complete successfully, the coordinator begins the {@code Finalization} process. Otherwise,
