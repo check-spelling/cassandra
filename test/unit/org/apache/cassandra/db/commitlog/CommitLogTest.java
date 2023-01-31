@@ -475,7 +475,7 @@ public abstract class CommitLogTest
         int max = DatabaseDescriptor.getMaxMutationSize();
         max -= ENTRY_OVERHEAD_SIZE; // log entry overhead
 
-        // Note that the size of the value if vint encoded. So we first compute the ovehead of the mutation without the value and it's size
+        // Note that the size of the value if vint encoded. So we first compute the overhead of the mutation without the value and it's size
         int mutationOverhead = rm.serializedSize(MessagingService.current_version) - (VIntCoding.computeVIntSize(allocSize) + allocSize);
         max -= mutationOverhead;
 
