@@ -180,7 +180,7 @@ public class CassandraStreamReceiver implements StreamReceiver
     /*
      * We have a special path for views and for CDC.
      *
-     * For views, since the view requires cleaning up any pre-existing state, we must put all partitions
+     * For views, since the view requires cleaning up any preexisting state, we must put all partitions
      * through the same write path as normal mutations. This also ensures any 2is are also updated.
      *
      * For CDC-enabled tables and write path for CDC is enabled, we want to ensure that the mutations are

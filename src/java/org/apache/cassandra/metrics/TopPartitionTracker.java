@@ -253,7 +253,7 @@ public class TopPartitionTracker implements Closeable
         }
 
         /**
-         * we merge any pre-existing top partitions on to the ones we just collected if they are outside of the
+         * we merge any preexisting top partitions on to the ones we just collected if they are outside of the
          * range collected.
          *
          * This means that if a large partition is deleted it will disappear from the top partitions

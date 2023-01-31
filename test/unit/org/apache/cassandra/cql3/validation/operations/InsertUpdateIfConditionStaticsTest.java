@@ -308,7 +308,7 @@ public class InsertUpdateIfConditionStaticsTest extends CQLTester
 
         assertInvalidMessage("Invalid 'unset' value in condition", "UPDATE %s SET s = 6 WHERE a = 6 IF s = ?", unset());
 
-        // pre-existing row
+        // preexisting row
         execute("INSERT INTO %s (a, b, s, d) values (6, 6, 100, 'a')");
         assertRows(execute("UPDATE %s SET s = 6 WHERE a = 6 IF s = 100"),
                    row(true));
@@ -321,7 +321,7 @@ public class InsertUpdateIfConditionStaticsTest extends CQLTester
         assertRows(execute("SELECT * FROM %s WHERE a = 7"),
                    row(7, 7, 100, "a"));
 
-        // pre-existing row with null in the static column
+        // preexisting row with null in the static column
         execute("INSERT INTO %s (a, b, d) values (7, 7, 'a')");
         assertRows(execute("UPDATE %s SET s = 7 WHERE a = 7 IF s = NULL"),
                    row(false, 100));

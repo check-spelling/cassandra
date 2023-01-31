@@ -140,7 +140,7 @@ public final class Keyspaces implements Iterable<KeyspaceMetadata>
      * Returns a new {@link Keyspaces} equivalent to this one, but with the provided keyspace metadata either added (if
      * this {@link Keyspaces} does not have that keyspace), or replaced by the provided definition.
      *
-     * <p>Note that if this contains the provided keyspace, its pre-existing definition is discarded and completely
+     * <p>Note that if this contains the provided keyspace, its preexisting definition is discarded and completely
      * replaced with the newly provided one. See {@link #withAddedOrUpdated(KeyspaceMetadata)} if you wish the provided
      * definition to be "merged" with the existing one instead.
      *

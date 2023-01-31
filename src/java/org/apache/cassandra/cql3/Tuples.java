@@ -213,7 +213,7 @@ public class Tuples
             for (int i = 0; i < elements.size(); i++)
             {
                 buffers[i] = elements.get(i).bindAndGet(options);
-                // Since A tuple value is always written in its entirety Cassandra can't preserve a pre-existing value by 'not setting' the new value. Reject the query.
+                // Since A tuple value is always written in its entirety Cassandra can't preserve a preexisting value by 'not setting' the new value. Reject the query.
                 if (buffers[i] == ByteBufferUtil.UNSET_BYTE_BUFFER)
                     throw new InvalidRequestException(String.format("Invalid unset value for tuple field number %d", i));
             }

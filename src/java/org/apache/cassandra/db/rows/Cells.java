@@ -167,7 +167,7 @@ public abstract class Cells
      * <p>
      * For simple cells that is either the original cell (if still live), or nothing (if shadowed).
      *
-     * @param existing the pre-existing cell, the one that is updated.
+     * @param existing the preexisting cell, the one that is updated.
      * @param update the newly added cell, the update. This can be {@code null} out
      * of convenience, in which case this function simply copy {@code existing} to
      * {@code writer}.
@@ -195,7 +195,7 @@ public abstract class Cells
      * For simple cells that is either the original cell (if still live), or nothing (if shadowed).
      *
      * @param column the complex column the cells are for.
-     * @param existing the pre-existing cells, the ones that are updated.
+     * @param existing the preexisting cells, the ones that are updated.
      * @param update the newly added cells, the update. This can be {@code null} out
      * of convenience, in which case this function simply copy the cells from
      * {@code existing} to {@code writer}.

@@ -126,7 +126,7 @@ public class View
     {
         // We can guarantee that the view won't be affected if:
         //  - the clustering is excluded by the view filter (note that this isn't true of the filter on regular columns:
-        //    even if an update don't match a view condition on a regular column, that update can still invalidate an pre-existing
+        //    even if an update don't match a view condition on a regular column, that update can still invalidate an preexisting
         //    entry).
         //  - or the update don't modify any of the columns impacting the view (where "impacting" the view means that column is
         //    neither included in the view, nor used by the view filter).

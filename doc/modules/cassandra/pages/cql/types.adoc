@@ -343,14 +343,14 @@ operation is not safe and it may (or may not) lead to
 appending/prepending the value twice.
 ====
 
-* Setting the value at a particular position in a list that has a pre-existing element for that position. An error
+* Setting the value at a particular position in a list that has a preexisting element for that position. An error
 will be thrown if the list does not have the position:
 +
 [source,cql]
 ----
 include::example$CQL/update_particular_list_element.cql[]
 ----
-* Removing an element by its position in the list that has a pre-existing element for that position. An error
+* Removing an element by its position in the list that has a preexisting element for that position. An error
 will be thrown if the list does not have the position. Further, as the operation removes an
 element from the list, the list size will decrease by one element, shifting
 the position of all the following elements one forward:

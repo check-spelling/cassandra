@@ -793,7 +793,7 @@ public class InMemoryTrie<T> extends InMemoryReadTrie<T>
     /**
      * Somewhat similar to {@link MergeResolver}, this encapsulates logic to be applied whenever new content is being
      * upserted into a {@link InMemoryTrie}. Unlike {@link MergeResolver}, {@link UpsertTransformer} will be applied no
-     * matter if there's pre-existing content for that trie key/path or not.
+     * matter if there's preexisting content for that trie key/path or not.
      *
      * @param <T> The content type for this {@link InMemoryTrie}.
      * @param <U> The type of the new content being applied to this {@link InMemoryTrie}.
@@ -812,11 +812,11 @@ public class InMemoryTrie<T> extends InMemoryReadTrie<T>
 
     /**
      * Modify this trie to apply the mutation given in the form of a trie. Any content in the mutation will be resolved
-     * with the given function before being placed in this trie (even if there's no pre-existing content in this trie).
+     * with the given function before being placed in this trie (even if there's no preexisting content in this trie).
      * @param mutation the mutation to be applied, given in the form of a trie. Note that its content can be of type
      * different than the element type for this memtable trie.
-     * @param transformer a function applied to the potentially pre-existing value for the given key, and the new
-     * value. Applied even if there's no pre-existing value in the memtable trie.
+     * @param transformer a function applied to the potentially preexisting value for the given key, and the new
+     * value. Applied even if there's no preexisting value in the memtable trie.
      */
     public <U> void apply(Trie<U> mutation, final UpsertTransformer<T, U> transformer) throws SpaceExhaustedException
     {
@@ -849,14 +849,14 @@ public class InMemoryTrie<T> extends InMemoryReadTrie<T>
     /**
      * Map-like put method, using the apply machinery above which cannot run into stack overflow. When the correct
      * position in the trie has been reached, the value will be resolved with the given function before being placed in
-     * the trie (even if there's no pre-existing content in this trie).
+     * the trie (even if there's no preexisting content in this trie).
      * @param key the trie path/key for the given value.
      * @param value the value being put in the memtable trie. Note that it can be of type different than the element
      * type for this memtable trie. It's up to the {@code transformer} to return the final value that will stay in
      * the memtable trie.
-     * @param transformer a function applied to the potentially pre-existing value for the given key, and the new
+     * @param transformer a function applied to the potentially preexisting value for the given key, and the new
      * value (of a potentially different type), returning the final value that will stay in the memtable trie. Applied
-     * even if there's no pre-existing value in the memtable trie.
+     * even if there's no preexisting value in the memtable trie.
      */
     public <R> void putSingleton(ByteComparable key,
                                  R value,
@@ -882,14 +882,14 @@ public class InMemoryTrie<T> extends InMemoryReadTrie<T>
     /**
      * Map-like put method, using a fast recursive implementation through the key bytes. May run into stack overflow if
      * the trie becomes too deep. When the correct position in the trie has been reached, the value will be resolved
-     * with the given function before being placed in the trie (even if there's no pre-existing content in this trie).
+     * with the given function before being placed in the trie (even if there's no preexisting content in this trie).
      * @param key the trie path/key for the given value.
      * @param value the value being put in the memtable trie. Note that it can be of type different than the element
      * type for this memtable trie. It's up to the {@code transformer} to return the final value that will stay in
      * the memtable trie.
-     * @param transformer a function applied to the potentially pre-existing value for the given key, and the new
+     * @param transformer a function applied to the potentially preexisting value for the given key, and the new
      * value (of a potentially different type), returning the final value that will stay in the memtable trie. Applied
-     * even if there's no pre-existing value in the memtable trie.
+     * even if there's no preexisting value in the memtable trie.
      */
     public <R> void putRecursive(ByteComparable key, R value, final UpsertTransformer<T, R> transformer) throws SpaceExhaustedException
     {

@@ -104,7 +104,7 @@ public class ViewBuilderTask extends CompactionInfo.Holder implements Callable<L
         SinglePartitionReadCommand command = view.getSelectStatement().internalReadForView(key, nowInSec);
 
         // We're rebuilding everything from what's on disk, so we read everything, consider that as new updates
-        // and pretend that there is nothing pre-existing.
+        // and pretend that there is nothing preexisting.
         UnfilteredRowIterator empty = UnfilteredRowIterators.noRowsIterator(baseCfs.metadata(), key, Rows.EMPTY_STATIC_ROW, DeletionTime.LIVE, false);
 
         try (ReadExecutionController orderGroup = command.executionController();

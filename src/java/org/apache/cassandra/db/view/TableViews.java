@@ -249,7 +249,7 @@ public class TableViews extends AbstractCollection<View>
             }
             else
             {
-                // We're updating a row that had pre-existing data
+                // We're updating a row that had preexisting data
                 if (update.isRangeTombstoneMarker())
                 {
                     assert existing.isRangeTombstoneMarker();
@@ -301,7 +301,7 @@ public class TableViews extends AbstractCollection<View>
                     while (updatesIter.hasNext())
                     {
                         Unfiltered update = updatesIter.next();
-                        // If it's a range tombstone, it removes nothing pre-existing, so we can ignore it for view updates
+                        // If it's a range tombstone, it removes nothing preexisting, so we can ignore it for view updates
                         if (update.isRangeTombstoneMarker())
                             continue;
 
@@ -342,7 +342,7 @@ public class TableViews extends AbstractCollection<View>
             while (updatesIter.hasNext())
             {
                 Unfiltered update = updatesIter.next();
-                // If it's a range tombstone, it removes nothing pre-existing, so we can ignore it for view updates
+                // If it's a range tombstone, it removes nothing preexisting, so we can ignore it for view updates
                 if (update.isRangeTombstoneMarker())
                     continue;
 
@@ -499,7 +499,7 @@ public class TableViews extends AbstractCollection<View>
 
     private static Row emptyRow(Clustering<?> clustering, DeletionTime deletion)
     {
-        // Returning null for an empty row is slightly ugly, but the case where there is no pre-existing row is fairly common
+        // Returning null for an empty row is slightly ugly, but the case where there is no preexisting row is fairly common
         // (especially when building the view), so we want to avoid a dummy allocation of an empty row every time.
         // And MultiViewUpdateBuilder knows how to deal with that.
         return deletion.isLive() ? null : BTreeRow.emptyDeletedRow(clustering, Row.Deletion.regular(deletion));

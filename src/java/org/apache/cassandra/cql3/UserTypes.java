@@ -285,7 +285,7 @@ public abstract class UserTypes
             for (int i = 0; i < type.size(); i++)
             {
                 buffers[i] = values.get(i).bindAndGet(options);
-                // Since a frozen UDT value is always written in its entirety Cassandra can't preserve a pre-existing
+                // Since a frozen UDT value is always written in its entirety Cassandra can't preserve a preexisting
                 // value by 'not setting' the new value. Reject the query.
                 if (!type.isMultiCell() && buffers[i] == ByteBufferUtil.UNSET_BYTE_BUFFER)
                     throw new InvalidRequestException(String.format("Invalid unset value for field '%s' of user defined type %s", type.fieldNameAsString(i), type.getNameAsString()));

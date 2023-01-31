@@ -93,7 +93,7 @@ public interface Row extends Unfiltered, Iterable<ColumnData>, IMeasurableMemory
      * Note in particular that a row may have live cells but no PK liveness info, because the
      * primary key liveness informations are only set on {@code INSERT} (which makes sense
      * in itself, see #6782) but live cells can be added through {@code UPDATE} even if the row
-     * wasn't pre-existing (which users are encouraged not to do, but we can't validate).
+     * wasn't preexisting (which users are encouraged not to do, but we can't validate).
      */
     public LivenessInfo primaryKeyLivenessInfo();
 
@@ -631,11 +631,11 @@ public interface Row extends Unfiltered, Iterable<ColumnData>, IMeasurableMemory
          * Appends new values to a given non-frozen collection column.
          * <p>
          * This method is similar to {@code add()} but the collection elements added through this method are "appended"
-         * to any pre-existing elements. In other words, this is like {@code add()} except that it doesn't delete the
+         * to any preexisting elements. In other words, this is like {@code add()} except that it doesn't delete the
          * previous value of the collection. This can only be called on non-frozen collection columns.
          * <p>
          * Note that this method can be used in replacement of {@code add()} if you know that there can't be any
-         * pre-existing value for that column, in which case this is slightly less expensive as it avoid the collection
+         * preexisting value for that column, in which case this is slightly less expensive as it avoid the collection
          * tombstone inherent to {@code add()}.
          *
          * @param columnName the name of the column for which to add a new value, which must be a non-frozen collection.

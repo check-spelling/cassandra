@@ -290,7 +290,7 @@ public class Operation extends RangeIterator<Long, Token>
 
             // EQ/LIKE_*/NOT_EQ can have multiple expressions e.g. text = "Hello World",
             // becomes text = "Hello" OR text = "World" because "space" is always interpreted as a split point (by analyzer),
-            // NOT_EQ is made an independent expression only in case of pre-existing multiple EQ expressions, or
+            // NOT_EQ is made an independent expression only in case of preexisting multiple EQ expressions, or
             // if there is no EQ operations and NOT_EQ is met or a single NOT_EQ expression present,
             // in such case we know exactly that there would be no more EQ/RANGE expressions for given column
             // since NOT_EQ has the lowest priority.
