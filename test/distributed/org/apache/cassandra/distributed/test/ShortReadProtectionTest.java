@@ -64,7 +64,7 @@ public class ShortReadProtectionTest extends TestBaseImpl
 
     /**
      * The consistency level to be used in reads. Internal writes will hit the minimum number of replicas to match this
-     * consisstency level. With RF=3, this means one witten replica for CL=ALL, and two for CL=QUORUM.
+     * consistency level. With RF=3, this means one witten replica for CL=ALL, and two for CL=QUORUM.
      */
     @Parameterized.Parameter
     public ConsistencyLevel readConsistencyLevel;

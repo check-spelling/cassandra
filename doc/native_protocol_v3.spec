@@ -332,7 +332,7 @@ Table of Contents
               started (See Section 8 for more details).
         0x10: With serial consistency. If present, <serial_consistency> should be
               present. <serial_consistency> is the [consistency] level for the
-              serial phase of conditional updates. That consitency can only be
+              serial phase of conditional updates. That consistency can only be
               either SERIAL or LOCAL_SERIAL and if not present, it defaults to
               SERIAL. This option will be ignored for anything else that a
               conditional update/insert.
@@ -400,7 +400,7 @@ Table of Contents
       flags are, given there mask:
         0x10: With serial consistency. If present, <serial_consistency> should be
               present. <serial_consistency> is the [consistency] level for the
-              serial phase of conditional updates. That consitency can only be
+              serial phase of conditional updates. That consistency can only be
               either SERIAL or LOCAL_SERIAL and if not present, it defaults to
               SERIAL. This option will be ignored for anything else that a
               conditional update/insert.
@@ -435,7 +435,7 @@ Table of Contents
     - <consistency> is the [consistency] level for the operation.
     - <serial_consistency> is only present if the 0x10 flag is set. In that case,
       <serial_consistency> is the [consistency] level for the serial phase of
-      conditional updates. That consitency can only be either SERIAL or
+      conditional updates. That consistency can only be either SERIAL or
       LOCAL_SERIAL and if not present will defaults to SERIAL. This option will
       be ignored for anything else that a conditional update/insert.
 

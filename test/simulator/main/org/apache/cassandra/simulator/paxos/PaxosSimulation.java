@@ -71,9 +71,9 @@ public abstract class PaxosSimulation implements Simulation, ClusterActionListen
         int start;
 
         public Operation(int primaryKey, int id, IInvokableInstance instance,
-                         String idString, String query, ConsistencyLevel commitConsistency, ConsistencyLevel serialConistency, Object... params)
+                         String idString, String query, ConsistencyLevel commitConsistency, ConsistencyLevel serialConsistency, Object... params)
         {
-            super(primaryKey + "/" + id + ": " + idString, DISPLAY_ORIGIN, NONE, PaxosSimulation.this.simulated, instance, query, commitConsistency, serialConistency, params);
+            super(primaryKey + "/" + id + ": " + idString, DISPLAY_ORIGIN, NONE, PaxosSimulation.this.simulated, instance, query, commitConsistency, serialConsistency, params);
             this.primaryKey = primaryKey;
             this.id = id;
         }
