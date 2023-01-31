@@ -422,7 +422,7 @@ public class BinLogTest
 
     /**
      * Test for a bug where files were deleted but the space was not reclaimed when tracking so
-     * all log segemnts were incorrectly deleted when rolled.
+     * all log segments were incorrectly deleted when rolled.
      *
      * Due to some internal state in ChronicleQueue this test is occasionally
      * flaky when run in the suite with testPut or testOffer.
