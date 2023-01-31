@@ -269,7 +269,7 @@ public class CQL3CasRequest implements CASRequest
     /**
      * Due to some operation on lists, we can't generate the update that a given Modification statement does before
      * we get the values read by the initial read of Paxos. A RowUpdate thus just store the relevant information
-     * (include the statement iself) to generate those updates. We'll have multiple RowUpdate for a Batch, otherwise
+     * (include the statement itself) to generate those updates. We'll have multiple RowUpdate for a Batch, otherwise
      * we'll have only one.
      */
     private class RowUpdate
