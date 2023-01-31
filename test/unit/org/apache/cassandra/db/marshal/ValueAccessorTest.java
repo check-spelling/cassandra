@@ -254,7 +254,7 @@ public class ValueAccessorTest extends ValueAccessorTester
         }
 
         /**
-         * Returns the silce as a byte array.
+         * Returns the slice as a byte array.
          */
         public byte[] toArray()
         {
