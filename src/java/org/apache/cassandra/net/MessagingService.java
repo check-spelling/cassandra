@@ -92,7 +92,7 @@ import static org.apache.cassandra.utils.Throwables.maybeFail;
  *
  * Since our messaging protocol is TCP-based, and also doesn't yet support interleaving messages with each other,
  * we need a way to prevent head-of-line blocking adversely affecting all messages - in particular, large messages
- * being in the way of smaller ones. To achive that (somewhat), we maintain three messaging connections to and
+ * being in the way of smaller ones. To achieve that (somewhat), we maintain three messaging connections to and
  * from each peer:
  * - one for large messages - defined as being larger than {@link OutboundConnections#LARGE_MESSAGE_THRESHOLD}
  *   (65KiB by default)
