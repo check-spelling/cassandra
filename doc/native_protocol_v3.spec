@@ -228,7 +228,7 @@ Table of Contents
                    representing the port.
     [consistency]  A consistency level specification. This is a [short]
                    representing a consistency level with the following
-                   correspondance:
+                   correspondence:
                      0x0000    ANY
                      0x0001    ONE
                      0x0002    TWO

@@ -155,7 +155,7 @@ public class CQLSSTableWriter implements Closeable
      * Adds a new row to the writer.
      * <p>
      * Each provided value type should correspond to the types of the CQL column
-     * the value is for. The correspondance between java type and CQL type is the
+     * the value is for. The correspondence between java type and CQL type is the
      * same one than the one documented at
      * www.datastax.com/drivers/java/2.0/apidocs/com/datastax/driver/core/DataType.Name.html#asJavaClass().
      * <p>
