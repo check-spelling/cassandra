@@ -215,7 +215,7 @@ public class Range<T extends RingPosition<T>> extends AbstractBounds<T> implemen
         Set<Range<T>> intersection = new HashSet<Range<T>>(2);
         if (other.contains(wrapping.right))
             intersection.add(new Range<T>(other.left, wrapping.right));
-        // need the extra compareto here because ranges are asymmetrical; wrapping.left _is not_ contained by the wrapping range
+        // need the extra compareTo here because ranges are asymmetrical; wrapping.left _is not_ contained by the wrapping range
         if (other.contains(wrapping.left) && wrapping.left.compareTo(other.right) < 0)
             intersection.add(new Range<T>(wrapping.left, other.right));
         return Collections.unmodifiableSet(intersection);
