@@ -126,7 +126,7 @@ public abstract class FileBasedSslContextFactory extends AbstractSslContextFacto
 
     /**
      * Builds required KeyManagerFactory from the file based keystore. It also checks for the PrivateKey's certificate's
-     * expiry and logs {@code warning} for each expired PrivateKey's certitificate.
+     * expiry and logs {@code warning} for each expired PrivateKey's certificate.
      *
      * @return KeyManagerFactory built from the file based keystore.
      * @throws SSLException if any issues encountered during the build process

@@ -218,7 +218,7 @@ public final class PEMBasedSslContextFactory extends FileBasedSslContextFactory
 
     /**
      * Builds required KeyManagerFactory from the PEM based keystore. It also checks for the PrivateKey's certificate's
-     * expiry and logs {@code warning} for each expired PrivateKey's certitificate.
+     * expiry and logs {@code warning} for each expired PrivateKey's certificate.
      *
      * @return KeyManagerFactory built from the PEM based keystore.
      * @throws SSLException if any issues encountered during the build process

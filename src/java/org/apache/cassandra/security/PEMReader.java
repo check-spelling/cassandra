@@ -167,7 +167,7 @@ public final class PEMReader
      * Extracts the certificates/cert-chain from the PEM content.
      *
      * @param pemCerts certificates/cert-chain stored as PEM content
-     * @return X509 certiificate list
+     * @return X509 certificate list
      * @throws GeneralSecurityException in case any issue encountered while reading the certificates
      */
     public static Certificate[] extractCertificates(String pemCerts) throws GeneralSecurityException
