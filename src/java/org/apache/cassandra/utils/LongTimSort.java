@@ -118,7 +118,7 @@ public final class LongTimSort {
     private final int[] runBase;
     private final int[] runLen;
     /**
-     * Asserts have been placed in if-statements for performace. To enable them,
+     * Asserts have been placed in if-statements for performance. To enable them,
      * set this field to true and enable them in VM with a command line flag.
      * If you modify this class, please do test the asserts!
      */

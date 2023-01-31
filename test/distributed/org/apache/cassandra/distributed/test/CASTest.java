@@ -766,7 +766,7 @@ public class CASTest extends CASCommonTestCases
      * <p>This specifically test for the inconsistency described/fixed by CASSANDRA-17999.
      */
     @Test
-    public void testWriteTimeoutExceptionUsingPaxosInLwtPerformaceTest() throws IOException
+    public void testWriteTimeoutExceptionUsingPaxosInLwtPerformanceTest() throws IOException
     {
 
         THREE_NODES.schemaChange(String.format("CREATE KEYSPACE IF NOT EXISTS %s WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '3'}", KEYSPACE));
