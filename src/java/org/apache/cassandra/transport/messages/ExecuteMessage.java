@@ -228,7 +228,7 @@ public class ExecuteMessage extends Message.Request
             if (boundValue.length() > 1000)
                 boundValue = boundValue.substring(0, 1000) + "...'";
 
-            //Here we prefix boundName with the index to avoid possible collission in builder keys due to
+            //Here we prefix boundName with the index to avoid possible collision in builder keys due to
             //having multiple boundValues for the same variable
             builder.put("bound_var_" + i + '_' + boundName, boundValue);
         }
