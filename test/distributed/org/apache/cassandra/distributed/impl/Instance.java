@@ -396,7 +396,7 @@ public class Instance extends IsolatedExecutor implements IInvokableInstance
         {
             // On a 4.0+ node, C* makes a distinction between "local" and "remote" batches, where only the former can 
             // be serialized and sent to a remote node, where they are deserialized and written to the batch commitlog
-            // without first being converted into mutation objects. Batch serialization is therfore not symmetric, and
+            // without first being converted into mutation objects. Batch serialization is therefore not symmetric, and
             // we use a special procedure here that "re-serializes" a "remote" batch to build the message.
             if (fromVersion >= MessagingService.VERSION_40 && messageOut.verb().id == BATCH_STORE_REQ.id)
             {
