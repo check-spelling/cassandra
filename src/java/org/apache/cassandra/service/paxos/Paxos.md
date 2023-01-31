@@ -329,7 +329,7 @@ that all quorums intersect). When the node set is fixed this is achieved by requ
 half the replicas for the given partition.
 
 Range movements (i.e. joining or leaving nodes), however, can change the set of replicas that are responsible for a
-partition. In the exteme case, after multiple range movements it is possible to have a completely different set of
+partition. In the extreme case, after multiple range movements it is possible to have a completely different set of
 replicas responsible for the partition (i.e. no quorum can exist that contains a replica for all earlier transactions).
 To deal with this problem, we must ensure that:
 
