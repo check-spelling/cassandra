@@ -363,12 +363,12 @@ public class PaxosUncommittedTracker
         return tableStates.keySet();
     }
 
-    public static UpdateSupplier unsafGetUpdateSupplier()
+    public static UpdateSupplier unsafeGetUpdateSupplier()
     {
         return updateSupplier;
     }
 
-    public static void unsafSetUpdateSupplier(UpdateSupplier updateSupplier)
+    public static void unsafeSetUpdateSupplier(UpdateSupplier updateSupplier)
     {
         Preconditions.checkArgument(updateSupplier != null);
         PaxosUncommittedTracker.updateSupplier = updateSupplier;

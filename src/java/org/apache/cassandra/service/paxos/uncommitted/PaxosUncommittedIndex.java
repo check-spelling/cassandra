@@ -83,7 +83,7 @@ public class PaxosUncommittedIndex implements Index, PaxosUncommittedTracker.Upd
         this.metadata = metadata;
 
         this.memtableColumnFilter = ColumnFilter.all(baseTable.metadata.get());
-        PaxosUncommittedTracker.unsafSetUpdateSupplier(this);
+        PaxosUncommittedTracker.unsafeSetUpdateSupplier(this);
     }
 
     public static IndexMetadata indexMetadata()

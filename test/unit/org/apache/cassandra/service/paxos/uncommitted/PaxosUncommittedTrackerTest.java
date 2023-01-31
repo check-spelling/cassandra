@@ -76,7 +76,7 @@ public class PaxosUncommittedTrackerTest
         tracker = new PaxosUncommittedTracker(directory);
         tracker.start();
         updates = new PaxosMockUpdateSupplier();
-        PaxosUncommittedTracker.unsafSetUpdateSupplier(updates);
+        PaxosUncommittedTracker.unsafeSetUpdateSupplier(updates);
         state = tracker.getOrCreateTableState(cfid);
     }
 

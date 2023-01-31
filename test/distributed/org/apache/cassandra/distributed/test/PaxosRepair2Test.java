@@ -561,10 +561,10 @@ public class PaxosRepair2Test extends TestBaseImpl
                 TableMetadata table = Schema.instance.getTableMetadata(KEYSPACE, TABLE);
                 DecoratedKey dk = table.partitioner.decorateKey(ByteBufferUtil.bytes(400));
 
-                UpdateSupplier supplier = PaxosState.uncommittedTracker().unsafGetUpdateSupplier();
+                UpdateSupplier supplier = PaxosState.uncommittedTracker().unsafeGetUpdateSupplier();
                 try
                 {
-                    PaxosUncommittedTracker.unsafSetUpdateSupplier(new SingleUpdateSupplier(table, dk, oldBallot));
+                    PaxosUncommittedTracker.unsafeSetUpdateSupplier(new SingleUpdateSupplier(table, dk, oldBallot));
                     StorageService.instance.autoRepairPaxos(table.id).get();
                 }
                 catch (Exception e)
@@ -573,7 +573,7 @@ public class PaxosRepair2Test extends TestBaseImpl
                 }
                 finally
                 {
-                    PaxosUncommittedTracker.unsafSetUpdateSupplier(supplier);
+                    PaxosUncommittedTracker.unsafeSetUpdateSupplier(supplier);
                 }
             });
 
