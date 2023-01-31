@@ -171,13 +171,13 @@ public class StressMetrics implements MeasurementSink
         {
             while (!stop)
             {
-                final long wakupTarget = reportingStartNs + parkIntervalNs;
-                sleepUntil(wakupTarget);
+                final long wakeupTarget = reportingStartNs + parkIntervalNs;
+                sleepUntil(wakeupTarget);
                 if (stop)
                 {
                     break;
                 }
-                recordInterval(wakupTarget, parkIntervalNs);
+                recordInterval(wakeupTarget, parkIntervalNs);
                 reportingStartNs += parkIntervalNs;
             }
 

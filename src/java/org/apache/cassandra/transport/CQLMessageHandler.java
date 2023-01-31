@@ -222,7 +222,7 @@ public class CQLMessageHandler<M extends Message> extends AbstractMessageHandler
                         if (decoder.isActive())
                             ClientMetrics.instance.pauseConnection();
 
-                        // Schedule a wakup here if we process successfully. The connection should be closing otherwise.  
+                        // Schedule a wakeup here if we process successfully. The connection should be closing otherwise.  
                         scheduleConnectionWakeupTask(delay, RATE_LIMITER_DELAY_UNIT);
                     }
                     
