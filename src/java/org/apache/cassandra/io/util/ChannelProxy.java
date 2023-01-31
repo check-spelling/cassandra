@@ -111,7 +111,7 @@ public final class ChannelProxy extends SharedCloseableImpl
     }
 
     /**
-     * {@link #sharedCopy()} can not be used if thread will be interruped, as the backing channel will be closed.
+     * {@link #sharedCopy()} can not be used if thread will be interrupted, as the backing channel will be closed.
      *
      * @return a new channel instance
      */
