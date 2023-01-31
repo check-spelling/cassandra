@@ -48,17 +48,17 @@ written to SSTables out of order, with new data and old data in the same
 SSTable. Out of order data can appear in two ways:
 
 * If the user mixes old data and new data in the traditional write path,
-the data will be comingled in the memtables and flushed into the same
-SSTable, where it will remain comingled.
+the data will be commingled in the memtables and flushed into the same
+SSTable, where it will remain commingled.
 * If the user's read requests for old data cause read repairs that pull
-old data into the current memtable, that data will be comingled and
+old data into the current memtable, that data will be commingled and
 flushed into the same SSTable.
 
-While TWCS tries to minimize the impact of comingled data, users should
+While TWCS tries to minimize the impact of commingled data, users should
 attempt to avoid this behavior. Specifically, users should avoid queries
 that explicitly set the timestamp via CQL `USING TIMESTAMP`.
 Additionally, users should run frequent repairs (which streams data in
-such a way that it does not become comingled).
+such a way that it does not become commingled).
 
 == Changing TimeWindowCompactionStrategy Options
 
