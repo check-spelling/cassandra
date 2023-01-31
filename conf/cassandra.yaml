@@ -1001,7 +1001,7 @@ column_index_cache_size: 2KiB
 
 # Number of simultaneous repair validations to allow. If not set or set to
 # a value less than 1, it defaults to the value of concurrent_compactors.
-# To set a value greeater than concurrent_compactors at startup, the system
+# To set a value greater than concurrent_compactors at startup, the system
 # property cassandra.allow_unlimited_concurrent_validations must be set to
 # true. To dynamically resize to a value > concurrent_compactors on a running
 # node, first call the bypassConcurrentValidatorsLimit method on the

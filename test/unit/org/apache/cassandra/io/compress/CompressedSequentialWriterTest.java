@@ -281,7 +281,7 @@ public class CompressedSequentialWriterTest extends SequentialWriterTest
                                                                       CompressionParams.lz4(bufferSize),
                                                                       new MetadataCollector(new ClusteringComparator(UTF8Type.instance))))
         {
-            // write bytes greather than buffer
+            // write bytes greater than buffer
             writer.write(toWrite);
             long flushedOffset = writer.getLastFlushOffset();
             assertEquals(writeSize, writer.position());

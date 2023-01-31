@@ -139,7 +139,7 @@ public class SequentialWriterTest extends AbstractTransactionalTest
         SequentialWriterOption option = SequentialWriterOption.newBuilder().bufferSize(bufferSize).build();
         try (SequentialWriter writer = new SequentialWriter(tempFile, option))
         {
-            // write bytes greather than buffer
+            // write bytes greater than buffer
             writer.write(toWrite);
             assertEquals(bufferSize, writer.getLastFlushOffset());
             assertEquals(writeSize, writer.position());
