@@ -413,7 +413,7 @@ public class Verifier implements Closeable
     }
 
     /**
-     * Use the fact that check(..) is called with sorted tokens - we keep a pointer in to the normalized ranges
+     * Use the fact that check(..) is called with sorted tokens - we keep a pointer to the normalized ranges
      * and only bump the pointer if the key given is out of range. This is done to avoid calling .contains(..) many
      * times for each key (with vnodes for example)
      */
