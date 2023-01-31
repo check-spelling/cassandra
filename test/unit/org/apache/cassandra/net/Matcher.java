@@ -20,7 +20,7 @@ package org.apache.cassandra.net;
 import org.apache.cassandra.locator.InetAddressAndPort;
 
 /**
- * Predicate based on intercepted, outgoing messange and the message's destination address.
+ * Predicate based on intercepted, outgoing message and the message's destination address.
  */
 public interface Matcher<T>
 {

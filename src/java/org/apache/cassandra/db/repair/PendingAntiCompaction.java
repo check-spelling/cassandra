@@ -149,7 +149,7 @@ public class PendingAntiCompaction
             Collection<CompactionInfo> cis = CompactionManager.instance.active.getCompactionsForSSTable(sstable, OperationType.ANTICOMPACTION);
             if (cis != null && !cis.isEmpty())
             {
-                // todo: start tracking the parent repair session id that created the anticompaction to be able to give a better error messsage here:
+                // todo: start tracking the parent repair session id that created the anticompaction to be able to give a better error message here:
                 StringBuilder sb = new StringBuilder();
                 sb.append("Prepare phase for incremental repair session ");
                 sb.append(prsid);

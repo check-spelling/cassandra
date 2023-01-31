@@ -725,7 +725,7 @@ public class Verifier
                         else
                         {
                             // warning: enqueueEnd can occur at any time in the future, since it's a different thread;
-                            //          it could be arbitrarily paused, long enough even for the messsage to be fully processed
+                            //          it could be arbitrarily paused, long enough even for the message to be fully processed
                             m = messages.get(e.messageId);
                             if (m != null)
                                 m.enqueueEnd = e.end;
