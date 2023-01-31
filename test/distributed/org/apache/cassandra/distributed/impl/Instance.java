@@ -349,7 +349,7 @@ public class Instance extends IsolatedExecutor implements IInvokableInstance
             if (from == null)
                 return false;
             int fromNum = from.config().num();
-            int toNum = config.num(); // since this instance is reciving the message, to will always be this instance
+            int toNum = config.num(); // since this instance is receiving the message, to will always be this instance
             return cluster.filters().permitInbound(fromNum, toNum, serialized);
         });
     }

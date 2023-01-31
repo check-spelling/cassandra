@@ -303,11 +303,11 @@ public abstract class AbstractNetstatsStreaming extends TestBaseImpl
                 long toReceive = 0;
                 double progress = 0.0;
 
-                private static final Pattern recievingFilePattern = Pattern.compile("(.*) (.*)/(.*) bytes \\((.*)%\\) received from (.*)");
+                private static final Pattern receivingFilePattern = Pattern.compile("(.*) (.*)/(.*) bytes \\((.*)%\\) received from (.*)");
 
                 public static ReceivingTable parseTable(String table)
                 {
-                    final Matcher matcher = recievingFilePattern.matcher(table);
+                    final Matcher matcher = receivingFilePattern.matcher(table);
 
                     if (matcher.matches())
                     {
