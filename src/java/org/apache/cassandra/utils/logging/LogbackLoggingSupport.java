@@ -72,7 +72,7 @@ public class LogbackLoggingSupport implements LoggingSupport
         // prevents this configuration file check and possible reload of the configuration,
         // while executing sandboxed UDF code.
         //
-        // NOTE: this is obsolte with logback versions (at least since 1.2.3)
+        // NOTE: this is obsolete with logback versions (at least since 1.2.3)
         Logger logbackLogger = (Logger) LoggerFactory.getLogger(ThreadAwareSecurityManager.class);
         LoggerContext ctx = logbackLogger.getLoggerContext();
 
