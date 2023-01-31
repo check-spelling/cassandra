@@ -132,7 +132,7 @@ public abstract class QueryOptions
      * json initially and no check is done afterwards. So in practice, any call of this method on the same QueryOptions object and with the same
      * {@code bindIndx} values should use the same value for this parameter, but this isn't validated in any way.
      *
-     * @return the value correspong to column {@code columnName} in the (JSON) bind value at index {@code bindIndex}. This may return null if the
+     * @return the value correspond to column {@code columnName} in the (JSON) bind value at index {@code bindIndex}. This may return null if the
      * JSON value has no value for this column.
      */
     public Term getJsonColumnValue(int bindIndex, ColumnIdentifier columnName, Collection<ColumnMetadata> expectedReceivers) throws InvalidRequestException
