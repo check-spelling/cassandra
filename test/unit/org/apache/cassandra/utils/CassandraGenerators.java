@@ -231,7 +231,7 @@ public final class CassandraGenerators
     }
 
     /**
-     * Java's type inferrence with chaining doesn't work well, so this is used to infer the root type early in cases
+     * Java's type inference with chaining doesn't work well, so this is used to infer the root type early in cases
      * where javac can't figure it out
      */
     private static <T> Gen<T> gen(Gen<T> fn)
