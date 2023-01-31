@@ -140,7 +140,7 @@ public class Gossiper implements IFailureDetectionEventListener, GossiperMBean
 
     public static final long aVeryLongTime = getVeryLongTime();
 
-    // Maximimum difference between generation value and local time we are willing to accept about a peer
+    // Maximum difference between generation value and local time we are willing to accept about a peer
     static final int MAX_GENERATION_DIFFERENCE = 86400 * 365;
     private final long fatClientTimeout;
     private final Random random = new Random();
