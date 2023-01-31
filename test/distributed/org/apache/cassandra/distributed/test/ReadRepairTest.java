@@ -318,7 +318,7 @@ public class ReadRepairTest extends TestBaseImpl
                     coordinator.execute(deleteRowQuery, ALL, k, c);
             }
 
-            // delete some of the rows of some not-existent partitions, including deleted and never-written partitions
+            // delete some of the rows of some nonexistent partitions, including deleted and never-written partitions
             for (int k = 12; k < 17; k++)
             {
                 for (int c = 0; c < 5; c++)
@@ -435,11 +435,11 @@ public class ReadRepairTest extends TestBaseImpl
             coordinator.execute(withKeyspace("INSERT INTO %s.t(k, c) VALUES (0, 0)"), ALL);
             coordinator.execute(withKeyspace("INSERT INTO %s.t(k, c) VALUES (1, 1)"), ALL);
 
-            // create partition tombstones in all nodes for both existent and not existent partitions
+            // create partition tombstones in all nodes for both existent and nonexistent partitions
             coordinator.execute(withKeyspace("DELETE FROM %s.t WHERE k=0"), ALL); // exists
             coordinator.execute(withKeyspace("DELETE FROM %s.t WHERE k=2"), ALL); // doesn't exist
 
-            // create row tombstones in all nodes for both existent and not existent rows
+            // create row tombstones in all nodes for both existent and nonexistent rows
             coordinator.execute(withKeyspace("DELETE FROM %s.t WHERE k=1 AND c=1"), ALL); // exists
             coordinator.execute(withKeyspace("DELETE FROM %s.t WHERE k=3 AND c=1"), ALL); // doesn't exist
 

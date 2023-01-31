@@ -178,7 +178,7 @@ public class BTreeTest
         assertEquals(1, monitor.getNumberOfCalls(3));
         assertEquals(1, monitor.getNumberOfCalls(4));
 
-        // with one existing value and one non existing value
+        // with one existing value and one nonexistent value
         monitor.clear();
         btree = BTree.update(btree, BTree.build(Arrays.asList(2, 5)), CMP, monitor);
         assertArrayEquals(new Object[] {3, new Object[]{1, 2, null}, new Object[]{4, 5, null}, new int[]{2, 5}}, btree);

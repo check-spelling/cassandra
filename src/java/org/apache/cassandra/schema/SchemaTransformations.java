@@ -132,7 +132,7 @@ public class SchemaTransformations
         {
             KeyspaceMetadata keyspace = schema.getNullable(view.keyspace());
             if (keyspace == null)
-                throw invalidRequest("Cannot add view to non existing keyspace '%s'", view.keyspace());
+                throw invalidRequest("Cannot add view to nonexistent keyspace '%s'", view.keyspace());
 
             if (keyspace.hasView(view.name()))
             {

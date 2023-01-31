@@ -163,7 +163,7 @@ public class PaxosTableRepairs implements AbstractPaxosRepair.Listener
         if (keyRepair == null)
         {
             NoSpamLogger.log(logger, NoSpamLogger.Level.WARN, 1, TimeUnit.MINUTES,
-                             "onComplete callback fired for nonexistant KeyRepair");
+                             "onComplete callback fired for nonexistent KeyRepair");
             return;
         }
 

@@ -70,7 +70,7 @@ public class StandaloneSplitter
             {
                 File file = new File(filename);
                 if (!file.exists()) {
-                    System.out.println("Skipping inexisting file " + file);
+                    System.out.println("Skipping nonexistent file " + file);
                     continue;
                 }
 

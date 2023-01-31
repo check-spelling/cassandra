@@ -77,7 +77,7 @@ public class StandaloneSplitterTest extends OfflineToolUtils
     public void testWrongFilename()
     {
         ToolResult tool = ToolRunner.invokeClass(StandaloneSplitter.class, "mockFile");
-        assertThat(tool.getStdout(), CoreMatchers.containsStringIgnoringCase("Skipping inexisting file mockFile"));
+        assertThat(tool.getStdout(), CoreMatchers.containsStringIgnoringCase("Skipping nonexistent file mockFile"));
         assertThat(tool.getCleanedStderr(), CoreMatchers.containsStringIgnoringCase("No valid sstables to split"));
         assertEquals(1, tool.getExitCode());
         assertCorrectEnvPostTest();
@@ -88,7 +88,7 @@ public class StandaloneSplitterTest extends OfflineToolUtils
     {
         Arrays.asList("--debug", "--no-snapshot").forEach(arg -> {
             ToolResult tool = ToolRunner.invokeClass(StandaloneSplitter.class, arg, "mockFile");
-            assertThat("Arg: [" + arg + "]", tool.getStdout(), CoreMatchers.containsStringIgnoringCase("Skipping inexisting file mockFile"));
+            assertThat("Arg: [" + arg + "]", tool.getStdout(), CoreMatchers.containsStringIgnoringCase("Skipping nonexistent file mockFile"));
             assertThat("Arg: [" + arg + "]", tool.getCleanedStderr(), CoreMatchers.containsStringIgnoringCase("No valid sstables to split"));
             assertEquals(1, tool.getExitCode());
             assertCorrectEnvPostTest();
@@ -119,7 +119,7 @@ public class StandaloneSplitterTest extends OfflineToolUtils
                                                                   arg.getLeft(),
                                                                   arg.getRight(),
                                                                   "mockFile");
-                  assertThat("Arg: [" + arg + "]", tool.getStdout(), CoreMatchers.containsStringIgnoringCase("Skipping inexisting file mockFile"));
+                  assertThat("Arg: [" + arg + "]", tool.getStdout(), CoreMatchers.containsStringIgnoringCase("Skipping nonexistent file mockFile"));
                   assertThat("Arg: [" + arg + "]", tool.getCleanedStderr(), CoreMatchers.containsStringIgnoringCase("No valid sstables to split"));
                   assertEquals(1, tool.getExitCode());
                   assertCorrectEnvPostTest();

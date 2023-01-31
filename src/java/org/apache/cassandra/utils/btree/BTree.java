@@ -1056,7 +1056,7 @@ public class BTree
             {
                 newTargetOffset += toArray((Object[]) tree[childOffset + i], max(0, treeStart - childStart), min(childEnd, treeEnd) - childStart,
                                            target, newTargetOffset);
-                if (treeStart <= childEnd && treeEnd > childEnd) // this check will always fail for the non-existent key
+                if (treeStart <= childEnd && treeEnd > childEnd) // this check will always fail for the nonexistent key
                     target[newTargetOffset++] = tree[i];
             }
         }

@@ -131,7 +131,7 @@ public class ProfileLoad extends NodeToolCmd
                 if (!opSuccess)
                 {
                     if (shouldStop)
-                        out.printf("Unable to stop the non-existent scheduled sampling for keyspace: %s, table: %s%n", keyspace, table);
+                        out.printf("Unable to stop the nonexistent scheduled sampling for keyspace: %s, table: %s%n", keyspace, table);
                     else
                         out.printf("Unable to schedule sampling for keyspace: %s, table: %s due to existing samplings. " +
                                    "Stop the existing sampling jobs first.%n", keyspace, table);

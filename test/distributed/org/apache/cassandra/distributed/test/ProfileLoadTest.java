@@ -137,7 +137,7 @@ public class ProfileLoadTest extends TestBaseImpl
             cluster.get(1).nodetoolResult("profileload", "nonexistks", "nonexisttbl", "--stop")
                    .asserts()
                    .success()
-                   .stdoutContains("Unable to stop the non-existent scheduled sampling");
+                   .stdoutContains("Unable to stop the nonexistent scheduled sampling");
         }
     }
 

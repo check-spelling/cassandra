@@ -1015,7 +1015,7 @@ Merged from 3.0:
  * Fix InternodeOutboundMetrics overloaded bytes/count mixup (CASSANDRA-15186)
  * Enhance & reenable RepairTest with compression=off and compression=on (CASSANDRA-15272)
  * Improve readability of Table metrics Virtual tables units (CASSANDRA-15194)
- * Fix error with non-existent table for nodetool tablehistograms (CASSANDRA-14410)
+ * Fix error with nonexistent table for nodetool tablehistograms (CASSANDRA-14410)
  * Avoid result truncation in decimal operations (CASSANDRA-15232)
  * Catch non-IOException in FileUtils.close to make sure that all resources are closed (CASSANDRA-15225)
  * Align load column in nodetool status output (CASSANDRA-14787)
@@ -1880,7 +1880,7 @@ Merged from 2.1:
  * Cleanup uses of AlterTableStatementColumn (CASSANDRA-12567)
  * Add keep-alive to streaming (CASSANDRA-11841)
  * Tracing payload is passed through newSession(..) (CASSANDRA-11706)
- * avoid deleting non existing sstable files and improve related log messages (CASSANDRA-12261)
+ * avoid deleting nonexistent sstable files and improve related log messages (CASSANDRA-12261)
  * json/yaml output format for nodetool compactionhistory (CASSANDRA-12486)
  * Retry all internode messages once after a connection is
    closed and reopened (CASSANDRA-12192)
@@ -3863,8 +3863,8 @@ Merged from 2.0:
    (CASSANDRA-7578)
  * (cqlsh) Fix cqlsh display when zero rows are returned (CASSANDRA-7580)
  * Get java version correctly when JAVA_TOOL_OPTIONS is set (CASSANDRA-7572)
- * Fix NPE when dropping index from non-existent keyspace, AssertionError when
-   dropping non-existent index with IF EXISTS (CASSANDRA-7590)
+ * Fix NPE when dropping index from nonexistent keyspace, AssertionError when
+   dropping nonexistent index with IF EXISTS (CASSANDRA-7590)
  * Fix sstablelevelresetter hang (CASSANDRA-7614)
  * (cqlsh) Fix deserialization of blobs (CASSANDRA-7603)
  * Use "keyspace updated" schema change message for UDT changes in v1 and

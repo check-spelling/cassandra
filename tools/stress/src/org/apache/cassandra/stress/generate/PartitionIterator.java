@@ -262,7 +262,7 @@ public abstract class PartitionIterator implements Iterator<Row>
 
             while (true)
             {
-                // we loop in case we have picked an entirely non-existent range, in which case
+                // we loop in case we have picked an entirely nonexistent range, in which case
                 // we will reset the seed's position, then try again (until we exhaust it or find
                 // some real range)
 
@@ -479,7 +479,7 @@ public abstract class PartitionIterator implements Iterator<Row>
                     }
 
                     // we don't check here to see if we've exceeded our lastRow,
-                    // because if we came to a non-existent position and generated a lastRow
+                    // because if we came to a nonexistent position and generated a lastRow
                     // we want to at least find the next real position, and set it on the seed
                     // in this case we do then yield false and select a different seed to continue with
                     position[j]++;

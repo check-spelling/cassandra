@@ -81,7 +81,7 @@ public class KeyspaceTest extends CQLTester
             // slice with nothing in between the bounds
             Util.assertEmpty(Util.cmd(cfs, "0").columns("c").fromIncl(1).toIncl(1).build());
 
-            // fetch a non-existent name
+            // fetch a nonexistent name
             Util.assertEmpty(Util.cmd(cfs, "0").columns("c").includeRow(1).build());
 
             if (round == 0)

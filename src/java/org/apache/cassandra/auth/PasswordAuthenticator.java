@@ -176,7 +176,7 @@ public class PasswordAuthenticator implements IAuthenticator, AuthCache.BulkLoad
 
             ResultMessage.Rows rows = select(authenticateStatement, options);
 
-            // If either a non-existent role name was supplied, or no credentials
+            // If either a nonexistent role name was supplied, or no credentials
             // were found for that role, we don't want to cache the result so we
             // return a sentinel value. On receiving the sentinel, the caller can
             // invalidate the cache and throw an appropriate exception.

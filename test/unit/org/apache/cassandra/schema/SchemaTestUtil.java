@@ -61,7 +61,7 @@ public class SchemaTestUtil
 
         KeyspaceMetadata ksm = Schema.instance.getKeyspaceMetadata(cfm.keyspace);
         if (ksm == null)
-            throw new ConfigurationException(String.format("Cannot add table '%s' to non existing keyspace '%s'.", cfm.name, cfm.keyspace));
+            throw new ConfigurationException(String.format("Cannot add table '%s' to nonexistent keyspace '%s'.", cfm.name, cfm.keyspace));
             // If we have a table or a view which has the same name, we can't add a new one
         else if (throwOnDuplicate && ksm.getTableOrViewNullable(cfm.name) != null)
             throw new AlreadyExistsException(cfm.keyspace, cfm.name);
@@ -76,7 +76,7 @@ public class SchemaTestUtil
 
         KeyspaceMetadata oldKsm = Schema.instance.getKeyspaceMetadata(ksm.name);
         if (oldKsm == null)
-            throw new ConfigurationException(String.format("Cannot update non existing keyspace '%s'.", ksm.name));
+            throw new ConfigurationException(String.format("Cannot update nonexistent keyspace '%s'.", ksm.name));
 
         logger.info("Update Keyspace '{}' From {} To {}", ksm.name, oldKsm, ksm);
         Schema.instance.transform(schema -> schema.withAddedOrUpdated(ksm));
@@ -88,7 +88,7 @@ public class SchemaTestUtil
 
         TableMetadata current = Schema.instance.getTableMetadata(updated.keyspace, updated.name);
         if (current == null)
-            throw new ConfigurationException(String.format("Cannot update non existing table '%s' in keyspace '%s'.", updated.name, updated.keyspace));
+            throw new ConfigurationException(String.format("Cannot update nonexistent table '%s' in keyspace '%s'.", updated.name, updated.keyspace));
         KeyspaceMetadata ksm = Schema.instance.getKeyspaceMetadata(current.keyspace);
 
         updated.validateCompatibility(current);
@@ -101,7 +101,7 @@ public class SchemaTestUtil
     {
         KeyspaceMetadata oldKsm = Schema.instance.getKeyspaceMetadata(ksName);
         if (oldKsm == null)
-            throw new ConfigurationException(String.format("Cannot drop non existing keyspace '%s'.", ksName));
+            throw new ConfigurationException(String.format("Cannot drop nonexistent keyspace '%s'.", ksName));
 
         logger.info("Drop Keyspace '{}'", oldKsm.name);
         Schema.instance.transform(schema -> schema.without(ksName));
@@ -113,7 +113,7 @@ public class SchemaTestUtil
             KeyspaceMetadata ksm = schema.getNullable(ksName);
             TableMetadata tm = ksm != null ? ksm.getTableOrViewNullable(cfName) : null;
             if (tm == null)
-                throw new ConfigurationException(String.format("Cannot drop non existing table '%s' in keyspace '%s'.", cfName, ksName));
+                throw new ConfigurationException(String.format("Cannot drop nonexistent table '%s' in keyspace '%s'.", cfName, ksName));
 
             return schema.withAddedOrUpdated(ksm.withSwapped(ksm.tables.without(cfName)));
         };
