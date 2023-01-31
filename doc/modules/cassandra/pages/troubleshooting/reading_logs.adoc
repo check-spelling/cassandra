@@ -189,7 +189,7 @@ be crucial while debugging tail latency issues.
 
 == Getting More Information
 
-If the default logging levels are insuficient, `nodetool` can set higher
+If the default logging levels are insufficient, `nodetool` can set higher
 or lower logging levels for various packages and classes using the
 `nodetool setlogginglevel` command. Start by viewing the current levels:
 
