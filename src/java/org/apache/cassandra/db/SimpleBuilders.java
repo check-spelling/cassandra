@@ -45,7 +45,7 @@ public abstract class SimpleBuilders
     {
     }
 
-    private static DecoratedKey makePartitonKey(TableMetadata metadata, Object... partitionKey)
+    private static DecoratedKey makePartitionKey(TableMetadata metadata, Object... partitionKey)
     {
         if (partitionKey.length == 1 && partitionKey[0] instanceof DecoratedKey)
             return (DecoratedKey)partitionKey[0];
@@ -167,7 +167,7 @@ public abstract class SimpleBuilders
         public PartitionUpdateBuilder(TableMetadata metadata, Object... partitionKeyValues)
         {
             this.metadata = metadata;
-            this.key = makePartitonKey(metadata, partitionKeyValues);
+            this.key = makePartitionKey(metadata, partitionKeyValues);
         }
 
         public TableMetadata metadata()

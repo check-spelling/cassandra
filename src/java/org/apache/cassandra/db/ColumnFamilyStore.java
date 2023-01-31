@@ -2308,11 +2308,11 @@ public class ColumnFamilyStore implements ColumnFamilyStoreMBean, Memtable.Owner
 
     /**
      * @return the cached partition for @param key if it is already present in the cache.
-     * Not that this will not readAndCache the parition if it is not present, nor
+     * Not that this will not readAndCache the partition if it is not present, nor
      * are these calls counted in cache statistics.
      *
      * Note that this WILL cause deserialization of a SerializingCache partition, so if all you
-     * need to know is whether a partition is present or not, use containsCachedParition instead.
+     * need to know is whether a partition is present or not, use containsCachedPartition instead.
      */
     public CachedPartition getRawCachedPartition(DecoratedKey key)
     {
@@ -2367,7 +2367,7 @@ public class ColumnFamilyStore implements ColumnFamilyStoreMBean, Memtable.Owner
     /**
      * @return true if @param key is contained in the row cache
      */
-    public boolean containsCachedParition(DecoratedKey key)
+    public boolean containsCachedPartition(DecoratedKey key)
     {
         return CacheService.instance.rowCache.getCapacity() != 0 && CacheService.instance.rowCache.containsKey(new RowCacheKey(metadata(), key));
     }

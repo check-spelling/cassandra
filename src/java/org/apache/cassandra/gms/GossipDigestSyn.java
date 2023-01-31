@@ -36,13 +36,13 @@ public class GossipDigestSyn
     public static final IVersionedSerializer<GossipDigestSyn> serializer = new GossipDigestSynSerializer();
 
     final String clusterId;
-    final String partioner;
+    final String partitioner;
     final List<GossipDigest> gDigests;
 
-    public GossipDigestSyn(String clusterId, String partioner, List<GossipDigest> gDigests)
+    public GossipDigestSyn(String clusterId, String partitioner, List<GossipDigest> gDigests)
     {
         this.clusterId = clusterId;
-        this.partioner = partioner;
+        this.partitioner = partitioner;
         this.gDigests = gDigests;
     }
 
@@ -84,23 +84,23 @@ class GossipDigestSynSerializer implements IVersionedSerializer<GossipDigestSyn>
     public void serialize(GossipDigestSyn gDigestSynMessage, DataOutputPlus out, int version) throws IOException
     {
         out.writeUTF(gDigestSynMessage.clusterId);
-        out.writeUTF(gDigestSynMessage.partioner);
+        out.writeUTF(gDigestSynMessage.partitioner);
         GossipDigestSerializationHelper.serialize(gDigestSynMessage.gDigests, out, version);
     }
 
     public GossipDigestSyn deserialize(DataInputPlus in, int version) throws IOException
     {
         String clusterId = in.readUTF();
-        String partioner = null;
-        partioner = in.readUTF();
+        String partitioner = null;
+        partitioner = in.readUTF();
         List<GossipDigest> gDigests = GossipDigestSerializationHelper.deserialize(in, version);
-        return new GossipDigestSyn(clusterId, partioner, gDigests);
+        return new GossipDigestSyn(clusterId, partitioner, gDigests);
     }
 
     public long serializedSize(GossipDigestSyn syn, int version)
     {
         long size = TypeSizes.sizeof(syn.clusterId);
-        size += TypeSizes.sizeof(syn.partioner);
+        size += TypeSizes.sizeof(syn.partitioner);
         size += GossipDigestSerializationHelper.serializedSize(syn.gDigests, version);
         return size;
     }

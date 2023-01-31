@@ -154,7 +154,7 @@ public class RowCacheTest
 
             Util.getAll(Util.cmd(cachedStore, key).build());
             assert CacheService.instance.rowCache.size() == i + 1;
-            assert cachedStore.containsCachedParition(key); // current key should be stored in the cache
+            assert cachedStore.containsCachedPartition(key); // current key should be stored in the cache
 
             // checking if cell is read correctly after cache
             CachedPartition cp = cachedStore.getRawCachedPartition(key);
@@ -181,7 +181,7 @@ public class RowCacheTest
             DecoratedKey key = Util.dk("key" + i);
 
             Util.getAll(Util.cmd(cachedStore, key).build());
-            assert cachedStore.containsCachedParition(key); // cache should be populated with the latest rows read (old ones should be popped)
+            assert cachedStore.containsCachedPartition(key); // cache should be populated with the latest rows read (old ones should be popped)
 
             // checking if cell is read correctly after cache
             CachedPartition cp = cachedStore.getRawCachedPartition(key);
@@ -237,7 +237,7 @@ public class RowCacheTest
             Util.getAll(Util.cmd(cachedStore, key).build());
 
             assertEquals(CacheService.instance.rowCache.size(), i + 1);
-            assert(cachedStore.containsCachedParition(key)); // current key should be stored in the cache
+            assert(cachedStore.containsCachedPartition(key)); // current key should be stored in the cache
         }
 
         // insert 10 more keys
@@ -248,7 +248,7 @@ public class RowCacheTest
             DecoratedKey key = Util.dk("key" + i);
 
             Util.getAll(Util.cmd(cachedStore, key).build());
-            assert cachedStore.containsCachedParition(key); // cache should be populated with the latest rows read (old ones should be popped)
+            assert cachedStore.containsCachedPartition(key); // cache should be populated with the latest rows read (old ones should be popped)
 
             // checking if cell is read correctly after cache
             CachedPartition cp = cachedStore.getRawCachedPartition(key);
