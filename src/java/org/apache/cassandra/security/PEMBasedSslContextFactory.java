@@ -140,7 +140,7 @@ public final class PEMBasedSslContextFactory extends FileBasedSslContextFactory
         final String pemEncodedCerts = getString(ConfigKey.ENCODED_CERTIFICATES.getKeyName());
         pemEncodedTrustCertificates = new PEMBasedKeyStoreContext(pemEncodedCerts, null, StringUtils.isEmpty(pemEncodedCerts), trustStoreContext);
         enforceSinglePrivateKeySource();
-        enforceSingleTurstedCertificatesSource();
+        enforceSingleTrustedCertificatesSource();
     }
 
     /**
@@ -374,7 +374,7 @@ public final class PEMBasedSslContextFactory extends FileBasedSslContextFactory
      * Enforces that the configuration specified a sole source of loading trusted certificates - either {@code
      * truststore} (actual file must exist) or {@code trusted_certificates}, not both.
      */
-    private void enforceSingleTurstedCertificatesSource()
+    private void enforceSingleTrustedCertificatesSource()
     {
         if (truststoreFileExists() && !StringUtils.isEmpty(pemEncodedTrustCertificates.key))
         {
