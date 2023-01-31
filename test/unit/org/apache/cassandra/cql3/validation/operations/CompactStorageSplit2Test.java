@@ -2491,7 +2491,7 @@ public class CompactStorageSplit2Test extends CQLTester
      * Test for CASSANDRA-13917
      */
     @Test
-    public void testCreateIndextWithCompactStaticFormat() throws Throwable
+    public void testCreateIndexWithCompactStaticFormat() throws Throwable
     {
         createTable("CREATE TABLE %s (a int PRIMARY KEY, b int, c int) WITH COMPACT STORAGE");
         assertInvalidMessage("Undefined column name column1 in table",
