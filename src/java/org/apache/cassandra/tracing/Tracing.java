@@ -194,7 +194,7 @@ public abstract class Tracing extends ExecutorLocals.Impl
 
 
     /**
-     * Stop the session and record its complete.  Called by coodinator when request is complete.
+     * Stop the session and record its complete.  Called by coordinator when request is complete.
      */
     public void stopSession()
     {
