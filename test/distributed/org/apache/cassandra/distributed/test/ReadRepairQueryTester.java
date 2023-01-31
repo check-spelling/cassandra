@@ -39,7 +39,7 @@ import static org.apache.cassandra.service.reads.repair.ReadRepairStrategy.NONE;
  * Base class for tests around read repair functionality with different query types and schemas.
  * <p>
  * Each test verifies that its tested query triggers read repair propagating mismatched rows/columns and row/column
- * deletions. They also verify that the selected rows and columns are propagated through read repair on missmatch,
+ * deletions. They also verify that the selected rows and columns are propagated through read repair on mismatch,
  * and that unselected rows/columns are not repaired.
  * <p>
  * The tests are parameterized for:
