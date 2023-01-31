@@ -79,7 +79,7 @@ public class BinLog implements Runnable
     private ExcerptAppender appender;
     @VisibleForTesting
     Thread binLogThread = new NamedThreadFactory("Binary Log thread").newThread(this);
-    final WeightedQueue<ReleaseableWriteMarshallable> sampleQueue;
+    final WeightedQueue<ReleasableWriteMarshallable> sampleQueue;
     private final BinLogArchiver archiver;
     private final boolean blocking;
 
@@ -93,7 +93,7 @@ public class BinLog implements Runnable
     */
     private static final Set<Path> currentPaths = Collections.synchronizedSet(new HashSet<>());
 
-    private static final ReleaseableWriteMarshallable NO_OP = new ReleaseableWriteMarshallable()
+    private static final ReleasableWriteMarshallable NO_OP = new ReleasableWriteMarshallable()
     {
         @Override
         protected long version()
@@ -184,7 +184,7 @@ public class BinLog implements Runnable
      * @param record The record to write to the log
      * @return true if the record was queued and false otherwise
      */
-    public boolean offer(ReleaseableWriteMarshallable record)
+    public boolean offer(ReleasableWriteMarshallable record)
     {
         if (!shouldContinue)
         {
@@ -199,7 +199,7 @@ public class BinLog implements Runnable
      * @param record The record to write to the log
      * @throws InterruptedException
      */
-    public void put(ReleaseableWriteMarshallable record) throws InterruptedException
+    public void put(ReleasableWriteMarshallable record) throws InterruptedException
     {
         if (!shouldContinue)
         {
@@ -216,7 +216,7 @@ public class BinLog implements Runnable
         }
     }
 
-    private void processTasks(List<ReleaseableWriteMarshallable> tasks)
+    private void processTasks(List<ReleasableWriteMarshallable> tasks)
     {
         for (int ii = 0; ii < tasks.size(); ii++)
         {
@@ -234,13 +234,13 @@ public class BinLog implements Runnable
     @Override
     public void run()
     {
-        List<ReleaseableWriteMarshallable> tasks = new ArrayList<>(16);
+        List<ReleasableWriteMarshallable> tasks = new ArrayList<>(16);
         while (shouldContinue)
         {
             try
             {
                 tasks.clear();
-                ReleaseableWriteMarshallable task = sampleQueue.take();
+                ReleasableWriteMarshallable task = sampleQueue.take();
                 tasks.add(task);
                 sampleQueue.drainTo(tasks, 15);
 
@@ -273,7 +273,7 @@ public class BinLog implements Runnable
     @Override
     public void finalize()
     {
-        ReleaseableWriteMarshallable toRelease;
+        ReleasableWriteMarshallable toRelease;
         while (((toRelease = sampleQueue.poll()) != null))
         {
             toRelease.release();
@@ -281,7 +281,7 @@ public class BinLog implements Runnable
     }
 
     // todo: refactor to helper class?
-    public void logRecord(ReleaseableWriteMarshallable record)
+    public void logRecord(ReleasableWriteMarshallable record)
     {
         boolean putInQueue = false;
         try
@@ -333,7 +333,7 @@ public class BinLog implements Runnable
     }
 
 
-    public abstract static class ReleaseableWriteMarshallable implements WriteMarshallable
+    public abstract static class ReleasableWriteMarshallable implements WriteMarshallable
     {
         @Override
         public final void writeMarshallable(WireOut wire)

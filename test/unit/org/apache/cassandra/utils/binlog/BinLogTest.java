@@ -127,8 +127,8 @@ public class BinLogTest
     {
         AtomicInteger releaseCount = new AtomicInteger();
         CountDownLatch ready = new CountDownLatch(2);
-        Supplier<BinLog.ReleaseableWriteMarshallable> recordSupplier =
-        () -> new BinLog.ReleaseableWriteMarshallable()
+        Supplier<BinLog.ReleasableWriteMarshallable> recordSupplier =
+        () -> new BinLog.ReleasableWriteMarshallable()
         {
             public void release()
             {
@@ -180,7 +180,7 @@ public class BinLogTest
     {
         binLog.stop();
         Semaphore released = new Semaphore(0);
-        binLog.sampleQueue.put(new BinLog.ReleaseableWriteMarshallable()
+        binLog.sampleQueue.put(new BinLog.ReleasableWriteMarshallable()
         {
             public void release()
             {
@@ -236,7 +236,7 @@ public class BinLogTest
         Semaphore binLogBlocked = new Semaphore(0);
         try
         {
-            binLog.put(new BinLog.ReleaseableWriteMarshallable()
+            binLog.put(new BinLog.ReleasableWriteMarshallable()
             {
                 public void release()
                 {
@@ -322,7 +322,7 @@ public class BinLogTest
         Semaphore binLogBlocked = new Semaphore(0);
         try
         {
-            assertTrue(binLog.offer(new BinLog.ReleaseableWriteMarshallable()
+            assertTrue(binLog.offer(new BinLog.ReleasableWriteMarshallable()
             {
                 public void release()
                 {
@@ -410,10 +410,10 @@ public class BinLogTest
     @Test
     public void testPutAfterStop() throws Exception
     {
-        final BinLog.ReleaseableWriteMarshallable unexpected = record(testString);
+        final BinLog.ReleasableWriteMarshallable unexpected = record(testString);
         binLog.stop();
         binLog.put(unexpected);
-        BinLog.ReleaseableWriteMarshallable record;
+        BinLog.ReleasableWriteMarshallable record;
         while (null != (record = binLog.sampleQueue.poll()))
         {
             assertNotEquals("A stopped BinLog should no longer accept", unexpected, record);
@@ -466,9 +466,9 @@ public class BinLogTest
         Util.spinAssertEquals(2, () -> readBinLogRecords(path).size(), 60);
     }
 
-    static BinLog.ReleaseableWriteMarshallable record(String text)
+    static BinLog.ReleasableWriteMarshallable record(String text)
     {
-        return new BinLog.ReleaseableWriteMarshallable()
+        return new BinLog.ReleasableWriteMarshallable()
         {
             public void release()
             {

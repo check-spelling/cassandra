@@ -57,7 +57,7 @@ public abstract class FQLQuery implements Comparable<FQLQuery>
     /**
      * used when storing the queries executed
      */
-    public abstract BinLog.ReleaseableWriteMarshallable toMarshallable();
+    public abstract BinLog.ReleasableWriteMarshallable toMarshallable();
 
     public String keyspace()
     {
@@ -146,7 +146,7 @@ public abstract class FQLQuery implements Comparable<FQLQuery>
             return ss;
         }
 
-        public BinLog.ReleaseableWriteMarshallable toMarshallable()
+        public BinLog.ReleasableWriteMarshallable toMarshallable()
         {
 
             return new FullQueryLogger.Query(query, queryOptions, queryState, queryStartTime);
@@ -241,7 +241,7 @@ public abstract class FQLQuery implements Comparable<FQLQuery>
             return cmp;
         }
 
-        public BinLog.ReleaseableWriteMarshallable toMarshallable()
+        public BinLog.ReleasableWriteMarshallable toMarshallable()
         {
             List<String> queryStrings = new ArrayList<>();
             List<List<ByteBuffer>> values = new ArrayList<>();

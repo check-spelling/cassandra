@@ -96,7 +96,7 @@ public class BinAuditLogger implements IAuditLogger
 
 
     @VisibleForTesting
-    public static class Message extends BinLog.ReleaseableWriteMarshallable implements WeightedQueue.Weighable
+    public static class Message extends BinLog.ReleasableWriteMarshallable implements WeightedQueue.Weighable
     {
         private final String message;
 

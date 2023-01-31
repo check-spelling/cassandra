@@ -597,7 +597,7 @@ public class FQLReplayTest
         try (ChronicleQueue queue = SingleChronicleQueueBuilder.single(dir).build())
         {
             ExcerptAppender appender = queue.acquireAppender();
-            appender.writeDocument(new BinLog.ReleaseableWriteMarshallable() {
+            appender.writeDocument(new BinLog.ReleasableWriteMarshallable() {
                 protected long version()
                 {
                     return 999;
@@ -638,7 +638,7 @@ public class FQLReplayTest
         try (ChronicleQueue queue = SingleChronicleQueueBuilder.single(dir).build())
         {
             ExcerptAppender appender = queue.acquireAppender();
-            appender.writeDocument(new BinLog.ReleaseableWriteMarshallable() {
+            appender.writeDocument(new BinLog.ReleasableWriteMarshallable() {
                 protected long version()
                 {
                     return FullQueryLogger.CURRENT_VERSION;

@@ -125,7 +125,7 @@ public class ResultStore
         finishedHosts.clear();
         if (queryStoreAppender != null)
         {
-            BinLog.ReleaseableWriteMarshallable writeMarshallableQuery = query.toMarshallable();
+            BinLog.ReleasableWriteMarshallable writeMarshallableQuery = query.toMarshallable();
             queryStoreAppender.writeDocument(writeMarshallableQuery);
             writeMarshallableQuery.release();
         }

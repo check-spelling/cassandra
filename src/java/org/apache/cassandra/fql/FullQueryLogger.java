@@ -437,7 +437,7 @@ public class FullQueryLogger implements QueryEvents.Listener
         }
     }
 
-    private static abstract class AbstractLogEntry extends BinLog.ReleaseableWriteMarshallable implements WeightedQueue.Weighable
+    private static abstract class AbstractLogEntry extends BinLog.ReleasableWriteMarshallable implements WeightedQueue.Weighable
     {
         private final long queryStartTime;
         private final int protocolVersion;
