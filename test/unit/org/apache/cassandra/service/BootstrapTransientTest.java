@@ -125,12 +125,12 @@ public class BootstrapTransientTest
     Token tenToken    = new OrderPreservingPartitioner.StringToken("00010");
     Token twentyToken = new OrderPreservingPartitioner.StringToken("00020");
     Token thirtyToken = new OrderPreservingPartitioner.StringToken("00030");
-    Token fourtyToken = new OrderPreservingPartitioner.StringToken("00040");
+    Token fortyToken = new OrderPreservingPartitioner.StringToken("00040");
 
     Range<Token> range30_10 = new Range<>(thirtyToken, tenToken);
     Range<Token> range10_20 = new Range<>(tenToken, twentyToken);
     Range<Token> range20_30 = new Range<>(twentyToken, thirtyToken);
-    Range<Token> range30_40 = new Range<>(thirtyToken, fourtyToken);
+    Range<Token> range30_40 = new Range<>(thirtyToken, fortyToken);
 
     RangesAtEndpoint toFetch = RangesAtEndpoint.of(new Replica(address05, range30_40, true),
                                                    new Replica(address05, range20_30, true),
