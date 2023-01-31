@@ -1607,7 +1607,7 @@ public class CompactionManager implements CompactionManagerMBean
 
     /**
      * Splits up an sstable into two new sstables. The first of the new tables will store repaired ranges, the second
-     * will store the non-repaired ranges. Once anticompation is completed, the original sstable is marked as compacted
+     * will store the non-repaired ranges. Once anticompaction is completed, the original sstable is marked as compacted
      * and subsequently deleted.
      * @param cfs
      * @param txn a transaction over the repaired sstables to anticompact

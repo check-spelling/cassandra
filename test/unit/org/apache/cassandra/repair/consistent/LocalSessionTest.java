@@ -297,7 +297,7 @@ public class LocalSessionTest extends AbstractRepairTest
     }
 
     /**
-     * If anti compactionn fails, we should fail the session locally,
+     * If anticompaction fails, we should fail the session locally,
      * and send a failure message back to the coordinator
      */
     @Test
