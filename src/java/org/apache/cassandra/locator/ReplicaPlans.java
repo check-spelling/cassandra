@@ -96,7 +96,7 @@ public class ReplicaPlans
                     }
                     return fullCount > 0;
                 }
-                // Fallthough on purpose for SimpleStrategy
+                // Fallthrough on purpose for SimpleStrategy
             default:
                 return liveReplicas.size() >= consistencyLevel.blockFor(replicationStrategy)
                         && Replicas.countFull(liveReplicas) > 0;
@@ -158,7 +158,7 @@ public class ReplicaPlans
                         throw UnavailableException.create(consistencyLevel, blockFor, total, blockForFullReplicas, totalFull);
                     break;
                 }
-                // Fallthough on purpose for SimpleStrategy
+                // Fallthrough on purpose for SimpleStrategy
             default:
                 int live = allLive.size();
                 int full = Replicas.countFull(allLive);
