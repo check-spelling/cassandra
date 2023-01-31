@@ -69,7 +69,7 @@ public class JMXServerUtils
 
     /**
      * Creates a server programmatically. This allows us to set parameters which normally are
-     * inaccessable.
+     * inaccessible.
      */
     @SuppressWarnings("resource")
     @VisibleForTesting
