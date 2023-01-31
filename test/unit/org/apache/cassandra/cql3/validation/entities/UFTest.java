@@ -553,7 +553,7 @@ public class UFTest extends CQLTester
         assertInvalidMessage("cannot be passed as argument 0 of function", "SELECT v FROM %s WHERE k = " + fOverload + "((ascii)?)", "foo");
         // single-int-overload must still work
         assertRows(execute("SELECT v FROM %s WHERE k = " + fOverload + "((int)?)", 3), row(1));
-        // overloaded has just one overload now - so the following DROP FUNCTION is not ambigious (CASSANDRA-7812)
+        // overloaded has just one overload now - so the following DROP FUNCTION is not ambiguous (CASSANDRA-7812)
         execute("DROP FUNCTION " + fOverload);
     }
 

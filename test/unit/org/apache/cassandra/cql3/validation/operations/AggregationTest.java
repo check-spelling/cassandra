@@ -619,7 +619,7 @@ public class AggregationTest extends CQLTester
         assertInvalidMessage("matches multiple function definitions", "DROP FUNCTION " + a);
         assertInvalidMessage("doesn't exist", "DROP FUNCTION " + a + "(double)");
 
-        // ambigious
+        // ambiguous
         assertInvalidMessage("matches multiple function definitions", "DROP AGGREGATE " + a);
         assertInvalidMessage("matches multiple function definitions", "DROP AGGREGATE IF EXISTS " + a);
 
