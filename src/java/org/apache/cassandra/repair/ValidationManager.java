@@ -102,7 +102,7 @@ public class ValidationManager
     private void doValidation(ColumnFamilyStore cfs, Validator validator) throws IOException, NoSuchRepairSessionException
     {
         // this isn't meant to be race-proof, because it's not -- it won't cause bugs for a CFS to be dropped
-        // mid-validation, or to attempt to validate a droped CFS.  this is just a best effort to avoid useless work,
+        // mid-validation, or to attempt to validate a dropped CFS.  this is just a best effort to avoid useless work,
         // particularly in the scenario where a validation is submitted before the drop, and there are compactions
         // started prior to the drop keeping some sstables alive.  Since validationCompaction can run
         // concurrently with other compactions, it would otherwise go ahead and scan those again.

@@ -59,7 +59,7 @@ public class CompactionMetrics
     public final Counter compactionsReduced;
 
     /** Total number of sstables that have been dropped out */
-    public final Counter sstablesDropppedFromCompactions;
+    public final Counter sstablesDroppedFromCompactions;
 
     /** Total number of compactions which have outright failed due to lack of disk space */
     public final Counter compactionsAborted;
@@ -149,7 +149,7 @@ public class CompactionMetrics
 
         // compaction failure metrics
         compactionsReduced = Metrics.counter(factory.createMetricName("CompactionsReduced"));
-        sstablesDropppedFromCompactions = Metrics.counter(factory.createMetricName("SSTablesDroppedFromCompaction"));
+        sstablesDroppedFromCompactions = Metrics.counter(factory.createMetricName("SSTablesDroppedFromCompaction"));
         compactionsAborted = Metrics.counter(factory.createMetricName("CompactionsAborted"));
         indexSummaryRedistributionTime = Metrics.timer(factory.createMetricName("IndexSummaryRedistributionTime"));
     }

@@ -191,7 +191,7 @@ public class CommitLogSegmentManagerCDC extends AbstractCommitLogSegmentManager
 
     // Permit a forbidden segment under the following conditions.
     // - Non-blocking mode has just recently been enabled for CDC.
-    // - The CDC total space has droppped below the limit (e.g. CDC consumer cleans up).
+    // - The CDC total space has dropped below the limit (e.g. CDC consumer cleans up).
     private void permitSegmentMaybe(CommitLogSegment segment)
     {
         if (segment.getCDCState() != CDCState.FORBIDDEN)

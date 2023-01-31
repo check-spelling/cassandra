@@ -426,7 +426,7 @@ public class CompactionTask extends AbstractCompactionTask
         if(sstablesRemoved > 0)
         {
             CompactionManager.instance.incrementCompactionsReduced();
-            CompactionManager.instance.incrementSstablesDropppedFromCompactions(sstablesRemoved);
+            CompactionManager.instance.incrementSstablesDroppedFromCompactions(sstablesRemoved);
         }
     }
 

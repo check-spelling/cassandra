@@ -2083,9 +2083,9 @@ public class CompactionManager implements CompactionManagerMBean
         metrics.compactionsReduced.inc();
     }
 
-    public void incrementSstablesDropppedFromCompactions(long num)
+    public void incrementSstablesDroppedFromCompactions(long num)
     {
-        metrics.sstablesDropppedFromCompactions.inc(num);
+        metrics.sstablesDroppedFromCompactions.inc(num);
     }
 
     private static class SecondaryIndexExecutor extends CompactionExecutor
