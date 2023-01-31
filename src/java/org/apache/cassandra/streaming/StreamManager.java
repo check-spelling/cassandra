@@ -367,7 +367,7 @@ public class StreamManager implements StreamManagerMBean
     public void putInitiatorStream(StreamResultFuture future)
     {
         StreamResultFuture current = initiatorStreams.putIfAbsent(future.planId, future);
-        assert current == null: "Duplicat initiator stream for " + future.planId;
+        assert current == null: "Duplicate initiator stream for " + future.planId;
     }
 
     @VisibleForTesting
