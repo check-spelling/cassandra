@@ -157,14 +157,14 @@ final class RestrictionSet implements Restrictions, Iterable<SingleRestriction>
     public RestrictionSet addRestriction(SingleRestriction restriction)
     {
         // RestrictionSet is immutable so we need to clone the restrictions map.
-        TreeMap<ColumnMetadata, SingleRestriction> newRestricitons = new TreeMap<>(this.restrictions);
+        TreeMap<ColumnMetadata, SingleRestriction> newRestrictions = new TreeMap<>(this.restrictions);
 
         boolean newHasIn = hasIn || restriction.isIN();
         boolean newHasContains = hasContains || restriction.isContains();
         boolean newHasSlice = hasSlice || restriction.isSlice();
         boolean newHasOnlyEqualityRestrictions = hasOnlyEqualityRestrictions && (restriction.isEQ() || restriction.isIN());
 
-        return new RestrictionSet(mergeRestrictions(newRestricitons, restriction),
+        return new RestrictionSet(mergeRestrictions(newRestrictions, restriction),
                                   hasMultiColumnRestrictions || restriction.isMultiColumn(),
                                   newHasIn,
                                   newHasContains,

@@ -210,7 +210,7 @@ public interface ReadQuery
     public boolean selectsFullPartition();
 
     /**
-     * Filters/Resrictions on CQL rows.
+     * Filters/Restrictions on CQL rows.
      * <p>
      * This contains the restrictions that are not directly handled by the
      * {@code ClusteringIndexFilter}. More specifically, this includes any non-PK column
