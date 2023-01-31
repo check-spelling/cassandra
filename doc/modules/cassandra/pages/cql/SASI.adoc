@@ -542,7 +542,7 @@ or there is no more matching data, the result set is returned to the
 coordinator through the existing internal components.
 
 The number of queries (total/failed/timed-out), and their latencies, are
-maintined per-table/column family.
+maintained per-table/column family.
 
 SASI also supports concurrently iterating terms for the same index
 across SSTables. The concurrency factor is controlled by the
