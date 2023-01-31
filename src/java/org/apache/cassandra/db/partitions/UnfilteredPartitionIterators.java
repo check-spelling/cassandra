@@ -132,7 +132,7 @@ public abstract class UnfilteredPartitionIterators
                                                                  ? null
                                                                  : listener.getRowMergeListener(partitionKey, toMerge);
 
-                // Make a single empty iterator object to merge, we don't need toMerge.size() copiess
+                // Make a single empty iterator object to merge, we don't need toMerge.size() copies
                 UnfilteredRowIterator empty = null;
 
                 // Replace nulls by empty iterators
