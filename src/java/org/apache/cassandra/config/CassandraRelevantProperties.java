@@ -334,7 +334,7 @@ public enum CassandraRelevantProperties
     COMMIT_LOG_REPLAY_LIST("cassandra.replayList", null),
 
     /**
-     * The maximum number of seeds returned by a seed provider before emmitting a warning.
+     * The maximum number of seeds returned by a seed provider before emitting a warning.
      * A large seed list may impact effectiveness of the third gossip round.
      * The default used in SimpleSeedProvider is 20.
      */
