@@ -37,7 +37,7 @@ import org.apache.cassandra.db.ConsistencyLevel;
 public abstract class GuardrailConsistencyLevelsTester extends GuardrailTester
 {
     private final String warnedPropertyName;
-    private final String disallowePropertyName;
+    private final String disallowedPropertyName;
     private final Function<Guardrails, Set<String>> warnedGetter;
     private final Function<Guardrails, Set<String>> disallowedGetter;
     private final Function<Guardrails, String> warnedCSVGetter;
@@ -48,7 +48,7 @@ public abstract class GuardrailConsistencyLevelsTester extends GuardrailTester
     private final BiConsumer<Guardrails, String> disallowedCSVSetter;
 
     public GuardrailConsistencyLevelsTester(String warnedPropertyName,
-                                            String disallowePropertyName,
+                                            String disallowedPropertyName,
                                             Values<ConsistencyLevel> guardrail,
                                             Function<Guardrails, Set<String>> warnedGetter,
                                             Function<Guardrails, Set<String>> disallowedGetter,
@@ -61,7 +61,7 @@ public abstract class GuardrailConsistencyLevelsTester extends GuardrailTester
     {
         super(guardrail);
         this.warnedPropertyName = warnedPropertyName;
-        this.disallowePropertyName = disallowePropertyName;
+        this.disallowedPropertyName = disallowedPropertyName;
         this.warnedGetter = warnedGetter;
         this.disallowedGetter = disallowedGetter;
         this.warnedCSVGetter = g -> sortCSV(warnedCSVGetter.apply(g));
@@ -94,7 +94,7 @@ public abstract class GuardrailConsistencyLevelsTester extends GuardrailTester
     {
         String message = "Invalid value for %s: null is not allowed";
         assertInvalidProperty(warnedSetter, null, message, warnedPropertyName);
-        assertInvalidProperty(disallowedSetter, null, message, disallowePropertyName);
+        assertInvalidProperty(disallowedSetter, null, message, disallowedPropertyName);
 
         assertValidProperty(Collections.emptySet());
         assertValidProperty(EnumSet.allOf(ConsistencyLevel.class));
