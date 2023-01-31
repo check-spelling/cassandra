@@ -273,7 +273,7 @@ public class PipelineConfigurator
         // Any non-fatal errors caught in CQLMessageHandler propagate back to the client
         // via the pipeline. Firing the exceptionCaught event on an inbound handler context
         // (in this case, the initial context) will cause it to propagate to to the
-        // exceptionHandler provided none of the the intermediate handlers drop it
+        // exceptionHandler provided none of the intermediate handlers drop it
         // in their exceptionCaught implementation
         ChannelPipeline pipeline = ctx.channel().pipeline();
         final ChannelHandlerContext firstContext = pipeline.firstContext();

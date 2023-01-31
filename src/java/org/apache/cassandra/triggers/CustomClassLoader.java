@@ -39,7 +39,7 @@ import static java.nio.file.Files.*;
 
 /**
  * Custom class loader will load the classes from the class path, CCL will load
- * the classes from the the URL first, if it cannot find the required class it
+ * the classes from the URL first, if it cannot find the required class it
  * will let the parent class loader do the its job.
  *
  * Note: If the CCL is GC'ed then the associated classes will be unloaded.

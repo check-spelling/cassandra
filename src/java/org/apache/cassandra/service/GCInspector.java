@@ -184,7 +184,7 @@ public class GCInspector implements NotificationListener, GCInspectorMXBean
      * should be used to calculate application stopped time due to the GC.
      *
      * If the GC isn't recognized then assume that is concurrent and we need to do our own calculation
-     * via the the side channel.
+     * via the side channel.
      */
     private static boolean assumeGCIsPartiallyConcurrent(GarbageCollectorMXBean gc)
     {

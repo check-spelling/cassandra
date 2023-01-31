@@ -79,7 +79,7 @@ public abstract class AbstractCommitLogService
     final long syncIntervalNanos;
 
     /**
-     * The duration between updating the chained markers in the the commit log file. This value should be
+     * The duration between updating the chained markers in the commit log file. This value should be
      * 0 < {@link #markerIntervalNanos} <= {@link #syncIntervalNanos}.
      */
     final long markerIntervalNanos;

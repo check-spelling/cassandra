@@ -483,7 +483,7 @@ Table of Contents
       version. This is displayed in the output of `nodetool clientstats`
     - "THROW_ON_OVERLOAD": flag to specify server behaviour where the incoming message
       rate is too high. An [string] value of "1" instructs the server to respond with
-      and Error when its resources are exhausted. Any other value, or if the the key
+      and Error when its resources are exhausted. Any other value, or if the key
       is not present, and the server will apply backpressure to the connection until it
       has cleared its backlog of inbound messages.
 

@@ -941,7 +941,7 @@ public class InMemoryTrie<T> extends InMemoryReadTrie<T>
     }
 
     /**
-     * Returns true if the allocation threshold has been reached. To be called by the the writing thread (ideally, just
+     * Returns true if the allocation threshold has been reached. To be called by the writing thread (ideally, just
      * after the write completes). When this returns true, the user should switch to a new trie as soon as feasible.
      *
      * The trie expects up to 10% growth above this threshold. Any growth beyond that may be done inefficiently, and

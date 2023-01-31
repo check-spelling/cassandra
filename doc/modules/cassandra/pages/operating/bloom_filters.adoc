@@ -13,7 +13,7 @@ file.
 While bloom filters can not guarantee that the data exists in a given
 SSTable, bloom filters can be made more accurate by allowing them to
 consume more RAM. Operators have the opportunity to tune this behavior
-per table by adjusting the the `bloom_filter_fp_chance` to a float
+per table by adjusting the `bloom_filter_fp_chance` to a float
 between 0 and 1.
 
 The default value for `bloom_filter_fp_chance` is 0.1 for tables using

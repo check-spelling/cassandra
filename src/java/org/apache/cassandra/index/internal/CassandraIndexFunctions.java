@@ -41,7 +41,7 @@ public interface CassandraIndexFunctions
     public CassandraIndex newIndexInstance(ColumnFamilyStore baseCfs, IndexMetadata indexMetadata);
 
     /**
-     * Returns the type of the the values in the index. For most columns this is simply its type, but for collections
+     * Returns the type of the values in the index. For most columns this is simply its type, but for collections
      * it depends on whether the index is on the collection name/value element or on a frozen collection
      * @param indexedColumn
      * @return

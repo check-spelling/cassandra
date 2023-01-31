@@ -622,7 +622,7 @@ public abstract class AbstractCluster<I extends IInstance> implements ICluster<I
 
         if (null != prev)
         {
-            throw new IllegalStateException(String.format("This cluster already contains a node (%d) with with same address and port: %s",
+            throw new IllegalStateException(String.format("This cluster already contains a node (%d) with the same address and port: %s",
                                                           config.num(),
                                                           instance));
         }

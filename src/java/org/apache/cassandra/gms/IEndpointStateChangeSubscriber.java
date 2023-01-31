@@ -21,7 +21,7 @@ import org.apache.cassandra.locator.InetAddressAndPort;
 
 /**
  * This is called by an instance of the IEndpointStateChangePublisher to notify
- * interested parties about changes in the the state associated with any endpoint.
+ * interested parties about changes in the state associated with any endpoint.
  * For instance if node A figures there is a changes in state for an endpoint B
  * it notifies all interested parties of this change. It is upto to the registered
  * instance to decide what he does with this change. Not all modules maybe interested

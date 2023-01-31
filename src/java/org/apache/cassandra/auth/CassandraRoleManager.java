@@ -479,7 +479,7 @@ public class CassandraRoleManager implements IRoleManager
      */
     private void removeAllMembers(String role) throws RequestValidationException, RequestExecutionException
     {
-        // Get the membership list of the the given role
+        // Get the membership list of the given role
         UntypedResultSet rows = process(String.format("SELECT member FROM %s.%s WHERE role = '%s'",
                                                       SchemaConstants.AUTH_KEYSPACE_NAME,
                                                       AuthKeyspace.ROLE_MEMBERS,

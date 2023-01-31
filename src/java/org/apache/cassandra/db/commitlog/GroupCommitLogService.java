@@ -22,7 +22,7 @@ import org.apache.cassandra.config.DatabaseDescriptor;
 
 /**
  * A commitlog service that will block returning an ACK back to the a coordinator/client
- * for a minimum amount of time as we wait until the the commit log segment is flushed.
+ * for a minimum amount of time as we wait until the commit log segment is flushed.
  */
 public class GroupCommitLogService extends AbstractCommitLogService
 {

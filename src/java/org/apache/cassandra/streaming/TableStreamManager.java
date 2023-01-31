@@ -28,7 +28,7 @@ import org.apache.cassandra.utils.TimeUUID;
  * The main streaming hook for a storage implementation.
  *
  * From here, the streaming system can get instances of {@link StreamReceiver}, {@link IncomingStream},
- * and {@link OutgoingStream}, which expose the interfaces into the the underlying storage implementation
+ * and {@link OutgoingStream}, which expose the interfaces into the underlying storage implementation
  * needed to make streaming work.
  */
 public interface TableStreamManager
