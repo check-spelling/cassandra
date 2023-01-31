@@ -901,7 +901,7 @@ public abstract class RowFilter implements Iterable<RowFilter.Expression>
 
         private static ColumnMetadata makeDefinition(TableMetadata table, IndexMetadata index)
         {
-            // Similarly to how we handle non-defined columns in thift, we create a fake column definition to
+            // Similarly to how we handle non-defined columns in thrift, we create a fake column definition to
             // represent the target index. This is definitely something that can be improved though.
             return ColumnMetadata.regularColumn(table, ByteBuffer.wrap(index.name.getBytes()), BytesType.instance);
         }
