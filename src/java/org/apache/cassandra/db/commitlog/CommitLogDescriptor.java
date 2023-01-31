@@ -191,18 +191,18 @@ public class CommitLogDescriptor
 
     public static CommitLogDescriptor fromFileName(String name)
     {
-        Matcher matcher = extactFromFileName(name);
+        Matcher matcher = extractFromFileName(name);
         long id = Long.parseLong(matcher.group(3).split(SEPARATOR)[1]);
         return new CommitLogDescriptor(Integer.parseInt(matcher.group(2)), id, null, new EncryptionContext());
     }
 
     public static long idFromFileName(String name)
     {
-        Matcher matcher = extactFromFileName(name);
+        Matcher matcher = extractFromFileName(name);
         return Long.parseLong(matcher.group(3).split(SEPARATOR)[1]);
     }
 
-    private static Matcher extactFromFileName(String name)
+    private static Matcher extractFromFileName(String name)
     {
         Matcher matcher = COMMIT_LOG_FILE_PATTERN.matcher(name);
         if (!matcher.matches())
