@@ -63,7 +63,7 @@ public final class ThreadLocalByteBufferHolder
      * Returns the buffer for the current thread.
      *
      * <p>If the buffer for the current thread does not have a capacity large enough. A new buffer with the requested
-     *  size will be instatiated an will replace the existing one.</p>
+     *  size will be instantiated an will replace the existing one.</p>
      *
      * @param size the buffer size
      * @return the buffer for the current thread.

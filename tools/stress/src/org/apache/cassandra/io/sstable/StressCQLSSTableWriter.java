@@ -400,7 +400,7 @@ public class StressCQLSSTableWriter implements Closeable
         }
 
         /**
-         * A pre-instanciated ColumnFamilyStore
+         * A pre-instantiated ColumnFamilyStore
          * <p>
          * This is can be used in place of inDirectory and forTable
          *
