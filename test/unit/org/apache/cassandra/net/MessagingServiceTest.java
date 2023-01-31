@@ -245,7 +245,7 @@ public class MessagingServiceTest
     }
 
     /**
-     * Make sure that if internode authenticatino fails for an outbound connection that all the code that relies
+     * Make sure that if internode authentication fails for an outbound connection that all the code that relies
      * on getting the connection pool handles the null return
      *
      * @throws Exception
