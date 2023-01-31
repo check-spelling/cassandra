@@ -109,8 +109,8 @@ public class SchemaCQLHelper
          *   CREATE TABLE t (k int PRIMARY KEY, c1 frozen<outer>, c2 set<frozen<inner>>)
          * The corresponding TableMetadata would have, as types (where 'mc=true' means that the type has his isMultiCell
          * set to true):
-         *   c1: UserType(mc=false, "outer", b->UserType(mc=false, "inner", a->SetType(mc=fase, Int32Type)))
-         *   c2: SetType(mc=true, UserType(mc=false, "inner", a->SetType(mc=fase, Int32Type)))
+         *   c1: UserType(mc=false, "outer", b->UserType(mc=false, "inner", a->SetType(mc=false, Int32Type)))
+         *   c2: SetType(mc=true, UserType(mc=false, "inner", a->SetType(mc=false, Int32Type)))
          * From which, it's impossible to decide if we should dump the types above, or instead:
          *   CREATE TYPE inner (a frozen<set<int>>);
          *   CREATE TYPE outer (b frozen<inner>);

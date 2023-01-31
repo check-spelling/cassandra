@@ -102,7 +102,7 @@ public class SamplingManager
      * @param capacity Capacity of the sampler, higher for more accuracy
      * @param count Number of the top samples to list
      * @param samplers a list of samplers to enable
-     * @return true if the scheduled sampling is started successfully. Otherwise return fasle
+     * @return true if the scheduled sampling is started successfully. Otherwise return false
      */
     public boolean register(String ks, String table, int duration, int interval, int capacity, int count, List<String> samplers)
     {
