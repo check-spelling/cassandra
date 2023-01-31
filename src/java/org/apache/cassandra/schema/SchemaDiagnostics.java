@@ -116,8 +116,8 @@ final class SchemaDiagnostics
 
     static void versionAnnounced(Schema schema)
     {
-        if (isEnabled(SchemaEventType.VERSION_ANOUNCED))
-            service.publish(new SchemaEvent(SchemaEventType.VERSION_ANOUNCED, schema, null,
+        if (isEnabled(SchemaEventType.VERSION_ANNOUNCED))
+            service.publish(new SchemaEvent(SchemaEventType.VERSION_ANNOUNCED, schema, null,
                                             null, null, null, null, null, null));
     }
 

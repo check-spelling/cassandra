@@ -69,7 +69,7 @@ public final class SchemaEvent extends DiagnosticEvent
         KS_METADATA_RELOADED,
         KS_METADATA_REMOVED,
         VERSION_UPDATED,
-        VERSION_ANOUNCED,
+        VERSION_ANNOUNCED,
         KS_CREATING,
         KS_CREATED,
         KS_ALTERING,
