@@ -105,7 +105,7 @@ public class KeyCacheCqlTest extends CQLTester
      * each test, whereas the default keyspace gets dropped asynchronously and this may cause unexpected
      * flush operations during a test, which would change the expected result of metrics.
      *
-     * Then add manual caching, since by default we have disabled cachinng for all other tables, to ensure
+     * Then add manual caching, since by default we have disabled caching for all other tables, to ensure
      * that we can assert on the key cache size and metrics.
      */
     @Override
