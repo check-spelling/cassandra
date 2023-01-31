@@ -3211,7 +3211,7 @@ Merged from 2.0:
  * Warn on misuse of unlogged batches (CASSANDRA-9282)
  * Failure detector detects and ignores local pauses (CASSANDRA-9183)
  * Add utility class to support for rate limiting a given log statement (CASSANDRA-9029)
- * Add missing consistency levels to cassandra-stess (CASSANDRA-9361)
+ * Add missing consistency levels to cassandra-stress (CASSANDRA-9361)
  * Fix commitlog getCompletedTasks to not increment (CASSANDRA-9339)
  * Fix for harmless exceptions logged as ERROR (CASSANDRA-8564)
  * Delete processed sstables in sstablesplit/sstableupgrade (CASSANDRA-8606)
