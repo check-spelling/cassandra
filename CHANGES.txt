@@ -6591,7 +6591,7 @@ Merged from 0.8:
  * avoid caching token-only decoratedkeys (CASSANDRA-2416)
  * convert mmap assertion to if/throw so scrub can catch it (CASSANDRA-2417)
  * don't overwrite gc log (CASSANDRA-2418)
- * invalidate row cache for streamed row to avoid inconsitencies
+ * invalidate row cache for streamed row to avoid inconsistencies
    (CASSANDRA-2420)
  * avoid copies in range/index scans (CASSANDRA-2425)
  * make sure we don't wipe data during cleanup if the node has not join

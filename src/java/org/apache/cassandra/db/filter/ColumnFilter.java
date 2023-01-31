@@ -567,7 +567,7 @@ public abstract class ColumnFilter
                 // Moreover, there is no way to convert the filter with fetchAll and queried != null so that it is
                 // interpreted the same way on 3.4- because that Cassandra version does not support such filtering.
                 //
-                // In order to avoid inconsitencies in data read by 3.4- and 3.4+ we need to avoid creation of incompatible
+                // In order to avoid inconsistencies in data read by 3.4- and 3.4+ we need to avoid creation of incompatible
                 // filters when the cluster contains 3.4- nodes. We do that by forcibly setting queried to null.
                 //
                 // see CASSANDRA-10657, CASSANDRA-15833, CASSANDRA-16415
