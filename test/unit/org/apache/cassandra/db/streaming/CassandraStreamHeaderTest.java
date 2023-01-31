@@ -88,45 +88,45 @@ public class CassandraStreamHeaderTest
     }
 
     @Test
-    public void transferedSizeWithCompressionTest()
+    public void transferredSizeWithCompressionTest()
     {
         // compression info is lazily initialized to reduce GC, compute size based on compressionMetadata
         CassandraStreamHeader header = header(false, true);
-        long transferedSize = header.size();
-        assertEquals(transferedSize, header.calculateSize());
+        long transferredSize = header.size();
+        assertEquals(transferredSize, header.calculateSize());
 
         // computing file chunks before sending over network, and verify size is the same
         header.compressionInfo.chunks();
-        assertEquals(transferedSize, header.calculateSize());
+        assertEquals(transferredSize, header.calculateSize());
 
         SerializationUtils.assertSerializationCycle(header, CassandraStreamHeader.serializer);
     }
 
     @Test
-    public void transferedSizeWithZeroCopyStreamingTest()
+    public void transferredSizeWithZeroCopyStreamingTest()
     {
         // verify all component on-disk length is used for ZCS
         CassandraStreamHeader header = header(true, true);
-        long transferedSize = header.size();
-        assertEquals(ComponentManifest.create(sstable.descriptor).totalSize(), transferedSize);
-        assertEquals(transferedSize, header.calculateSize());
+        long transferredSize = header.size();
+        assertEquals(ComponentManifest.create(sstable.descriptor).totalSize(), transferredSize);
+        assertEquals(transferredSize, header.calculateSize());
 
         // verify that computing file chunks doesn't change transferred size for ZCS
         header.compressionInfo.chunks();
-        assertEquals(transferedSize, header.calculateSize());
+        assertEquals(transferredSize, header.calculateSize());
 
         SerializationUtils.assertSerializationCycle(header, CassandraStreamHeader.serializer);
     }
 
     @Test
-    public void transferedSizeWithoutCompressionTest()
+    public void transferredSizeWithoutCompressionTest()
     {
         // verify section size is used as transferred size
         CassandraStreamHeader header = header(false, false);
-        long transferedSize = header.size();
+        long transferredSize = header.size();
         assertNull(header.compressionInfo);
-        assertEquals(sstable.uncompressedLength(), transferedSize);
-        assertEquals(transferedSize, header.calculateSize());
+        assertEquals(sstable.uncompressedLength(), transferredSize);
+        assertEquals(transferredSize, header.calculateSize());
 
         SerializationUtils.assertSerializationCycle(header, CassandraStreamHeader.serializer);
     }
