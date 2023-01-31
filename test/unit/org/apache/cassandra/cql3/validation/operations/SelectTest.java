@@ -1859,7 +1859,7 @@ public class SelectTest extends CQLTester
                     "SELECT * FROM %s WHERE a <= 11 AND c > 15 AND d >= 16");
         });
 
-        // test clutering order
+        // test clustering order
         createTable("CREATE TABLE %s (a int, b int, c int, d int, e int, PRIMARY KEY ((a, b), c, d)) WITH CLUSTERING ORDER BY (c DESC, d ASC)");
 
         execute("INSERT INTO %s (a,b,c,d,e) VALUES (11, 11, 13, 14, 15)");

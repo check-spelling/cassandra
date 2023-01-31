@@ -511,7 +511,7 @@ public class DescribeStatementTest extends CQLTester
     }
 
     @Test
-    public void testDescribeTableAndMaterializedViewWithClustringOrder() throws Throwable
+    public void testDescribeTableAndMaterializedViewWithClusteringOrder() throws Throwable
     {
         String table = createTable(KEYSPACE_PER_TEST, "CREATE TABLE IF NOT EXISTS %s (pk1 int, pk2 int, ck1 int, ck2 int, reg1 int, reg2 list<int>, reg3 int, PRIMARY KEY ((pk1, pk2), ck1, ck2)) WITH CLUSTERING ORDER BY (ck1 ASC, ck2 DESC);");
 
