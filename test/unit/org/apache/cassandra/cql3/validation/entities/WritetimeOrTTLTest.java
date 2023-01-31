@@ -131,7 +131,7 @@ public class WritetimeOrTTLTest extends CQLTester
         execute("INSERT INTO %s (k, v) VALUES (1, []) USING TIMESTAMP ? AND TTL ?", TIMESTAMP_1, TTL_1);
         assertWritetimeAndTTL("v", TIMESTAMP_1, TTL_1);
 
-        // truncate, since previous columns would win on reconcilliation because of their TTL (CASSANDRA-14592)
+        // truncate, since previous columns would win on reconciliation because of their TTL (CASSANDRA-14592)
         execute("TRUNCATE TABLE %s");
 
         // Update with a single element without TTL
@@ -277,7 +277,7 @@ public class WritetimeOrTTLTest extends CQLTester
         assertWritetimeAndTTL("s[0]", NO_TIMESTAMP, NO_TTL);
         assertWritetimeAndTTL("s[0..0]", NO_TIMESTAMP, NO_TTL);
 
-        // truncate, since previous columns would win on reconcilliation because of their TTL (CASSANDRA-14592)
+        // truncate, since previous columns would win on reconciliation because of their TTL (CASSANDRA-14592)
         execute("TRUNCATE TABLE %s");
 
         // Update with a single element without TTL
@@ -463,7 +463,7 @@ public class WritetimeOrTTLTest extends CQLTester
         assertWritetimeAndTTL("m[0..]", NO_TIMESTAMP, NO_TTL);
         assertWritetimeAndTTL("m[0..0]", NO_TIMESTAMP, NO_TTL);
 
-        // truncate, since previous columns would win on reconcilliation because of their TTL (CASSANDRA-14592)
+        // truncate, since previous columns would win on reconciliation because of their TTL (CASSANDRA-14592)
         execute("TRUNCATE TABLE %s");
 
         // Create with a single element without TTL

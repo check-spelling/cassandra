@@ -38,7 +38,7 @@ public class NonNativeTimestampTest extends CQLTester
         assertFalse(timestamp1 == -1l);
 
         // per CASSANDRA-8246 the two updates will have the same (incorrect)
-        // timestamp, so reconcilliation is by value and the "older" update wins
+        // timestamp, so reconciliation is by value and the "older" update wins
         execute("INSERT INTO %s (k, v) values (1, ?)", 1);
 
         row = execute("SELECT v, writetime(v) AS wt FROM %s WHERE k = 1").one();
