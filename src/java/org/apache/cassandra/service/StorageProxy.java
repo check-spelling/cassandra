@@ -2649,7 +2649,7 @@ public class StorageProxy implements StorageProxyMBean
 
     public static void logRequestException(Exception exception, Collection<? extends ReadCommand> commands)
     {
-        // Multiple different types of errors can happen, so by dedupping on the error type we can see each error
+        // Multiple different types of errors can happen, so by deduping on the error type we can see each error
         // case rather than just exposing the first error seen; this should make sure more rare issues are exposed
         // rather than being hidden by more common errors such as timeout or unavailable
         // see CASSANDRA-17754
