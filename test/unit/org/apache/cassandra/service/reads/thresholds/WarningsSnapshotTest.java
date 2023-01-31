@@ -38,14 +38,14 @@ public class WarningsSnapshotTest
     private static final InetAddressAndPort VACATION_HOME = address(127, 0, 0, 2);
 
     @Test
-    public void staticMergeEmtpy()
+    public void staticMergeEmpty()
     {
         WarningsSnapshot result = merge(null, empty(), null, empty());
         assertThat(result).isNull();
     }
 
     @Test
-    public void staticMergeNonEmtpy()
+    public void staticMergeNonEmpty()
     {
         qt().forAll(nonEmpty(), nonEmpty()).check((a, b) -> {
             WarningsSnapshot result = merge(a, b, null, empty());
@@ -54,7 +54,7 @@ public class WarningsSnapshotTest
     }
 
     @Test
-    public void mergeEmtpy()
+    public void mergeEmpty()
     {
         WarningsSnapshot result = empty().merge(empty());
         assertThat(result).isEqualTo(empty());
