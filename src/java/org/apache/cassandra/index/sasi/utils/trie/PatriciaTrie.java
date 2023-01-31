@@ -951,7 +951,7 @@ public class PatriciaTrie<K, V> extends AbstractPatriciaTrie<K, V> implements Se
         }
 
         /**
-         * This method does two things. It determinates the FROM
+         * This method does two things. It determinants the FROM
          * and TO range of the {@link PrefixRangeMap} and the number
          * of elements in the range. This method must be called every
          * time the {@link Trie} has changed.
