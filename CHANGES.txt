@@ -2014,7 +2014,7 @@ Merged from 2.2:
  * Fix DynamicEndpointSnitch noop in multi-datacenter situations (CASSANDRA-13074)
  * cqlsh copy-from: encode column names to avoid primary key parsing errors (CASSANDRA-12909)
  * Temporarily fix bug that creates commit log when running offline tools (CASSANDRA-8616)
- * Reduce granuality of OpOrder.Group during index build (CASSANDRA-12796)
+ * Reduce granularity of OpOrder.Group during index build (CASSANDRA-12796)
  * Test bind parameters and unset parameters in InsertUpdateIfConditionTest (CASSANDRA-12980)
  * Use saved tokens when setting local tokens on StorageService.joinRing (CASSANDRA-12935)
  * cqlsh: fix DESC TYPES errors (CASSANDRA-12914)
