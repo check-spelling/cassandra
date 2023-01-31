@@ -425,7 +425,7 @@ public class MigrationManagerTest
         try
         {
             cf.apply(newCfm);
-            throw new AssertionError("Should have blwon up when you used a different cf type.");
+            throw new AssertionError("Should have blown up when you used a different cf type.");
         }
         catch (ConfigurationException expected) {}
 
