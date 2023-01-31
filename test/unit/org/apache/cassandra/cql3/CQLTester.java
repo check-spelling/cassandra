@@ -2189,7 +2189,7 @@ public abstract class CQLTester
         return metrics.get(metricName);
     }
 
-    // Attempt to find an AbstracType from a value (for serialization/printing sake).
+    // Attempt to find an AbstractType from a value (for serialization/printing sake).
     // Will work as long as we use types we know of, which is good enough for testing
     private static AbstractType typeFor(Object value)
     {
