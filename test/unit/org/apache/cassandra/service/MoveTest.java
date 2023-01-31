@@ -526,7 +526,7 @@ public class MoveTest
         assertTrue(!tmd.isMoving(host));
         Token newToken = new BigIntegerToken(String.valueOf(token));
         tmd.updateNormalToken(newToken, host);
-        // As well as upating TMD, update the host's tokens in gossip. Since CASSANDRA-15120, status changing to MOVING
+        // As well as updating TMD, update the host's tokens in gossip. Since CASSANDRA-15120, status changing to MOVING
         // ensures that TMD is up to date with token assignments according to gossip. So we need to make sure gossip has
         // the correct new token, as the moving node itself would do upon successful completion of the move operation.
         // Without this, the next movement for that host will set the token in TMD's back to the old value from gossip

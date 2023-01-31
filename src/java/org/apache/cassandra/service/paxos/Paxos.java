@@ -989,7 +989,7 @@ public class Paxos
                         casReadMetrics.unfinishedCommit.inc();
 
                     // we DO NOT need to change the timestamp of this commit - either we or somebody else will finish it
-                    // and the original timestamp is correctly linearised. By not updatinig the timestamp we leave enough
+                    // and the original timestamp is correctly linearised. By not updating the timestamp we leave enough
                     // information for nodes to avoid competing re-proposing the same proposal; if an in progress accept
                     // is equal to the latest commit (even if the ballots aren't) we're done and can abort earlier,
                     // and in fact it's possible for a CAS to sometimes determine if side effects occurred by reading
