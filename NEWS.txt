@@ -1641,7 +1641,7 @@ Upgrading
      (See https://issues.apache.org/jira/browse/CASSANDRA-6504 and the
      blog post at http://goo.gl/qj8iQl for details).
    - (per-table) index_interval parameter has been replaced with
-     min_index_interval and max_index_interval paratemeters. index_interval
+     min_index_interval and max_index_interval parameters. index_interval
      has been deprecated.
    - support for supercolumns has been removed from json2sstable
 
