@@ -235,7 +235,7 @@ public class HadoopCompat
     }
 
     /**
-     * Creates TaskAttempContext from a JobConf and jobId using the correct
+     * Creates TaskAttemptContext from a JobConf and jobId using the correct
      * constructor for based on Hadoop version.
      */
     public static TaskAttemptContext newTaskAttemptContext(
