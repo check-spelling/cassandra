@@ -489,7 +489,7 @@ public class Schema implements SchemaProvider
     public Optional<UserFunction> findUserFunction(FunctionName name, List<AbstractType<?>> argTypes)
     {
         if (!name.hasKeyspace())
-            throw new IllegalArgumentException(String.format("Function name must be fully quallified: got %s", name));
+            throw new IllegalArgumentException(String.format("Function name must be fully qualified: got %s", name));
 
         return Optional.ofNullable(getKeyspaceMetadata(name.keyspace))
                        .flatMap(ksm -> ksm.userFunctions.find(name, argTypes));
