@@ -488,7 +488,7 @@ public class CompactionStrategyManagerTest
         {
             result[i] = result[i - 1] + sstablesPerRange;
         }
-        result[numDisks - 1] = numSSTables; // make last boundary alwyays be the number of SSTables to prevent rounding errors
+        result[numDisks - 1] = numSSTables; // make last boundary always be the number of SSTables to prevent rounding errors
         return result;
     }
 

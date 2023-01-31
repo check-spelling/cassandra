@@ -48,7 +48,7 @@ import org.apache.cassandra.transport.ProtocolVersion;
  * <li>Replaces each character before and after the supplied positions by the supplied padding character. In other
  * words, it will only mask all the first m and last n characters.</li>
  * </ul>
- * The returned value will allways be of the same type as the first string-based argument.
+ * The returned value will always be of the same type as the first string-based argument.
  */
 public class PartialMaskingFunction extends MaskingFunction
 {
