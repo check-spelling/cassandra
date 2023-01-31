@@ -502,7 +502,7 @@ public class MoveTransientTest
     @Test
     public void testMoveBackwardCalculateRangesToFetchWithPreferredEndpoints() throws Exception
     {
-        //Moving backwards should fetch nothing and fetch ranges is emptys so this doesn't test a ton
+        //Moving backwards should fetch nothing and fetch ranges is empties so this doesn't test a ton
         EndpointsByReplica.Builder expectedResult = new EndpointsByReplica.Builder();
 
         invokeCalculateRangesToFetchWithPreferredEndpoints(calculateStreamAndFetchRangesMoveBackward().right,
