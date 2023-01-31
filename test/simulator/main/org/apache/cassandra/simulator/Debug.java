@@ -219,7 +219,7 @@ public class Debug
         @Override
         public void before(Action action, Before before)
         {
-            if (logger.isWarnEnabled()) // invoke toString() eagerly to ensure we have the task's descriptin
+            if (logger.isWarnEnabled()) // invoke toString() eagerly to ensure we have the task's description
                 logger.warn(String.format("%6ds %s %s", TimeUnit.NANOSECONDS.toSeconds(time.nanoTime()), before, action));
         }
 
