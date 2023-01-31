@@ -161,7 +161,7 @@ public abstract class CBUtil
     }
 
     /**
-     * Returns the ecoding size of a US-ASCII string. It does not work if containing any char > 0x007F (127)
+     * Returns the encoding size of a US-ASCII string. It does not work if containing any char > 0x007F (127)
      * @param str, satisfies {@link org.apache.cassandra.db.marshal.AsciiType},
      *             i.e. seven-bit ASCII, a.k.a. ISO646-US
      */
