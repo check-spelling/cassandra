@@ -73,7 +73,7 @@ public class RegularColumnIndex extends CassandraIndex
         // Note: if indexing a static column, prefix will be Clustering.STATIC_CLUSTERING
         // so the Clustering obtained from builder::build will contain a value for only
         // the partition key. At query time though, this is all that's needed as the entire
-        // base table partition should be returned for any mathching index entry.
+        // base table partition should be returned for any matching index entry.
         return builder;
     }
 
