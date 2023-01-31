@@ -162,7 +162,7 @@ public class AlterTest extends CQLTester
         alterTable("ALTER TABLE %s DROP todrop USING TIMESTAMP 20000;");
         alterTable("ALTER TABLE %s ADD todrop int static;");
         execute("INSERT INTO %s (id, c1, v1, todrop) VALUES (?, ?, ?, ?) USING TIMESTAMP ?", 1, 100, 100, 100, 30000L);
-        // static column value with largest timestmap will be available again
+        // static column value with largest timestamp will be available again
         assertRows(execute("SELECT id, c1, v1, todrop FROM %s"),
                    row(1, 0, 0, 4),
                    row(1, 1, 1, 4),

@@ -91,7 +91,7 @@ public abstract class Cells
 
         if (leftIsExpiringOrTombstone | rightIsExpiringOrTombstone)
         {
-            // Tombstones always win reconciliation with live cells of the same timstamp
+            // Tombstones always win reconciliation with live cells of the same timestamp
             // CASSANDRA-14592: for consistency of reconciliation, regardless of system clock at time of reconciliation
             // this requires us to treat expiring cells (which will become tombstones at some future date) the same wrt regular cells
             if (leftIsExpiringOrTombstone != rightIsExpiringOrTombstone)

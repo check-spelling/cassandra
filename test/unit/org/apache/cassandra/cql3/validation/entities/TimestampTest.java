@@ -46,7 +46,7 @@ public class TimestampTest extends CQLTester
     }
 
     /**
-     * Test timestmp and ttl
+     * Test timestamp and ttl
      * migrated from cql_tests.py:TestCQL.timestamp_and_ttl_test()
      */
     @Test

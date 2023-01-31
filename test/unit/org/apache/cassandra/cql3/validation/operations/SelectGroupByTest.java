@@ -2146,7 +2146,7 @@ public class SelectGroupByTest extends CQLTester
     }
 
     @Test
-    public void testGroupByTimeRangesWithTimestamTypeAndWithoutPaging() throws Throwable
+    public void testGroupByTimeRangesWithTimestampTypeAndWithoutPaging() throws Throwable
     {
         for (String compactOption : new String[] { "", " WITH COMPACT STORAGE" })
         {

@@ -1957,7 +1957,7 @@ public class AggregationTest extends CQLTester
                 reconfigureFilter.setContext(ctx);
                 reconfigureFilter.setRefreshPeriod(millis);
                 reconfigureFilter.stop();
-                reconfigureFilter.start(); // start() sets the next check timestammp
+                reconfigureFilter.start(); // start() sets the next check timestamp
                 done = true;
                 break;
             }
