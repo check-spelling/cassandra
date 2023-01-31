@@ -65,7 +65,7 @@ USE `WITH HASHED PASSWORD` to provide the jBcrypt hashed password directly. See 
 If a `network_authorizer` has been configured, you can restrict login
 roles to specific datacenters with the `ACCESS TO DATACENTERS` clause
 followed by a set literal of datacenters the user can access. Not
-specifiying datacenters implicitly grants access to all datacenters. The
+specifying datacenters implicitly grants access to all datacenters. The
 clause `ACCESS TO ALL DATACENTERS` can be used for explicitness, but
 there's no functional difference.
 

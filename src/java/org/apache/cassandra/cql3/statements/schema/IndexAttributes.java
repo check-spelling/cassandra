@@ -44,7 +44,7 @@ public class IndexAttributes extends PropertyDefinitions
         validate(keywords, obsoleteKeywords);
 
         if (isCustom && customClass == null)
-            throw new InvalidRequestException("CUSTOM index requires specifiying the index class");
+            throw new InvalidRequestException("CUSTOM index requires specifying the index class");
 
         if (!isCustom && customClass != null)
             throw new InvalidRequestException("Cannot specify index class for a non-CUSTOM index");
