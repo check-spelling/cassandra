@@ -233,7 +233,7 @@ public abstract class RepairCoordinatorFast extends RepairCoordinatorBase
     public void desiredHostNotCoordinator()
     {
         // current limitation is that the coordinator must be apart of the repair, so as long as that exists this test
-        // verifies that the validation logic will termniate the repair properly
+        // verifies that the validation logic will terminate the repair properly
         String table = tableName("desiredhostnotcoordinator");
         assertTimeoutPreemptively(Duration.ofMinutes(1), () -> {
             CLUSTER.schemaChange(format("CREATE TABLE %s.%s (key text, value text, PRIMARY KEY (key))", KEYSPACE, table));
