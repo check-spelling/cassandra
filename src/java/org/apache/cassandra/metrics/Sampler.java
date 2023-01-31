@@ -39,7 +39,7 @@ public abstract class Sampler<T>
     private static long DISABLED = -1L;
 
     private static final BiFunction<SamplerType, SamplingManager.ResultBuilder, SamplingManager.ResultBuilder>
-        FrequencySamplerFomatter = (type, resultBuilder) ->
+        FrequencySamplerFormatter = (type, resultBuilder) ->
                                    resultBuilder.forType(type, type.description)
                                                 .addColumn("Table", "table")
                                                 .addColumn("Partition", "value")
@@ -48,8 +48,8 @@ public abstract class Sampler<T>
 
     public enum SamplerType
     {
-        READS("Frequency of reads by partition", FrequencySamplerFomatter),
-        WRITES("Frequency of writes by partition", FrequencySamplerFomatter),
+        READS("Frequency of reads by partition", FrequencySamplerFormatter),
+        WRITES("Frequency of writes by partition", FrequencySamplerFormatter),
         LOCAL_READ_TIME("Longest read query times", ((samplerType, resultBuilder) ->
                                                      resultBuilder.forType(samplerType, samplerType.description)
                                                                   .addColumn("Query", "value")
@@ -59,7 +59,7 @@ public abstract class Sampler<T>
                                                                    .addColumn("Table", "table")
                                                                    .addColumn("Partition", "value")
                                                                    .addColumn("Bytes", "count"))),
-        CAS_CONTENTIONS("Frequency of CAS contention by partition", FrequencySamplerFomatter);
+        CAS_CONTENTIONS("Frequency of CAS contention by partition", FrequencySamplerFormatter);
 
         private final String description;
         private final BiFunction<SamplerType, SamplingManager.ResultBuilder, SamplingManager.ResultBuilder> formatter;
