@@ -204,7 +204,7 @@ public final class Retry
     }
 
     /**
-     * Compute a expoential delay based off the retry count and min/max delay.
+     * Compute a exponential delay based off the retry count and min/max delay.
      */
     private static long computeSleepTimeMillis(int retryCount, long baseSleepTimeMillis, long maxSleepMillis)
     {
