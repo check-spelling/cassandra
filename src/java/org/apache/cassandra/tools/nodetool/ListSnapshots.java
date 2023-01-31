@@ -42,7 +42,7 @@ public class ListSnapshots extends NodeToolCmd
 
     @Option(title = "ephemeral",
     name = { "-e", "--ephemeral" },
-    description = "Include ephememeral snapshots")
+    description = "Include ephemeral snapshots")
     private boolean includeEphemeral = false;
 
     @Override
