@@ -567,7 +567,7 @@ public class ClusterUtils
     {
         if (!instance.config().has(Feature.GOSSIP))
         {
-            // when gosisp isn't enabled, don't bother waiting on gossip to settle...
+            // when gossip isn't enabled, don't bother waiting on gossip to settle...
             return;
         }
         awaitGossip(instance, "Schema IDs did not match", all -> {
