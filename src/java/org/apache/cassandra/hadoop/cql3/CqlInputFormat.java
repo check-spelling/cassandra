@@ -214,7 +214,7 @@ public class CqlInputFormat extends org.apache.hadoop.mapreduce.InputFormat<Long
             }
             // The estimate is only stored on a single host, if that host is down then can not get the estimate
             // its more than likely that a single host could be "too large" for one split but there is no way of
-            // knowning!
+            // knowing!
             // This logic attempts to guess the estimate from all the successful ranges
             if (!failedTasks.isEmpty())
             {
