@@ -92,7 +92,7 @@ public class AutoSnapshotTest extends CQLTester
     }
 
     @Test
-    public void testAutoSnapshotOnTrucate() throws Throwable
+    public void testAutoSnapshotOnTruncate() throws Throwable
     {
         createTable("CREATE TABLE %s (a int, b int, c int, PRIMARY KEY(a, b))");
         // Check there are no snapshots
