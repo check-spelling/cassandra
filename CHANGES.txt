@@ -3285,7 +3285,7 @@ Merged from 2.0:
  * Make PasswordAuthenticator number of hashing rounds configurable (CASSANDRA-8085)
  * Fix AssertionError when binding nested collections in DELETE (CASSANDRA-8900)
  * Check for overlap with non-early sstables in LCS (CASSANDRA-8739)
- * Only calculate max purgable timestamp if we have to (CASSANDRA-8914)
+ * Only calculate max purgeable timestamp if we have to (CASSANDRA-8914)
  * (cqlsh) Greatly improve performance of COPY FROM (CASSANDRA-8225)
  * IndexSummary effectiveIndexInterval is now a guideline, not a rule (CASSANDRA-8993)
  * Use correct bounds for page cache eviction of compressed files (CASSANDRA-8746)

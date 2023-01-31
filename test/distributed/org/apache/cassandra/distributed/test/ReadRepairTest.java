@@ -412,7 +412,7 @@ public class ReadRepairTest extends TestBaseImpl
     }
 
     /**
-     * Range queries before CASSANDRA-11427 will trigger read repairs for puregable tombstones on hosts that already
+     * Range queries before CASSANDRA-11427 will trigger read repairs for purgeable tombstones on hosts that already
      * compacted given tombstones. This will result in constant transfer and compaction actions sourced by few nodes
      * seeding purgeable tombstones and triggered e.g. by periodical jobs scanning data range wise.
      * <p>

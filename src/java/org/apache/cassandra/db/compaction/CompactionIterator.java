@@ -64,7 +64,7 @@ import static org.apache.cassandra.config.DatabaseDescriptor.paxosStatePurging;
  *       data that is not read often, so compaction "pro-actively" fix such index entries. This is mainly
  *       an optimization).</li>
  *   <li>invalidate cached partitions that are empty post-compaction. This avoids keeping partitions with
- *       only purgable tombstones in the row cache.</li>
+ *       only purgeable tombstones in the row cache.</li>
  *   <li>keep tracks of the compaction progress.</li>
  * </ul>
  */

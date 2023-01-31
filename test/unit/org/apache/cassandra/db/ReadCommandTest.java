@@ -817,7 +817,7 @@ public class ReadCommandTest
         cfs.getLiveSSTables().forEach(sstable -> mutateRepaired(cfs, sstable, 111, null));
 
         Map<DecoratedKey, ByteBuffer> digestsWithTombstones = new HashMap<>();
-        //Tombstones are not yet purgable
+        //Tombstones are not yet purgeable
         for (DecoratedKey key : keys)
         {
             ReadCommand cmd = Util.cmd(cfs, key).withNowInSeconds(nowInSec).build();
@@ -840,7 +840,7 @@ public class ReadCommandTest
         // Make tombstones eligible for purging and re-run cmd with an incremented nowInSec
         setGCGrace(cfs, 0);
 
-        //Tombstones are now purgable, so won't be in the read results and produce different digests
+        //Tombstones are now purgeable, so won't be in the read results and produce different digests
         for (DecoratedKey key : keys)
         {
             ReadCommand cmd = Util.cmd(cfs, key).withNowInSeconds(nowInSec + 60).build();
@@ -1097,7 +1097,7 @@ public class ReadCommandTest
     public void purgingConsidersRepairedDataOnly()
     {
         // 2 sstables, first is repaired and contains data that is all purgeable
-        // the second is unrepaired and contains non-purgable data. Even though
+        // the second is unrepaired and contains non-purgeable data. Even though
         // the partition itself is not fully purged, the repaired data digest
         // should be empty as there was no non-purgeable, repaired data read.
         ColumnFamilyStore cfs = Keyspace.open(KEYSPACE).getColumnFamilyStore(CF6);

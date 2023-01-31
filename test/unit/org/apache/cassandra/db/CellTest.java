@@ -291,7 +291,7 @@ public class CellTest
      * tombstones shouldn't be purged if localDeletionTime is greater than gcBefore
      */
     @Test
-    public void testNonPurgableTombstone()
+    public void testNonPurgeableTombstone()
     {
         int now = 100;
         Cell<?> cell = deleted(cfm, "val", now, now);
