@@ -731,11 +731,11 @@ public interface StorageServiceMBean extends NotificationEmitter
     public void setEntireSSTableInterDCStreamThroughputMebibytesPerSec(int value);
     public double getEntireSSTableInterDCStreamThroughputMebibytesPerSecAsDouble();
 
-    public double getCompactionThroughtputMibPerSecAsDouble();
-    public long getCompactionThroughtputBytesPerSec();
+    public double getCompactionThroughputMibPerSecAsDouble();
+    public long getCompactionThroughputBytesPerSec();
     /**
-     * @return  compaction_throughgput in MiB
-     * @deprecated Use getCompactionThroughtputMibPerSecAsDouble instead as this one will provide a rounded value
+     * @return  compaction_throughput in MiB
+     * @deprecated Use getCompactionThroughputMibPerSecAsDouble instead as this one will provide a rounded value
      */
     @Deprecated
     public int getCompactionThroughputMbPerSec();

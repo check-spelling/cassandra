@@ -348,8 +348,8 @@ Deprecation
       in favor of getter methods `getStreamThroughputMebibytesPerSec` and `getStreamThroughputMebibytesPerSecAsDouble`;
       deprecate getter method `getInterDCStreamThroughputMbitPerSec` in favor of getter method `getInterDCStreamThroughputMbitPerSecAsDouble`;
       deprecate getter method `getInterDCStreamThroughputMbPerSec` in favor of getter methods `getInterDCStreamThroughputMebibytesPerSecAsDouble`;
-      deprecate getter method `getCompactionThroughputMbPerSec` in favor of getter methods `getCompactionThroughtputMibPerSecAsDouble`
-      and `getCompactionThroughtputBytesPerSec`; deprecate setter methods `setStreamThroughputMbPerSec` and `setStreamThroughputMbitPerSec`
+      deprecate getter method `getCompactionThroughputMbPerSec` in favor of getter methods `getCompactionThroughputMibPerSecAsDouble`
+      and `getCompactionThroughputBytesPerSec`; deprecate setter methods `setStreamThroughputMbPerSec` and `setStreamThroughputMbitPerSec`
       in favor of `setStreamThroughputMebibytesPerSec`; deprecate setter methods `setInterDCStreamThroughputMbitPerSec` and
       `setInterDCStreamThroughputMbPerSec` in favor of `setInterDCStreamThroughputMebibytesPerSec`. The deprecated JMX methods
       may return a rounded value so if precision is important, you want to use the new getters. While those deprecated JMX getters
@@ -467,7 +467,7 @@ New features
 
 Upgrading
 ---------
-    - If you were on 4.0.1 - 4.0.5 and if you haven't set the compaction_thoroughput_mb_per_sec in your 4.0 cassandra.yaml
+    - If you were on 4.0.1 - 4.0.5 and if you haven't set the compaction_throughput_mb_per_sec in your 4.0 cassandra.yaml
       file but you relied on the internal default value,then compaction_throughput_mb_per_sec was equal to an old default
       value of 16MiB/s in Cassandra 4.0. After CASSANDRA-17790 this is changed to 64MiB/s to match the default value in
       cassandra.yaml. If you prefer the old one of 16MiB/s, you need to set it explicitly in your cassandra.yaml file.
