@@ -278,7 +278,7 @@ public class MessagingServiceMBeanImpl implements MessagingServiceMBean
     @Override
     public void reloadSslCertificates() throws IOException
     {
-        final EncryptionOptions.ServerEncryptionOptions serverOpts = DatabaseDescriptor.getInternodeMessagingEncyptionOptions();
+        final EncryptionOptions.ServerEncryptionOptions serverOpts = DatabaseDescriptor.getInternodeMessagingEncryptionOptions();
         final EncryptionOptions clientOpts = DatabaseDescriptor.getNativeProtocolEncryptionOptions();
         SSLFactory.validateSslCerts(serverOpts, clientOpts);
         SSLFactory.checkCertFilesForHotReloading(serverOpts, clientOpts);

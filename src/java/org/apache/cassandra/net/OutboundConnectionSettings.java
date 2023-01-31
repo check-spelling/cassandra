@@ -497,7 +497,7 @@ public class OutboundConnectionSettings
     @VisibleForTesting
     static ServerEncryptionOptions defaultEncryptionOptions(InetAddressAndPort endpoint)
     {
-        ServerEncryptionOptions options = DatabaseDescriptor.getInternodeMessagingEncyptionOptions();
+        ServerEncryptionOptions options = DatabaseDescriptor.getInternodeMessagingEncryptionOptions();
         return options.shouldEncrypt(endpoint) ? options : null;
     }
 

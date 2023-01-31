@@ -116,7 +116,7 @@ public class MessagingServiceTest
         CommitLog.instance.start();
         DatabaseDescriptor.setBroadcastAddress(InetAddress.getByName("127.0.0.1"));
         originalAuthenticator = DatabaseDescriptor.getInternodeAuthenticator();
-        originalServerEncryptionOptions = DatabaseDescriptor.getInternodeMessagingEncyptionOptions();
+        originalServerEncryptionOptions = DatabaseDescriptor.getInternodeMessagingEncryptionOptions();
         originalListenAddress = InetAddressAndPort.getByAddressOverrideDefaults(DatabaseDescriptor.getListenAddress(), DatabaseDescriptor.getStoragePort());
     }
 
@@ -133,7 +133,7 @@ public class MessagingServiceTest
     public void tearDown()
     {
         DatabaseDescriptor.setInternodeAuthenticator(originalAuthenticator);
-        DatabaseDescriptor.setInternodeMessagingEncyptionOptions(originalServerEncryptionOptions);
+        DatabaseDescriptor.setInternodeMessagingEncryptionOptions(originalServerEncryptionOptions);
         DatabaseDescriptor.setShouldListenOnBroadcastAddress(false);
         DatabaseDescriptor.setListenAddress(originalListenAddress.getAddress());
         FBUtilities.reset();

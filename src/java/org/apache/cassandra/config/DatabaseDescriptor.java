@@ -3106,12 +3106,12 @@ public class DatabaseDescriptor
         conf.dynamic_snitch_badness_threshold = dynamicBadnessThreshold;
     }
 
-    public static EncryptionOptions.ServerEncryptionOptions getInternodeMessagingEncyptionOptions()
+    public static EncryptionOptions.ServerEncryptionOptions getInternodeMessagingEncryptionOptions()
     {
         return conf.server_encryption_options;
     }
 
-    public static void setInternodeMessagingEncyptionOptions(EncryptionOptions.ServerEncryptionOptions encryptionOptions)
+    public static void setInternodeMessagingEncryptionOptions(EncryptionOptions.ServerEncryptionOptions encryptionOptions)
     {
         conf.server_encryption_options = encryptionOptions;
     }

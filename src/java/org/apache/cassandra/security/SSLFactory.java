@@ -262,7 +262,7 @@ public final class SSLFactory
         {
             ScheduledExecutors.scheduledTasks
                 .scheduleWithFixedDelay(() -> checkCertFilesForHotReloading(
-                                                DatabaseDescriptor.getInternodeMessagingEncyptionOptions(),
+                                                DatabaseDescriptor.getInternodeMessagingEncryptionOptions(),
                                                 DatabaseDescriptor.getNativeProtocolEncryptionOptions()),
                                         DEFAULT_HOT_RELOAD_INITIAL_DELAY_SEC,
                                         DEFAULT_HOT_RELOAD_PERIOD_SEC, TimeUnit.SECONDS);

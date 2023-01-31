@@ -145,7 +145,7 @@ public class InboundConnectionSettings
     {
         ServerEncryptionOptions encryption = this.encryption;
         if (encryption == null)
-            encryption = DatabaseDescriptor.getInternodeMessagingEncyptionOptions();
+            encryption = DatabaseDescriptor.getInternodeMessagingEncryptionOptions();
         encryption = encryption.withOptional(false).withInternodeEncryption(ServerEncryptionOptions.InternodeEncryption.all);
 
         return this.withBindAddress(bindAddress.withPort(DatabaseDescriptor.getSSLStoragePort()))
@@ -174,7 +174,7 @@ public class InboundConnectionSettings
             authenticator = DatabaseDescriptor.getInternodeAuthenticator();
 
         if (encryption == null)
-            encryption = DatabaseDescriptor.getInternodeMessagingEncyptionOptions();
+            encryption = DatabaseDescriptor.getInternodeMessagingEncryptionOptions();
 
         if (socketReceiveBufferSizeInBytes == null)
             socketReceiveBufferSizeInBytes = DatabaseDescriptor.getInternodeSocketReceiveBufferSizeInBytes();
