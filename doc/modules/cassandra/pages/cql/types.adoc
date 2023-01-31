@@ -76,7 +76,7 @@ the first time you delete a counter. In other words, you should not
 re-update a counter that you have deleted (if you do, proper behavior is
 not guaranteed).
 * Counter updates are, by nature, not
-https://en.wikipedia.org/wiki/Idempotence[idemptotent]. An important
+https://en.wikipedia.org/wiki/Idempotence[idempotent]. An important
 consequence is that if a counter update fails unexpectedly (timeout or
 loss of connection to the coordinator node), the client has no way to
 know if the update has been applied or not. In particular, replaying the
