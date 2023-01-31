@@ -541,7 +541,7 @@ public class LoaderOptions
                     logger.info("ssl storage port is deprecated and not used, all communication goes though storage port " +
                                 "which is able to handle encrypted communication too.");
 
-                // Copy the encryption options and apply the config so that argument parsing can accesss isEnabled.
+                // Copy the encryption options and apply the config so that argument parsing can access isEnabled.
                 clientEncOptions = config.client_encryption_options.applyConfig();
                 serverEncOptions = config.server_encryption_options;
                 serverEncOptions.applyConfig();

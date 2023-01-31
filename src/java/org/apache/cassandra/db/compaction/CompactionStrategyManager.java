@@ -98,7 +98,7 @@ import static org.apache.cassandra.db.compaction.AbstractStrategyHolder.GroupedS
  *
  * Whenever the {@link DiskBoundaries} change, the compaction strategies must be reloaded, so in order to ensure
  * the compaction strategy placement reflect most up-to-date disk boundaries, call {@link this#maybeReloadDiskBoundaries()}
- * before acquiring the read lock to acess the strategies.
+ * before acquiring the read lock to access the strategies.
  *
  */
 
