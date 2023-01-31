@@ -84,7 +84,7 @@ public class CassandraValidationIterator extends ValidationPartitionIterator
             /*
              * The main reason we always purge is that including gcable tombstone would mean that the
              * repair digest will depends on the scheduling of compaction on the different nodes. This
-             * is still not perfect because gcbefore is currently dependend on the current time at which
+             * is still not perfect because gcbefore is currently dependent on the current time at which
              * the validation compaction start, which while not too bad for normal repair is broken for
              * repair on snapshots. A better solution would be to agree on a gcbefore that all node would
              * use, and we'll do that with CASSANDRA-4932.
