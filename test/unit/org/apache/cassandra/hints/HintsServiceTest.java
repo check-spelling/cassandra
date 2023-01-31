@@ -178,7 +178,7 @@ public class HintsServiceTest
         // verify that we have a dispatch offset set for the page we're currently stuck at
         HintsStore store = HintsService.instance.getCatalog().get(StorageService.instance.getLocalHostUUID());
         HintsDescriptor descriptor = store.poll();
-        store.offerFirst(descriptor); // add again for cleanup during re-instanciation
+        store.offerFirst(descriptor); // add again for cleanup during re-instantiation
         InputPosition dispatchOffset = store.getDispatchOffset(descriptor);
         assertTrue(dispatchOffset != null);
         assertTrue(((ChecksummedDataInput.Position) dispatchOffset).sourcePosition > 0);

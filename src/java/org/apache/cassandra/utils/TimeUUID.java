@@ -463,7 +463,7 @@ public class TimeUUID implements Serializable, Comparable<TimeUUID>
              * gathering all the ip of this host.
              * Note that FBUtilities.getJustBroadcastAddress() should be enough to uniquely
              * identify the node *in the cluster* but it triggers DatabaseDescriptor
-             * instanciation and the UUID generator is used in Stress for instance,
+             * instantiation and the UUID generator is used in Stress for instance,
              * where we don't want to require the yaml.
              */
             Collection<InetAddressAndPort> localAddresses = getAllLocalAddresses();
