@@ -189,7 +189,7 @@ improved write throughput.
 
 This implementation takes two parameters, `shards` which specifies the number of shards to split into (by default, the
 number of CPU threads available to the process) and `serialize_writes`, which, if set to `true` causes writes to the
-memtable to be synchronized. The latter can be useful to minimize space and time wasted for unsuccesful lockless 
+memtable to be synchronized. The latter can be useful to minimize space and time wasted for unsuccessful lockless 
 partition modification where a new copy of the partition would be prepared but not used due to concurrent modification.
 Regardless of the setting, reads can always execute in parallel, including concurrently with writes.
 
