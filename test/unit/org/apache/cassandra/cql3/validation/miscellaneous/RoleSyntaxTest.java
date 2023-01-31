@@ -27,7 +27,7 @@ import org.apache.cassandra.cql3.CQLTester;
 
 public class RoleSyntaxTest extends CQLTester
 {
-    private static final String NO_QUOTED_USERNAME = "Quoted strings are are not supported for user names " +
+    private static final String NO_QUOTED_USERNAME = "Quoted strings are not supported for user names " +
                                                      "and USER is deprecated, please use ROLE";
 
     @Test

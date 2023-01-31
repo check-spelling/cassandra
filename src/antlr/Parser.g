@@ -1853,7 +1853,7 @@ tuple_type returns [CQL3Type.Raw t]
 username
     : IDENT
     | STRING_LITERAL
-    | QUOTED_NAME { addRecognitionError("Quoted strings are are not supported for user names and USER is deprecated, please use ROLE");}
+    | QUOTED_NAME { addRecognitionError("Quoted strings are not supported for user names and USER is deprecated, please use ROLE");}
     ;
 
 mbean

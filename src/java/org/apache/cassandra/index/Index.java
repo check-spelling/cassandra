@@ -66,7 +66,7 @@ import org.apache.cassandra.schema.IndexMetadata;
  * The methods defined in the top level interface can be grouped into 3 categories:
  *
  * Management Tasks:
- * This group of methods is primarily concerned with maintenance of secondary indexes are are mainly called from
+ * This group of methods is primarily concerned with maintenance of secondary indexes are mainly called from
  * SecondaryIndexManager. It includes methods for registering and un-registering an index, performing maintenance
  * tasks such as (re)building an index from SSTable data, flushing, invalidating and so forth, as well as some to
  * retrieve general metadata about the index (index name, any internal tables used for persistence etc).
