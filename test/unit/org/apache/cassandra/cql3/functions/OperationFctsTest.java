@@ -297,7 +297,7 @@ public class OperationFctsTest extends CQLTester
         createTable("CREATE TABLE %s (pk int, c1 tinyint, c2 smallint, v text, PRIMARY KEY(pk, c1, c2))");
         execute("INSERT INTO %S (pk, c1, c2, v) VALUES (2, 2, 2, 'test')");
 
-        // There is only one function outputing tinyint
+        // There is only one function outputting tinyint
         assertRows(execute("SELECT * FROM %s WHERE pk = 2 AND c1 = 1 + 1"),
                    row(2, (byte) 2, (short) 2, "test"));
 
