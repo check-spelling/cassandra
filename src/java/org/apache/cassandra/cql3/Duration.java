@@ -295,7 +295,7 @@ public final class Duration
 
     /**
      * Substracts this duration from the specified time in milliseconds.
-     * @param timeInMillis the time from which the duration must be substracted
+     * @param timeInMillis the time from which the duration must be subtracted
      * @return the specified time minus this duration
      */
     public long subtractFrom(long timeInMillis)

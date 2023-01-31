@@ -2029,7 +2029,7 @@ The return type of the operation will be based on the operand types:
 
 h3(#datetimeArithmetic). Datetime Arithmetic
 
-A @duration@ can be added (+) or substracted (-) from a @timestamp@ or a @date@ to create a new @timestamp@ or @date@. So for instance:
+A @duration@ can be added (+) or subtracted (-) from a @timestamp@ or a @date@ to create a new @timestamp@ or @date@. So for instance:
 
 bc(sample). 
 SELECT * FROM myTable WHERE t = '2017-01-01' - 2d

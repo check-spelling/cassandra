@@ -50,7 +50,7 @@ public class EncodingStats implements IMeasurableMemory
 
     static
     {
-        // We want a fixed epoch, but that provide small values when substracted from our timestamp and deletion time.
+        // We want a fixed epoch, but that provide small values when subtracted from our timestamp and deletion time.
         // So we somewhat arbitrary use the date of the summit 2015, which should hopefully roughly correspond to 3.0 release.
         Calendar c = Calendar.getInstance(TimeZone.getTimeZone("GMT-0"), Locale.US);
         c.set(Calendar.YEAR, 2015);

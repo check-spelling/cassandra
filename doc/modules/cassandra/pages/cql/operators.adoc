@@ -56,7 +56,7 @@ evaluated left to right based on their position in the expression.
 [[datetime--arithmetic]]
 == Datetime Arithmetic
 
-A `duration` can be added (+) or substracted (-) from a `timestamp` or a
+A `duration` can be added (+) or subtracted (-) from a `timestamp` or a
 `date` to create a new `timestamp` or `date`. So for instance:
 
 [source,cql]
