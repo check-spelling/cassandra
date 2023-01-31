@@ -629,7 +629,7 @@ public class ThrottledUnfilteredIteratorTest extends CQLTester
         builder.applyUnsafe();
 
         new RowUpdateBuilder(cfs.metadata(), 3, key).addRangeTombstone(19, 27).build().applyUnsafe();
-        // We don't flush to test with both a range tomsbtone in memtable and in sstable
+        // We don't flush to test with both a range tombstone in memtable and in sstable
 
         // Queries by name
         int[] live = new int[]{ 4, 9, 11, 17, 28 };

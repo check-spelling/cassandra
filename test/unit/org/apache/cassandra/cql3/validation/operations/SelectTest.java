@@ -1248,7 +1248,7 @@ public class SelectTest extends CQLTester
         execute("UPDATE %s SET s = 2 WHERE a = 2");
         execute("UPDATE %s SET s = 3 WHERE a = 3");
 
-        // Adds tomstones
+        // Adds tombstones
         execute("INSERT INTO %s (a, b, c, d) VALUES (1, 1, 4, 8)");
         execute("INSERT INTO %s (a, b, c, d) VALUES (2, 2, 7, 12)");
         execute("DELETE FROM %s WHERE a = 1 AND b = 1");
@@ -1786,7 +1786,7 @@ public class SelectTest extends CQLTester
         execute("INSERT INTO %s (a, b, c) VALUES (3, 2, 4)");
         execute("INSERT INTO %s (a, b, c) VALUES (4, 1, 7)");
 
-        // Adds tomstones
+        // Adds tombstones
         execute("INSERT INTO %s (a, b, c) VALUES (0, 1, 4)");
         execute("INSERT INTO %s (a, b, c) VALUES (5, 2, 7)");
         execute("DELETE FROM %s WHERE a = 0");

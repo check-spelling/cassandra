@@ -62,7 +62,7 @@ public class CompactStorageSplit2Test extends CQLTester
         execute("INSERT INTO %s (a, b, c) VALUES (1, 4, 4)");
         execute("INSERT INTO %s (a, b, c) VALUES (2, 3, 7)");
 
-        // Adds tomstones
+        // Adds tombstones
         execute("INSERT INTO %s (a, b, c) VALUES (1, 1, 4)");
         execute("INSERT INTO %s (a, b, c) VALUES (2, 2, 7)");
         execute("DELETE FROM %s WHERE a = 1 AND b = 1");
@@ -134,7 +134,7 @@ public class CompactStorageSplit2Test extends CQLTester
         execute("INSERT INTO %s (a, b, c) VALUES (3, 2, 4)");
         execute("INSERT INTO %s (a, b, c) VALUES (4, 1, 7)");
 
-        // Adds tomstones
+        // Adds tombstones
         execute("INSERT INTO %s (a, b, c) VALUES (0, 1, 4)");
         execute("INSERT INTO %s (a, b, c) VALUES (5, 2, 7)");
         execute("DELETE FROM %s WHERE a = 0");
@@ -1100,7 +1100,7 @@ public class CompactStorageSplit2Test extends CQLTester
         execute("INSERT INTO %s (a, b, c, d) VALUES (1, 4, 4, 5)");
         execute("INSERT INTO %s (a, b, c, d) VALUES (2, 3, 7, 8)");
 
-        // Adds tomstones
+        // Adds tombstones
         execute("INSERT INTO %s (a, b, c, d) VALUES (1, 1, 4, 5)");
         execute("INSERT INTO %s (a, b, c, d) VALUES (2, 2, 7, 8)");
         execute("DELETE FROM %s WHERE a = 1 AND b = 1 AND c = 4");
@@ -1166,7 +1166,7 @@ public class CompactStorageSplit2Test extends CQLTester
         execute("INSERT INTO %s (a, b, c) VALUES (3, 2, 4)");
         execute("INSERT INTO %s (a, b, c) VALUES (4, 1, 7)");
 
-        // Adds tomstones
+        // Adds tombstones
         execute("INSERT INTO %s (a, b, c) VALUES (0, 1, 4)");
         execute("INSERT INTO %s (a, b, c) VALUES (5, 2, 7)");
         execute("DELETE FROM %s WHERE a = 0");

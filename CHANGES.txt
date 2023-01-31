@@ -4951,7 +4951,7 @@ Merged from 1.1:
  * fix compressed streaming sending extra chunk (CASSANDRA-5105)
  * Add CQL3-based implementations of IAuthenticator and IAuthorizer
    (CASSANDRA-4898)
- * Fix timestamp-based tomstone removal logic (CASSANDRA-5248)
+ * Fix timestamp-based tombstone removal logic (CASSANDRA-5248)
  * cli: Add JMX authentication support (CASSANDRA-5080)
  * Fix forceFlush behavior (CASSANDRA-5241)
  * cqlsh: Add username autocompletion (CASSANDRA-5231)

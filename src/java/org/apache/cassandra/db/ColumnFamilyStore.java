@@ -322,7 +322,7 @@ public class ColumnFamilyStore implements ColumnFamilyStoreMBean, Memtable.Owner
 
     private volatile boolean compactionSpaceCheck = true;
 
-    // Tombtone partitions that ignore the gc_grace_seconds during compaction
+    // Tombstone partitions that ignore the gc_grace_seconds during compaction
     private final Set<DecoratedKey> partitionKeySetIgnoreGcGrace = ConcurrentHashMap.newKeySet();
 
     @VisibleForTesting
