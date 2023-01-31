@@ -95,7 +95,7 @@ public class SnapshotManifestTest
     }
 
     @Test
-    public void testIngoredFields() throws IOException {
+    public void testIgnoredFields() throws IOException {
         Map<String, Object> map = new HashMap<>();
         map.put("files", Arrays.asList("db1", "db2", "db3"));
         map.put("dummy", "dummy");
