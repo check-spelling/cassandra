@@ -1848,7 +1848,7 @@ public class Gossiper implements IFailureDetectionEventListener, GossiperMBean
                 else if (remoteGeneration == localGeneration)
                 {
                     /*
-                        If the max remote version is greater then we request the remote endpoint send us all the data
+                        If the max remote version is greater than we request the remote endpoint send us all the data
                         for this endpoint with version greater than the max version number we have locally for this
                         endpoint.
                         If the max remote version is lesser, then we send all the data we have locally for this endpoint

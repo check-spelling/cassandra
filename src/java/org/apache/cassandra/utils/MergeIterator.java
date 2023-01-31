@@ -260,7 +260,7 @@ public abstract class MergeIterator<In,Out> extends AbstractIterator<Out> implem
             // Advance within the sorted section, pulling up items lighter than candidate.
             while ((nextIdx = currIdx + 1) <= sortedSectionSize)
             {
-                if (!heap[nextIdx].equalParent) // if we were greater then an (or were the) equal parent, we are >= the child
+                if (!heap[nextIdx].equalParent) // if we were greater than an (or were the) equal parent, we are >= the child
                 {
                     int cmp = candidate.compareTo(heap[nextIdx]);
                     if (cmp <= 0)

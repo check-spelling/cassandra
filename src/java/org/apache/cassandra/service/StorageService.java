@@ -6206,7 +6206,7 @@ public class StorageService extends NotificationBroadcasterSupport implements IE
         Preconditions.checkArgument(duration > 0, "Sampling duration %s must be positive.", duration);
 
         Preconditions.checkArgument(interval <= 0 || interval >= duration,
-                                    "Sampling interval %s should be greater then or equals to duration %s if defined.",
+                                    "Sampling interval %s should be greater than or equals to duration %s if defined.",
                                     interval, duration);
 
         Preconditions.checkArgument(capacity > 0 && capacity <= 1024,
