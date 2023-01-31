@@ -277,7 +277,7 @@ public class DecayingEstimatedHistogramReservoir implements SnapshottingReservoi
         // to consult (as our approximation otherwise produces a value that is within 1 of the true value)
         int offset = (value > 2 ? 3 : 1) + (int)bucketOffsets[0];
 
-        // See DecayingEstimatedHistogramResevoirTest#showEstimationWorks and DecayingEstimatedHistogramResevoirTest#testFindIndex()
+        // See DecayingEstimatedHistogramReservoirTest#showEstimationWorks and DecayingEstimatedHistogramReservoirTest#testFindIndex()
         // for a runnable "proof"
         //
         // With this assumption, the estimate is calculated and the furthest offset from the estimation is checked
