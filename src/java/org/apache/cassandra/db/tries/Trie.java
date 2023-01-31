@@ -355,7 +355,7 @@ public abstract class Trie<T>
     }
 
     /**
-     * Constuct a textual representation of the trie.
+     * Construct a textual representation of the trie.
      */
     public String dump()
     {
@@ -363,7 +363,7 @@ public abstract class Trie<T>
     }
 
     /**
-     * Constuct a textual representation of the trie using the given content-to-string mapper.
+     * Construct a textual representation of the trie using the given content-to-string mapper.
      */
     public String dump(Function<T, String> contentToString)
     {
