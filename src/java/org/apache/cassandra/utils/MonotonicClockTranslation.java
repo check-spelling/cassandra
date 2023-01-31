@@ -25,7 +25,7 @@ public interface MonotonicClockTranslation
 {
     /** accepts millis since epoch, returns nanoTime in the related clock */
     public long fromMillisSinceEpoch(long currentTimeMillis);
-    /** accepts nanoTime in the related MonotinicClock, returns millis since epoch */
+    /** accepts nanoTime in the related MonotonicClock, returns millis since epoch */
     public long toMillisSinceEpoch(long nanoTime);
     /** Nanoseconds of probable error in the translation */
     public long error();
