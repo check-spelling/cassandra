@@ -47,7 +47,7 @@ Cassandra provides flexibility of using Java based key material or
 completely customizing the SSL context. You can choose any keystore
 format supported by Java (JKS, PKCS12 etc) as well as other standards
 like PEM. You can even customize the SSL context creation to use Cloud
-Native technologies like Kuberenetes Secrets for storing the key
+Native technologies like Kubernetes Secrets for storing the key
 material or to integrate with your in-house Key Management System.
 
 For information on generating the keystore and truststore files
