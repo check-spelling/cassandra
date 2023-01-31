@@ -363,7 +363,7 @@ public class TableMetadata implements SchemaElement
      * Returns the column of the provided name if it exists, but throws a user-visible exception if that column doesn't
      * exist.
      *
-     * <p>This method is for finding columns from a name provided by the user, and as such it does _not_ returne hidden
+     * <p>This method is for finding columns from a name provided by the user, and as such it does _not_ return hidden
      * columns (throwing that the column is unknown instead).
      *
      * @param name the name of an existing non-hidden column of this table.
