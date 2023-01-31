@@ -250,7 +250,7 @@ if $has_env_vars; then
 fi
 
 # Define function to remove unneeded jobs.
-# The first argument is the file name, and the second arguemnt is the job name.
+# The first argument is the file name, and the second argument is the job name.
 delete_job()
 {
   delete_yaml_block()

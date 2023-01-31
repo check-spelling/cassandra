@@ -198,7 +198,7 @@ public class AlterTest extends CQLTester
 
 
     @Test
-    public void testChangeStrategyWithUnquotedAgrument() throws Throwable
+    public void testChangeStrategyWithUnquotedArgument() throws Throwable
     {
         createTable("CREATE TABLE %s (id text PRIMARY KEY);");
 

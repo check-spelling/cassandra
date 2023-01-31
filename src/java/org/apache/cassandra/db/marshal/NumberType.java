@@ -251,7 +251,7 @@ public abstract class NumberType<T extends Number> extends AbstractType<T>
     public abstract ByteBuffer log(ByteBuffer input);
 
     /**
-     * Takes the log base 10 of the arguement.
+     * Takes the log base 10 of the argument.
      *
      * @param input the argument to take the log base ten of
      * @return a ByteBuffer containg the log base 10 of the argument. The type of the contents of the ByteBuffer
