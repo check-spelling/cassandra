@@ -478,7 +478,7 @@ class LogTransaction extends Transactional.AbstractTransactional implements Tran
     protected void doPrepare() { }
 
     /**
-     * Removes any leftovers from unifinished transactions as indicated by any transaction log files that
+     * Removes any leftovers from unfinished transactions as indicated by any transaction log files that
      * are found in the table directories. This means that any old sstable files for transactions that were committed,
      * or any new sstable files for transactions that were aborted or still in progress, should be removed *if
      * it is safe to do so*. Refer to the checks in LogFile.verify for further details on the safety checks
