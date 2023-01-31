@@ -182,7 +182,7 @@ data for consecutive days will likely be on separate nodes.
 Another technique known as *bucketing* is often used to break the data
 into moderate-size partitions. For example, you could bucketize the
 `available_rooms_by_hotel_date` table by adding a `month` column to the
-partition key, perhaps represented as an integer. The comparision with
+partition key, perhaps represented as an integer. The comparison with
 the original design is shown in the figure below. While the `month`
 column is partially duplicative of the `date`, it provides a nice way of
 grouping related data in a partition that will not get too large.

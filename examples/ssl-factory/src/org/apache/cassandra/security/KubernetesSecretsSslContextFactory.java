@@ -214,7 +214,7 @@ public class KubernetesSecretsSslContextFactory extends FileBasedSslContextFacto
             keystoreLastUpdatedTime = keystoreUpdatedTime;
             return true;
         } else {
-            logger.info("Based on the comparision, no keystore update needed");
+            logger.info("Based on the comparison, no keystore update needed");
             return false;
         }
     }
@@ -229,7 +229,7 @@ public class KubernetesSecretsSslContextFactory extends FileBasedSslContextFacto
             truststoreLastUpdatedTime = truststoreUpdatedTime;
             return true;
         } else {
-            logger.info("Based on the comparision, no truststore update needed");
+            logger.info("Based on the comparison, no truststore update needed");
             return false;
         }
     }
