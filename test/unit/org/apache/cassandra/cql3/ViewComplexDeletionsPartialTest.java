@@ -222,7 +222,7 @@ public class ViewComplexDeletionsPartialTest extends ViewAbstractParameterizedTe
 
         assertRowsIgnoringOrder(executeView("SELECT * FROM %s"));
 
-        // restor view row with b,c column. d is still tombstone
+        // restore view row with b,c column. d is still tombstone
         updateView("UPDATE %s using timestamp 3 set b = 1,c = 1 where a=1"); // upsert
         if (flush)
             Util.flush(ks);
