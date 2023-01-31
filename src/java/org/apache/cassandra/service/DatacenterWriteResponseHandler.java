@@ -53,7 +53,7 @@ public class DatacenterWriteResponseHandler<T> extends WriteResponseHandler<T>
         }
         else
         {
-            //WriteResponseHandler.response will call logResonseToIdealCLDelegate so only do it if not calling WriteResponseHandler.response.
+            //WriteResponseHandler.response will call logResponseToIdealCLDelegate so only do it if not calling WriteResponseHandler.response.
             //Must be last after all subclass processing
             logResponseToIdealCLDelegate(message);
         }
