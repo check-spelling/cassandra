@@ -156,7 +156,7 @@ prerequisite for working on them.
 ### Test all branches and inputs.
 
 All branches and inputs of a method should be exercised. For branches that require multiple criteria to be met, (ie `x > 10 && y < 100`), there
-should be tests demonstrating that the branch is taken when all critera are met (ie `x=11,y=99`), and that it is not taken when only one is met 
+should be tests demonstrating that the branch is taken when all criteria are met (ie `x=11,y=99`), and that it is not taken when only one is met 
 (ie: `x=11, y=200 or x=5,y=99`). If a method deals with ranges of values, (ie `x >= 10`), the boundaries of the ranges should be tested (ie: `x=9, x=10`)
 
 In the following example
