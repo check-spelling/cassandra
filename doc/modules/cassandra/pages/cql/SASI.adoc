@@ -480,7 +480,7 @@ numbers.
 The
 https://github.com/apache/cassandra/blob/trunk/src/java/org/apache/cassandra/index/sasi/memory/TrieMemIndex.java[`TrieMemIndex`]
 is built using either the `ConcurrentRadixTree` or
-`ConcurrentSuffixTree` from the `com.goooglecode.concurrenttrees`
+`ConcurrentSuffixTree` from the `com.googlecode.concurrenttrees`
 package. The choice between the two is made based on the indexing mode,
 `PREFIX` or other modes, and `CONTAINS` mode, respectively.
 
