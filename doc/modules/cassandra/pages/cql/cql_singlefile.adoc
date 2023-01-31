@@ -3715,7 +3715,7 @@ https://issues.apache.org/jira/browse/CASSANDRA-10707)[CASSANDRA-10707].
 * link:#updateOptions[`INSERT/UPDATE options`] for tables having a
 default_time_to_live specifying a TTL of 0 will remove the TTL from the
 inserted or updated values
-* link:#alterTableStmt[`ALTER TABLE`] `ADD` and `DROP` now allow mutiple
+* link:#alterTableStmt[`ALTER TABLE`] `ADD` and `DROP` now allow multiple
 columns to be added/removed
 * New link:#selectLimit[`PER PARTITION LIMIT`] option (see
 https://issues.apache.org/jira/browse/CASSANDRA-7017)[CASSANDRA-7017].

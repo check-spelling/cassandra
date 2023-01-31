@@ -289,7 +289,7 @@ public class CqlInputFormat extends org.apache.hadoop.mapreduce.InputFormat<Long
             case 0:
                 throw new IllegalStateException("Input addresses could not be used to find DC; non match client metadata");
             default:
-                // Mutliple DCs found, attempt to pick the first based off address list. This is to mimic the 2.1
+                // Multiple DCs found, attempt to pick the first based off address list. This is to mimic the 2.1
                 // behavior which would connect in order and the first node successfully able to connect to was the
                 // local DC to use; since client abstracts this, we rely on existence as a proxy for connect.
                 for (String inputAddress : inputInitialAddress)

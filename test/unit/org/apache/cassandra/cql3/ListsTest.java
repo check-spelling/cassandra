@@ -63,7 +63,7 @@ public class ListsTest extends CQLTester
     }
 
     @Test
-    public void testPrecisionTime_getNext_Mulitple()
+    public void testPrecisionTime_getNext_Multiple()
     {
         PrecisionTime.set(DEFAULT_MILLIS, DEFAULT_NANOS);
 
