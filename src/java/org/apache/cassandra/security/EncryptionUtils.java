@@ -60,7 +60,7 @@ public class EncryptionUtils
      * Write the two header lengths (plain text length, compressed length) to the beginning of the buffer as we want those
      * values encapsulated in the encrypted block, as well.
      *
-     * @return the byte buffer that was actaully written to; it may be the {@code outputBuffer} if it had enough capacity,
+     * @return the byte buffer that was actually written to; it may be the {@code outputBuffer} if it had enough capacity,
      * or it may be a new, larger instance. Callers should capture the return buffer (if calling multiple times).
      */
     public static ByteBuffer compress(ByteBuffer inputBuffer, ByteBuffer outputBuffer, boolean allowBufferResize, ICompressor compressor) throws IOException
@@ -126,7 +126,7 @@ public class EncryptionUtils
      * Decrypt the input data, as well as manage sizing of the {@code outputBuffer}; if the buffer is not big enough,
      * deallocate current, and allocate a large enough buffer.
      *
-     * @return the byte buffer that was actaully written to; it may be the {@code outputBuffer} if it had enough capacity,
+     * @return the byte buffer that was actually written to; it may be the {@code outputBuffer} if it had enough capacity,
      * or it may be a new, larger instance. Callers should capture the return buffer (if calling multiple times).
      */
     public static ByteBuffer decrypt(ReadableByteChannel channel, ByteBuffer outputBuffer, boolean allowBufferResize, Cipher cipher) throws IOException
@@ -177,7 +177,7 @@ public class EncryptionUtils
      * Uncompress the input data, as well as manage sizing of the {@code outputBuffer}; if the buffer is not big enough,
      * deallocate current, and allocate a large enough buffer.
      *
-     * @return the byte buffer that was actaully written to; it may be the {@code outputBuffer} if it had enough capacity,
+     * @return the byte buffer that was actually written to; it may be the {@code outputBuffer} if it had enough capacity,
      * or it may be a new, larger instance. Callers should capture the return buffer (if calling multiple times).
      */
     public static ByteBuffer uncompress(ByteBuffer inputBuffer, ByteBuffer outputBuffer, boolean allowBufferResize, ICompressor compressor) throws IOException

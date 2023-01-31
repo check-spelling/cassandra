@@ -215,7 +215,7 @@ public class ReadExecutorTest
         new Thread(() ->
                    {
                        // Fail the first request. When this fails the number of contacts has already been increased
-                       // to 2, so the failure won't actally signal. However...
+                       // to 2, so the failure won't actually signal. However...
                        executor.handler.onFailure(targets.get(0).endpoint(), RequestFailureReason.READ_TOO_MANY_TOMBSTONES);
 
                        // ...speculative retries are fired after a short wait, and it is possible for the failure to

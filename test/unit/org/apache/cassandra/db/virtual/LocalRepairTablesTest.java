@@ -211,7 +211,7 @@ public class LocalRepairTablesTest extends CQLTester
             state.bytesRead += 10;
             state.updated();
 
-            // min 99% is because >= 100 gets lowered to 99% and the last 1% is when validation is actualy complete
+            // min 99% is because >= 100 gets lowered to 99% and the last 1% is when validation is actually complete
             assertRowsIgnoringOrder(execute(t("SELECT id, initiator, status, progress_percentage, estimated_partitions, estimated_total_bytes, partitions_processed, bytes_read, failure_cause, success_message FROM %s.repair_validations")),
                                     row(state.getId(), FBUtilities.getBroadcastAddressAndPort().toString(), "start", Math.min(99.0F, (float) state.partitionsProcessed), 100L, 100L, state.partitionsProcessed, state.bytesRead, null, null));
         }
