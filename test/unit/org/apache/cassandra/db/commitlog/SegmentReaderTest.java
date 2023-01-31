@@ -146,7 +146,7 @@ public class SegmentReaderTest
         {
             try
             {
-                // seek to beginning of offet
+                // seek to beginning of offset
                 input.seek(inputStart + offsets[i]);
                 //read this segment
                 input.readFully(buf, offsets[i], offsets[i + 1] - offsets[i]);
