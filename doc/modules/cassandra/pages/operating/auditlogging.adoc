@@ -536,7 +536,7 @@ user:anonymous|host:10.0.2.238:7000|source:/127.0.0.1|port:46264|timestamp:15647
 Password obfuscation examples:
 LogMessage: user:cassandra|host:localhost/127.0.0.1:7000|source:/127.0.0.1|port:65282|timestamp:1622630496708|type:CREATE_ROLE|category:DCL|operation:CREATE ROLE role1 WITH PASSWORD = '*******';
 Type: audit
-LogMessage: user:cassandra|host:localhost/127.0.0.1:7000|source:/127.0.0.1|port:65282|timestamp:1622630634552|type:ALTER_ROLE|category:DCL|operation:ATLER ROLE role1 WITH PASSWORD = '*******';
+LogMessage: user:cassandra|host:localhost/127.0.0.1:7000|source:/127.0.0.1|port:65282|timestamp:1622630634552|type:ALTER_ROLE|category:DCL|operation:ALTER ROLE role1 WITH PASSWORD = '*******';
 Type: audit
 LogMessage: user:cassandra|host:localhost/127.0.0.1:7000|source:/127.0.0.1|port:65282|timestamp:1622630698686|type:CREATE_ROLE|category:DCL|operation:CREATE USER user1 WITH PASSWORD '*******';
 Type: audit
