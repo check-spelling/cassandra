@@ -1341,7 +1341,7 @@ DROP ROLE alice;
 DROP ROLE IF EXISTS bob;
 
 
-@DROP ROLE@ requires the client to have @DROP@ "permission":#permissions on the role in question. In addition, client may not @DROP@ the role with which it identified at login. Finaly, only a client with @SUPERUSER@ status may @DROP@ another @SUPERUSER@ role.
+@DROP ROLE@ requires the client to have @DROP@ "permission":#permissions on the role in question. In addition, client may not @DROP@ the role with which it identified at login. Finally, only a client with @SUPERUSER@ status may @DROP@ another @SUPERUSER@ role.
 Attempting to drop a role which does not exist results in an invalid query condition unless the @IF EXISTS@ option is used. If the option is used and the role does not exist the statement is a no-op. 
 
 

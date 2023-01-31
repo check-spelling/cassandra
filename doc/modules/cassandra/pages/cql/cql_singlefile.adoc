@@ -2046,7 +2046,7 @@ DROP ROLE IF EXISTS bob;
 `DROP ROLE` requires the client to have `DROP`
 link:#permissions[permission] on the role in question. In addition,
 client may not `DROP` the role with which it identified at login.
-Finaly, only a client with `SUPERUSER` status may `DROP` another
+Finally, only a client with `SUPERUSER` status may `DROP` another
 `SUPERUSER` role. +
 Attempting to drop a role which does not exist results in an invalid
 query condition unless the `IF EXISTS` option is used. If the option is
