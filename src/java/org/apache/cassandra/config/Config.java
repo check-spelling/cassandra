@@ -699,7 +699,7 @@ public class Config
     public volatile boolean report_unconfirmed_repaired_data_mismatches = false;
     /*
      * If true, when a repaired data mismatch is detected at read time or during a preview repair,
-     * a snapshot request will be issued to each particpating replica. These are limited at the replica level
+     * a snapshot request will be issued to each participating replica. These are limited at the replica level
      * so that only a single snapshot per-table per-day can be taken via this method.
      */
     public volatile boolean snapshot_on_repaired_data_mismatch = false;
