@@ -132,7 +132,7 @@ public class Descriptor
      */
     public String tmpFilenameForStreaming(Component component)
     {
-        // Use UUID to handle concurrent streamings on the same sstable.
+        // Use UUID to handle concurrent streaming on the same sstable.
         // TMP_EXT allows temp file to be removed by {@link ColumnFamilyStore#scrubDataDirectories}
         return String.format("%s.%s%s", filenameFor(component), nextTimeUUID(), TMP_EXT);
     }
