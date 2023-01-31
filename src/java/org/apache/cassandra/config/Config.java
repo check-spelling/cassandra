@@ -640,7 +640,7 @@ public class Config
     public int repair_command_pool_size = concurrent_validations;
 
     /**
-     * When a node first starts up it intially considers all other peers as DOWN and is disconnected from all of them.
+     * When a node first starts up it initially considers all other peers as DOWN and is disconnected from all of them.
      * To be useful as a coordinator (and not introduce latency penalties on restart) this node must have successfully
      * opened all three internode TCP connections (gossip, small, and large messages) before advertising to clients.
      * Due to this, by default, Casssandra will prime these internode TCP connections and wait for all but a single
@@ -753,7 +753,7 @@ public class Config
     public ConsistencyLevel denylist_consistency_level = ConsistencyLevel.QUORUM;
 
     /**
-     * The intial capacity for creating RangeTombstoneList.
+     * The initial capacity for creating RangeTombstoneList.
      */
     public volatile int initial_range_tombstone_list_allocation_size = 1;
     /**

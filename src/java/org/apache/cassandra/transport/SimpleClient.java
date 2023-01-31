@@ -377,7 +377,7 @@ public class SimpleClient implements Closeable
         private static final String MESSAGE_DECODER         = "messageDecoder";
         private static final String MESSAGE_ENCODER         = "messageEncoder";
 
-        private static final String INITIAL_HANDLER         = "intitialHandler";
+        private static final String INITIAL_HANDLER         = "initialHandler";
         private static final String RESPONSE_HANDLER        = "responseHandler";
 
         private static final String FRAME_DECODER           = "frameDecoder";

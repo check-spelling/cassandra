@@ -51,7 +51,7 @@ import org.apache.cassandra.transport.messages.StartupMessage;
 import static org.apache.cassandra.net.SocketFactory.newSslHandler;
 
 /**
- * Takes care of intializing a Netty Channel and Pipeline for client protocol connections.
+ * Takes care of initializing a Netty Channel and Pipeline for client protocol connections.
  * The pipeline is first set up with some common handlers for connection limiting, dropping
  * idle connections and optionally SSL, along with a handler to deal with the handshake
  * between client and server. That handshake handler calls back to this class to reconfigure

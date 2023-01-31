@@ -35,7 +35,7 @@ public class UninitializedServerTest extends CQLTester
     }
 
     @Test
-    public void testUnintializedServer()
+    public void testUninitializedServer()
     {
         // CASSANDRA-11537
         // fails, not finished initializing node because test never calls requireNetwork()

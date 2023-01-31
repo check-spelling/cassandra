@@ -307,7 +307,7 @@ public class ClientResourceLimitsTest extends CQLTester
     {
         try (SimpleClient client = client(true))
         {
-            // wait for the completion of the intial messages created by the client connection
+            // wait for the completion of the initial messages created by the client connection
             Awaitility.await()
                       .pollDelay(1, TimeUnit.SECONDS)
                       .atMost(30, TimeUnit.SECONDS)
