@@ -50,7 +50,7 @@ import static org.apache.cassandra.db.ClusteringPrefix.Kind.*;
  * A note on byte buffers for implementors: the "value" of a byte buffer is always interpreted as beginning at
  * it's {@link ByteBuffer#position()} and having a length of {@link ByteBuffer#remaining()}. ValueAccessor
  * implementations need to maintain this internally. ValueAccessors should also never modify the state of the
- * byte buffers view (ie: offset, limit). This would also apply to value accessors for simlilar types
+ * byte buffers view (ie: offset, limit). This would also apply to value accessors for similar types
  * (ie: netty's ByteBuf}.
  *
  * @param <V> the backing type

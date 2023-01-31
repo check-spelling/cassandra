@@ -96,7 +96,7 @@ providing enough slack to allow for delays.
   default, incremental repairs are estimated, add the `--full` flag to
   estimate a full repair.
 `-vd, --validate`::
-  Verifies that the repaired data is the same across all nodes. Similiar
+  Verifies that the repaired data is the same across all nodes. Similar
   to `--preview`, this builds and compares merkle trees of repaired
   data, but doesn't do any streaming. This is useful for
   troubleshooting. If this shows that the repaired data is out of sync,
