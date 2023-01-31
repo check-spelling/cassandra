@@ -82,7 +82,7 @@ public class SizeEstimatesRecorder implements SchemaChangeListener, Runnable
             // DC3: [2, 12, 22, 32]
             // When working with the primary ring we have:
             // [0, 1, 2, 10, 11, 12, 20, 21, 22, 30, 31, 32]
-            // this then leads to primrary ranges with one token in it, which cause the estimates to be less useful.
+            // this then leads to primary ranges with one token in it, which cause the estimates to be less useful.
             // Since only one range was published some tools make this assumption; for this reason we can't publish
             // all ranges (including the replica ranges) nor can we keep backwards compatability and publish primary
             // range.  If we publish multiple ranges downstream integrations may start to see duplicate data.
