@@ -146,7 +146,7 @@ auditlogviewer <path1> [<path2>...<pathN>] [options]
 === Options
 
 `-f,--follow`::
-  Upon reacahing the end of the log continue indefinitely;;
+  Upon reaching the end of the log continue indefinitely;;
     waiting for more records
 `-r,--roll_cycle`::
   How often to roll the log file was rolled. May be;;

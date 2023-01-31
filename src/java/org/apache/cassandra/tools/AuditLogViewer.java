@@ -238,7 +238,7 @@ public class AuditLogViewer
             Options options = new Options();
 
             options.addOption(new Option("r", ROLL_CYCLE, true, "How often to roll the log file was rolled. May be necessary for Chronicle to correctly parse file names. (MINUTELY, HOURLY, DAILY). Default HOURLY."));
-            options.addOption(new Option("f", FOLLOW, false, "Upon reacahing the end of the log continue indefinitely waiting for more records"));
+            options.addOption(new Option("f", FOLLOW, false, "Upon reaching the end of the log continue indefinitely waiting for more records"));
             options.addOption(new Option("i", IGNORE, false, "Silently ignore unsupported records"));
             options.addOption(new Option("h", HELP_OPTION, false, "display this help message"));
 

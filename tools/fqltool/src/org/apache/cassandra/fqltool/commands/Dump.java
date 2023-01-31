@@ -59,7 +59,7 @@ public class Dump implements Runnable
     @Option(title = "roll_cycle", name = {"--roll-cycle"}, description = "How often to roll the log file was rolled. May be necessary for Chronicle to correctly parse file names. (MINUTELY, HOURLY, DAILY). Default HOURLY.")
     private String rollCycle = "HOURLY";
 
-    @Option(title = "follow", name = {"--follow"}, description = "Upon reacahing the end of the log continue indefinitely waiting for more records")
+    @Option(title = "follow", name = {"--follow"}, description = "Upon reaching the end of the log continue indefinitely waiting for more records")
     private boolean follow = false;
 
     @Override

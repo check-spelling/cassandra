@@ -92,7 +92,7 @@ public class AuditLogViewerTest
                        "View the audit log contents in human readable format\n" + 
                        "--\n" + 
                        "Options are:\n" + 
-                       " -f,--follow             Upon reacahing the end of the log continue\n" + 
+                       " -f,--follow             Upon reaching the end of the log continue\n" + 
                        "                         indefinitely waiting for more records\n" + 
                        " -h,--help               display this help message\n" + 
                        " -i,--ignore             Silently ignore unsupported records\n" + 
