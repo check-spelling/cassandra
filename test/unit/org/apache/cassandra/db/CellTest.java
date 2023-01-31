@@ -253,7 +253,7 @@ public class CellTest
     }
 
     @Test
-    public void testExpiringCellReconile()
+    public void testExpiringCellReconcile()
     {
         // equal
         Assert.assertEquals(0, testExpiring("val", "a", 1, 1, null, null, null, null));
