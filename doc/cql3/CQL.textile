@@ -138,7 +138,7 @@ bc(syntax)..
 p. 
 Please note that not every possible productions of the grammar above will be valid in practice. Most notably, @<variable>@ and nested @<collection-literal>@ are currently not allowed inside @<collection-literal>@.
 
-p. A @<variable>@ can be either anonymous (a question mark (@?@)) or named (an identifier preceded by @:@). Both declare a bind variables for "prepared statements":#preparedStatement. The only difference between an anymous and a named variable is that a named one will be easier to refer to (how exactly depends on the client driver used).
+p. A @<variable>@ can be either anonymous (a question mark (@?@)) or named (an identifier preceded by @:@). Both declare a bind variables for "prepared statements":#preparedStatement. The only difference between an anonymous and a named variable is that a named one will be easier to refer to (how exactly depends on the client driver used).
 
 p. The @<properties>@ production is use by statement that create and alter keyspaces and tables. Each @<property>@ is either a _simple_ one, in which case it just has a value, or a _map_ one, in which case it's value is a map grouping sub-options. The following will refer to one or the other as the _kind_ (_simple_ or _map_) of the property.
 

@@ -188,7 +188,7 @@ will be valid in practice. Most notably, `<variable>` and nested
 A `<variable>` can be either anonymous (a question mark (`?`)) or named
 (an identifier preceded by `:`). Both declare a bind variables for
 link:#preparedStatement[prepared statements]. The only difference
-between an anymous and a named variable is that a named one will be
+between an anonymous and a named variable is that a named one will be
 easier to refer to (how exactly depends on the client driver used).
 
 The `<properties>` production is use by statement that create and alter
