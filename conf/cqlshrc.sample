@@ -33,7 +33,7 @@
 ; username = user1
 
 [protocol]
-;; Specify a specific protcol version otherwise the client will default and downgrade as necessary
+;; Specify a specific protocol version otherwise the client will default and downgrade as necessary
 ; version = None
 
 [ui]

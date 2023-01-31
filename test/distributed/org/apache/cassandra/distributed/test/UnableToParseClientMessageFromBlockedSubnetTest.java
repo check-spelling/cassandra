@@ -100,7 +100,7 @@ public class UnableToParseClientMessageFromBlockedSubnetTest extends TestBaseImp
             client.connect(false, true);
 
             // this should return a failed response
-            // disable waiting on procol errors as that logic was reverted until we can figure out its 100% safe
+            // disable waiting on protocol errors as that logic was reverted until we can figure out its 100% safe
             // right now ProtocolException is thrown for fatal and non-fatal issues, so closing the channel
             // on non-fatal issues could cause other issues for the cluster
             byte expectedVersion = (byte) (80 + version.asInt());

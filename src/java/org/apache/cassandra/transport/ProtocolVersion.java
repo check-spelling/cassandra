@@ -147,7 +147,7 @@ public enum ProtocolVersion implements Comparable<ProtocolVersion>
     @Override
     public String toString()
     {
-        // This format is mandated by the protocl specs for the SUPPORTED message, see OptionsMessage execute().
+        // This format is mandated by the protocol specs for the SUPPORTED message, see OptionsMessage execute().
         return String.format("%d/%s", num, descr);
     }
 
