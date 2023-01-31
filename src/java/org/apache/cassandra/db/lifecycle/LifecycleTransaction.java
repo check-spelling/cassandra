@@ -267,7 +267,7 @@ public class LifecycleTransaction extends Transactional.AbstractTransactional im
         accumulate = tracker.notifySSTablesChanged(invalid, restored, OperationType.COMPACTION, accumulate);
         // setReplaced immediately preceding versions that have not been obsoleted
         accumulate = setReplaced(logged.update, accumulate);
-        accumulate = runOnAbortooks(accumulate);
+        accumulate = runOnAbortHooks(accumulate);
         // we have replaced all of logged.update and never made visible staged.update,
         // and the files we have logged as obsolete we clone fresh versions of, so they are no longer needed either
         // any _staged_ obsoletes should either be in staged.update already, and dealt with there,
@@ -284,7 +284,7 @@ public class LifecycleTransaction extends Transactional.AbstractTransactional im
         return runHooks(commitHooks, accumulate);
     }
 
-    private Throwable runOnAbortooks(Throwable accumulate)
+    private Throwable runOnAbortHooks(Throwable accumulate)
     {
         return runHooks(abortHooks, accumulate);
     }
