@@ -7,7 +7,7 @@ conventions in this document:
 
 * Language rules will be given in an informal
 http://en.wikipedia.org/wiki/Backus%E2%80%93Naur_Form#Variants[BNF
-variant] notation. In particular, we'll use square brakets (`[ item ]`)
+variant] notation. In particular, we'll use square brackets (`[ item ]`)
 for optional items, `*` and `+` for repeated items (where `+` imply at
 least one).
 * The grammar will also use the following convention for convenience:
