@@ -296,7 +296,7 @@ public abstract class UnfilteredRowIterators
      * This is mainly used by scrubber to detect problems in sstables.
      *
      * @param iterator the partition to check.
-     * @param filename the name of the file the data is comming from.
+     * @param filename the name of the file the data is coming from.
      * @return an iterator that returns the same data than {@code iterator} but that
      * checks said data and throws a {@code CorruptedSSTableException} if it detects
      * invalid data.
