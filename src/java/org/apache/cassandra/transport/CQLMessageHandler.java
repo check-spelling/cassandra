@@ -62,7 +62,7 @@ import static org.apache.cassandra.utils.MonotonicClock.Global.approxTime;
  * # Flow control (backpressure)
  * The size of an incoming message is explicit in the {@link Envelope.Header}.
  *
- * By default, every connection has 1MiB of exlusive permits available before needing to access the per-endpoint
+ * By default, every connection has 1MiB of exclusive permits available before needing to access the per-endpoint
  * and global reserves. By default, those reserves are sized proportionally to the heap - 2.5% of heap per-endpoint
  * and a 10% for the global reserve.
  *

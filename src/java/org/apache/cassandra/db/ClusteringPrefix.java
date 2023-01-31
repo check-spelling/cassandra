@@ -111,7 +111,7 @@ public interface ClusteringPrefix<V> extends IMeasurableMemory, Clusterable<V>
          * <p>
          * This invert both start into end (and vice-versa) and inclusive into exclusive (and vice-versa).
          *
-         * @return the invert of this kind. For instance, if this kind is an exlusive start, this return
+         * @return the invert of this kind. For instance, if this kind is an exclusive start, this return
          * an inclusive end.
          */
         public Kind invert()

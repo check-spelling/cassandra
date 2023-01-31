@@ -60,7 +60,7 @@ import static org.apache.cassandra.utils.MonotonicClock.Global.approxTime;
  * The size of the incoming message is dependent on the messaging version of the specific peer connection. See
  * {@link Message.Serializer#inferMessageSize(ByteBuffer, int, int, int)}.
  *
- * By default, every connection has 4MiB of exlusive permits available before needing to access the per-endpoint
+ * By default, every connection has 4MiB of exclusive permits available before needing to access the per-endpoint
  * and global reserves.
  *
  * Permits are released after the verb handler has been invoked on the {@link Stage} for the {@link Verb} of the message.

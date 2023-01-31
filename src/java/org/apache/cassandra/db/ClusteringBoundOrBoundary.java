@@ -93,7 +93,7 @@ public interface ClusteringBoundOrBoundary<V> extends ClusteringPrefix<V>
      * <p>
      * This invert both start into end (and vice-versa) and inclusive into exclusive (and vice-versa).
      *
-     * @return the invert of this bound. For instance, if this bound is an exlusive start, this return
+     * @return the invert of this bound. For instance, if this bound is an exclusive start, this return
      * an inclusive end with the same values.
      */
     public abstract ClusteringBoundOrBoundary<V> invert();
