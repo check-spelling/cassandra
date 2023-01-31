@@ -50,7 +50,7 @@ public class StreamCompressionSerializer
     }
 
     /**
-     * Length of heaer data, which includes compressed length, uncompressed length.
+     * Length of header data, which includes compressed length, uncompressed length.
      */
     private static final int HEADER_LENGTH = 8;
 
