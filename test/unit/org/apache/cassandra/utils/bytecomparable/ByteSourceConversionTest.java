@@ -217,7 +217,7 @@ public class ByteSourceConversionTest extends ByteSourceTestBase
     }
 
     @Test
-    public void testPatitionerDefinedOrder()
+    public void testPetitionerDefinedOrder()
     {
         List<ByteBuffer> values = new ArrayList<>();
         for (int i = 0; i < testValues.length; ++i)
@@ -230,7 +230,7 @@ public class ByteSourceConversionTest extends ByteSourceTestBase
     }
 
     @Test
-    public void testPatitionerOrder()
+    public void testPetitionerOrder()
     {
         List<ByteBuffer> values = new ArrayList<>();
         for (int i = 0; i < testValues.length; ++i)
@@ -243,7 +243,7 @@ public class ByteSourceConversionTest extends ByteSourceTestBase
     }
 
     @Test
-    public void testLocalPatitionerOrder()
+    public void testLocalPetitionerOrder()
     {
         for (int i = 0; i < testValues.length; ++i)
         {
