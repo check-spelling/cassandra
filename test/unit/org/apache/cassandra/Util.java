@@ -1033,7 +1033,7 @@ public class Util
     }
 
     /**
-     * Find a mupltiplicative inverse for the given multiplier for long, i.e.
+     * Find a multiplicative inverse for the given multiplier for long, i.e.
      * such that x * inverse(x) = 1 where * is long multiplication.
      * In other words, such an integer that x * inverse(x) == 1 (mod 2^64).
      */
