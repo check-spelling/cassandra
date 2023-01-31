@@ -43,7 +43,7 @@ public interface StartupCheck
      *
      * @param startupChecksOptions all options from descriptor
      * @throws org.apache.cassandra.exceptions.StartupException if the test determines
-     * that the environement or system is not in a safe state to startup
+     * that the environment or system is not in a safe state to startup
      */
     void execute(StartupChecksOptions startupChecksOptions) throws StartupException;
 
