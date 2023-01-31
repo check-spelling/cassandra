@@ -115,7 +115,7 @@ public abstract class AbstractBTreePartition implements Partition, Iterable<Row>
             // this means our partition level deletion supersedes all other deletions and we don't have to keep the row deletions
             if (activeDeletion == holder.deletionInfo.getPartitionDeletion())
                 return null;
-            // no need to check activeDeletion.isLive here - if anything superseedes the partitionDeletion
+            // no need to check activeDeletion.isLive here - if anything supersedes the partitionDeletion
             // it must be non-live
             return BTreeRow.emptyDeletedRow(clustering, Row.Deletion.regular(activeDeletion));
         }
