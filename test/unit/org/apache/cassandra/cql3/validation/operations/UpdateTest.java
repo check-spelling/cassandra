@@ -49,7 +49,7 @@ public class UpdateTest extends CQLTester
         execute("UPDATE %s SET a = (ascii)'foo' WHERE k = ?", 0);
 
         // But trying to put some explicitely type-casted text into an ascii
-        // column should be rejected (even though the text is actually ascci)
+        // column should be rejected (even though the text is actually ascii)
         assertInvalid("UPDATE %s SET a = (text)'foo' WHERE k = ?", 0);
 
         // This is also fine because integer constants works for both integer and float types
