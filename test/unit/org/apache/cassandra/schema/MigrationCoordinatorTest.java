@@ -376,11 +376,11 @@ public class MigrationCoordinatorTest
         EndpointState validState = mock(EndpointState.class);
 
         InetAddressAndPort thisNode = wrapper.configureMocksForEndpoint(FBUtilities.getBroadcastAddressAndPort(), validState, MessagingService.current_version, false);
-        InetAddressAndPort unkonwnNode = wrapper.configureMocksForEndpoint("10.0.0.1:8000", validState, null, false);
+        InetAddressAndPort unknownNode = wrapper.configureMocksForEndpoint("10.0.0.1:8000", validState, null, false);
         InetAddressAndPort invalidMessagingVersionNode = wrapper.configureMocksForEndpoint("10.0.0.2:8000", validState, MessagingService.VERSION_30, false);
         InetAddressAndPort regularNode = wrapper.configureMocksForEndpoint("10.0.0.3:8000", validState, MessagingService.current_version, false);
 
-        when(wrapper.gossiper.getLiveMembers()).thenReturn(Sets.newHashSet(thisNode, unkonwnNode, invalidMessagingVersionNode, regularNode));
+        when(wrapper.gossiper.getLiveMembers()).thenReturn(Sets.newHashSet(thisNode, unknownNode, invalidMessagingVersionNode, regularNode));
 
         ArgumentCaptor<Message> msg = ArgumentCaptor.forClass(Message.class);
         ArgumentCaptor<InetAddressAndPort> targetEndpoint = ArgumentCaptor.forClass(InetAddressAndPort.class);
@@ -388,7 +388,7 @@ public class MigrationCoordinatorTest
 
         Pair<Set<InetAddressAndPort>, Set<InetAddressAndPort>> result = wrapper.coordinator.pushSchemaMutations(mutations);
         assertThat(result.left()).containsExactlyInAnyOrder(regularNode);
-        assertThat(result.right()).containsExactlyInAnyOrder(thisNode, unkonwnNode, invalidMessagingVersionNode);
+        assertThat(result.right()).containsExactlyInAnyOrder(thisNode, unknownNode, invalidMessagingVersionNode);
         assertThat(msg.getAllValues()).hasSize(1);
         assertThat(msg.getValue().payload).isEqualTo(mutations);
         assertThat(msg.getValue().verb()).isEqualTo(Verb.SCHEMA_PUSH_REQ);
@@ -419,12 +419,12 @@ public class MigrationCoordinatorTest
         InetAddressAndPort thisNode = wrapper.configureMocksForEndpoint(FBUtilities.getBroadcastAddressAndPort(), localVersionState, MessagingService.current_version, false);
         InetAddressAndPort noStateNode = wrapper.configureMocksForEndpoint("10.0.0.1:8000", null, MessagingService.current_version, false);
         InetAddressAndPort diffMajorVersionNode = wrapper.configureMocksForEndpoint("10.0.0.2:8000", invalidVersionState, MessagingService.current_version, false);
-        InetAddressAndPort unkonwnNode = wrapper.configureMocksForEndpoint("10.0.0.2:8000", validVersionState, null, false);
+        InetAddressAndPort unknownNode = wrapper.configureMocksForEndpoint("10.0.0.2:8000", validVersionState, null, false);
         InetAddressAndPort invalidMessagingVersionNode = wrapper.configureMocksForEndpoint("10.0.0.3:8000", validVersionState, MessagingService.VERSION_30, false);
         InetAddressAndPort gossipOnlyMemberNode = wrapper.configureMocksForEndpoint("10.0.0.4:8000", validVersionState, MessagingService.current_version, true);
         InetAddressAndPort regularNode1 = wrapper.configureMocksForEndpoint("10.0.0.5:8000", validVersionState, MessagingService.current_version, false);
         InetAddressAndPort regularNode2 = wrapper.configureMocksForEndpoint("10.0.0.6:8000", validVersionState, MessagingService.current_version, false);
-        Set<InetAddressAndPort> nodes = new LinkedHashSet<>(Arrays.asList(thisNode, noStateNode, diffMajorVersionNode, unkonwnNode, invalidMessagingVersionNode, gossipOnlyMemberNode, regularNode1, regularNode2));
+        Set<InetAddressAndPort> nodes = new LinkedHashSet<>(Arrays.asList(thisNode, noStateNode, diffMajorVersionNode, unknownNode, invalidMessagingVersionNode, gossipOnlyMemberNode, regularNode1, regularNode2));
         when(wrapper.gossiper.getLiveMembers()).thenReturn(nodes);
         doAnswer(a -> {
             Message msg = a.getArgument(0, Message.class);

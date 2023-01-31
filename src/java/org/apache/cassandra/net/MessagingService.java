@@ -228,7 +228,7 @@ public class MessagingService extends MessagingServiceMBeanImpl
     {
         Integer ordinal = versionOrdinalMap.get(version);
         if (ordinal == null)
-            throw new IllegalStateException("Unkown serialization version: " + version);
+            throw new IllegalStateException("Unknown serialization version: " + version);
 
         return ordinal;
     }

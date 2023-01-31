@@ -960,7 +960,7 @@ public class UserTypesTest extends CQLTester
         execute("INSERT INTO %s (k, y) VALUES(?, ?)", 1, userType("z", 1));
         assertRows(execute("SELECT * FROM %s"), row(1, userType("z", 1)));
 
-        assertInvalidThrowMessage(String.format("Unkown field %s in user type %s", "a", columnType),
+        assertInvalidThrowMessage(String.format("Unknown field %s in user type %s", "a", columnType),
                                   InvalidRequestException.class,
                                   "ALTER TYPE " + columnType + " RENAME a TO z;");
     }
