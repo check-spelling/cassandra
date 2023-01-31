@@ -47,7 +47,7 @@ public class FileAuditLogger implements IAuditLogger
     public void log(AuditLogEntry auditLogEntry)
     {
         // don't bother with the volatile read of enabled here. just go ahead and log, other components
-        // will check the enbaled field.
+        // will check the enabled field.
         logger.info(auditLogEntry.getLogString());
     }
 
