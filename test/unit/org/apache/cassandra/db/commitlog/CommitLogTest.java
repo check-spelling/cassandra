@@ -237,7 +237,7 @@ public abstract class CommitLogTest
 
     /**
      * Since commit log segments can be allocated before they're needed, the commit log file with the highest
-     * id isn't neccesarily the last log that we wrote to. We should remove header only logs on recover so we
+     * id isn't necessarily the last log that we wrote to. We should remove header only logs on recover so we
      * can tolerate truncated logs
      */
     @Test

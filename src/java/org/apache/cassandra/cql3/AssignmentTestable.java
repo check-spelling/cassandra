@@ -38,7 +38,7 @@ public interface AssignmentTestable
 
     /**
      * @return A data type that can represent this, or {@code null} if we can't determine that type. The returned type
-     * won't necessarely be the exact type, but one that is compatible with it.
+     * won't necessarily be the exact type, but one that is compatible with it.
      */
     @Nullable
     public AbstractType<?> getCompatibleTypeIfKnown(String keyspace);

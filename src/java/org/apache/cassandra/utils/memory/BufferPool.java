@@ -845,7 +845,7 @@ public class BufferPool
                 // Please note that we may end up running `put` on a different thread when we're called
                 // from chunk.tryRecycle() on a child chunk which was previously owned by tinyPool of this pool.
                 // Such tiny chunk will point to this pool with its recycler reference. Thanks to the recycler, a thread
-                // that returns the tiny chunk can end up here in a LocalPool that's not neccessarily local to the
+                // that returns the tiny chunk can end up here in a LocalPool that's not necessarily local to the
                 // calling thread, as there is no guarantee a child chunk is returned to the pool
                 // by the same thread that originally allocated it.
                 // It is ok we skip recycling in such case, and it does not cause
