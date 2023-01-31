@@ -47,7 +47,7 @@ public class Bounds<T extends RingPosition<T>> extends AbstractBounds<T>
     {
         // Range.contains doesnt work correctly if left == right (unless both
         // are minimum) because for Range that means a wrapping range that select
-        // the whole ring. So we must explicitely handle this case
+        // the whole ring. So we must explicitly handle this case
         return left.equals(position) || ((right.isMinimum() || !left.equals(right)) && Range.contains(left, right, position));
     }
 

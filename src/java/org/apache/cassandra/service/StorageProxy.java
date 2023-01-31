@@ -1674,7 +1674,7 @@ public class StorageProxy implements StorageProxyMBean
             public String description()
             {
                 // description is an Object and toString() called so we do not have to evaluate the Mutation.toString()
-                // unless expliclitly checked
+                // unless explicitly checked
                 return description.toString();
             }
 

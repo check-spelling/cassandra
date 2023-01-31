@@ -615,7 +615,7 @@ public class SinglePartitionReadCommand extends ReadCommand implements SinglePar
      * but it should be used only where you know you don't need thoses things.
      * <p>
      * Also note that one must have created a {@code ReadExecutionController} on the queried table and we require it as
-     * a parameter to enforce that fact, even though it's not explicitlly used by the method.
+     * a parameter to enforce that fact, even though it's not explicitly used by the method.
      */
     public UnfilteredRowIterator queryMemtableAndDisk(ColumnFamilyStore cfs, ReadExecutionController executionController)
     {
