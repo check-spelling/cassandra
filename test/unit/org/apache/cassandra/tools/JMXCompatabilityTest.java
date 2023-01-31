@@ -43,7 +43,7 @@ import org.assertj.core.api.Assertions;
  *
  * If a test fails for a previous version, then this means we have a JMX compatability regression, if the metric has
  * gone through proper deprecation then the metric can be excluded using the patterns used in other tests, if the metric
- * has not gone through proper deprecation then the change should be looked at more carfuly to avoid breaking users.
+ * has not gone through proper deprecation then the change should be looked at more carefully to avoid breaking users.
  *
  * In order to generate the dump for another version, launch a cluster then run the following
  * {@code
