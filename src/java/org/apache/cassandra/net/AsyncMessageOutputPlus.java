@@ -45,7 +45,7 @@ public class AsyncMessageOutputPlus extends AsyncChannelOutputPlus
      *
      * i.e., if we are at or below the {@link #lowWaterMark} we should definitely start writing again;
      *       if we are at or above the {@link #highWaterMark} we should definitely stop writing;
-     *       if we are inbetween, it is OK to either write or not write
+     *       if we are in between, it is OK to either write or not write
      *
      * note that we consider the bytes we are about to write to our high water mark, but not our low.
      * i.e., we will not begin a write that would take us over our high water mark, unless not doing so would

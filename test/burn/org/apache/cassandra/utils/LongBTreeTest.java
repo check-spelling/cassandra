@@ -649,7 +649,7 @@ public class LongBTreeTest
         return new RandomTree(seed, canonical, btree);
     }
 
-    // select a random subset of the keys, with an optional random population of keys inbetween those that are present
+    // select a random subset of the keys, with an optional random population of keys in between those that are present
     // return a value with the search position
     private static List<Integer> randomKeys(Random random, Iterable<Integer> canonical, boolean mixInNotPresentItems)
     {
