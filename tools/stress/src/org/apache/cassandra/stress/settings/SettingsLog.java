@@ -46,7 +46,7 @@ public class SettingsLog implements Serializable
     public SettingsLog(Options options)
     {
 
-        noSummary = options.noSummmary.setByUser();
+        noSummary = options.noSummary.setByUser();
         noSettings = options.noSettings.setByUser();
 
         if (options.outputFile.setByUser())
@@ -84,7 +84,7 @@ public class SettingsLog implements Serializable
 
     public static final class Options extends GroupedOptions
     {
-        final OptionSimple noSummmary = new OptionSimple("no-summary", "", null, "Disable printing of aggregate statistics at the end of a test", false);
+        final OptionSimple noSummary = new OptionSimple("no-summary", "", null, "Disable printing of aggregate statistics at the end of a test", false);
         final OptionSimple noSettings = new OptionSimple("no-settings", "", null, "Disable printing of settings values at start of test", false);
         final OptionSimple outputFile = new OptionSimple("file=", ".*", null, "Log to a file", false);
         final OptionSimple hdrOutputFile = new OptionSimple("hdrfile=", ".*", null, "Log to a file", false);
@@ -94,7 +94,7 @@ public class SettingsLog implements Serializable
         @Override
         public List<? extends Option> options()
         {
-            return Arrays.asList(level, noSummmary, outputFile, hdrOutputFile, interval, noSettings);
+            return Arrays.asList(level, noSummary, outputFile, hdrOutputFile, interval, noSettings);
         }
     }
 
