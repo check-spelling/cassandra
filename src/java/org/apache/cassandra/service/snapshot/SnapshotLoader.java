@@ -82,7 +82,7 @@ public class SnapshotLoader extends SimpleFileVisitor<Path>
 
     public Set<TableSnapshot> loadSnapshots(String keyspace)
     {
-        // if we supply a keyspace, the walking max depth will be suddenly shorther
+        // if we supply a keyspace, the walking max depth will be suddenly shorter
         // because we are one level down in the directory structure
         int maxDepth = keyspace == null ? 5 : 4;
         for (Path dataDir : dataDirectories)
