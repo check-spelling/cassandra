@@ -91,7 +91,7 @@ public class PartialMaskingFunction extends MaskingFunction
     public final ByteBuffer execute(ProtocolVersion protocolVersion, List<ByteBuffer> parameters)
     {
         // Parse the beginning and end positions. No validation is needed since the masker accepts negatives,
-        // but we should consider that the arguments migh be null.
+        // but we should consider that the arguments might be null.
         int begin = parameters.get(1) == null ? 0 : Int32Type.instance.compose(parameters.get(1));
         int end = parameters.get(2) == null ? 0 : Int32Type.instance.compose(parameters.get(2));
 

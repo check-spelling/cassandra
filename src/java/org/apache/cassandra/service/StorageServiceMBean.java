@@ -845,7 +845,7 @@ public interface StorageServiceMBean extends NotificationEmitter
      *
      * @param probability
      *            ]0,1[ will enable tracing on a partial number of requests with the provided probability. 0 will
-     *            disable tracing and 1 will enable tracing for all requests (which mich severely cripple the system)
+     *            disable tracing and 1 will enable tracing for all requests (which might severely cripple the system)
      */
     public void setTraceProbability(double probability);
 
