@@ -45,7 +45,7 @@ public class PgStringTest extends CQLTester
         execute("INSERT INTO %s (key, val) VALUES ($$prim$ $ $key$$, $$some '' arbitrary value$$)");
         // same empty pg-style marker for multiple strings
         execute("INSERT INTO %s (key, val) VALUES ($$key_empty$$, $$'' value for empty$$)");
-        // stange but valid pg-style
+        // strange but valid pg-style
         execute("INSERT INTO %s (key, val) VALUES ($$$foo$_$foo$$, $$$'' value for empty$$)");
         // these are conventional quoted strings
         execute("INSERT INTO %s (key, val) VALUES ('$txt$key$$$$txt$', '$txt$'' other value$txt$')");
