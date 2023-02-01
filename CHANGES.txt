@@ -4423,7 +4423,7 @@ Merged from 1.2:
 
 
 2.0.2
- * Update FailureDetector to use nanontime (CASSANDRA-4925)
+ * Update FailureDetector to use nanotime (CASSANDRA-4925)
  * Fix FileCacheService regressions (CASSANDRA-6149)
  * Never return WriteTimeout for CL.ANY (CASSANDRA-6132)
  * Fix race conditions in bulk loader (CASSANDRA-6129)
