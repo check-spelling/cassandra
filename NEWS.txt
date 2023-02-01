@@ -944,7 +944,7 @@ Upgrading
     - Application layer keep-alives were added to the streaming protocol to prevent idle incoming connections from
       timing out and failing the stream session (CASSANDRA-11839). This effectively deprecates the streaming_socket_timeout_in_ms
       property in favor of streaming_keep_alive_period_in_secs. See cassandra.yaml for more details about this property.
-    - Duration litterals support the ISO 8601 format. By consequence, identifiers matching that format
+    - Duration literals support the ISO 8601 format. By consequence, identifiers matching that format
       (e.g P2Y or P1MT6H) will not be supported anymore (CASSANDRA-11873).
 
 3.8

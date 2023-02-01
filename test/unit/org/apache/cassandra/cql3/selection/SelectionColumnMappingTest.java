@@ -103,14 +103,14 @@ public class SelectionColumnMappingTest extends CQLTester
         testMixedColumnTypes();
         testMultipleUnaliasedSelectionOfSameColumn();
         testUserDefinedAggregate();
-        testListLitteral();
-        testEmptyListLitteral();
-        testSetLitteral();
-        testEmptySetLitteral();
-        testMapLitteral();
-        testEmptyMapLitteral();
-        testUDTLitteral();
-        testTupleLitteral();
+        testListLiteral();
+        testEmptyListLiteral();
+        testSetLiteral();
+        testEmptySetLiteral();
+        testMapLiteral();
+        testEmptyMapLiteral();
+        testUDTLiteral();
+        testTupleLiteral();
     }
 
     @Test
@@ -416,7 +416,7 @@ public class SelectionColumnMappingTest extends CQLTester
         verify(expected, "SELECT v1, v1 FROM %s");
     }
 
-    private void testListLitteral() throws Throwable
+    private void testListLiteral() throws Throwable
     {
         ColumnSpecification listSpec = columnSpecification("[k, v1]", ListType.getInstance(Int32Type.instance, false));
         SelectionColumnMapping expected = SelectionColumnMapping.newMapping()
@@ -426,7 +426,7 @@ public class SelectionColumnMappingTest extends CQLTester
         verify(expected, "SELECT [k, v1] FROM %s");
     }
 
-    private void testEmptyListLitteral() throws Throwable
+    private void testEmptyListLiteral() throws Throwable
     {
         ColumnSpecification listSpec = columnSpecification("(list<int>)[]", ListType.getInstance(Int32Type.instance, false));
         SelectionColumnMapping expected = SelectionColumnMapping.newMapping()
@@ -435,7 +435,7 @@ public class SelectionColumnMappingTest extends CQLTester
         verify(expected, "SELECT (list<int>)[] FROM %s");
     }
 
-    private void testSetLitteral() throws Throwable
+    private void testSetLiteral() throws Throwable
     {
         ColumnSpecification setSpec = columnSpecification("{k, v1}", SetType.getInstance(Int32Type.instance, false));
         SelectionColumnMapping expected = SelectionColumnMapping.newMapping()
@@ -445,7 +445,7 @@ public class SelectionColumnMappingTest extends CQLTester
         verify(expected, "SELECT {k, v1} FROM %s");
     }
 
-    private void testEmptySetLitteral() throws Throwable
+    private void testEmptySetLiteral() throws Throwable
     {
         ColumnSpecification setSpec = columnSpecification("(set<int>){}", SetType.getInstance(Int32Type.instance, false));
         SelectionColumnMapping expected = SelectionColumnMapping.newMapping()
@@ -454,7 +454,7 @@ public class SelectionColumnMappingTest extends CQLTester
         verify(expected, "SELECT (set<int>){} FROM %s");
     }
 
-    private void testMapLitteral() throws Throwable
+    private void testMapLiteral() throws Throwable
     {
         ColumnSpecification mapSpec = columnSpecification("(map<text, int>){'min': system.min(v1), 'max': system.max(v1)}", MapType.getInstance(UTF8Type.instance, Int32Type.instance, false));
         SelectionColumnMapping expected = SelectionColumnMapping.newMapping()
@@ -463,7 +463,7 @@ public class SelectionColumnMappingTest extends CQLTester
         verify(expected, "SELECT (map<text, int>){'min': min(v1), 'max': max(v1)} FROM %s");
     }
 
-    private void testEmptyMapLitteral() throws Throwable
+    private void testEmptyMapLiteral() throws Throwable
     {
         ColumnSpecification mapSpec = columnSpecification("(map<text, int>){}", MapType.getInstance(UTF8Type.instance, Int32Type.instance, false));
         SelectionColumnMapping expected = SelectionColumnMapping.newMapping()
@@ -472,7 +472,7 @@ public class SelectionColumnMappingTest extends CQLTester
         verify(expected, "SELECT (map<text, int>){} FROM %s");
     }
 
-    private void testUDTLitteral() throws Throwable
+    private void testUDTLiteral() throws Throwable
     {
         UserType type = new UserType(KEYSPACE, ByteBufferUtil.bytes(typeName),
                                       asList(FieldIdentifier.forUnquoted("f1"),
@@ -489,7 +489,7 @@ public class SelectionColumnMappingTest extends CQLTester
         verify(expected, "SELECT ("+ typeName + "){f1: v1, f2: v2} FROM %s");
     }
 
-    private void testTupleLitteral() throws Throwable
+    private void testTupleLiteral() throws Throwable
     {
         TupleType type = new TupleType(asList(Int32Type.instance, UTF8Type.instance));
 
