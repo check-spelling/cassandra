@@ -175,8 +175,8 @@ public class ColumnIndex
                                              openMarker);
 
         // indexOffsets is used for both shallow (ShallowIndexedEntry) and non-shallow IndexedEntry.
-        // For shallow ones, we need it to serialize the offsts in finish().
-        // For non-shallow ones, the offsts are passed into IndexedEntry, so we don't have to
+        // For shallow ones, we need it to serialize the offsets in finish().
+        // For non-shallow ones, the offsets are passed into IndexedEntry, so we don't have to
         // calculate the offsets again.
 
         // indexOffsets contains the offsets of the serialized IndexInfo objects.
@@ -289,7 +289,7 @@ public class ColumnIndex
             addIndexBlock();
 
         // If we serialize the IndexInfo objects directly in the code above into 'buffer',
-        // we have to write the offsts to these here. The offsets have already been are collected
+        // we have to write the offsets to these here. The offsets have already been are collected
         // in indexOffsets[]. buffer is != null, if it exceeds Config.column_index_cache_size.
         // In the other case, when buffer==null, the offsets are serialized in RowIndexEntry.IndexedEntry.serialize().
         if (buffer != null)
