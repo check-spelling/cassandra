@@ -491,7 +491,7 @@ public abstract class AbstractReplicationStrategy
                 return null;
 
             // If ring version has changed, create a fresh replica holder and try to replace the current one.
-            // This may race with other threads that have the same new ring version and one will win and the loosers
+            // This may race with other threads that have the same new ring version and one will win and the losers
             // will be garbage collected
             ReplicaHolder<K, V> cleaned = new ReplicaHolder<>(ringVersion, current.replicas.size());
             cachedReplicas.compareAndSet(current, cleaned);
