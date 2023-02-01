@@ -1103,7 +1103,7 @@ public class Util
      * Sets the length of the file to given size. File will be created if not exist.
      *
      * @param file file for which length needs to be set
-     * @param size new szie
+     * @param size new size
      * @throws IOException on any I/O error.
      */
     public static void setFileLength(File file, long size) throws IOException
