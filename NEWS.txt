@@ -1666,7 +1666,7 @@ New features
 
 New features
 ------------
-    - CqlPaginRecordReader and CqlPagingInputFormat have both been removed.
+    - CqlPagingRecordReader and CqlPagingInputFormat have both been removed.
       Use CqlInputFormat instead.
     - If you are using Leveled Compaction, you can now disable doing size-tiered
       compaction in L0 by starting Cassandra with -Dcassandra.disable_stcs_in_l0
