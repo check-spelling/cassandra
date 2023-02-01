@@ -154,7 +154,7 @@
     </condition>
     <condition property="java.version.11">
       <!-- This includes every JDK other than 8; so JDK 9 is flagged as JDK 11, and JDK 17 is as well... at the moment this is desired behavior
-      and may be relooked at once JDK 8 support is dropped -->
+      and may be reconsidered at once JDK 8 support is dropped -->
         <not><isset property="java.version.8"/></not>
     </condition>
     <fail message="Unsupported JDK version used: ${ant.java.version}"><condition><not><or>
