@@ -346,7 +346,7 @@ public class DateTieredCompactionStrategyTest extends SchemaLoader
         ByteBuffer bigValue = ByteBuffer.wrap(new byte[10000]);
         ByteBuffer value = ByteBuffer.wrap(new byte[100]);
         int numSSTables = 40;
-        // create big sstabels out of half:
+        // create big sstables out of half:
         long timestamp = System.currentTimeMillis();
         for (int r = 0; r < numSSTables / 2; r++)
         {
