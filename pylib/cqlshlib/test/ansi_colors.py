@@ -191,7 +191,7 @@ def lookup_colorletter(letter):
 
 
 def lookup_letter_from_code(code):
-    letr = letters_by_num.get(code, ' ')
-    if letr == 'n':
-        letr = ' '
-    return letr
+    letter = letters_by_num.get(code, ' ')
+    if letter == 'n':
+        letter = ' '
+    return letter
