@@ -2,7 +2,7 @@
 keyspace: stresscql
 
 # The CQL for creating a keyspace (optional if it already exists)
-# Would almost always be network topology unless running something locall
+# Would almost always be network topology unless running something local
 keyspace_definition: |
   CREATE KEYSPACE stresscql WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
 
