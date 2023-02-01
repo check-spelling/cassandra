@@ -136,7 +136,7 @@ public class BlockingPartitionRepair
      */
     private PartitionUpdate mergeUnackedUpdates()
     {
-        // recombinate the updates
+        // recombine the updates
         List<PartitionUpdate> updates = Lists.newArrayList(Iterables.transform(pendingRepairs.values(), BlockingPartitionRepair::extractUpdate));
         return updates.isEmpty() ? null : PartitionUpdate.merge(updates);
     }
