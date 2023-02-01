@@ -194,7 +194,7 @@ public abstract class UnfilteredRowIterators
         iterator.columns().regulars.digest(digest);
         // When serializing an iterator, we skip the static columns if the iterator has not static row, even if the
         // columns() object itself has some (the columns() is a superset of what the iterator actually contains, and
-        // will correspond to the queried columns pre-serialization). So we must avoid taking the satic column names
+        // will correspond to the queried columns pre-serialization). So we must avoid taking the static column names
         // into account if there is no static row or we'd have a digest mismatch between depending on whether the digest
         // is computed on an iterator that has been serialized or not (see CASSANDRA-12090)
         // TODO: in practice we could completely skip digesting the columns since they are more informative of what the

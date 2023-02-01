@@ -2002,7 +2002,7 @@ public class SASIIndexTest
         Assert.assertEquals(1.04, row1.getDouble("value"), 0.0);
         Assert.assertEquals(7, row1.getInt("variance"));
 
-        // Only non statc columns filtering
+        // Only non static columns filtering
         results = executeCQL(STATIC_CF_NAME ,"SELECT * FROM %s.%s WHERE value >= ? AND variance <= ? ALLOW FILTERING", 1.02, 7);
         Assert.assertNotNull(results);
         Assert.assertEquals(4, results.size());
