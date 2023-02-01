@@ -6044,7 +6044,7 @@ public class StorageService extends NotificationBroadcasterSupport implements IE
 
         StreamPlan streamPlan = new StreamPlan(StreamOperation.DECOMMISSION);
 
-        // Vinculate StreamStateStore to current StreamPlan to update transferred rangeas per StreamSession
+        // Vinculate StreamStateStore to current StreamPlan to update transferred range as per StreamSession
         streamPlan.listeners(streamStateStore);
 
         for (Map.Entry<String, RangesByEndpoint> entry : sessionsToStreamByKeyspace.entrySet())
