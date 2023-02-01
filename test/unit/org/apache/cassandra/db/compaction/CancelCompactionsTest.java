@@ -68,7 +68,7 @@ import static org.junit.Assert.fail;
 public class CancelCompactionsTest extends CQLTester
 {
     /**
-     * makes sure we only cancel compactions if the precidate says we have overlapping sstables
+     * makes sure we only cancel compactions if the predicate says we have overlapping sstables
      */
     @Test
     public void cancelTest() throws InterruptedException
