@@ -84,7 +84,7 @@ public abstract class TemporalType<T> extends AbstractType<T>
      *
      * @param temporal the value to substract from
      * @param duration the duration to substract
-     * @return the substracion result
+     * @return the substraction result
      */
     public ByteBuffer substractDuration(ByteBuffer temporal,
                                 ByteBuffer duration)
