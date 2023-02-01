@@ -343,7 +343,7 @@ public class Commit
      * We can witness reproposals of the latest successful commit; we can detect this by comparing the timestamp of
      * the update with our ballot; if it is the same, we are not a reproposal. If it is the same as either the
      * ballot timestamp or update timestamp of the latest committed proposal, then we are reproposing it and can
-     * instead simpy commit it.
+     * instead simply commit it.
      */
     public boolean isReproposalOf(Commit older)
     {
