@@ -946,7 +946,7 @@ public abstract class TypeCodec<T>
          * {@inheritDoc}
          *
          * <p>Implementation note: this method treats {@code null}s and empty buffers differently: the
-         * formers are mapped to {@code null}s while the latters are mapped to empty strings.
+         * formers are mapped to {@code null}s while the latter are mapped to empty strings.
          */
         @Override
         public String deserialize(ByteBuffer bytes, ProtocolVersion protocolVersion)
