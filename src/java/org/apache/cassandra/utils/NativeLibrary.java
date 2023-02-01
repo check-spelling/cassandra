@@ -391,7 +391,7 @@ public final class NativeLibrary
 
     /**
      * Get system file descriptor from FileDescriptor object.
-     * @param descriptor - FileDescriptor objec to get fd from
+     * @param descriptor - FileDescriptor object to get fd from
      * @return file descriptor, -1 or error
      */
     public static int getfd(FileDescriptor descriptor)
