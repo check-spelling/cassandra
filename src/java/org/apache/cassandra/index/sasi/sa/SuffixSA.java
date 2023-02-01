@@ -98,8 +98,8 @@ public class SuffixSA extends SA<CharBuffer>
         {
             long index = suffixes[position];
             Term term = terms.get((int) (index >>> 32));
-            boolean isPartitial = (index & ((long) 1 << 31)) == 0;
-            return Pair.create(new IndexedTerm(term.getSuffix(clearCompleteBit(index) - term.getPosition()), isPartitial), term.getTokens());
+            boolean isPartial = (index & ((long) 1 << 31)) == 0;
+            return Pair.create(new IndexedTerm(term.getSuffix(clearCompleteBit(index) - term.getPosition()), isPartial), term.getTokens());
         }
 
         public ByteBuffer minTerm()
