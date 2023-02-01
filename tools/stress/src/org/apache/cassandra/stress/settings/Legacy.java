@@ -46,7 +46,7 @@ public class Legacy implements Serializable
         availableOptions.addOption("S",  "column-size",          true,   "Size of column values in bytes, default:34");
         availableOptions.addOption("C",  "unique columns",       true,   "Max number of unique columns per key, default:50");
         availableOptions.addOption("RC", "unique rows",          true,   "Max number of unique rows, default:50");
-        availableOptions.addOption("d",  "nodes",                true,   "Host nodes (comma separated), default:locahost");
+        availableOptions.addOption("d",  "nodes",                true,   "Host nodes (comma separated), default:localhost");
         availableOptions.addOption("D",  "nodesfile",            true,   "File containing host nodes (one per line)");
         availableOptions.addOption("s",  "stdev",                true,   "Standard Deviation for gaussian read key generation, default:0.1");
         availableOptions.addOption("r",  "random",               false,  "Use random key generator for read key generation (STDEV will have no effect), default:false");
