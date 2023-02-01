@@ -753,7 +753,7 @@ public class LongBufferPoolTest
             Node<V> next = head.next;
             if (next == null)
             {
-                // this is racey, but good enough for our purposes
+                // this is racy, but good enough for our purposes
                 exhausted = true;
                 return null;
             }
