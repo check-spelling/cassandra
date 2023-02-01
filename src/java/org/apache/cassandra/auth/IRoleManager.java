@@ -61,7 +61,7 @@ public interface IRoleManager extends AuthCache.BulkLoader<RoleResource, Set<Rol
      * options are guaranteed to be a subset of supportedOptions().
      *
      * @param performer User issuing the create role statement.
-     * @param role Rolei being created
+     * @param role Role being created
      * @param options Options the role will be created with
      * @throws RequestValidationException
      * @throws RequestExecutionException
