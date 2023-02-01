@@ -90,7 +90,7 @@ public class CoordinatedRepairResult
     }
 
     /**
-     * Utility method for tests to produce a success result; should only be used by tests as syntaxtic sugar as all
+     * Utility method for tests to produce a success result; should only be used by tests as syntactic sugar as all
      * results must be present else an error is thrown.
      */
     @VisibleForTesting
