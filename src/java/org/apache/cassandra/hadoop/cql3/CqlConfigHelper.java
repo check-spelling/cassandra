@@ -80,8 +80,8 @@ public class CqlConfigHelper
     private static final String INPUT_NATIVE_AUTH_PROVIDER = "cassandra.input.native.auth.provider";
     private static final String INPUT_NATIVE_SSL_TRUST_STORE_PATH = "cassandra.input.native.ssl.trust.store.path";
     private static final String INPUT_NATIVE_SSL_KEY_STORE_PATH = "cassandra.input.native.ssl.key.store.path";
-    private static final String INPUT_NATIVE_SSL_TRUST_STORE_PASSWARD = "cassandra.input.native.ssl.trust.store.password";
-    private static final String INPUT_NATIVE_SSL_KEY_STORE_PASSWARD = "cassandra.input.native.ssl.key.store.password";
+    private static final String INPUT_NATIVE_SSL_TRUST_STORE_PASSWORD = "cassandra.input.native.ssl.trust.store.password";
+    private static final String INPUT_NATIVE_SSL_KEY_STORE_PASSWORD = "cassandra.input.native.ssl.key.store.password";
     private static final String INPUT_NATIVE_SSL_CIPHER_SUITES = "cassandra.input.native.ssl.cipher.suites";
 
     private static final String INPUT_NATIVE_PROTOCOL_VERSION = "cassandra.input.native.protocol.version";
@@ -242,12 +242,12 @@ public class CqlConfigHelper
 
     public static Optional<String> getInputNativeSSLKeystorePassword(Configuration conf)
     {
-        return getStringSetting(INPUT_NATIVE_SSL_KEY_STORE_PASSWARD, conf);
+        return getStringSetting(INPUT_NATIVE_SSL_KEY_STORE_PASSWORD, conf);
     }
 
     public static Optional<String> getInputNativeSSLTruststorePassword(Configuration conf)
     {
-        return getStringSetting(INPUT_NATIVE_SSL_TRUST_STORE_PASSWARD, conf);
+        return getStringSetting(INPUT_NATIVE_SSL_TRUST_STORE_PASSWORD, conf);
     }
 
     public static Optional<String> getInputNativeSSLCipherSuites(Configuration conf)
@@ -407,12 +407,12 @@ public class CqlConfigHelper
 
     public static void setInputNativeSSLKeystorePassword(Configuration conf, String pass)
     {
-        conf.set(INPUT_NATIVE_SSL_KEY_STORE_PASSWARD, pass);
+        conf.set(INPUT_NATIVE_SSL_KEY_STORE_PASSWORD, pass);
     }
 
     public static void setInputNativeSSLTruststorePassword(Configuration conf, String pass)
     {
-        conf.set(INPUT_NATIVE_SSL_TRUST_STORE_PASSWARD, pass);
+        conf.set(INPUT_NATIVE_SSL_TRUST_STORE_PASSWORD, pass);
     }
 
     public static void setInputNativeSSLCipherSuites(Configuration conf, String suites)
