@@ -133,8 +133,8 @@ public class RepairCoordinatorFailingMessageTest extends TestBaseImpl implements
         }
     }
 
-    //TODO failure reply murkle tree
-    //TODO failure reply murkle tree IR
+    //TODO failure reply merkle tree
+    //TODO failure reply merkle tree IR
 
     @Test(timeout = 1 * 60 * 1000)
     public void validationFailure()
