@@ -6,7 +6,7 @@ tool is used to bump sstables into the highest level possible.
 
 ref: https://issues.apache.org/jira/browse/CASSANDRA-8301
 
-The way this is done is: sstables are storted by their last token. Given
+The way this is done is: sstables are sorted by their last token. Given
 an original leveling like this (note that [ ] indicates token
 boundaries, not sstable size on disk; all sstables are the same size):
 
