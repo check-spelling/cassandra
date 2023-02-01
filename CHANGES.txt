@@ -656,7 +656,7 @@ Merged from 3.0:
  * Ignore trailing zeros in hint files (CASSANDRA-16523)
  * Refuse DROP COMPACT STORAGE if some 2.x sstables are in use (CASSANDRA-15897)
  * Fix ColumnFilter::toString not returning a valid CQL fragment (CASSANDRA-16483)
- * Fix ColumnFilter behaviour to prevent digest mitmatches during upgrades (CASSANDRA-16415)
+ * Fix ColumnFilter behaviour to prevent digest mismatches during upgrades (CASSANDRA-16415)
  * Update debian packaging for python3 (CASSANDRA-16396)
  * Avoid pushing schema mutations when setting up distributed system keyspaces locally (CASSANDRA-16387)
  * Prevent unbounded number of pending flushing tasks (CASSANDRA-16261)
