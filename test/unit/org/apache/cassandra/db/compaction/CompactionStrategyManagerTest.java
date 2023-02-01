@@ -140,7 +140,7 @@ public class CompactionStrategyManagerTest
             previousSSTables = currentSSTables;
         }
 
-        // Creates a CompactionStrategymanager with different numbers of disks and check
+        // Creates a CompactionStrategyManager with different numbers of disks and check
         // if the SSTables are assigned to the correct compaction strategies
         for (int numDisks = 2; numDisks < 10; numDisks++)
         {
