@@ -39,7 +39,7 @@ import org.apache.cassandra.security.ThreadAwareSecurityManager;
 import org.apache.cassandra.service.EmbeddedCassandraService;
 
 /**
- * Utility methodes used by SchemaLoader and CQLTester to manage the server and its state.
+ * Utility methods used by SchemaLoader and CQLTester to manage the server and its state.
  *
  */
 public final class ServerTestUtils
