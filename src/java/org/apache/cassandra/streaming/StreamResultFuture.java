@@ -223,7 +223,7 @@ public final class StreamResultFuture extends AsyncFuture<StreamState>
             }
             catch (Throwable t)
             {
-                logger.warn("Unexpected exception in listern while calling handleStreamEvent", t);
+                logger.warn("Unexpected exception in listener while calling handleStreamEvent", t);
             }
         }
         long totalNanos = nanoTime() - startNanos;
