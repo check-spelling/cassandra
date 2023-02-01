@@ -158,7 +158,7 @@ public abstract class NumberType<T extends Number> extends AbstractType<T>
                                    ByteBuffer right);
 
     /**
-     * Substracts the left argument from the right one.
+     * Subtracts the left argument from the right one.
      *
      * @param leftType the type associated to the left argument
      * @param left the left argument
