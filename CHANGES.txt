@@ -142,7 +142,7 @@ Merged from 3.0:
  * Fix race and return after failing connections (CASSANDRA-17618)
  * Speculative execution threshold unit mismatch (CASSANDRA-17877)
  * Fix BulkLoader to load entireSSTableThrottle and entireSSTableInterDcThrottle (CASSANDRA-17677)
- * Fix a race condition where a keyspace can be oopened while it is being removed (CASSANDRA-17658)
+ * Fix a race condition where a keyspace can be opened while it is being removed (CASSANDRA-17658)
  * DatabaseDescriptor will set the default failure detector during client initialization (CASSANDRA-17782)
  * Avoid initializing schema via SystemKeyspace.getPreferredIP() with the BulkLoader tool (CASSANDRA-17740)
  * Improve JMX methods signatures, fix JMX and config backward compatibility (CASSANDRA-17725)
