@@ -95,7 +95,7 @@ public class OperationFctsTest extends CQLTester
                        BigDecimal.valueOf(15.5),
                        BigDecimal.valueOf(17.0)));
 
-        // Test substractions
+        // Test subtractions
 
         assertColumnNames(execute("SELECT a - a, b - a, c - a, d - a, e - a, f - a, g - a, h - a FROM %s WHERE a = 1 AND b = 2 AND c = 4 - 1"),
                           "a - a", "b - a", "c - a", "d - a", "e - a", "f - a", "g - a", "h - a");
@@ -378,7 +378,7 @@ public class OperationFctsTest extends CQLTester
         assertRows(execute("SELECT a + 6.5, b + 6.5, c + 6.5, d + 6.5, e + 6.5, f + 6.5, g + 6.5, h + 6.5 FROM %s WHERE a = 1 AND b = 2"),
                    row(7.5, 8.5, 9.5, 10.5, 12.0, 13.0, BigDecimal.valueOf(13.5), BigDecimal.valueOf(15.0)));
 
-        // Test substractions
+        // Test subtractions
 
         assertColumnNames(execute("SELECT a - 1, b - 1, c - 1, d - 1, e - 1, f - 1, g - 1, h - 1 FROM %s WHERE a = 1 AND b = 2"),
                           "a - 1", "b - 1", "c - 1", "d - 1", "e - 1", "f - 1", "g - 1", "h - 1");
