@@ -61,7 +61,7 @@ def convert(yaml_file, dest_file):
     with open(dest_file, 'w') as outfile:
         outfile.write("= cassandra.yaml file configuration\n")
 
-        # since comments preceed an option, this holds all of the comment
+        # since comments precede an option, this holds all of the comment
         # lines we've seen since the last option
         comments_since_last_option = []
         line_iter = iter(lines)
