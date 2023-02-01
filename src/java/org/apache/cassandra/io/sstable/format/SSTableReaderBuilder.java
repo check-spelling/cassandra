@@ -161,7 +161,7 @@ public abstract class SSTableReaderBuilder
 
     /**
      * Build index summary, first key, last key if {@code summaryLoaded} is false and recreate bloom filter if
-     * {@code recreteBloomFilter} is true by reading through Index.db file.
+     * {@code recreateBloomFilter} is true by reading through Index.db file.
      *
      * @param recreateBloomFilter true if recreate bloom filter
      * @param summaryLoaded true if index summary, first key and last key are already loaded and not need to build again
