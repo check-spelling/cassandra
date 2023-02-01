@@ -86,7 +86,7 @@ import static org.apache.cassandra.utils.Clock.Global.currentTimeMillis;
  *                                             .using(insert).build();
  *
  *   UserType myType = writer.getUDType("myType");
- *   // Adds a nember of rows to the resulting sstable
+ *   // Adds a number of rows to the resulting sstable
  *   writer.addRow(0, "test1", 24, myType.newValue().setInt("a", 10).setInt("b", 20));
  *   writer.addRow(1, "test2", null, null);
  *   writer.addRow(2, "test3", 42, myType.newValue().setInt("a", 30).setInt("b", 40));
