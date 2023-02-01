@@ -380,7 +380,7 @@ public class ColumnFamilyStoreTest
         assertThat(cfs.metric.coordinatorReadLatency.getSnapshot().getValue(0.5))
             .isBetween((double) TimeUnit.MILLISECONDS.toMicros(5839),
                        (double) TimeUnit.MILLISECONDS.toMicros(5840));
-        // Sanity check the metrics - 75th percentileof linear 0-10000ms
+        // Sanity check the metrics - 75th percentile of linear 0-10000ms
         assertThat(cfs.metric.coordinatorWriteLatency.getCount()).isEqualTo(count);
         assertThat(cfs.metric.coordinatorWriteLatency.getSnapshot().getValue(0.75))
         .isBetween((double) TimeUnit.MILLISECONDS.toMicros(8409),
