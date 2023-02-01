@@ -77,7 +77,7 @@ public class SetGetColumnIndexSizeTest extends CQLTester
     }
 
     @Test
-    public void testUnparseable()
+    public void testUnparsable()
     {
         assertSetInvalidColumnIndexSize("1.2", "column_index_size: can not convert \"1.2\" to a int", 1);
         assertSetInvalidColumnIndexSize("value", "column_index_size: can not convert \"value\" to a int", 1);

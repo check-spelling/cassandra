@@ -384,7 +384,7 @@ class ParsingRuleSet:
     def parse_rules(cls, rulestr):
         tokens, unmatched = cls.RuleSpecScanner.scan(rulestr)
         if unmatched:
-            raise LexingError.from_text(rulestr, unmatched, msg="Syntax rules are unparseable")
+            raise LexingError.from_text(rulestr, unmatched, msg="Syntax rules are unparsable")
         rules = {}
         terminals = []
         tokeniter = iter(tokens)
@@ -458,7 +458,7 @@ class ParsingRuleSet:
                 mybranches.append(myrules)
                 continue
             else:
-                raise ValueError('Unparseable rule token %r after %r' % (t, myrules[-1]))
+                raise ValueError('Unparsable rule token %r after %r' % (t, myrules[-1]))
             myrules.append(t)
             if countsofar == counttarget:
                 if len(mybranches) == 1:

@@ -65,14 +65,14 @@ public class ReplicationFactorTest
     public void shouldRoundTripParseSimpleRF()
     {
         String rf = "3";
-        assertEquals(rf, ReplicationFactor.fromString(rf).toParseableString());
+        assertEquals(rf, ReplicationFactor.fromString(rf).toParsableString());
     }
 
     @Test
     public void shouldRoundTripParseTransientRF()
     {
         String rf = "3/1";
-        assertEquals(rf, ReplicationFactor.fromString(rf).toParseableString());
+        assertEquals(rf, ReplicationFactor.fromString(rf).toParsableString());
     }
 
     private static void assertRfParseFailure(String s, String error)

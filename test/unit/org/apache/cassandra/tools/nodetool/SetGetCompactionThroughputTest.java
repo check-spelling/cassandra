@@ -73,7 +73,7 @@ public class SetGetCompactionThroughputTest extends CQLTester
     }
 
     @Test
-    public void testUnparseable()
+    public void testUnparsable()
     {
         assertSetInvalidThroughput("1.2", "compaction_throughput: can not convert \"1.2\" to a Integer");
         assertSetInvalidThroughput("value", "compaction_throughput: can not convert \"value\" to a Integer");

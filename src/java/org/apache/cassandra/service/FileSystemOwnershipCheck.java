@@ -48,7 +48,7 @@ import static org.apache.cassandra.service.StartupChecks.StartupCheckType.check_
  * This simple formatting is intended to enable them to be created either
  * manually or by automated tooling using minimal standard tools (editor/shell
  * builtins/etc).
- * The only mandatory property is version, which must be parseable as an int
+ * The only mandatory property is version, which must be parsable as an int
  * and upon which the further set of required properties will depend.
  *
  * In version 1, two further property values are required:

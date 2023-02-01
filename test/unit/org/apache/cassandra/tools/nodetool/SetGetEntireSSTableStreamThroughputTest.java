@@ -74,7 +74,7 @@ public class SetGetEntireSSTableStreamThroughputTest extends CQLTester
     }
 
     @Test
-    public void testUnparseable()
+    public void testUnparsable()
     {
         assertSetInvalidThroughput("1.2", "stream_throughput: can not convert \"1.2\" to a int");
         assertSetInvalidThroughput("value", "stream_throughput: can not convert \"value\" to a int");

@@ -4981,7 +4981,7 @@ Merged from 1.1:
  * apply disk_failure_policy to bad disks on initial directory creation
    (CASSANDRA-4847)
  * Optimize name-based queries to use ArrayBackedSortedColumns (CASSANDRA-5043)
- * Fall back to old manifest if most recent is unparseable (CASSANDRA-5041)
+ * Fall back to old manifest if most recent is unparsable (CASSANDRA-5041)
  * pool [Compressed]RandomAccessReader objects on the partitioned read path
    (CASSANDRA-4942)
  * Add debug logging to list filenames processed by Directories.migrateFile

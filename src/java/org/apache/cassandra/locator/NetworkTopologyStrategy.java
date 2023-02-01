@@ -298,7 +298,7 @@ public class NetworkTopologyStrategy extends AbstractReplicationStrategy
         if (replication != null) {
             ReplicationFactor defaultReplicas = ReplicationFactor.fromString(replication);
             Datacenters.getValidDatacenters()
-                       .forEach(dc -> options.putIfAbsent(dc, defaultReplicas.toParseableString()));
+                       .forEach(dc -> options.putIfAbsent(dc, defaultReplicas.toParsableString()));
         }
 
         options.values().removeAll(Collections.singleton("0"));
