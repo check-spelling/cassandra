@@ -6431,7 +6431,7 @@ Merged from 0.8:
  * fix race that could result in Hadoop writer failing to throw an
    exception encountered after close() (CASSANDRA-2755)
  * fix scan wrongly throwing assertion error (CASSANDRA-2653)
- * Always use even distribution for merkle tree with RandomPartitionner
+ * Always use even distribution for merkle tree with RandomPartitioner
    (CASSANDRA-2841)
  * fix describeOwnership for OPP (CASSANDRA-2800)
  * ensure that string tokens do not contain commas (CASSANDRA-2762)
