@@ -537,7 +537,7 @@ public final class IntegerType extends NumberType<BigInteger>
         return decompose(leftType.toBigInteger(left).add(rightType.toBigInteger(right)));
     }
 
-    public ByteBuffer substract(NumberType<?> leftType, ByteBuffer left, NumberType<?> rightType, ByteBuffer right)
+    public ByteBuffer subtract(NumberType<?> leftType, ByteBuffer left, NumberType<?> rightType, ByteBuffer right)
     {
         return decompose(leftType.toBigInteger(left).subtract(rightType.toBigInteger(right)));
     }

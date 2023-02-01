@@ -138,31 +138,31 @@ public class DurationTest
     @Test
     public void testSubstractFrom()
     {
-        assertTimeEquals("2016-09-21T00:00:00.000", Duration.from("0m").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2016-09-21T00:00:00.000", Duration.from("10us").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2016-09-20T23:50:00.000", Duration.from("10m").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2016-09-20T22:30:00.000", Duration.from("90m").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2016-09-20T21:50:00.000", Duration.from("2h10m").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2016-09-18T23:50:00.000", Duration.from("2d10m").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2016-09-17T23:00:00.000", Duration.from("2d25h").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2016-08-21T00:00:00.000", Duration.from("1mo").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2015-07-21T00:00:00.000", Duration.from("14mo").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2015-02-28T00:00:00.000", Duration.from("12mo").substractFrom(toMillis("2016-02-29T00:00:00")));
+        assertTimeEquals("2016-09-21T00:00:00.000", Duration.from("0m").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2016-09-21T00:00:00.000", Duration.from("10us").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2016-09-20T23:50:00.000", Duration.from("10m").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2016-09-20T22:30:00.000", Duration.from("90m").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2016-09-20T21:50:00.000", Duration.from("2h10m").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2016-09-18T23:50:00.000", Duration.from("2d10m").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2016-09-17T23:00:00.000", Duration.from("2d25h").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2016-08-21T00:00:00.000", Duration.from("1mo").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2015-07-21T00:00:00.000", Duration.from("14mo").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2015-02-28T00:00:00.000", Duration.from("12mo").subtractFrom(toMillis("2016-02-29T00:00:00")));
     }
 
     @Test
     public void testSubstractWithNegativeDurations()
     {
-        assertTimeEquals("2016-09-21T00:00:00.000", Duration.from("-0m").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2016-09-21T00:00:00.000", Duration.from("-10us").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2016-09-21T00:10:00.000", Duration.from("-10m").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2016-09-21T01:30:00.000", Duration.from("-90m").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2016-09-21T02:10:00.000", Duration.from("-2h10m").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2016-09-23T00:10:00.000", Duration.from("-2d10m").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2016-09-24T01:00:00.000", Duration.from("-2d25h").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2016-10-21T00:00:00.000", Duration.from("-1mo").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2017-11-21T00:00:00.000", Duration.from("-14mo").substractFrom(toMillis("2016-09-21T00:00:00")));
-        assertTimeEquals("2017-02-28T00:00:00.000", Duration.from("-12mo").substractFrom(toMillis("2016-02-29T00:00:00")));
+        assertTimeEquals("2016-09-21T00:00:00.000", Duration.from("-0m").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2016-09-21T00:00:00.000", Duration.from("-10us").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2016-09-21T00:10:00.000", Duration.from("-10m").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2016-09-21T01:30:00.000", Duration.from("-90m").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2016-09-21T02:10:00.000", Duration.from("-2h10m").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2016-09-23T00:10:00.000", Duration.from("-2d10m").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2016-09-24T01:00:00.000", Duration.from("-2d25h").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2016-10-21T00:00:00.000", Duration.from("-1mo").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2017-11-21T00:00:00.000", Duration.from("-14mo").subtractFrom(toMillis("2016-09-21T00:00:00")));
+        assertTimeEquals("2017-02-28T00:00:00.000", Duration.from("-12mo").subtractFrom(toMillis("2016-02-29T00:00:00")));
     }
 
     @Test

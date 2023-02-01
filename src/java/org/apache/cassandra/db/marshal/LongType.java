@@ -176,7 +176,7 @@ public class LongType extends NumberType<Long>
         return ByteBufferUtil.bytes(leftType.toLong(left) + rightType.toLong(right));
     }
 
-    public ByteBuffer substract(NumberType<?> leftType, ByteBuffer left, NumberType<?> rightType, ByteBuffer right)
+    public ByteBuffer subtract(NumberType<?> leftType, ByteBuffer left, NumberType<?> rightType, ByteBuffer right)
     {
         return ByteBufferUtil.bytes(leftType.toLong(left) - rightType.toLong(right));
     }

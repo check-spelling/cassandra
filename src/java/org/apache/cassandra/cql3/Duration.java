@@ -298,7 +298,7 @@ public final class Duration
      * @param timeInMillis the time from which the duration must be substracted
      * @return the specified time minus this duration
      */
-    public long substractFrom(long timeInMillis)
+    public long subtractFrom(long timeInMillis)
     {
         return add(timeInMillis, -months, -days, -nanoseconds);
     }

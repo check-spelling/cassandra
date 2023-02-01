@@ -128,7 +128,7 @@ public class ShortType extends NumberType<Short>
         return ByteBufferUtil.bytes((short) (leftType.toShort(left) + rightType.toShort(right)));
     }
 
-    public ByteBuffer substract(NumberType<?> leftType, ByteBuffer left, NumberType<?> rightType, ByteBuffer right)
+    public ByteBuffer subtract(NumberType<?> leftType, ByteBuffer left, NumberType<?> rightType, ByteBuffer right)
     {
         return ByteBufferUtil.bytes((short) (leftType.toShort(left) - rightType.toShort(right)));
     }

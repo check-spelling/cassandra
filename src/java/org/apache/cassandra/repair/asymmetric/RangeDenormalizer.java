@@ -103,13 +103,13 @@ public class RangeDenormalizer
         result.add(toSubtract);
         for(Map.Entry<Range<Token>, StreamFromOptions> range : ranges)
         {
-            result = substractAllFromToken(result, range.getKey());
+            result = subtractAllFromToken(result, range.getKey());
         }
 
         return result;
     }
 
-    private static <T extends RingPosition<T>> Set<Range<T>> substractAllFromToken(Set<Range<T>> ranges, Range<T> subtract)
+    private static <T extends RingPosition<T>> Set<Range<T>> subtractAllFromToken(Set<Range<T>> ranges, Range<T> subtract)
     {
         Set<Range<T>> result = new HashSet<>();
         for(Range<T> range : ranges)

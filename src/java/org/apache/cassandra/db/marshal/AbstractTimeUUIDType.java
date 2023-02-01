@@ -204,7 +204,7 @@ public abstract class AbstractTimeUUIDType<T> extends TemporalType<T>
     }
 
     @Override
-    public ByteBuffer substractDuration(ByteBuffer temporal, ByteBuffer duration)
+    public ByteBuffer subtractDuration(ByteBuffer temporal, ByteBuffer duration)
     {
         throw new UnsupportedOperationException();
     }

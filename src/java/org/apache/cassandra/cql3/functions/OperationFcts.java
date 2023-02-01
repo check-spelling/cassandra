@@ -62,7 +62,7 @@ public final class OperationFcts
                 return resultType.concat(leftType, left, rightType, right);
             }
         },
-        SUBSTRACTION('-', "_substract")
+        SUBSTRACTION('-', "_subtract")
         {
             protected ByteBuffer executeOnNumerics(NumberType<?> resultType,
                                                    NumberType<?> leftType,
@@ -70,7 +70,7 @@ public final class OperationFcts
                                                    NumberType<?> rightType,
                                                    ByteBuffer right)
             {
-                return resultType.substract(leftType, left, rightType, right);
+                return resultType.subtract(leftType, left, rightType, right);
             }
 
             @Override
@@ -78,7 +78,7 @@ public final class OperationFcts
                                                     ByteBuffer temporal,
                                                     ByteBuffer duration)
             {
-                return type.substractDuration(temporal, duration);
+                return type.subtractDuration(temporal, duration);
             }
         },
         MULTIPLICATION('*', "_multiply")

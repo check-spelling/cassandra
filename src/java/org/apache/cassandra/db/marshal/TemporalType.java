@@ -82,17 +82,17 @@ public abstract class TemporalType<T> extends AbstractType<T>
     /**
      * Substract the duration from the specified value.
      *
-     * @param temporal the value to substract from
-     * @param duration the duration to substract
-     * @return the substraction result
+     * @param temporal the value to subtract from
+     * @param duration the duration to subtract
+     * @return the subtraction result
      */
-    public ByteBuffer substractDuration(ByteBuffer temporal,
+    public ByteBuffer subtractDuration(ByteBuffer temporal,
                                 ByteBuffer duration)
     {
         long timeInMillis = toTimeInMillis(temporal);
         Duration d = DurationType.instance.compose(duration);
         validateDuration(d);
-        return fromTimeInMillis(d.substractFrom(timeInMillis));
+        return fromTimeInMillis(d.subtractFrom(timeInMillis));
     }
 
     /**

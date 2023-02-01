@@ -152,7 +152,7 @@ public class Int32Type extends NumberType<Integer>
         return ByteBufferUtil.bytes(leftType.toInt(left) + rightType.toInt(right));
     }
 
-    public ByteBuffer substract(NumberType<?> leftType, ByteBuffer left, NumberType<?> rightType, ByteBuffer right)
+    public ByteBuffer subtract(NumberType<?> leftType, ByteBuffer left, NumberType<?> rightType, ByteBuffer right)
     {
         return ByteBufferUtil.bytes(leftType.toInt(left) - rightType.toInt(right));
     }

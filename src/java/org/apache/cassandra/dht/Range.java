@@ -325,13 +325,13 @@ public class Range<T extends RingPosition<T>> extends AbstractBounds<T> implemen
         result.add(this);
         for(Range<T> range : ranges)
         {
-            result = substractAllFromToken(result, range);
+            result = subtractAllFromToken(result, range);
         }
 
         return result;
     }
 
-    private static <T extends RingPosition<T>> Set<Range<T>> substractAllFromToken(Set<Range<T>> ranges, Range<T> subtract)
+    private static <T extends RingPosition<T>> Set<Range<T>> subtractAllFromToken(Set<Range<T>> ranges, Range<T> subtract)
     {
         Set<Range<T>> result = new HashSet<>();
         for(Range<T> range : ranges)

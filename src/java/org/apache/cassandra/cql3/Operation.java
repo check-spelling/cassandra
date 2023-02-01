@@ -394,7 +394,7 @@ public abstract class Operation
                     }
                     catch (InvalidRequestException e)
                     {
-                        throw new InvalidRequestException(String.format("Value for a map substraction has to be a set, but was: '%s'", value));
+                        throw new InvalidRequestException(String.format("Value for a map subtraction has to be a set, but was: '%s'", value));
                     }
                     return new Sets.Discarder(receiver, term);
             }

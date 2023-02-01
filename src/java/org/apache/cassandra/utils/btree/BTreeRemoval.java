@@ -224,7 +224,7 @@ public class BTreeRemoval
         return copy;
     }
 
-    private static Object[] copyWithKeyAndChildRemoved(final Object[] node, final int keyIndex, final int childIndex, final boolean substractSize)
+    private static Object[] copyWithKeyAndChildRemoved(final Object[] node, final int keyIndex, final int childIndex, final boolean subtractSize)
     {
         final boolean leaf = BTree.isLeaf(node);
         final Object[] newNode;
@@ -248,7 +248,7 @@ public class BTreeRemoval
             for (int i = 0; i < nodeSizeMap.length; ++i)
                 if (i != childIndex)
                     newNodeSizeMap[pos++] = nodeSizeMap[i] -
-                        ((substractSize && i > childIndex) ? sizeToRemove : 0);
+                        ((subtractSize && i > childIndex) ? sizeToRemove : 0);
             newNode[offset] = newNodeSizeMap;
         }
         return newNode;

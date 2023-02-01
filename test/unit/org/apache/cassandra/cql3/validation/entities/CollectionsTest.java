@@ -158,7 +158,7 @@ public class CollectionsTest extends CQLTester
                              "UPDATE %s SET m = m + {1} WHERE k = 0;");
         assertInvalidMessage("Not enough bytes to read a map",
                              "UPDATE %s SET m += ? WHERE k = 0", set("v1"));
-        assertInvalidMessage("Value for a map substraction has to be a set, but was: '{'v1': 1}'",
+        assertInvalidMessage("Value for a map subtraction has to be a set, but was: '{'v1': 1}'",
                              "UPDATE %s SET m = m - {'v1': 1} WHERE k = 0", map("v1", 1));
         assertInvalidMessage("Unexpected extraneous bytes after set value",
                              "UPDATE %s SET m -= ? WHERE k = 0", map("v1", 1));
