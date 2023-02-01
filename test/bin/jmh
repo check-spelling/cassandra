@@ -118,11 +118,11 @@ case "`uname -s`" in
     ;;
 esac
 
-cassandra_parms="-Dlogback.configurationFile=$CASSANDRA_HOME/test/conf/logback-jmh.xml"
-cassandra_parms="$cassandra_parms -Dcassandra.logdir=$CASSANDRA_HOME/logs"
-cassandra_parms="$cassandra_parms -Dcassandra.storagedir=$cassandra_storagedir"
-cassandra_parms="$cassandra_parms -Dcassandra-foreground=yes"
-cassandra_parms="$cassandra_parms -XX:+PreserveFramePointer"
+cassandra_params="-Dlogback.configurationFile=$CASSANDRA_HOME/test/conf/logback-jmh.xml"
+cassandra_params="$cassandra_params -Dcassandra.logdir=$CASSANDRA_HOME/logs"
+cassandra_params="$cassandra_params -Dcassandra.storagedir=$cassandra_storagedir"
+cassandra_params="$cassandra_params -Dcassandra-foreground=yes"
+cassandra_params="$cassandra_params -XX:+PreserveFramePointer"
 
 # Create log directory, some tests require that
 mkdir -p $CASSANDRA_HOME/logs
@@ -132,6 +132,6 @@ if [ ! -f $CASSANDRA_HOME/build/test/benchmarks.jar ] ; then
     exit 1
 fi
 
-exec $NUMACTL "$JAVA" -cp "$CLASSPATH:$CASSANDRA_HOME/build/test/benchmarks.jar:$CASSANDRA_HOME/build/test/deps.jar" org.openjdk.jmh.Main -jvmArgs="$cassandra_parms $JVM_OPTS" $@
+exec $NUMACTL "$JAVA" -cp "$CLASSPATH:$CASSANDRA_HOME/build/test/benchmarks.jar:$CASSANDRA_HOME/build/test/deps.jar" org.openjdk.jmh.Main -jvmArgs="$cassandra_params $JVM_OPTS" $@
 
 # vi:ai sw=4 ts=4 tw=0 et
