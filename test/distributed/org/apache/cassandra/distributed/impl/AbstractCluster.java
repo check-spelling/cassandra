@@ -118,7 +118,7 @@ import static org.apache.cassandra.utils.concurrent.Condition.newOneTimeConditio
  * Each instance has its own class loader that will load logging, yaml libraries and all non-shared
  * Cassandra package classes. The rule of thumb is that we'd like to have all Cassandra-specific things
  * (unless explicitly shared through the common classloader) on a per-classloader basis in order to
- * allow creating more than one instance of DatabaseDescriptor and other Cassandra singletones.
+ * allow creating more than one instance of DatabaseDescriptor and other Cassandra singletons.
  *
  * All actions (reading, writing, schema changes, etc) are executed by serializing lambda/runnables,
  * transferring them to instance-specific classloaders, deserializing and running them there. Most of
