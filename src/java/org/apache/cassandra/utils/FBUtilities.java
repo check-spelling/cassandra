@@ -787,7 +787,7 @@ public class FBUtilities
     }
 
     /**
-     * Make straing out of the given {@code Map}.
+     * Make string out of the given {@code Map}.
      *
      * @param map Map to make string.
      * @return String representation of all entries in the map,
