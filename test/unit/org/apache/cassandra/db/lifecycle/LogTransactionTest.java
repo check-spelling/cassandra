@@ -338,9 +338,9 @@ public class LogTransactionTest extends AbstractTransactionalTest
     {
         ColumnFamilyStore cfs = MockSchema.newCFS(KEYSPACE);
 
-        File origiFolder = new Directories(cfs.metadata()).getDirectoryForNewSSTables();
-        File dataFolder1 = new File(origiFolder, "1");
-        File dataFolder2 = new File(origiFolder, "2");
+        File origFolder = new Directories(cfs.metadata()).getDirectoryForNewSSTables();
+        File dataFolder1 = new File(origFolder, "1");
+        File dataFolder2 = new File(origFolder, "2");
         Files.createDirectories(dataFolder1.toPath());
         Files.createDirectories(dataFolder2.toPath());
 
@@ -414,9 +414,9 @@ public class LogTransactionTest extends AbstractTransactionalTest
     {
         ColumnFamilyStore cfs = MockSchema.newCFS(KEYSPACE);
 
-        File origiFolder = new Directories(cfs.metadata()).getDirectoryForNewSSTables();
-        File dataFolder1 = new File(origiFolder, "1");
-        File dataFolder2 = new File(origiFolder, "2");
+        File origFolder = new Directories(cfs.metadata()).getDirectoryForNewSSTables();
+        File dataFolder1 = new File(origFolder, "1");
+        File dataFolder2 = new File(origFolder, "2");
         Files.createDirectories(dataFolder1.toPath());
         Files.createDirectories(dataFolder2.toPath());
 
@@ -527,9 +527,9 @@ public class LogTransactionTest extends AbstractTransactionalTest
     {
         ColumnFamilyStore cfs = MockSchema.newCFS(KEYSPACE);
 
-        File origiFolder = new Directories(cfs.metadata()).getDirectoryForNewSSTables();
-        File dataFolder1 = new File(origiFolder, "1");
-        File dataFolder2 = new File(origiFolder, "2");
+        File origFolder = new Directories(cfs.metadata()).getDirectoryForNewSSTables();
+        File dataFolder1 = new File(origFolder, "1");
+        File dataFolder2 = new File(origFolder, "2");
         Files.createDirectories(dataFolder1.toPath());
         Files.createDirectories(dataFolder2.toPath());
 
@@ -578,9 +578,9 @@ public class LogTransactionTest extends AbstractTransactionalTest
     {
         ColumnFamilyStore cfs = MockSchema.newCFS(KEYSPACE);
 
-        File origiFolder = new Directories(cfs.metadata()).getDirectoryForNewSSTables();
-        File dataFolder1 = new File(origiFolder, "1");
-        File dataFolder2 = new File(origiFolder, "2");
+        File origFolder = new Directories(cfs.metadata()).getDirectoryForNewSSTables();
+        File dataFolder1 = new File(origFolder, "1");
+        File dataFolder2 = new File(origFolder, "2");
         Files.createDirectories(dataFolder1.toPath());
         Files.createDirectories(dataFolder2.toPath());
 
@@ -753,9 +753,9 @@ public class LogTransactionTest extends AbstractTransactionalTest
     {
         ColumnFamilyStore cfs = MockSchema.newCFS(KEYSPACE);
 
-        File origiFolder = new Directories(cfs.metadata()).getDirectoryForNewSSTables();
-        File dataFolder1 = new File(origiFolder, "1");
-        File dataFolder2 = new File(origiFolder, "2");
+        File origFolder = new Directories(cfs.metadata()).getDirectoryForNewSSTables();
+        File dataFolder1 = new File(origFolder, "1");
+        File dataFolder2 = new File(origFolder, "2");
         Files.createDirectories(dataFolder1.toPath());
         Files.createDirectories(dataFolder2.toPath());
 
@@ -878,9 +878,9 @@ public class LogTransactionTest extends AbstractTransactionalTest
     {
         ColumnFamilyStore cfs = MockSchema.newCFS(KEYSPACE);
 
-        File origiFolder = new Directories(cfs.metadata()).getDirectoryForNewSSTables();
-        File dataFolder1 = new File(origiFolder, "1");
-        File dataFolder2 = new File(origiFolder, "2");
+        File origFolder = new Directories(cfs.metadata()).getDirectoryForNewSSTables();
+        File dataFolder1 = new File(origFolder, "1");
+        File dataFolder2 = new File(origFolder, "2");
         Files.createDirectories(dataFolder1.toPath());
         Files.createDirectories(dataFolder2.toPath());
 
