@@ -731,7 +731,7 @@ public class CompactionsCQLTest extends CQLTester
          getCurrentColumnFamilyStore().setCompactionParameters(localOptions);
      }
      @Test
-     public void testProvidesTombstoneOptionverifiation()
+     public void testProvidesTombstoneOptionVerification()
      {
          createTable("CREATE TABLE %s (id text PRIMARY KEY)");
          Map<String, String> localOptions = new HashMap<>();
