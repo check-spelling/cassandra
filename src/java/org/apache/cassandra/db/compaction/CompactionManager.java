@@ -207,7 +207,7 @@ public class CompactionManager implements CompactionManagerMBean
          * If a CF is currently being compacted, and there are no idle threads, submitBackground should be a no-op;
          * we can wait for the current compaction to finish and re-submit when more information is available.
          * Otherwise, we should submit at least one task to prevent starvation by busier CFs, and more if there
-         * are idle threads stil. (CASSANDRA-4310)
+         * are idle threads still. (CASSANDRA-4310)
          */
         int count = compactingCF.count(cfs);
         if (count > 0 && executor.getActiveTaskCount() >= executor.getMaximumPoolSize())
