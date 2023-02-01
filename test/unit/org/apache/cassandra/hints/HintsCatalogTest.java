@@ -128,7 +128,7 @@ public class HintsCatalogTest
         assertTrue(catalog.get(hostId1).hasFiles());
         catalog.deleteAllHints(hostId1);
         assertFalse(catalog.get(hostId1).hasFiles());
-        // stores are still keepts for each host, even after deleting hints
+        // stores are still kept for each host, even after deleting hints
         assertEquals(2, catalog.stores().count());
         assertTrue(catalog.hasFiles());
 
