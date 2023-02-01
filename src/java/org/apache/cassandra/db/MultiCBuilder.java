@@ -85,7 +85,7 @@ public abstract class MultiCBuilder
      * </p>
      *
      * @param value the value of the next element
-     * @return this <code>MulitCBuilder</code>
+     * @return this <code>MultiCBuilder</code>
      */
     public abstract MultiCBuilder addElementToAll(ByteBuffer value);
 
