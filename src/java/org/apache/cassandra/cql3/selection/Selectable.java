@@ -1265,7 +1265,7 @@ public interface Selectable extends AssignmentTestable
     public static class WithElementSelection implements Selectable
     {
         public final Selectable selected;
-        // Note that we can't yet prepare the Term.Raw yet as we need the ColumnSpecificiation corresponding to Selectable, which
+        // Note that we can't yet prepare the Term.Raw yet as we need the ColumnSpecification corresponding to Selectable, which
         // we'll only know in newSelectorFactory due to functions (which needs the defs passed to newSelectorFactory to resolve which
         // function is called). Note that this doesn't really matter performance wise since the factories are still created during
         // preparation of the corresponding SelectStatement.
@@ -1344,7 +1344,7 @@ public interface Selectable extends AssignmentTestable
     public static class WithSliceSelection implements Selectable
     {
         public final Selectable selected;
-        // Note that we can't yet prepare the Term.Raw yet as we need the ColumnSpecificiation corresponding to Selectable, which
+        // Note that we can't yet prepare the Term.Raw yet as we need the ColumnSpecification corresponding to Selectable, which
         // we'll only know in newSelectorFactory due to functions (which needs the defs passed to newSelectorFactory to resolve which
         // function is called). Note that this doesn't really matter performance wise since the factories are still created during
         // preparation of the corresponding SelectStatement.
