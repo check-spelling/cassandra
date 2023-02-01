@@ -235,7 +235,7 @@ public abstract class AbstractCommitLogSegmentManager
     public abstract Allocation allocate(Mutation mutation, int size);
 
     /**
-     * Hook to allow segment managers to track state surrounding creation of new segments. Onl perform as task submit
+     * Hook to allow segment managers to track state surrounding creation of new segments. Only perform as task submit
      * to segment manager so it's performed on segment management thread.
      */
     abstract CommitLogSegment createSegment();
