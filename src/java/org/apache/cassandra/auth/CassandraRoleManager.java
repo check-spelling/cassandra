@@ -275,7 +275,7 @@ public class CassandraRoleManager implements IRoleManager
     }
 
     /**
-     * We hard-code this query to Quorum regardless of the role or auth credentials of the queryer given the nature of
+     * We hard-code this query to Quorum regardless of the role or auth credentials of the querier given the nature of
      * this query: we expect to know *all* roles across the entire cluster when we query this, not just local quorum or
      * on a single node.
      */
