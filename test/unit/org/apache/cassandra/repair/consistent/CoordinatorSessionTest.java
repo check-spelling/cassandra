@@ -271,7 +271,7 @@ public class CoordinatorSessionTest extends AbstractRepairTest
             assertMessageSent(coordinator, participant, expected);
         }
 
-        // finalize commit messages will be sent once all participants respond with a promize to finalize
+        // finalize commit messages will be sent once all participants respond with a promise to finalize
         coordinator.sentMessages.clear();
         Assert.assertEquals(ConsistentSession.State.REPAIRING, coordinator.getState());
 
