@@ -927,7 +927,7 @@ public class BufferPool
                 {
                     if (size == 0)
                         return EMPTY_BUFFER;
-                    throw new IllegalArgumentException("Size must be non-negative (" + size + ')');
+                    throw new IllegalArgumentException("Size must be nonnegative (" + size + ')');
                 }
 
                 pool = tinyPool();

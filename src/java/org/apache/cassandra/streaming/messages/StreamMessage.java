@@ -107,7 +107,7 @@ public abstract class StreamMessage
         Type(int id, int priority, Serializer inSerializer, Serializer outSerializer)
         {
             if (id < 0 || id > Byte.MAX_VALUE)
-                throw new IllegalArgumentException("StreamMessage Type id must be non-negative and less than " + Byte.MAX_VALUE);
+                throw new IllegalArgumentException("StreamMessage Type id must be nonnegative and less than " + Byte.MAX_VALUE);
 
             this.id = id;
             this.priority = priority;

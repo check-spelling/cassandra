@@ -77,7 +77,7 @@ public enum MessageFlag
     MessageFlag lookUpById(int id)
     {
         if (id < 0)
-            throw new IllegalArgumentException("MessageFlag id must be non-negative (got " + id + ')');
+            throw new IllegalArgumentException("MessageFlag id must be nonnegative (got " + id + ')');
 
         return id < idToFlagMap.length ? idToFlagMap[id] : null;
     }

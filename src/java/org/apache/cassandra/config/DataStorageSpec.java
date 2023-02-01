@@ -69,7 +69,7 @@ public abstract class DataStorageSpec
         else
         {
             throw new IllegalArgumentException("Invalid data storage: " + value + " Accepted units:" + acceptedUnits(minUnit) +
-                                               " where case matters and only non-negative values are accepted");
+                                               " where case matters and only nonnegative values are accepted");
         }
     }
 
@@ -105,7 +105,7 @@ public abstract class DataStorageSpec
     private static void validateQuantity(long quantity, DataStorageUnit sourceUnit, DataStorageUnit minUnit, long max)
     {
         if (quantity < 0)
-            throw new IllegalArgumentException("Invalid data storage: value must be non-negative");
+            throw new IllegalArgumentException("Invalid data storage: value must be nonnegative");
 
         if (minUnit.convert(quantity, sourceUnit) >= max)
             throw new IllegalArgumentException(String.format("Invalid data storage: %d %s. It shouldn't be more than %d in %s",

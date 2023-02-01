@@ -174,7 +174,7 @@ public class DataStorageSpecTest
         assertThatThrownBy(() -> new DataStorageSpec.LongBytesBound("-10b")).isInstanceOf(IllegalArgumentException.class)
                                                                             .hasMessageContaining("Invalid data storage: -10b");
         assertThatThrownBy(() -> new DataStorageSpec.LongBytesBound(-10, BYTES)).isInstanceOf(IllegalArgumentException.class)
-                                                                                .hasMessageContaining("Invalid data storage: value must be non-negative");
+                                                                                .hasMessageContaining("Invalid data storage: value must be nonnegative");
         assertThatThrownBy(() -> new DataStorageSpec.LongBytesBound("10HG")).isInstanceOf(IllegalArgumentException.class)
                                                                             .hasMessageContaining("Invalid data storage: 10HG");
         assertThatThrownBy(() -> new DataStorageSpec.LongBytesBound("9223372036854775809B")

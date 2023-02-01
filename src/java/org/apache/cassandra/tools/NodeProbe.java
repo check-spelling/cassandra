@@ -1512,7 +1512,7 @@ public class NodeProbe implements AutoCloseable
     public void setTimeout(String type, long value)
     {
         if (value < 0)
-            throw new RuntimeException("timeout must be non-negative");
+            throw new RuntimeException("timeout must be nonnegative");
 
         switch (type)
         {

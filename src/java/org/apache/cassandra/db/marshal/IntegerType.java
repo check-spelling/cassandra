@@ -418,7 +418,7 @@ public final class IntegerType extends NumberType<BigInteger>
         int writtenBytes = 0;
         V buf;
         // Add "leading zero" if needed (i.e. in case the leading byte of a positive number corresponds to a negative
-        // value, or in case the leading byte of a negative number corresponds to a non-negative value).
+        // value, or in case the leading byte of a negative number corresponds to a nonnegative value).
         // Size the array containing all the value bytes accordingly.
         int curr = comparableBytes.next();
         if ((curr & 0x80) != (sign & 0x80))

@@ -85,7 +85,7 @@ public class DurationSpecTest
         assertThatThrownBy(() -> new DurationSpec.LongNanosecondsBound("-10s")).isInstanceOf(IllegalArgumentException.class)
                                                                                .hasMessageContaining("Invalid duration: -10s");
         assertThatThrownBy(() -> new DurationSpec.LongNanosecondsBound(-10, SECONDS)).isInstanceOf(IllegalArgumentException.class)
-                                                                               .hasMessageContaining("Invalid duration: value must be non-negativ");
+                                                                               .hasMessageContaining("Invalid duration: value must be nonnegative");
         assertThatThrownBy(() -> new DurationSpec.LongNanosecondsBound("10xd")).isInstanceOf(IllegalArgumentException.class)
                                                                                .hasMessageContaining("Invalid duration: 10xd");
         assertThatThrownBy(() -> new DurationSpec.LongNanosecondsBound("0.333555555ms")).isInstanceOf(IllegalArgumentException.class)

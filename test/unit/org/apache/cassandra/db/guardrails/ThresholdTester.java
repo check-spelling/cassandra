@@ -247,7 +247,7 @@ public abstract class ThresholdTester extends GuardrailTester
                                          value, name, disabledValue);
 
             if (expectedMessage == null && value < 0)
-                expectedMessage = format("Invalid data storage: value must be non-negative");
+                expectedMessage = format("Invalid data storage: value must be nonnegative");
 
             assertEquals(format("Exception message '%s' does not contain '%s'", e.getMessage(), expectedMessage),
                          expectedMessage, e.getMessage());

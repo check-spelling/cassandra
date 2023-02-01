@@ -128,7 +128,7 @@ public class DecimalType extends NumberType<BigDecimal>
         int exponent = Math.toIntExact(-scale >> 1);
         // Flip the exponent sign for negative numbers, so that ones with larger magnitudes are propely treated as smaller.
         final int modulatedExponent = negative ? -exponent : exponent;
-        // We should never have scale > Integer.MAX_VALUE, as we're always subtracting the non-negative precision of
+        // We should never have scale > Integer.MAX_VALUE, as we're always subtracting the nonnegative precision of
         // the encoded BigDecimal, and furthermore we're rounding to negative infinity.
         assert scale <= Integer.MAX_VALUE;
         // However, we may end up overflowing on the negative side.

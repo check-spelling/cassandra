@@ -275,7 +275,7 @@ public class YamlConfigurationLoaderTest
         assertThat(from("permissions_validity_in_ms", "42").permissions_validity.toMilliseconds()).isEqualTo(42);
         assertThatThrownBy(() -> from("permissions_validity", -2).permissions_validity.toMilliseconds())
         .hasRootCauseInstanceOf(IllegalArgumentException.class)
-        .hasRootCauseMessage("Invalid duration: -2 Accepted units:[MILLISECONDS, SECONDS, MINUTES, HOURS, DAYS] where case matters and only non-negative values.");
+        .hasRootCauseMessage("Invalid duration: -2 Accepted units:[MILLISECONDS, SECONDS, MINUTES, HOURS, DAYS] where case matters and only nonnegative values.");
 
         // MILLIS_DOUBLE_DURATION
         assertThat(from("commitlog_sync_group_window_in_ms", "42").commitlog_sync_group_window.toMilliseconds()).isEqualTo(42);
@@ -284,20 +284,20 @@ public class YamlConfigurationLoaderTest
         assertThat(from("commitlog_sync_group_window_in_ms", "NaN").commitlog_sync_group_window.toMilliseconds()).isEqualTo(0);
         assertThatThrownBy(() -> from("commitlog_sync_group_window_in_ms", -2).commitlog_sync_group_window.toMilliseconds())
         .hasRootCauseInstanceOf(IllegalArgumentException.class)
-        .hasRootCauseMessage("Invalid duration: value must be non-negative");
+        .hasRootCauseMessage("Invalid duration: value must be nonnegative");
 
         // MILLIS_CUSTOM_DURATION
         assertThat(from("permissions_update_interval_in_ms", 42).permissions_update_interval).isEqualTo(new DurationSpec.IntMillisecondsBound(42));
         assertThat(from("permissions_update_interval_in_ms", -1).permissions_update_interval).isNull();
         assertThatThrownBy(() -> from("permissions_update_interval_in_ms", -2))
         .hasRootCauseInstanceOf(IllegalArgumentException.class)
-        .hasRootCauseMessage("Invalid duration: value must be non-negative");
+        .hasRootCauseMessage("Invalid duration: value must be nonnegative");
 
         // SECONDS_DURATION
         assertThat(from("streaming_keep_alive_period_in_secs", "42").streaming_keep_alive_period.toSeconds()).isEqualTo(42);
         assertThatThrownBy(() -> from("streaming_keep_alive_period_in_secs", -2).streaming_keep_alive_period.toSeconds())
         .hasRootCauseInstanceOf(IllegalArgumentException.class)
-        .hasRootCauseMessage("Invalid duration: value must be non-negative");
+        .hasRootCauseMessage("Invalid duration: value must be nonnegative");
 
         // NEGATIVE_SECONDS_DURATION
         assertThat(from("validation_preview_purge_head_start_in_sec", -1).validation_preview_purge_head_start.toSeconds()).isEqualTo(0);
@@ -311,7 +311,7 @@ public class YamlConfigurationLoaderTest
         assertThat(from("index_summary_resize_interval_in_minutes", "-1").index_summary_resize_interval).isNull();
         assertThatThrownBy(() -> from("index_summary_resize_interval_in_minutes", -2).index_summary_resize_interval.toMinutes())
         .hasRootCauseInstanceOf(IllegalArgumentException.class)
-        .hasRootCauseMessage("Invalid duration: value must be non-negative");
+        .hasRootCauseMessage("Invalid duration: value must be nonnegative");
 
         // BYTES_CUSTOM_DATASTORAGE
         assertThat(from("native_transport_max_concurrent_requests_in_bytes_per_ip", -1).native_transport_max_request_data_in_flight_per_ip).isEqualTo(null);
@@ -322,37 +322,37 @@ public class YamlConfigurationLoaderTest
         assertThat(from("memtable_heap_space_in_mb", "42").memtable_heap_space.toMebibytes()).isEqualTo(42);
         assertThatThrownBy(() -> from("memtable_heap_space_in_mb", -2).memtable_heap_space.toMebibytes())
         .hasRootCauseInstanceOf(IllegalArgumentException.class)
-        .hasRootCauseMessage("Invalid data storage: value must be non-negative");
+        .hasRootCauseMessage("Invalid data storage: value must be nonnegative");
 
         // KIBIBYTES_DATASTORAGE
         assertThat(from("column_index_size_in_kb", "42").column_index_size.toKibibytes()).isEqualTo(42);
         assertThatThrownBy(() -> from("column_index_size_in_kb", -2).column_index_size.toKibibytes())
         .hasRootCauseInstanceOf(IllegalArgumentException.class)
-        .hasRootCauseMessage("Invalid data storage: value must be non-negative");
+        .hasRootCauseMessage("Invalid data storage: value must be nonnegative");
 
         // BYTES_DATASTORAGE
         assertThat(from("internode_max_message_size_in_bytes", "42").internode_max_message_size.toBytes()).isEqualTo(42);
         assertThatThrownBy(() -> from("internode_max_message_size_in_bytes", -2).internode_max_message_size.toBytes())
         .hasRootCauseInstanceOf(IllegalArgumentException.class)
-        .hasRootCauseMessage("Invalid data storage: value must be non-negative");
+        .hasRootCauseMessage("Invalid data storage: value must be nonnegative");
 
         // BYTES_DATASTORAGE
         assertThat(from("internode_max_message_size_in_bytes", "42").internode_max_message_size.toBytes()).isEqualTo(42);
         assertThatThrownBy(() -> from("internode_max_message_size_in_bytes", -2).internode_max_message_size.toBytes())
         .hasRootCauseInstanceOf(IllegalArgumentException.class)
-        .hasRootCauseMessage("Invalid data storage: value must be non-negative");
+        .hasRootCauseMessage("Invalid data storage: value must be nonnegative");
 
         // MEBIBYTES_PER_SECOND_DATA_RATE
         assertThat(from("compaction_throughput_mb_per_sec", "42").compaction_throughput.toMebibytesPerSecondAsInt()).isEqualTo(42);
         assertThatThrownBy(() -> from("compaction_throughput_mb_per_sec", -2).compaction_throughput.toMebibytesPerSecondAsInt())
         .hasRootCauseInstanceOf(IllegalArgumentException.class)
-        .hasRootCauseMessage("Invalid data rate: value must be non-negative");
+        .hasRootCauseMessage("Invalid data rate: value must be nonnegative");
 
         // MEGABITS_TO_BYTES_PER_SECOND_DATA_RATE
         assertThat(from("stream_throughput_outbound_megabits_per_sec", "42").stream_throughput_outbound.toMegabitsPerSecondAsInt()).isEqualTo(42);
         assertThatThrownBy(() -> from("stream_throughput_outbound_megabits_per_sec", -2).stream_throughput_outbound.toMegabitsPerSecondAsInt())
         .hasRootCauseInstanceOf(IllegalArgumentException.class)
-        .hasRootCauseMessage("Invalid data rate: value must be non-negative");
+        .hasRootCauseMessage("Invalid data rate: value must be nonnegative");
 
         // NEGATIVE_MEBIBYTES_DATA_STORAGE_INT
         assertThat(from("sstable_preemptive_open_interval_in_mb", "1").sstable_preemptive_open_interval.toMebibytes()).isEqualTo(1);

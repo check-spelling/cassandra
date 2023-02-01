@@ -178,7 +178,7 @@ public class CacheService implements CacheServiceMBean
     public void setRowCacheSavePeriodInSeconds(int seconds)
     {
         if (seconds < 0)
-            throw new RuntimeException("RowCacheSavePeriodInSeconds must be non-negative.");
+            throw new RuntimeException("RowCacheSavePeriodInSeconds must be nonnegative.");
 
         DatabaseDescriptor.setRowCacheSavePeriod(seconds);
         rowCache.scheduleSaving(seconds, DatabaseDescriptor.getRowCacheKeysToSave());
@@ -192,7 +192,7 @@ public class CacheService implements CacheServiceMBean
     public void setKeyCacheSavePeriodInSeconds(int seconds)
     {
         if (seconds < 0)
-            throw new RuntimeException("KeyCacheSavePeriodInSeconds must be non-negative.");
+            throw new RuntimeException("KeyCacheSavePeriodInSeconds must be nonnegative.");
 
         DatabaseDescriptor.setKeyCacheSavePeriod(seconds);
         keyCache.scheduleSaving(seconds, DatabaseDescriptor.getKeyCacheKeysToSave());
@@ -206,7 +206,7 @@ public class CacheService implements CacheServiceMBean
     public void setCounterCacheSavePeriodInSeconds(int seconds)
     {
         if (seconds < 0)
-            throw new RuntimeException("CounterCacheSavePeriodInSeconds must be non-negative.");
+            throw new RuntimeException("CounterCacheSavePeriodInSeconds must be nonnegative.");
 
         DatabaseDescriptor.setCounterCacheSavePeriod(seconds);
         counterCache.scheduleSaving(seconds, DatabaseDescriptor.getCounterCacheKeysToSave());
@@ -220,7 +220,7 @@ public class CacheService implements CacheServiceMBean
     public void setRowCacheKeysToSave(int count)
     {
         if (count < 0)
-            throw new RuntimeException("RowCacheKeysToSave must be non-negative.");
+            throw new RuntimeException("RowCacheKeysToSave must be nonnegative.");
         DatabaseDescriptor.setRowCacheKeysToSave(count);
         rowCache.scheduleSaving(getRowCacheSavePeriodInSeconds(), count);
     }
@@ -233,7 +233,7 @@ public class CacheService implements CacheServiceMBean
     public void setKeyCacheKeysToSave(int count)
     {
         if (count < 0)
-            throw new RuntimeException("KeyCacheKeysToSave must be non-negative.");
+            throw new RuntimeException("KeyCacheKeysToSave must be nonnegative.");
         DatabaseDescriptor.setKeyCacheKeysToSave(count);
         keyCache.scheduleSaving(getKeyCacheSavePeriodInSeconds(), count);
     }
@@ -246,7 +246,7 @@ public class CacheService implements CacheServiceMBean
     public void setCounterCacheKeysToSave(int count)
     {
         if (count < 0)
-            throw new RuntimeException("CounterCacheKeysToSave must be non-negative.");
+            throw new RuntimeException("CounterCacheKeysToSave must be nonnegative.");
         DatabaseDescriptor.setCounterCacheKeysToSave(count);
         counterCache.scheduleSaving(getCounterCacheSavePeriodInSeconds(), count);
     }

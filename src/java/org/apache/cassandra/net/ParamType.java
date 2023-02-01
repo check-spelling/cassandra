@@ -74,7 +74,7 @@ public enum ParamType
     ParamType(int id, String legacyAlias, IVersionedSerializer serializer)
     {
         if (id < 0)
-            throw new IllegalArgumentException("ParamType id must be non-negative");
+            throw new IllegalArgumentException("ParamType id must be nonnegative");
 
         this.id = id;
         this.legacyAlias = legacyAlias;
@@ -113,7 +113,7 @@ public enum ParamType
     static ParamType lookUpById(int id)
     {
         if (id < 0)
-            throw new IllegalArgumentException("ParamType id must be non-negative (got " + id + ')');
+            throw new IllegalArgumentException("ParamType id must be nonnegative (got " + id + ')');
 
         return id < idToTypeMap.length ? idToTypeMap[id] : null;
     }

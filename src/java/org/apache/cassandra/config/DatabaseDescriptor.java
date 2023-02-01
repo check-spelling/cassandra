@@ -799,7 +799,7 @@ public class DatabaseDescriptor
 
         if (indexSummaryCapacityInMiB < 0)
             throw new ConfigurationException("index_summary_capacity option was set incorrectly to '"
-                                             + conf.index_summary_capacity.toString() + "', it should be a non-negative integer.", false);
+                                             + conf.index_summary_capacity.toString() + "', it should be a nonnegative integer.", false);
 
         // we need this assignment for the Settings virtual table - CASSANDRA-17735
         conf.index_summary_capacity = new DataStorageSpec.LongMebibytesBound(indexSummaryCapacityInMiB);
@@ -1932,7 +1932,7 @@ public class DatabaseDescriptor
     {
         if (concurrent_reads < 0)
         {
-            throw new IllegalArgumentException("Concurrent reads must be non-negative");
+            throw new IllegalArgumentException("Concurrent reads must be nonnegative");
         }
         conf.concurrent_reads = concurrent_reads;
     }
@@ -1946,7 +1946,7 @@ public class DatabaseDescriptor
     {
         if (concurrent_writers < 0)
         {
-            throw new IllegalArgumentException("Concurrent reads must be non-negative");
+            throw new IllegalArgumentException("Concurrent reads must be nonnegative");
         }
         conf.concurrent_writes = concurrent_writers;
     }
@@ -1960,7 +1960,7 @@ public class DatabaseDescriptor
     {
         if (concurrent_counter_writes < 0)
         {
-            throw new IllegalArgumentException("Concurrent reads must be non-negative");
+            throw new IllegalArgumentException("Concurrent reads must be nonnegative");
         }
         conf.concurrent_counter_writes = concurrent_counter_writes;
     }
@@ -1974,7 +1974,7 @@ public class DatabaseDescriptor
     {
         if (concurrent_materialized_view_writes < 0)
         {
-            throw new IllegalArgumentException("Concurrent reads must be non-negative");
+            throw new IllegalArgumentException("Concurrent reads must be nonnegative");
         }
         conf.concurrent_materialized_view_writes = concurrent_materialized_view_writes;
     }

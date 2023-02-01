@@ -104,7 +104,7 @@ public class NodeToolTest extends TestBaseImpl
         NODE.nodetoolResult("settimeout", "internodestreaminguser", "-1")
             .asserts()
             .failure()
-            .stdoutContains("timeout must be non-negative");
+            .stdoutContains("timeout must be nonnegative");
     }
 
     @Test

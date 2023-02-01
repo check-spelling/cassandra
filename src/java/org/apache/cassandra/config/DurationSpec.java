@@ -78,7 +78,7 @@ public abstract class DurationSpec
         else
         {
             throw new IllegalArgumentException("Invalid duration: " + value + " Accepted units:" + acceptedUnits(minUnit) +
-                                               " where case matters and only non-negative values.");
+                                               " where case matters and only nonnegative values.");
         }
     }
 
@@ -114,7 +114,7 @@ public abstract class DurationSpec
     private static void validateQuantity(long quantity, TimeUnit sourceUnit, TimeUnit minUnit, long max)
     {
         if (quantity < 0)
-            throw new IllegalArgumentException("Invalid duration: value must be non-negative");
+            throw new IllegalArgumentException("Invalid duration: value must be nonnegative");
 
         if (minUnit.convert(quantity, sourceUnit) >= max)
             throw new IllegalArgumentException(String.format("Invalid duration: %d %s. It shouldn't be more than %d in %s",

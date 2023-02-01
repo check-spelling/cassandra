@@ -109,7 +109,7 @@ public class DataRateSpecTest
                                                                                     .hasMessageContaining("Invalid data rate: -10b/s");
         assertThatThrownBy(() -> new DataRateSpec.LongBytesPerSecondBound(-10, DataRateSpec.DataRateUnit.BYTES_PER_SECOND))
         .isInstanceOf(IllegalArgumentException.class)
-        .hasMessageContaining("Invalid data rate: value must be non-negative");
+        .hasMessageContaining("Invalid data rate: value must be nonnegative");
         assertThatThrownBy(() -> new DataRateSpec.LongBytesPerSecondBound("10xb/s")).isInstanceOf(IllegalArgumentException.class)
                                                                                     .hasMessageContaining("Invalid data rate: 10xb/s");
         assertThatThrownBy(() -> new DataRateSpec.LongBytesPerSecondBound("9223372036854775809B/s")

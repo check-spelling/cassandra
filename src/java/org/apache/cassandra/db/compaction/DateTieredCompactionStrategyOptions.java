@@ -94,7 +94,7 @@ public final class DateTieredCompactionStrategyOptions
             double maxSStableAge = optionValue == null ? DEFAULT_MAX_SSTABLE_AGE_DAYS : Double.parseDouble(optionValue);
             if (maxSStableAge < 0)
             {
-                throw new ConfigurationException(String.format("%s must be non-negative: %.2f", MAX_SSTABLE_AGE_KEY, maxSStableAge));
+                throw new ConfigurationException(String.format("%s must be nonnegative: %.2f", MAX_SSTABLE_AGE_KEY, maxSStableAge));
             }
         }
         catch (NumberFormatException e)

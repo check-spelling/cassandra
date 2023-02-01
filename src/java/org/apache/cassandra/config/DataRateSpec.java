@@ -50,7 +50,7 @@ public abstract class DataRateSpec
 
         if (!matcher.find())
             throw new IllegalArgumentException("Invalid data rate: " + value + " Accepted units: MiB/s, KiB/s, B/s where " +
-                                                "case matters and " + "only non-negative values are valid");
+                                                "case matters and " + "only nonnegative values are valid");
 
         quantity = Long.parseLong(matcher.group(1));
         unit = DataRateUnit.fromSymbol(matcher.group(2));
@@ -82,7 +82,7 @@ public abstract class DataRateSpec
     private static void validateQuantity(double quantity, DataRateUnit unit, DataRateUnit minUnit, long max)
     {
         if (quantity < 0)
-            throw new IllegalArgumentException("Invalid data rate: value must be non-negative");
+            throw new IllegalArgumentException("Invalid data rate: value must be nonnegative");
 
         if (minUnit.convert(quantity, unit) >= max)
             throw new IllegalArgumentException(String.format("Invalid data rate: %s %s. It shouldn't be more than %d in %s",

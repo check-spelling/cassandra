@@ -169,7 +169,7 @@ public class PagingState
     }
 
     // Following operations are similar to Math.{addExact/toIntExact}, but without using exceptions for control flow.
-    // Since we're operating non-negative numbers, we can use -1 return value as an error code.
+    // Since we're operating nonnegative numbers, we can use -1 return value as an error code.
     private static int addNonNegative(int x, int y)
     {
         int sum = x + y;

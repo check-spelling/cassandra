@@ -289,7 +289,7 @@ public enum Verb
     {
         this.stage = stage;
         if (id < 0)
-            throw new IllegalArgumentException("Verb id must be non-negative, got " + id + " for verb " + name());
+            throw new IllegalArgumentException("Verb id must be nonnegative, got " + id + " for verb " + name());
 
         if (kind == CUSTOM)
         {

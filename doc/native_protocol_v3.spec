@@ -147,7 +147,7 @@ Table of Contents
 2.3. stream
 
   A frame has a stream id (a [short] value). When sending request messages, this
-  stream id must be set by the client to a non-negative value (negative stream id
+  stream id must be set by the client to a nonnegative value (negative stream id
   are reserved for streams initiated by the server; currently all EVENT messages
   (section 4.2.6) have a streamId of -1). If a client sends a request message
   with the stream id X, it is guaranteed that the stream id of the response to
