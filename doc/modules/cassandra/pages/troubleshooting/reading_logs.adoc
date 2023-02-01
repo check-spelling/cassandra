@@ -52,7 +52,7 @@ $ zgrep 'WARN\|ERROR' system.log.* | less
 === `debug.log`
 
 This log contains additional debugging information that may be useful
-when troubleshooting but may be much noiser than the normal
+when troubleshooting but may be much noisier than the normal
 `system.log`. Some examples of activities logged to this log:
 
 * Information about compactions, including when they start, which
