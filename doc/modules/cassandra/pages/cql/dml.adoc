@@ -80,7 +80,7 @@ You must use the orignal column name instead.
 Selection supports three special functions that aren't allowed anywhere
 else: `WRITETIME`, `MAXWRITETIME` and `TTL`.
 All functions take only one argument, a column name. If the column is a collection or UDT, it's possible to add element
-selectors, such as `WRITETTIME(phones[2..4])` or `WRITETTIME(user.name)`.
+selectors, such as `WRITETIME(phones[2..4])` or `WRITETIME(user.name)`.
 These functions retrieve meta-information that is stored internally for each column:
 
 * `WRITETIME` stores the timestamp of the value of the column.
