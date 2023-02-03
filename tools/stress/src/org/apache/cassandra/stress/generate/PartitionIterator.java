@@ -561,7 +561,7 @@ public abstract class PartitionIterator implements Iterator<Row>
                 }
                 boolean forceReturnOne = first && compareToLastRow == 0;
 
-                // the chance of descending is the uniform usechance, multiplied by the number of children
+                // the chance of descending is the uniform useChance, multiplied by the number of children
                 // we would on average generate (so if we have a 0.1 use chance, but should generate 10 children
                 // then we will always descend), multiplied by 1/(compound roll), where (compound roll) is the
                 // chance with which we reached this depth, i.e. if we already beat 50/50 odds, we double our
