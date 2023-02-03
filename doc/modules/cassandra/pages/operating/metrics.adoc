@@ -505,7 +505,7 @@ mutations.
 RequestType::
   ViewWrite
 Description::
-  Metrics related to materialized view write wrtes.
+  Metrics related to materialized view write requests.
 Metrics::
 [cols=",,",]
 |===
