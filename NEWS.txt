@@ -3,7 +3,7 @@ PLEASE READ: MAXIMUM TTL EXPIRATION DATE NOTICE (CASSANDRA-14092)
 (General upgrading instructions are available in the next section)
 
 The maximum expiration timestamp that can be represented by the storage engine is
-2038-01-19T03:14:06+00:00, which means that inserts with TTL thatl expire after
+2038-01-19T03:14:06+00:00, which means that inserts with TTL that will expire after
 this date are not currently supported. By default, INSERTS with TTL exceeding the
 maximum supported date are rejected, but it's possible to choose a different
  expiration overflow policy. See CASSANDRA-14092.txt for more details.
