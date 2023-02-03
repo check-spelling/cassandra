@@ -134,7 +134,7 @@ public final class OperationFcts
         /**
          * Executes the operation between the specified numeric operand.
          *
-         * @param resultType the result ype of the operation
+         * @param resultType the result type of the operation
          * @param leftType the type of the left operand
          * @param left the left operand
          * @param rightType the type of the right operand
