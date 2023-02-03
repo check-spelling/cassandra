@@ -200,7 +200,7 @@ public class ByteBufferUtil
      *
      * @param buffer the array to traverse for looking for the object, may be <code>null</code>
      * @param valueToFind the value to find
-     * @param startIndex the start index (i.e. BB position) to travers backwards from
+     * @param startIndex the start index (i.e. BB position) to traverse backwards from
      * @return the last index (i.e. BB position) of the value within the array
      * [between buffer.position() and buffer.limit()]; <code>-1</code> if not found.
      */
