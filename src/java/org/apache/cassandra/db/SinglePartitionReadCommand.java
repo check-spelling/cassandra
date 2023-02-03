@@ -612,7 +612,7 @@ public class SinglePartitionReadCommand extends ReadCommand implements SinglePar
      *   3) does not record some of the read metrics (latency, scanned cells histograms) nor
      *      throws TombstoneOverwhelmingException.
      * It is publicly exposed because there is a few places where that is exactly what we want,
-     * but it should be used only where you know you don't need thoses things.
+     * but it should be used only where you know you don't need those things.
      * <p>
      * Also note that one must have created a {@code ReadExecutionController} on the queried table and we require it as
      * a parameter to enforce that fact, even though it's not explicitly used by the method.
