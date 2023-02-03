@@ -219,7 +219,7 @@ be waiting for a response).
 
 For writes, this means that the mutation was not applied to all replicas
 it was sent to. The inconsistency will be repaired by read repair, hints
-or a manual repair. The write operation may also have timeouted as a
+or a manual repair. The write operation may also have timed out as a
 result.
 
 For reads, this means a read request may not have completed.

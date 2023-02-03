@@ -105,7 +105,7 @@ public class AlterTest extends TestBaseImpl
             while (((IInvokableInstance) (cluster.get(2))).callOnInstance(() -> StorageService.instance.getTokenMetadata().getAllMembers().isEmpty()))
             {
                 if (attempts++ > 30)
-                    throw new RuntimeException("timeouted on waiting for a member");
+                    throw new RuntimeException("timed out on waiting for a member");
                 Thread.sleep(1000);
             }
 

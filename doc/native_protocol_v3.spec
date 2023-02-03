@@ -981,7 +981,7 @@ Table of Contents
                 <blockfor> is an [int] representing the number of replica whose
                            acknowledgement is required to achieve <cl>.
                 <writeType> is a [string] that describe the type of the write
-                            that timeouted. The value of that string can be one
+                            that timed out. The value of that string can be one
                             of:
                              - "SIMPLE": the write was a non-batched
                                non-counter write.
