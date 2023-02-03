@@ -176,7 +176,7 @@ public abstract class AbstractCluster<I extends IInstance> implements ICluster<I
     private volatile IMessageSink messageSink;
 
     /**
-     * Common builder, add methods that are applicable to both Cluster and Upgradable cluster here.
+     * Common builder, add methods that are applicable to both Cluster and Upgradeable cluster here.
      */
     public static abstract class AbstractBuilder<I extends IInstance, C extends ICluster, B extends AbstractBuilder<I, C, B>>
         extends org.apache.cassandra.distributed.shared.AbstractBuilder<I, C, B>
