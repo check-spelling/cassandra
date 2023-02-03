@@ -35,7 +35,7 @@ import org.apache.cassandra.utils.FastByteOperations;
 import org.apache.cassandra.utils.UUIDGen;
 
 /**
- * Accessor for ByteBuffer values. ByteBufferAccessor treates {@link ByteBuffer#position()} as index 0,
+ * Accessor for ByteBuffer values. ByteBufferAccessor treats {@link ByteBuffer#position()} as index 0,
  * and {@link ByteBuffer#remaining()} as the length.
  */
 public class ByteBufferAccessor implements ValueAccessor<ByteBuffer>
