@@ -83,7 +83,7 @@ public interface IRoleManager extends AuthCache.BulkLoader<RoleResource, Set<Rol
     /**
      * Called during execution of ALTER ROLE statement.
      * options are always guaranteed to be a subset of supportedOptions(). Furthermore, if the actor performing the query
-     * is not a superuser and is altering themself, then options are guaranteed to be a subset of alterableOptions().
+     * is not a superuser and is altering themselves, then options are guaranteed to be a subset of alterableOptions().
      * Keep the body of the method blank if your implementation doesn't support modification of any options.
      *
      * @param performer User issuing the alter role statement.
