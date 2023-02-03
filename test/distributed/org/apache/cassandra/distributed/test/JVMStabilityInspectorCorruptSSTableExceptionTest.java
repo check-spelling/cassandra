@@ -140,7 +140,7 @@ public class JVMStabilityInspectorCorruptSSTableExceptionTest extends TestBaseIm
             }
             catch (final ExceptionInInitializerError ex)
             {
-                // native thows this, ignore on purpose, this means that native transport is closed.
+                // native throws this, ignore on purpose, this means that native transport is closed.
                 running = false;
             }
 
