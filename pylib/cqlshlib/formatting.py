@@ -225,9 +225,9 @@ def get_formatter(val, cqltype):
     return _formatters.get(type(val).__name__.lower(), format_value_default)
 
 
-def formatter_for(typname):
+def formatter_for(typename):
     def registrator(f):
-        _formatters[typname.lower()] = f
+        _formatters[typename.lower()] = f
         return f
     return registrator
 
