@@ -115,7 +115,7 @@ class DateTimeFormat:
         self.date_format = date_format
         self.nanotime_format = nanotime_format
         self.timezone = timezone
-        self.milliseconds_only = milliseconds_only  # the microseconds part, .NNNNNN, wil be rounded to .NNN
+        self.milliseconds_only = milliseconds_only  # the microseconds part, .NNNNNN, will be rounded to .NNN
 
 
 class CqlType:

@@ -482,7 +482,7 @@ public class BinLog implements Runnable
                                                               && file.name().endsWith(SingleChronicleQueue.SUFFIX);
 
                                   if (foundEmptyCq4File)
-                                      logger.warn("Found empty ChronicleQueue file {}. This file wil be deleted as part of BinLog initialization.",
+                                      logger.warn("Found empty ChronicleQueue file {}. This file will be deleted as part of BinLog initialization.",
                                                   file.absolutePath());
 
                                   return foundEmptyCq4File;
