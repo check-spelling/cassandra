@@ -113,7 +113,7 @@ public class SyncUtil
             {
                 throw new RuntimeException(e);
             }
-            //This is what MappedByteBuffer.force() throws if a you call force() on an umapped buffer
+            //This is what MappedByteBuffer.force() throws if a you call force() on an unmapped buffer
             if (mbbFDField != null && fd == null)
                 throw new UnsupportedOperationException();
             return buf;
