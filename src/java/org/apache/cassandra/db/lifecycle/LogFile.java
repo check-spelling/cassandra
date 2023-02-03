@@ -118,7 +118,7 @@ final class LogFile implements AutoCloseable
         try
         {
             // we sync the parent directories before content deletion to ensure
-            // any previously deleted files (see SSTableTider) are not
+            // any previously deleted files (see SSTableTidier) are not
             // incorrectly picked up by record.getExistingFiles() in
             // deleteRecordFiles(), see CASSANDRA-12261
             Throwables.maybeFail(syncDirectory(accumulate));
