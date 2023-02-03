@@ -191,7 +191,7 @@ public final class Generators
         ZonedDateTime endOfDays = now.plusYears(50);
         Constraint millisConstraint = Constraint.between(startOfTime.toInstant().toEpochMilli(), endOfDays.toInstant().toEpochMilli());
         Constraint nanosInSecondConstraint = Constraint.between(0, secondInNanos - 1);
-        // Represents the timespan based on the most of the default request timeouts. See DatabaseDescriptor
+        // Represents the time span based on the most of the default request timeouts. See DatabaseDescriptor
         Constraint smallTimeSpanNanosConstraint = Constraint.between(0, 10 * secondInNanos);
         TIMESTAMP_GEN = rnd -> {
             Timestamp ts = new Timestamp(rnd.next(millisConstraint));

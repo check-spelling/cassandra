@@ -298,8 +298,8 @@ public class DateTieredCompactionStrategy extends AbstractCompactionStrategy
 
     /**
      * Group files with similar min timestamp into buckets. Files with recent min timestamps are grouped together into
-     * buckets designated to short timespans while files with older timestamps are grouped into buckets representing
-     * longer timespans.
+     * buckets designated to short time spans while files with older timestamps are grouped into buckets representing
+     * longer time spans.
      * @param files pairs consisting of a file and its min timestamp
      * @param timeUnit
      * @param base
