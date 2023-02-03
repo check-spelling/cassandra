@@ -63,7 +63,7 @@ import org.psjava.ds.math.Function;
  * * Since the sum of the capacity on the edges from the super source to the range-vertices is less or equal to the sum
  *   of the capacities between the node-vertices and super sink we know that to get maximum flow we will use all the
  *   range-vertices. (Say we have x ranges, y machines to provide them, total supersource -> range-vertice capacity will be x,
- *   total node-vertice -> supersink capacity will be (y * ceil(x / y)) which worst case is x if x==y). The capacity between
+ *   total node-vertices -> supersink capacity will be (y * ceil(x / y)) which worst case is x if x==y). The capacity between
  *   the range-vertices and node-vertices is infinite.
  * * Then we try to solve the max-flow problem using psjava
  * * If we can't find a solution where the total flow is = number of range-vertices, we bump the capacity between the node-vertices
